@@ -15,3 +15,7 @@ console.log('zmienna2 > 8: ', zmienna2 > 8);
 console.log('zmienna2 === 8: ', zmienna2 === 8);
 console.log('zmienna2 >= 8: ', zmienna2 >= 8);
 console.log('zmienna2 !== 8', zmienna2 !== 8);
+
+//sprawdzenie czy string jest pusty
+let napis = '';
+console.log(napis !== '');
