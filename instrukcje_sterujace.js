@@ -1,4 +1,4 @@
-
+console.log('~~~~~~~if else~~~~~~~~~');
 
 let dostepneSrodki = 1000;
 let ociazenie = 400;
@@ -51,6 +51,7 @@ else if (czekolada === 'gorzka') {
 }
 
 
+
 let a = 40;
 
 if (3 > 9) {
@@ -61,11 +62,12 @@ else {
 }
 console.log(a);
 
-//skrot do petli if i wyjdzie true lub false i zapisuje odpowiedni tekst.
+//skrot do if i wyjdzie true lub false i zapisuje odpowiedni tekst.
 let napis = (a > 50) ? 'Wieksze' : 'Mniejsze';
 
 console.log(napis);
 
+console.log('~~~~~~~while~~~~~~~~~');
 
 let aaa = 30;
 
@@ -84,7 +86,7 @@ while (aaa <=40) {
     // }
 }
 
-console.log('~~~~~~~~~~~~~~~~');
+console.log('~~~~~~~do while~~~~~~~~~');
 
 let aaaa = 20;
 do {
@@ -92,3 +94,49 @@ do {
  console.log(aaaa);
 }
 while (aaaa <=30)
+
+console.log('~~~~~~switch~~~~~~~~~~')
+
+let pojazd = 'rower'
+let liczbaKol;
+
+switch (pojazd) {
+    case 'samochod': {
+        console.log('samochod');
+        liczbaKol = 4;
+    break; }
+    case 'rower': {
+            console.log('rower');
+            liczbaKol = 3;
+    break; }
+    case 'hulajnoga': {
+                console.log('hulajnoga');
+                liczbaKol = 2;
+    break; }
+    default: {
+        console.log(`${pojazd} typ nieobsługiwany`);
+    break; }
+}
+console.log(`Liczba kół wpisanego pojazdu ${liczbaKol}`);
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+let pojazd1 = 'hulajnoga'
+let liczbaKol1;
+
+if (pojazd1 === 'samochod') {
+    console.log('samochod');
+        liczbaKol1 = 4;    
+    }
+else if (pojazd1 === 'rower') {
+    console.log('rower');
+    liczbaKol1 = 3}
+else if (pojazd1 === 'hulajnoga') {
+    console.log('hulajnoga');
+    liczbaKol1 = 2;   
+}
+else {
+    console.log(`${pojazd1} typ nieobsługiwany`);
+}
+
+console.log(`Liczba kół wpisanego pojazdu ${liczbaKol1}`);
