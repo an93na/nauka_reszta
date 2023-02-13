@@ -24,3 +24,14 @@ let i=1;
 i++; 
 
 console.log('wartość i po operacji i++ : ' + i);
+
+j=1;
+++j;
+
+console.log('wartość j po operacji ++j : ' + j);
+
+
+// % to zwraca nam reszte z dzielenia czyli w przypadku 12 % 5 otrzymamy 2 
+
+let num6 = 12 % 5;
+console.log('wartość num6: ', num6);
