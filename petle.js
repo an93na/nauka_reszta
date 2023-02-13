@@ -67,7 +67,7 @@ let napis = (a > 50) ? 'Wieksze' : 'Mniejsze';
 console.log(napis);
 
 
-let aaa = 0;
+let aaa = 30;
 
 while (aaa <=40) {
     console.log('mniejsze');
@@ -83,3 +83,12 @@ while (aaa <=40) {
         console.log(aaa);
     // }
 }
+
+console.log('~~~~~~~~~~~~~~~~');
+
+let aaaa = 20;
+do {
+ aaaa++
+ console.log(aaaa);
+}
+while (aaaa <=30)
