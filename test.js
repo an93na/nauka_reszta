@@ -30,4 +30,5 @@ let sixIsAPrimeNumber1 = false;
 const PeopleLikeCandies2 = true;
 const sixIsAPrimeNumber2 = false;
 
-
+let nowazmienna;
+console.log(nowazmienna);
