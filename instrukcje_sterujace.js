@@ -139,4 +139,5 @@ else {
     console.log(`${pojazd1} typ nieobsługiwany`);
 }
 
-console.log(`Liczba kół wpisanego pojazdu ${liczbaKol1}`);
+console.log(`Liczba kół wpisanego pojazdu: ${liczbaKol1}`);
+
