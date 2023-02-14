@@ -232,7 +232,7 @@ function trzeciaZtrzech(a, b, c) {
     else {
         c(a);
     }
-    
+
 }
 
 trzeciaZtrzech ('123456789', pierwszaZtrzech, drugaZtrzech);
