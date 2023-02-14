@@ -26,3 +26,12 @@ console.log(tablica[0]);
 console.log(tablica[7]);
 console.log(`długość tablicy to: `,tablica.length);
 // console.log(`długość tablicy to: `,(tablica.length-1));
+
+let oceny = [5, 6, 4, 4, 4, 5, 6, 3, 5, 4];
+let ocenyWyzszeNiz4 = oceny.filter(function (el) {
+    return el >=4
+})
+console.log(ocenyWyzszeNiz4);
+
+oceny.push(6, 5);
+console.log(oceny, `długość tablicy to: `, oceny.length);
