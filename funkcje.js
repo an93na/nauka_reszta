@@ -161,12 +161,12 @@ console.log(powiekszona2(rozkaz)+'!!!'+ ' ' +new Date ());
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 
-const eur = {
+let eur = {
     nazwa: 'euro',
     wartosc: 4.72,
     kraj: 'Wspolnota Europejska'
 } ;
-const dol = {
+let dol = {
     nazwa: 'dolar',
     wartosc: 5.27,
     kraj: 'USA'
@@ -190,3 +190,29 @@ function zwrocWieksza(a,b) {
 console.log(zwrocWieksza(eur, dol));
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+let obiekt = {
+    pi: 3.14,
+    e: 2.72,
+    temCiala: 36.6
+};
+
+let obiekt2 = {
+    pi: 3,
+    e: 3,
+    temCiala: 37
+};
+// obiekt.speed = 120;
+
+// console.log(obiekt);
+
+function coTo(a,b) {
+    // a.pi = obiekt.pi;
+    // b.pi = obiekt2.pi;
+    return (a.pi > b.pi) ? a : b; //skrocona wersja if else//
+}
+
+console.log(coTo(obiekt, obiekt2));
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
