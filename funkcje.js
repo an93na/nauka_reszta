@@ -197,7 +197,7 @@ let obiekt = {
     temCiala: 36.6
 };
 
-let obiekt2 = {
+let obiektZeZmyslonymiDanymi = {
     pi: 3,
     e: 3,
     temCiala: 37
@@ -212,7 +212,32 @@ function coTo(a,b) {
     return (a.pi > b.pi) ? a : b; //skrocona wersja if else//
 }
 
-console.log(coTo(obiekt, obiekt2));
+console.log(coTo(obiekt, obiektZeZmyslonymiDanymi));
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 
+function pierwszaZtrzech( ) {
+    console.log('Wartość poprawna :) ');
+}
+function drugaZtrzech( ) {
+    console.log('Niestety ta wartość nie jest poprawna');
+}
+function trzeciaZtrzech(a, b, c) {
+    const wymaganaDlugosc = 9;
+    let numer1 = Number(a);
+    // Math.log(numer1)*Math.LOG10E +1|0; - oblicza nam ilosc cyfr;
+    if (!isNaN(numer1) && (Math.log(numer1) * Math.LOG10E + 1 | 0) === wymaganaDlugosc) {
+        b(numer1);
+    }
+    else {
+        c(a);
+    }
+    
+}
+
+trzeciaZtrzech ('123456789', pierwszaZtrzech, drugaZtrzech);
+trzeciaZtrzech ('12345TY789', pierwszaZtrzech, drugaZtrzech);
+trzeciaZtrzech ('1A89010', pierwszaZtrzech, drugaZtrzech);
+trzeciaZtrzech ('1234ds10', pierwszaZtrzech, drugaZtrzech);
+trzeciaZtrzech ('999967890', pierwszaZtrzech, drugaZtrzech);
+// console.log(dlugosc);
