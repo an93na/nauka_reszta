@@ -66,7 +66,7 @@ function podzielnosc(x) {
    else {
     console.log('liczba nie jest podzielna przez 3 bez reszty. Ta reszta wynosi', (x % 3));
    }
-   return 
+   return x
 }
 
 podzielnosc(2);
@@ -75,28 +75,30 @@ podzielnosc(9);
 podzielnosc(12);
 console.log(`~~~~~~~~~~~~~~~~~`);
 
-liczba = 21;
-let arg1 = sprawdz(liczba);
-let arg2 = podzielnosc(liczba);
+
+let arg1 = sprawdz(12);
+let arg2 = podzielnosc(12);
 // let arg1 = 16;
 // let arg2 = 12;
+// console.log(arg1);
+// console.log(arg2);
 
-if (arg1 > 10 && arg2 % 3 === 000) {
+if (arg1 > 10 && arg2 % 3 === 0) {
     console.log('Git');
 }
 else {
     console.log('Niestety nie');
 }
 
-let arg4 = 16;
-let arg5 = 12;
+// let arg4 = 16;
+// let arg5 = 12;
 
-if (arg4 > 10 && arg5 % 3 === 0) {
-    console.log('Git');
-}
-else {
-    console.log('Niestety nie');
-}
+// if (arg4 > 10 && arg5 % 3 === 0) {
+//     console.log('Git');
+// }
+// else {
+//     console.log('Niestety nie');
+// }
 
 console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~`);
 
@@ -105,11 +107,46 @@ let dolar = 3.5;
 
 function kurs(a, b) {
     if (a > b) {
-        console.log(`Więcej kosztuje euro`);
+        console.log(`Więcej kosztuje euro, jego cena to: ${euro} zł.`);
     }
     else if (a < b) {
-        console.log(`Więcej kosztuje dolar`);
+        console.log(`Więcej kosztuje dolar, jego cena to ${dolar} zł.`);
     }
 }
 
 kurs(euro, dolar);
+
+
+function kurs2 (e, d) {
+    return e > d;
+}
+
+console.log(kurs2(euro, dolar));
+
+
+if (kurs2(euro, dolar) === true ) {
+    console.log(`Więcej kosztuje euro, jego cena to: ${euro} zł.`);
+}
+else if (kurs2(euro, dolar) === false) {
+    console.log(`Więcej kosztuje dolar, jego cena to ${dolar} zł.`);
+}
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+let string1 = `Ola ma psa`
+
+function powiekszona(a) {
+    console.log(a.toUpperCase());
+}
+function powiekszona1(a) {
+    console.log(a.toUpperCase());
+    return a.toUpperCase();
+}
+
+function powiekszona2(a) {
+    return a.toUpperCase();
+}
+
+powiekszona(string1);
+powiekszona1(string1);
+powiekszona2(string1);
