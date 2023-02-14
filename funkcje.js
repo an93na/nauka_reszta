@@ -150,3 +150,43 @@ function powiekszona2(a) {
 powiekszona(string1);
 powiekszona1(string1);
 powiekszona2(string1);
+
+console.log(powiekszona2(string1).toLowerCase());
+
+let rozkaz = 'Idż do sklepu'
+
+powiekszona2(rozkaz);
+
+console.log(powiekszona2(rozkaz)+'!!!'+ ' ' +new Date ());
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+const eur = {
+    nazwa: 'euro',
+    wartosc: 4.72,
+    kraj: 'Wspolnota Europejska'
+} ;
+const dol = {
+    nazwa: 'dolar',
+    wartosc: 5.27,
+    kraj: 'USA'
+};
+
+function zwrocWieksza(a,b) {
+    let wartoscWieksza = {};
+    if (a.wartosc > b.wartosc) {
+        wartoscWieksza.nazwa = a.nazwa;
+        wartoscWieksza.wartosc = a.wartosc;
+        wartoscWieksza.kraj = a.kraj;
+    }
+    else if (a.wartosc < b.wartosc) {
+        wartoscWieksza.nazwa = b.nazwa;
+        wartoscWieksza.wartosc = b.wartosc;
+        wartoscWieksza.kraj = b.kraj;
+    }
+    return wartoscWieksza;
+}
+
+console.log(zwrocWieksza(eur, dol));
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
