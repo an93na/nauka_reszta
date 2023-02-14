@@ -241,3 +241,30 @@ trzeciaZtrzech ('1A89010', pierwszaZtrzech, drugaZtrzech);
 trzeciaZtrzech ('1234ds10', pierwszaZtrzech, drugaZtrzech);
 trzeciaZtrzech ('999967890', pierwszaZtrzech, drugaZtrzech);
 // console.log(dlugosc);
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+function jakasFunkcja() {
+    console.log('to jest funkcja jakasFunkcja')
+    return function (a, b) {
+        console.log(`to jest funkcja zwrocona ta funkcja dodaje ${a} do ${b}`);
+        return a + b;
+    }
+}
+let Gacek = jakasFunkcja()
+console.log(Gacek);
+console.log(typeof Gacek);
+
+console.log(Gacek(4,8));
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+function funkcjaNr1() {
+console.log('To jest funkcja funkcjaNr1');
+return function (a,b) {                 //tu funkcja bez nazwy, czyli funkcja anonimowa//
+    console.log(`Funkcja odejmująca od ${a} odejmuje ${b}`);
+    return a-b;
+}    
+}
+let funkcjaZwroconaZfuncjiNr1 = funkcjaNr1();
+console.log(funkcjaZwroconaZfuncjiNr1(6, 7));
