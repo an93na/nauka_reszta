@@ -67,7 +67,7 @@ let sredniatomka = wynikOcen(dziennikObiektowy, 'tomek');
 let sredniaklasy = (sredniamalgosi + sredniaadriana + sredniatomka)/ 3;
 console.log(`Średnia całej klasy to: `,sredniaklasy);
 
-console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
+console.log(`~~~~~~~~~~~Szukanie indexu danego elementu~~~~~~~~~~~~~`);
 
 let dziennikTablicowyOcenyMatematyka = [
      [3, 3, 4, 4, 6],
@@ -146,5 +146,9 @@ let znajdzWiek = arrayOsob.filter((a) => a.wiek > 20 );
 console.log(`znajdowanie elementow tablicy których wiek jest większy od 20: `, znajdzWiek);
 
 
-let znajdzWiekiPlec = arrayOsob.filter((a) => a.wiek > 20 && a.plec === 'm' );
+let znajdzWiekiPlec = arrayOsob.filter((a) => a.wiek > 20 && a.plec === 'm');
 console.log(`znajdowanie elementow tablicy których wiek jest większy od 20 i są mężczyznami: `, znajdzWiekiPlec);
+
+console.log('~~~~~~~~~~~Mapowanie~~~~~~~~~~~~~~~~');
+
+
