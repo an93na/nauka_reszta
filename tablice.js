@@ -133,10 +133,10 @@ console.log(dziennikTablicowyImiona[wynikZtablicy4]);
 console.log('~~~~~~~~~~~~~~~~~~~Filtrowanie~~~~~~~~~~~~~~~~');
 
 let arrayOsob = [
-    {imie: 'Agata', nazwisko: 'Nowak', wiek: '15', plec: 'k' },
-    {imie: 'Mateusz', nazwisko: 'Kowalski', wiek: '19', plec: 'm' },
-    {imie: 'Jan', nazwisko: 'Głaz', wiek: '41', plec: 'm' },
-    {imie: 'Felicja', nazwisko: 'Ametyst', wiek: '29', plec: 'k' }
+    {imie: 'agata', nazwisko: 'nowak', wiek: '15', plec: 'k' },
+    {imie: 'mateusz', nazwisko: 'kowalski', wiek: '19', plec: 'm' },
+    {imie: 'jan', nazwisko: 'głaz', wiek: '41', plec: 'm' },
+    {imie: 'felicja', nazwisko: 'ametyst', wiek: '29', plec: 'k' }
 ]
 
 let znajdzK = arrayOsob.filter((a) => a.plec === 'k');
@@ -151,4 +151,17 @@ console.log(`znajdowanie elementow tablicy których wiek jest większy od 20 i s
 
 console.log('~~~~~~~~~~~Mapowanie~~~~~~~~~~~~~~~~');
 
+let mapa = arrayOsob.map((a) => {
+    return {
+        ...a,
+        imie: a.imie[0].toUpperCase()+a.imie.slice(1),
+        nazwisko: a.nazwisko[0].toUpperCase()+a.nazwisko.slice(1),
+    }
+});
+console.log(mapa);
 
+
+let array33 = [ 1, 2, 3, 4, 5, 6, 7];
+
+let arrrr2 = array33.map((a) => a*2);
+console.log(arrrr2);
