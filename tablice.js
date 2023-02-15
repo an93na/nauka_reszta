@@ -68,3 +68,47 @@ let sredniaklasy = (sredniamalgosi + sredniaadriana + sredniatomka)/ 3;
 console.log(`Średnia całej klasy to: `,sredniaklasy);
 
 console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
+
+let dziennikTablicowyOcenyMatematyka = [
+     [3, 3, 4, 4, 6],
+     [5, 6, 4.5, 5],
+     [2, 3, 3] 
+]
+
+let dziennikTablicowyOcenyJezykAngieski = [
+    [4, 3, 4, 4.5, 3],
+    [5, 4, 4.5, 5],
+    [5, 4.5, 6] 
+]
+
+
+letKsiazkiWypozyczoneZBibloteki = [
+ [1234, 23435, 6675, 7775],
+ [1234, 543, 121],
+ []
+]
+
+let adresUcznia = [
+    {miasto: 'Warszawa', ulica: 'Piękna'},
+    {miasto: 'Legionowo', ulica: 'Długa'},
+    {miasto: 'Waraszawa', ulica: '11 Listopada'}
+]
+
+let dziennikTablicowyImiona = [
+    {imie:'adrian', id: 0},
+    {imie:'malgosia', id: 1 },
+    {imie:'tomek', id: 2},
+    {imie:'renata', id: 3},
+]
+
+function znajdzAdrian(a) {
+    if (a.name === 'adrian'){
+        return true
+    }
+    else {
+        return false;
+    }
+}
+
+wynikZtablicy = dziennikTablicowyImiona.findIndex(znajdzAdrian);
+console.log(wynikZtablicy);
