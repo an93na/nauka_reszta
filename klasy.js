@@ -143,7 +143,7 @@ class Animal {
         // console.log('stworzono zwierze');
     }
     dajGlosProsze() {
-        console.log(`Nazywam sie ${this.imie} i coś mówię`);
+        console.log(`Nazywam sie ${this.imie} i wydaje nieokreślony dzwięk`);
     }
     czyJestesGlodny() {
         if (this.najedzony === true) {
@@ -185,6 +185,9 @@ class Pies extends Animal {
         this.obroza = kolorObrozy;
         // console.log('stworzono psa')
     }
+    dajGlosProsze() {
+        console.log(`Nazywam sie ${this.imie} i szczekam`);
+    }
 }
 
 class Kitek extends Animal {
@@ -195,9 +198,13 @@ class Kitek extends Animal {
         else {
             this.iloscZyc = iloscZyc;
         }
-        // console.log('stworzono kota')
+        // console.log('stworzono kota')   
+    }
+    dajGlosProsze() {
+        console.log(`Nazywam sie ${this.imie} i Miaucze`);
     }
 }
+
 
 let piesTestowy = new Pies('Julek', 2, 'niezidentyfikowany', 10, 'czerwona');
 piesTestowy.dajGlosProsze();
