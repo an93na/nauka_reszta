@@ -35,3 +35,23 @@ console.log(ocenyWyzszeNiz4);
 
 oceny.push(6, 5);
 console.log(oceny, `długość tablicy to: `, oceny.length);
+
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+
+
+let dziennikObiektowy = {
+    adrian:   [3, 3, 4, 4],
+    malgosia: [5, 6, 4.5, 5],
+    tomek:    [2, 3, 3, 2] 
+};
+
+function  wynikOcen(a, b) {
+    let wybranyUczen = dziennikObiektowy[];
+    for (let a = 0; a < array.length; a++) {
+       
+        
+    }
+    return 
+}
+
+wynikOcen(dziennikObiektowy.adam);
