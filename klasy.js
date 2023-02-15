@@ -145,7 +145,7 @@ class Animal {
     dajGlosProsze() {
         console.log(`Nazywam sie ${this.imie} i wydaje nieokreślony dzwięk`);
     }
-    czyJestesGlodny() {
+    czyJestesNajedzony() {
         if (this.najedzony === true) {
             console.log('tak');
         }
@@ -176,6 +176,10 @@ class Animal {
     spij() {
         console.log('ZZzzz ZZZzzz zZZZzz');
     }
+    biegaj() {
+        // console.log('Zwierzak biega');
+        this.najedzony = false;
+    }
 
 }
 
@@ -187,6 +191,11 @@ class Pies extends Animal {
     }
     dajGlosProsze() {
         console.log(`Nazywam sie ${this.imie} i szczekam`);
+    }
+    biegaj() {
+        super.biegaj();
+        console.log('Ale super!')
+
     }
 }
 
@@ -203,6 +212,11 @@ class Kitek extends Animal {
     dajGlosProsze() {
         console.log(`Nazywam sie ${this.imie} i Miaucze`);
     }
+    biegaj() {
+        super.biegaj();
+        console.log('A weż się ...');
+    }
+    
 }
 
 
@@ -214,3 +228,16 @@ kitekTestowy.dajGlosProsze();
 // console.log('.................');
 let kitekTestowy2 = new Kitek('Jacuś', 3, 'perski', 12, 5);
 kitekTestowy2.dajGlosProsze();
+
+piesTestowy.biegaj();
+kitekTestowy.biegaj();
+console.log('.........................')
+let tablicaZwierzat = [
+    new Kitek('Felus', 4, 'niezidentyfikowany', 8),
+    new Pies('Julek', 2, 'niezidentyfikowany', 10, 'czerwona'),
+    new Kitek('Kituś', 4, 'niezidentyfikowany', 8),
+    new Pies('Rambo', 2, 'niezidentyfikowany', 10, 'czerwona')
+]
+
+tablicaZwierzat.forEach(zwierz =>  zwierz.biegaj());
+// tablicaZwierzat.forEach(zwierz => zwierz.czyJestesNajedzony());
