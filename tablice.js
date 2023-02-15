@@ -102,13 +102,28 @@ let dziennikTablicowyImiona = [
 ]
 
 function znajdzAdrian(a) {
-    if (a.name === 'adrian'){
+    if (a.imie === 'renata'){
         return true
     }
     else {
         return false;
     }
 }
+wynikZtablicy2 = dziennikTablicowyImiona.findIndex(znajdzAdrian);
+console.log('Dłuższa metoda znajdująca nam index pod którym jest renata: ',wynikZtablicy2);
 
-wynikZtablicy = dziennikTablicowyImiona.findIndex(znajdzAdrian);
-console.log(wynikZtablicy);
+wynikZtablicy = dziennikTablicowyImiona.findIndex((a) => a.imie === 'adrian');
+console.log('Krótsza metoda znajdująca nam index pod którym jest adrian: ',wynikZtablicy);
+
+function znajdźKobieta(ele) {
+if (ele.imie[ele.imie.length - 1] === 'a') {
+    return true;
+}
+else {
+    return false;
+}
+}
+
+wynikZtablicy3 = dziennikTablicowyImiona.findIndex(znajdźKobieta);
+console.log(`Szukam pierwszej kobiety w tablicy, imie kończy się na 'a': `,wynikZtablicy3);
+console.log(dziennikTablicowyImiona[wynikZtablicy3]);
