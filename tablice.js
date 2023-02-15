@@ -126,4 +126,21 @@ else {
 
 wynikZtablicy3 = dziennikTablicowyImiona.findIndex(znajdźKobieta);
 console.log(`Szukam pierwszej kobiety w tablicy, imie kończy się na 'a': `,wynikZtablicy3);
-console.log(dziennikTablicowyImiona[wynikZtablicy3]);
+
+wynikZtablicy4 = wynikZtablicy = dziennikTablicowyImiona.findIndex((a) => a.imie[a.imie.length - 1] === 'a');
+console.log(dziennikTablicowyImiona[wynikZtablicy4]);
+
+console.log('~~~~~~~~~~~~~~~~~~~Filtrowanie~~~~~~~~~~~~~~~~');
+
+let arrayOsob = [
+    {imie: 'Agata', nazwisko: 'Nowak', wiek: '15', plec: 'k' },
+    {imie: 'Mateusz', nazwisko: 'Kowalski', wiek: '19', plec: 'm' },
+    {imie: 'Jan', nazwisko: 'Głaz', wiek: '41', plec: 'm' },
+    {imie: 'Felicja', nazwisko: 'Ametyst', wiek: '29', plec: 'k' }
+]
+
+let znajdzK = arrayOsob.filter((a) => a.plec === 'k');
+console.log('Wypisanie elementów tablicy które są kobietami ', znajdzK);
+
+let znajdzWiek = arrayOsob.filter((a) => a.wiek > 20 );
+console.log(`znajdowanie elementow tablicy których wiek jest większy od 20: `, znajdzWiek);
