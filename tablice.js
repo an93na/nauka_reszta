@@ -144,3 +144,7 @@ console.log('Wypisanie elementów tablicy które są kobietami ', znajdzK);
 
 let znajdzWiek = arrayOsob.filter((a) => a.wiek > 20 );
 console.log(`znajdowanie elementow tablicy których wiek jest większy od 20: `, znajdzWiek);
+
+
+let znajdzWiekiPlec = arrayOsob.filter((a) => a.wiek > 20 && a.plec === 'm' );
+console.log(`znajdowanie elementow tablicy których wiek jest większy od 20 i są mężczyznami: `, znajdzWiekiPlec);
