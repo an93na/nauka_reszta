@@ -45,13 +45,26 @@ let dziennikObiektowy = {
     tomek:    [2, 3, 3, 2] 
 };
 
-function  wynikOcen(a, b) {
-    let wybranyUczen = dziennikObiektowy[];
-    for (let a = 0; a < array.length; a++) {
-       
-        
+function  wynikOcen(dziennik, imieUcznia) {
+    let ocenyDanegoUcznia = dziennik[imieUcznia];
+    console.log(`oceny ucznia o imieniu ${imieUcznia} to: `,ocenyDanegoUcznia);
+    let suma = 0;
+    let srednia = 0;
+    for (let a = 0; a < ocenyDanegoUcznia.length; a++) {
+
+        suma+= ocenyDanegoUcznia[a];
     }
-    return 
+    // console.log(`suma to: `, suma);
+    srednia = suma / ocenyDanegoUcznia.length;
+    console.log(`średnia ocen to: `, srednia); 
+    return srednia;    
 }
 
-wynikOcen(dziennikObiektowy.adam);
+let sredniamalgosi = wynikOcen(dziennikObiektowy, 'malgosia');
+let sredniaadriana = wynikOcen(dziennikObiektowy, 'adrian');
+let sredniatomka = wynikOcen(dziennikObiektowy, 'tomek');
+
+let sredniaklasy = (sredniamalgosi + sredniaadriana + sredniatomka)/ 3;
+console.log(`Średnia całej klasy to: `,sredniaklasy);
+
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~`);
