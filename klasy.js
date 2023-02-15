@@ -131,3 +131,79 @@ if (nowyKot.czyJestesGlodny()) {
 }
 
 console.log('~~~~~~~~~dziedziczenie~~~~~~~~~~~~~');
+
+class Animal {
+    constructor (imie, wiek, rasa, waga) {
+        this.imie = imie;
+        this.wiek = wiek;
+        this.rasa = rasa;
+        this.waga = waga;
+        this.najedzony = false;
+        this.szczesliwy = true;
+        // console.log('stworzono zwierze');
+    }
+    dajGlosProsze() {
+        console.log(`Nazywam sie ${this.imie} i coś mówię`);
+    }
+    czyJestesGlodny() {
+        if (this.najedzony === true) {
+            console.log('tak');
+        }
+        else {
+            console.log('o nie zjadłbym coś');
+        }
+        return this.najedzony;
+    }
+    czyJestesSzczesliwy() {
+        if (this.szczesliwy === true) {
+            console.log(`TAK!!!`);
+        }
+        else
+        {
+            console.log(`Nie :(`);
+        }
+        return this.szczesliwy;
+    }
+    nakarm() {
+        this.najedzony = true;
+    }
+    bawSie() {
+        console.log('jupi ale swietna zabawa');
+    }
+    tesknijZaOpiekunem() {
+        this.najedzony = false;
+    }
+    spij() {
+        console.log('ZZzzz ZZZzzz zZZZzz');
+    }
+
+}
+
+class Pies extends Animal {
+    constructor(imie, wiek, rasa, waga, kolorObrozy) {
+        super(imie, wiek, rasa, waga);
+        this.obroza = kolorObrozy;
+        // console.log('stworzono psa')
+    }
+}
+
+class Kitek extends Animal {
+    constructor(imie, wiek, rasa, waga, iloscZyc) {
+        super(imie, wiek, rasa, waga);
+        if (iloscZyc === undefined) {
+        this.iloscZyc = 7;}
+        else {
+            this.iloscZyc = iloscZyc;
+        }
+        // console.log('stworzono kota')
+    }
+}
+
+let piesTestowy = new Pies('Julek', 2, 'niezidentyfikowany', 10, 'czerwona');
+piesTestowy.dajGlosProsze();
+// console.log('.................');
+let kitekTestowy = new Kitek('Felus', 4, 'niezidentyfikowany', 8);
+kitekTestowy.dajGlosProsze();
+// console.log('.................');
+let kitekTestowy2 = new Kitek('Jacuś', 3, 'perski', 12, 5);
+kitekTestowy2.dajGlosProsze();
