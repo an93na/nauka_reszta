@@ -36,16 +36,14 @@ function zmienadres(klient,nowyAdres) {
 
 function zmienAdresIWyrzucBlad(klient,nowyAdres) {
     if(nowyAdres === undefined) {
-        console.error (`Ten parametr jest wymagany`);
-        return;
+        throw new Error ('parametr nowyAdres jest wymagany i nie został dostarczony');
     }
     if( 
         nowyAdres.miasto === undefined || 
         nowyAdres.kodPocztowy === undefined || 
         nowyAdres.ulica === undefined || 
         nowyAdres.numer === undefined) {
-        console.error (`Twoj adress jest nie kompletny`);
-        return;
+        throw new Error ('jeden z wymaganych parametrów nie został dostarczony');
     }
 
     klient.adres = nowyAdres;
@@ -58,7 +56,7 @@ function zmienNumer(klient, nowyAdres) {
 
 osoba.logAdres();
 
-nowyAdress = {
+let nowyAdress = {
     miasto: 'Warszawa',
     kodPocztowy: 23213,
     ulica: `piekna`,
@@ -93,3 +91,19 @@ finally {
     osoba.logAdres();
     console.log('Program konczy dzialanie');
 }
+
+
+let nowyAdressBlad = {
+    miasto: 'Lublin',
+    kodPocztowy: 21133,
+    ulica: `niebieska`,
+    numer : {
+        numerDomu: 9,
+    }
+}
+
+// zmienadres(osoba, nowyAdressBlad);
+// osoba.logAdres();
+
+zmienAdresIWyrzucBlad(osoba, nowyAdressBlad);
+osoba.logAdres();
