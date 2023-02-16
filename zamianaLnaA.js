@@ -85,15 +85,65 @@ let baa = 'Ala ma kota'.indexOf('kot');
  console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 
  let wynikDzielenia = undefined;
- for (let idx = 1; idx <=2000; idx++) {
+ for (let idx = 1; idx <=20000; idx++) {
     if (idx % 123 === 0) {
         console.log('o super mamy wynik!', idx);
         if (wynikDzielenia === undefined) {
              wynikDzielenia = idx;
+             break;
         } else {
             console.log(idx +' też jest podzielny przez 123 ale ja mam już mój wynik', idx)
         }
        
     }
  }
- console.log(wynikDzielenia);
+
+
+ let wynikDzielenia2 = undefined;
+ for (let idx = 1; idx <=20000; idx++) {
+    if (idx % 123 === 0) {
+        console.log('o super mamy wynik!', idx);
+             break;
+        } 
+    }
+
+let d = 123;
+for (let index = -10; index <= 10; index++) {
+    if (index === 0) {
+        console.log('Nie wolno dzielić przez zero');
+        continue;
+    }
+    console.log(d/index);
+    
+}
+ 
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+let TablicaDoforEacha = [
+    'Sklep',
+    'Te',
+    'Tamten',
+    'Tudzież',
+    'Są',
+    'Po'
+];
+
+
+    let doklej1 = '';
+    let doklej2 = 'aaa';
+
+    function mojForEach(mojObecnyElement, obecnyIndex, calaTablic) {
+        console.log(mojObecnyElement);
+        doklej1 += ' ' + mojObecnyElement;
+    }
+
+    let tabForEach = TablicaDoforEacha.forEach(mojForEach);
+    let tabMap = TablicaDoforEacha.map((mojObecnyElement, index, array) => {return doklej2 += '%%' + mojObecnyElement + '%%'});
+
+    console.log(doklej1);
+    console.log(tabMap);
+
+    let tabNumery = [2, 3, 6, 8, 10];
+
+    let result = tabNumery.map((numer, index, array) => numer*2);
+    console.log(result);
