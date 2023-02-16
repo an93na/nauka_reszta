@@ -17,3 +17,26 @@ while (charCode < stopCondition) {
     charCodeA++
     console.log(String.fromCharCode(charCode++));
 }
+
+// Potęgowanie 2**3 - oznacza dwa do potęgi3
+
+console.log(2**3);
+
+
+//funkcja podnosząca do potęgi daną liczbę - działa :D
+
+function Potegowanie(podstawa, wykładnik) {
+    let wynik = podstawa;
+    if (wykładnik == 0) {
+         wynik = 1;
+    } else {
+    for (let index = 0; index < wykładnik-1; index++) {
+            wynik = wynik*podstawa
+            
+    } }
+    console.log(wynik);
+}
+
+Potegowanie(3,0);  
+Potegowanie(2,5);  console.log('sprawdzam', 2**5);  
+Potegowanie(4,3);  console.log('sprawdzam', 4**3);
