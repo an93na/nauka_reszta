@@ -69,8 +69,31 @@ sklejTab([1, 2],[6, 7, 8, 2, 4, 5]);
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 
+//wyciecie od danej pozycji do zadanej//
 ciagZnakow = 'ABCDEFGHIJKLMNOPRSTUQWXYZ'
  let wycianij = ciagZnakow.substring(2, 10);
  console.log(wycianij);
- 
- 
+
+ //szukanie po indeksie bo stringi tez jak tablice mają indeksy
+let baa = 'Ala ma kota'.indexOf('kot');
+ console.log(baa);
+
+
+ let napis = (11 > 10) ? 'Wieksze': 'Mniejsze';
+ console.log(napis);
+
+ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
+ let wynikDzielenia = undefined;
+ for (let idx = 1; idx <=2000; idx++) {
+    if (idx % 123 === 0) {
+        console.log('o super mamy wynik!', idx);
+        if (wynikDzielenia === undefined) {
+             wynikDzielenia = idx;
+        } else {
+            console.log(idx +' też jest podzielny przez 123 ale ja mam już mój wynik', idx)
+        }
+       
+    }
+ }
+ console.log(wynikDzielenia);
