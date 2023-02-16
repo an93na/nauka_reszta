@@ -133,3 +133,66 @@ let nowyAdressBlad = {
 
 zmienAdresIWyrzucBlad(osoba, nowyAdressBlad);
 osoba.logAdres();
+
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+
+
+let person = {
+    imie: `Jan`,
+    nazwisko: 'Kowalski',
+    adres: {
+        miasto: 'Gdańsk',
+        kodPocztowy: 81818,
+        ulica: `długa`,
+        numer : {
+            numerDomu: 77,
+            numerMieszkania: 5
+        }
+    },
+    logAddress: function ( ) {
+        console.log(this.adres);
+    }
+}
+
+
+function zmienNumer2(osoba, nowyAddress) {
+    osoba.adres.numer.numerDomu = nowyAddress.numer.numerDomu;
+    osoba.adres.numer.numerMieszkania = nowyAddress.numer.numerMieszkania;
+}
+
+person.logAddress();
+
+let newNumber = "22";
+try {
+    zmienNumer2(person,newNumber);
+} catch (error) {
+    console.error(error);
+    if (typeof newNumber === 'number')
+    { 
+        let wlasciwyNumber = {
+        numer : {
+            numerDomu: newNumber,
+            numerMieszkania: undefined
+        }
+        }
+        console.log(`Zaktualizowano pole adres z adresem`, wlasciwyNumber);
+        zmienNumer2(person,wlasciwyNumber);
+     
+    } else {
+        throw new Error('Zły format adressu numer nie może być stringiem');
+    }
+}
+finally {
+    person.logAddress();
+    console.log('Program konczy dzialanie');
+}
+
+let nowyAdressBlad2 = {
+    miasto: 'Lublin',
+    kodPocztowy: 21133,
+    ulica: `niebieska`,
+    numer : {
+        numerDomu: 9,
+    }
+}
+
