@@ -1,4 +1,29 @@
 
+let przykad = {
+    a: 5,
+    b: {
+        c: 2,
+        d: 'Dzien dobry'
+    }
+ }
+
+
+ try {
+
+    console.log(przykad.a)
+    console.log(przykad.b)
+    console.log(przykad.b)
+    console.log(przykad.c.d);
+    
+} catch (error) {
+    console.log('wystąpił problem ale dzięki zastosowaniu try catch możemy iść dalej');
+}
+console.log(przykad.b.c);
+console.log(przykad.b.d);
+
+
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
 
 let osoba = {
     imie: `Gabriel`,
@@ -77,7 +102,7 @@ try {
 catch (error) {
     console.error(error);
     if (typeof nowyNumer === 'number');
-    { let wlasciwyNumer = {
+{ let wlasciwyNumer = {
         numer : {
             numerDomu: nowyNumer,
             numerMieszkania: undefined
@@ -86,6 +111,7 @@ catch (error) {
     console.log(`Zaktualizowano pole adres z adresem`, wlasciwyNumer);
     zmienNumer(osoba,wlasciwyNumer);
 }
+    
 }
 finally {
     osoba.logAdres();
