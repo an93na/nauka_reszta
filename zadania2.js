@@ -317,3 +317,12 @@ console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
 
     let sprawdzenie = sumaWatoscPodatek8+sumaWatoscPodatek14+sumaWatoscPodatek23;
     console.log(sprawdzenie);
+
+    console.log('~~~~~~~~~~~Zadanie11~~~~~~~~~~~~~~~~');
+    // Napisz funckje sprawdzajaca, czy dany lancuch znakow jest palindromem
+
+    let lancuch11 = ['abcdefgh'];
+
+    function name(params) {
+        
+    }
