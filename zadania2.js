@@ -118,3 +118,55 @@ let tabli4u = zad4a(5);
 console.log(tabli4u);
 
 console.log('~~~~~~~~~~~Zadanie5~~~~~~~~~~~~~~~~');
+// J/W, ale kolejne cyfry naturalne, poczynając od 0
+// nums(5) => [0,1,2,3,4]
+
+function zad5(n) {
+    let p = [];
+    for (let i = 0; i < n ; i++){
+        p[i] = i;
+    }
+    return p
+}
+let tab5 = zad5(5);
+console.log(tab5);
+
+console.log('~~~~~~~~~~~Zadanie6~~~~~~~~~~~~~~~~');
+// J/W ale poczynając od zadanego N
+// numsFrom(5, 4) => [4,5,6,7,8]
+
+
+function zad6(n, m) {
+    let p = [];
+    for (let i = 0; i < n ; i++){
+        p[i] = m++;
+    }
+    return p
+}
+let tab6 = zad6(5, 5);
+console.log(tab6);
+
+console.log('~~~~~~~~~~~Zadanie7~~~~~~~~~~~~~~~~');
+// napisz funkcje, ktora zwroci funkcje, ktora bedzie  generowac tablice [1,2,3].
+//  Za pomoca takiej funkcji i operatora tablicy .concat() wygeneruj [1,2,3,1,2,3,1,2,3]
+
+function zad7() {
+    return function (a) {
+        a = [1, 2, 3]
+        return a
+    }
+}
+
+let funkcjaZwrocona = zad7();
+// console.log(funkcjaZwrocona());
+
+let funkcjaZad7 = funkcjaZwrocona()
+// console.log(funkcjaZad7);
+
+let polacz = funkcjaZad7.concat(funkcjaZad7);
+// console.log(polacz);
+
+let ostatecznePolacz = polacz.concat(funkcjaZad7);
+console.log(ostatecznePolacz)
+
+console.log('~~~~~~~~~~~Zadanie8~~~~~~~~~~~~~~~~');
