@@ -86,3 +86,13 @@ console.log(w3);
 
 
 console.log('~~~~~~~~~~~Zadanie4~~~~~~~~~~~~~~~~');
+// napisz funckje, ktora zwroci tablice o dlugosci N wypelnioną samymi zerami
+// zeros(5) => [0,0,0,0,0]
+
+tab4 = [];
+a = 4
+for(let i = 0; i< a; i++){
+    tab4[i] = 0
+}
+console.log(tab4);
+
