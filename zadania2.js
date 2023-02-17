@@ -321,8 +321,30 @@ console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
     console.log('~~~~~~~~~~~Zadanie11~~~~~~~~~~~~~~~~');
     // Napisz funckje sprawdzajaca, czy dany lancuch znakow jest palindromem
 
-    let lancuch11 = ['abcdefgh'];
+    let lancuch11 = 'abcdefghij'
 
-    function name(params) {
-        
+    function polindrom(a) {
+        let wynik = '';
+        let wynik2 = '';
+        for(let i=a.length-1; i >= 0; i--){
+            wynik += a[i];  
+        }
+        //  console.log(wynik);
+         for (let j = 0; j < a.length; j++) {
+            wynik2 +=a[j];
+            
+         }
+        //  console.log(wynik2)
+         if (wynik === wynik2) {
+            console.log('podany łańcuch znaków jest polimerem');
+         }
+         else {
+            console.log('podany łańcuch znaków NIE jest polimerem');
+         }
     }
+       
+    polindrom(lancuch11);
+    polindrom('aaaa');
+    polindrom('anna');
+  
+
