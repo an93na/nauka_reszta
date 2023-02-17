@@ -287,3 +287,33 @@ console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
 
     let sumaWartosciPodatkow = wartoscPodatkow.reduce((a,b) => a+b, 0)
     console.log(`Suma wartości podatków`,sumaWartosciPodatkow);
+
+    let podatek23 = tab10.filter((a) => a.tax === 23);
+    console.log(`Tablica tylko z podatkiem 23: `,podatek23);
+
+    let watroscPodatek23 = podatek23.map((a) => {return a.price*(a.tax/100)});
+    console.log(`Tablica z wyliczoną wartością podatku 23: `,watroscPodatek23);
+
+    let sumaWatoscPodatek23 = watroscPodatek23.reduce((a,b) => a+b,0)
+    console.log(`Wartośc podatku 23: `,sumaWatoscPodatek23);
+
+    let podatek8 = tab10.filter((a) => a.tax === 8);
+    console.log(`Tablica tylko z podatkiem 8: `,podatek8);
+
+    let watroscPodatek8 = podatek8.map((a) => {return a.price*(a.tax/100)});
+    console.log(`Tablica z wyliczoną wartością podatku 8: `,watroscPodatek8);
+
+    let sumaWatoscPodatek8 = watroscPodatek8.reduce((a,b) => a+b,0)
+    console.log(`Wartośc podatku 8: `,sumaWatoscPodatek8);
+
+    let podatek14 = tab10.filter((a) => a.tax === 14);
+    console.log(`Tablica tylko z podatkiem 14: `,podatek14);
+
+    let watroscPodatek14 = podatek14.map((a) => {return a.price*(a.tax/100)});
+    console.log(`Tablica z wyliczoną wartością podatu 14: `,watroscPodatek14);
+
+    let sumaWatoscPodatek14 = watroscPodatek14.reduce((a,b) => a+b,0)
+    console.log(`Wartośc podatku 14: `,sumaWatoscPodatek14);
+
+    let sprawdzenie = sumaWatoscPodatek8+sumaWatoscPodatek14+sumaWatoscPodatek23;
+    console.log(sprawdzenie);
