@@ -28,6 +28,7 @@ console.log(`Największa liczba z tablicy to: `, ma);
 //rozwiązanie z sortowaniem tablicy
 tab1.sort((a,b) => a-b);
 // console.log(tab1);
+// console.log(tab1.length)
 console.log('Największa liczba z tablicy to: ', tab1[6]);
 
 console.log('~~~~~~~~~~~Zadanie2~~~~~~~~~~~~~~~~');
