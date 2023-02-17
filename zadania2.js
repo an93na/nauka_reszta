@@ -170,3 +170,120 @@ let ostatecznePolacz = polacz.concat(funkcjaZad7);
 console.log(ostatecznePolacz)
 
 console.log('~~~~~~~~~~~Zadanie8~~~~~~~~~~~~~~~~');
+// napisz funckje, ktora podaną tablice przedzieli na pól i zwróci obiekt z polami 'before' i 'after' 
+// (jak na dobrej imprezie):
+// biscet([1,2,3,8,9,0]) => {beofre: [1,2,3], after: [8,9,0]}
+// jesli tablica nie ma parzystej liczby elementow, obiekt powinien zawierac dodatkowo pole 'middle' 
+// z elementem srodkowym
+
+let tab8 = [1,2,3,8,9,0]; 
+
+// let cala = tab8.length
+// console.log(cala)
+
+// let polowa = cala/2
+// console.log(polowa);
+
+function podziel(a) {
+    let obiekt = {
+        after : [],
+        middle: [],
+        before : []
+    };
+    let calatab = a.length;
+    let polowatab = calatab/2;
+        console.log('tu patrz', polowatab);
+    
+    if  (calatab % 2 === 0) {
+    for (let i = 0; i < a.length; i++) {
+        if (i < polowatab ) {
+            obiekt.after[i]=a[i];
+        }
+        else if (i >= polowatab) {
+            obiekt.before[i]=a[i];
+        }
+    }
+    } 
+    else {
+
+    console.log('hehe cos innego');
+
+    for (let i = 0; i < a.length; i++) {
+        if (i < polowatab ) {
+            obiekt.after[i]=a[i];
+        }
+        else if ( i = polowatab) {
+            obiekt.middle[i]=a[i];  
+        }
+        else if (i > polowatab) {
+            obiekt.before[i]=a[i];
+        }
+    }
+}
+    return obiekt
+}
+let wynikpodziel = podziel(tab8);
+console.log(wynikpodziel);
+
+
+console.log('~~~~~~~~~~~Zadanie9~~~~~~~~~~~~~~~~');
+// dla tablicy obiektow z cenami zakupow:
+/* 
+  [
+		{marchew: 5, jablka: 3, gruszki: 12},
+		{marchew: 7, jablka: 1, gruszki: 2},
+		{marchew: 2, jablka: 13, gruszki: 8},
+	]
+*/
+// wypisz poszczegolne wiersze (.foreach)
+// dodaj do każdej wartosci cyfre 10 (.map)
+// znajdz te wiersze, w ktorych jabkla byly dorzsze od gruszek (.filter)
+// zsumuj zakupy do nowego obiektu (.reduce)
+
+let tab9 = [
+        {marchew: 5, jablka: 3, gruszki: 12},
+		{marchew: 7, jablka: 1, gruszki: 2},
+		{marchew: 2, jablka: 13, gruszki: 8},
+]
+
+tab9.forEach((a) => {console.log(a)});
+
+let podb = tab9.map((a) => {
+    a.marchew +=10;
+    a.jablka +=10;
+    a.gruszki +=10;
+    return a});
+console.log(`Dodawanie +10`,podb);
+
+let cena = tab9.filter((a) => {
+     return a.jablka > a.gruszki
+})
+console.log(`filtrowanie`,cena);
+
+let summa = tab9.reduce((a, b) => b.marchew+b.jablka+b.gruszki, 0)
+console.log('suma zakupów: ',summa);
+
+
+console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
+// dla podanej listy cen brutto i zawartego w nich podatku:
+// oblicz w nowej tablicy same wartosci podatkow, n.p [(500 * 0.23), (140 * 0.08) ...]
+// J/W ale podaj laczna sume wartosci podatku
+// J/W ale podaj laczna sume wartosci podatku z podzialem na grupy procentowe
+// n.p  {tax23: (500*0.23 + 5140*0.23), tax08: ....}
+
+  let tab10 =  [
+      {price: 500, tax: 23},
+      {price: 140, tax: 8},
+      {price: 800, tax: 14},
+      {price: 5140, tax: 23},
+      {price: 250, tax: 8},
+    ]
+    
+    let zadanie10 = tab10.map((a) => {return a.price * (a.tax/100)});
+    // console.log(zadanie10);
+
+    let wartoscPodatkow = zadanie10;
+    console.log(`Tablica z wartością podatków`,wartoscPodatkow);
+
+    let sumaWartosciPodatkow = wartoscPodatkow.reduce((a,b) => a+b, 0)
+    console.log(`Suma wartości podatków`,sumaWartosciPodatkow);
