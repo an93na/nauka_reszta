@@ -39,8 +39,50 @@ console.log('~~~~~~~~~~~Zadanie2~~~~~~~~~~~~~~~~');
 // uwaga: zadbaj o przypadek gdy flip([1,2,3], [8,9,10], x, x), gdzie x bedzie tym samym indeksem
 
 let tab2 = [1, 2, 3, 4];
-let tab3 = [5, 6, 7, 8];
+let tab2a = [5, 6, 7, 8];
 
-function zad2 (){
-    
+function zad2 (a, b){
+    a[2] = b[2];
+    console.log(a);
+    console.log(b);
+    b[0] = a[0];
+    console.log(a);
+    console.log(b);
+    return a;
 }
+
+let wartosc = zad2(tab2, tab2a);
+// console.log(wartosc);
+
+
+function zad2copy (a, b){
+    a[1] = b[1];
+    console.log(a);
+    console.log(b);
+    b[1] = a[1];
+    console.log(a);
+    console.log(b);
+    return a;
+}
+let wartosca = zad2copy(tab2, tab2a);
+
+
+console.log('~~~~~~~~~~~Zadanie3~~~~~~~~~~~~~~~~');
+// napisz funkcje, ktora zamieni tabilce na obiekt
+// toObject([9, 4, 1]) => {0: 9, 1: 4, 2: 1}
+
+let tab3 = [9, 4, 1, 3];
+
+function zad3 (a){
+    let obi4 = {};
+    for (let i = 0; i < tab3.length; i++) {
+        obi4[i]= a[i]; 
+    }
+    return obi4
+
+}
+w3 = zad3(tab3);
+console.log(w3);
+
+
+console.log('~~~~~~~~~~~Zadanie4~~~~~~~~~~~~~~~~');
