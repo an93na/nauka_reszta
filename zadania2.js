@@ -1,5 +1,4 @@
 console.log('~~~~~~~~~~~~Zadanie1~~~~~~~~~~~~~~')
-// Zadanie 1. 
 // dla zadanej tablicy  [8, 4, 2, 7, 1, 9, 4]
 // napisz funcke, ktora przyjmie tablice i zwroci jej najwiekszy element
 
@@ -32,8 +31,6 @@ tab1.sort();
 console.log('Największa liczba z tablicy to: ', tab1[6]);
 
 console.log('~~~~~~~~~~~Zadanie2~~~~~~~~~~~~~~~~');
-
-//Zadanie2
 // Napisz funkcje, ktora przymie dwie tablice i podmieni w nich wartosci na podanych indeksach
 // np flip([1,2,3], [8,9,10], 1, 0) => spowoduje, ze tablice beda miec wartosci: [1,9,3], [1,9,10]
 // uwaga: zadbaj o przypadek gdy flip([1,2,3], [8,9,10], x, x), gdzie x bedzie tym samym indeksem
@@ -81,7 +78,7 @@ function zad3 (a){
     return obi4
 
 }
-w3 = zad3(tab3);
+let w3 = zad3(tab3);
 console.log(w3);
 
 
@@ -89,10 +86,35 @@ console.log('~~~~~~~~~~~Zadanie4~~~~~~~~~~~~~~~~');
 // napisz funckje, ktora zwroci tablice o dlugosci N wypelnioną samymi zerami
 // zeros(5) => [0,0,0,0,0]
 
-tab4 = [];
-a = 4
+// sama pętla for
+let tab4 = [];
+a = 3
 for(let i = 0; i< a; i++){
     tab4[i] = 0
 }
 console.log(tab4);
 
+//funkcja
+let tab4a = [];
+function zad4(p,n) {
+    for (let i = 0; i < n ; i++){
+        p[i] = 0;
+    }
+    return p
+}
+let tablica4 = zad4(tab4a,4);
+console.log(tablica4);
+
+// funkcja wersja II 
+
+function zad4a(n) {
+    let p = [];
+    for (let i = 0; i < n ; i++){
+        p[i] = 0;
+    }
+    return p
+}
+let tabli4u = zad4a(5);
+console.log(tabli4u);
+
+console.log('~~~~~~~~~~~Zadanie5~~~~~~~~~~~~~~~~');
