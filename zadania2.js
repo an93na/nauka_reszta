@@ -26,7 +26,7 @@ let ma = Math.max(...tab1);
 console.log(`Największa liczba z tablicy to: `, ma);
 
 //rozwiązanie z sortowaniem tablicy
-tab1.sort();
+tab1.sort((a,b) => a-b);
 // console.log(tab1);
 console.log('Największa liczba z tablicy to: ', tab1[6]);
 
@@ -346,5 +346,50 @@ console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
     polindrom(lancuch11);
     polindrom('aaaa');
     polindrom('anna');
-  
 
+
+    console.log('~~~~~~~~~~~Zadanie12~~~~~~~~~~~~~~~~');
+    // za pomoca wbudowanej metory .sort i zaglebienu się w dokumentacje posortuj tablice [9, 5, 8, 1, 0, 30]
+    // J/W ale malejąco, uśmiechnij się do sieie w duchu, gdy zauwazysz, jak mało to pracy
+    
+    let tab12 = [9, 5, 8, 1, 0, 30]; 
+    let posortowaneRosnaco = tab12.sort((a,b) => a-b);
+    console.log(`Elementy tablicy posortowane rosnąco: `,posortowaneRosnaco);
+    let posortowaneMalejaco = tab12.sort((a, b) => b-a);
+    console.log(`Elementy tablicy posortowane rosnąco: `,posortowaneMalejaco);
+
+    console.log('~~~~~~~~~~~Zadanie13~~~~~~~~~~~~~~~~');
+    // wygeneruje za pomocą Math.rand tablice 10 losowych elementów
+    // sprawdz, czy ktorykolwiek jest większy niż 0.8
+    // sprawdź czy wszystkie są w zakresie 0.2 < x < 0.8
+    // sprawdź, czy żaden nie jest mniejszy niż 0.1
+    // (.some, .every)
+
+    // let tab13 = Math.random();
+    // console.log(tab13)
+
+    function zad13() {
+        let tabliczka = [];
+        for (i = 0; i < 10; i++){
+            tabliczka[i] = Math.random()
+        
+        }
+        return tabliczka
+    }
+let tab13 = zad13();
+console.log(tab13);
+
+let WiekszeOd08 = tab13.filter((a) => a > 0.8);
+console.log('Wartości większe od 0.8', WiekszeOd08);
+
+let Zakres = tab13.filter((a)=> (a > 0.2 && a < 0.8))
+console.log(`Wartosci z zakresu od 0.2 do 0.8`, Zakres);
+
+let mniejszeOd01 = tab13.filter((a) => a< 0.1);
+console.log('Wartości mniejsze od 0.1', mniejszeOd01);
+
+let newEvery = tab13.every((a) => (a > 0.1));
+console.log(newEvery);
+
+let newSome = tab13.some((a) => (a > 0.8));
+console.log(newSome);
