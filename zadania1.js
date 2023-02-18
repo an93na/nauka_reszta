@@ -304,4 +304,66 @@ console.log(`~~~~~~~~~~15~~~~~~~~~~~~`);
 //  nastepnie rozwiazania rownania kwadratowego, przyjmujac delte 
 // i parametry a, b, c rownania
 
-// let pierwiastek = Math.sqrt(del);
+
+function zad15(a, b, c) {
+    if (a===NaN || b ===NaN || c ===NaN || a === undefined || b === undefined || c === undefined){
+        console.log('Niewłaściwe parametry')
+    }
+    else {
+    let delta = (b*b)-(4*a*c);
+    let pierwiastek = Math.sqrt(delta);
+    
+    if (delta === 0){
+        let x1 = -b/2*a;
+        let y = a*(x1*x1) + b*x3 + c;
+        console.log(`Rozwiazaniem równania jest x1 = ${x1}.`);
+    }
+    else if (delta > 0) {
+        
+        let x1 = (-b - pierwiastek)/(2*a);
+        let y1 = a*(x1*x1) + b*x1 + c;
+        
+        let x2 = (-b + pierwiastek)/(2*a);
+        let y2 = a*(x2*x2) + b*x2 + c;
+        console.log(`Rozwiazaniem równania są x1 = ${x1} i x2 = ${x2}.`);
+    }
+    else {
+        console.log('rozwiazannie nie istnieje')
+    }
+}
+}
+
+zad15(2, 8, -10);
+zad15(3, 4, 5);
+
+console.log(`~~~~~~~~~~16~~~~~~~~~~~~`);
+//16. napisz funkcje, ktora jako argument przyjmuje tablice cyfr (wydatki), 
+// i sume jaka mamy na koncie. Funkcja powinna sprawdzić, czy 
+// suma wydatków nie przekracza sumy na koncie i zwraca wynik 
+// typu boolean
+// funkcja([1,2,3], 10) -> true, bo (1 + 2 + 3) < 10
+// funckja([10, 5], 3) -> false, bo (10 + 5) > 3
+
+function zad16(w, p) {
+
+    let wydatki = w.reduce((a, b) => a+b, 0);
+
+    if (wydatki < p) {
+        console.log(wydatki<p);
+        console.log('Twoje wydatki są mniejsze od zasobu portfela jesteś na plus :) ');
+    }    
+    else if (wydatki === p) {
+        console.log(wydatki<p);
+        console.log('Twoje wydatki i zasób portfela równoważą się. Uważaj ;O ');
+    }
+    else {
+        console.log(wydatki<p);
+        console.log('Jesteś bankrutem :( ');
+    }
+};
+
+zad16([1,2,3,4,5,6],21);
+zad16([19,2,38,14,5,26],120);
+zad16([5,5,6,5,10],25);
+
+console.log(`~~~~~~~~~~17~~~~~~~~~~~~`);
