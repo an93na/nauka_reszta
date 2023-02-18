@@ -196,3 +196,19 @@ console.log(zad8(10,10,10));
 console.log(`~~~~~~~~~~9~~~~~~~~~~~~`);
 // 9. napisz funckje, ktora przyjmie trzy argumenty, 
 // pierwsze dwa doda, nastepnie trzeci odejmie i zwroci wynik
+
+function zad9(a,b,c){
+    let wynik;
+    wynik = (a+b)-c;
+    return wynik;
+}
+
+console.log(zad9(2,2,1));
+console.log(zad9(10,20,10));
+console.log(zad9(25,6,8));
+
+console.log(`~~~~~~~~~~10~~~~~~~~~~~~`);
+// 10. napisz funkcje, ktora przyjmie dwa argumenty, 
+// jesli ich suma jest dodatnia, zwrocu sumę, jesli jest 
+// ujemna, wypisze blad w konsoli
+
