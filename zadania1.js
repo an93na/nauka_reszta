@@ -154,3 +154,27 @@ zad6(3,50);
 console.log(`~~~~~~~~~~7~~~~~~~~~~~~`);
 // 7. napisz funkcje, ktora przyjmie cyfre, doda do niej 
 // wartosc PI i zwroci powiekszona cyfre
+const pi = 3.141592653589;
+
+function zad7(a,b){
+    a = a + b;
+    return a
+}
+
+
+console.log(zad7(7,pi));
+console.log(zad7(2,pi));
+console.log(zad7(0,pi));
+console.log(zad7(0.77,pi));
+console.log('.........................');
+
+function zad7a(a){
+    const pi = 3.141592653589;
+    a = a + pi
+    return a
+}
+
+console.log(zad7a(7));
+console.log(zad7a(2));
+console.log(zad7a(0));
+console.log(zad7a(0.77));
