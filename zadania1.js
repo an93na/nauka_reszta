@@ -266,3 +266,42 @@ console.log(`~~~~~~~~~~13~~~~~~~~~~~~`);
 
 //13. napisz funkcje, ktora zwroci wartosc bezwzgledna liczby
 // funcja(5) -> 5, funkcja(-5) -> 5
+
+function zad13(a) {
+    if (a > 0){
+        a = a;
+    }
+    else {
+        a = -a;
+    }
+    return a;
+}
+
+
+console.log(zad13(-2));
+console.log(zad13(5));
+console.log(zad13(-9));
+
+console.log(`~~~~~~~~~~14~~~~~~~~~~~~`);
+//14. napisz funkcje, ktora poda delte rownania kwadratowego, 
+// przyjmujac parametry a, b, c
+// np rownanie ax^2 + bx + c
+// konkretne: 2x^2 + 4x + 2
+// funkcja(2, 8, -10) -> 0
+
+function zad14(a, b, c) {
+    let delta = (b*b)-(4*a*c);
+    
+    return delta;
+}
+
+console.log(zad14(2, 8, -10));
+console.log(zad14(3, 4, 5));
+
+
+console.log(`~~~~~~~~~~15~~~~~~~~~~~~`);
+// 15. Napisz funkcje-kolezanke funkcji liczacej delte, ktora policzy
+//  nastepnie rozwiazania rownania kwadratowego, przyjmujac delte 
+// i parametry a, b, c rownania
+
+// let pierwiastek = Math.sqrt(del);
