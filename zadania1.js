@@ -212,3 +212,16 @@ console.log(`~~~~~~~~~~10~~~~~~~~~~~~`);
 // jesli ich suma jest dodatnia, zwrocu sumę, jesli jest 
 // ujemna, wypisze blad w konsoli
 
+function zad10(a,b) {
+    let suma =a+b
+    if (suma > 0){
+        console.log(suma)
+        return suma
+    }
+    else {
+        console.log('błąd');
+    }
+}
+
+zad10(3,4);
+zad10(3,-34);
