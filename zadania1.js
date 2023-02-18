@@ -227,3 +227,20 @@ zad10(3,4);
 zad10(3,-34);
 
 console.log(`~~~~~~~~~~11~~~~~~~~~~~~`);
+// 11. napisz funkcje, ktora polaczy dwa podane 
+// lancuchy napisow
+
+function zad11(a,b){
+    let polacz;
+    polacz = a+b;
+    return(polacz);
+}
+
+console.log(zad11('Ala ma ', 'Rudego kota'));
+console.log(zad11('Nie lubie ', 'pieczarek'));
+console.log(zad11('Nasz ', 'kot'));
+
+console.log(`~~~~~~~~~~12~~~~~~~~~~~~`);
+// 12. napisz funkcje, ktora przyjmuje jako argumenty: tablice cyfr, indeks tablicy i wartosc. 
+//Funkcja dokona podmiany wartosci pod zadanym indeksem na podaną
+// np funkcja([5, 4, 3, 2, 1], 2, 77) powinno zwrocic [5, 4, 77, 2, 1]
