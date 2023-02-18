@@ -178,3 +178,21 @@ console.log(zad7a(7));
 console.log(zad7a(2));
 console.log(zad7a(0));
 console.log(zad7a(0.77));
+
+console.log(`~~~~~~~~~~8~~~~~~~~~~~~`);
+// 8. napisz funkcje, ktora przyjmie trzy 
+// argumenty, zsumuje je z sobą
+
+function zad8(a,b,c){
+    let zsumuj;
+    zsumuj = a+b+c;
+    return zsumuj
+}
+
+console.log(zad8(2,3,4));
+console.log(zad8(5,5,5));
+console.log(zad8(10,10,10));
+
+console.log(`~~~~~~~~~~9~~~~~~~~~~~~`);
+// 9. napisz funckje, ktora przyjmie trzy argumenty, 
+// pierwsze dwa doda, nastepnie trzeci odejmie i zwroci wynik
