@@ -249,12 +249,20 @@ console.log(`~~~~~~~~~~12~~~~~~~~~~~~`);
 let tabzad12 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function zad12(a, b, c) {
+    if (b < a.length){
     a[b] = c;
-
+    }
+    else {
+        a = 'Tabliczka nie posiada elementu o takim indeksie';
+    }
     return a;
 }
 
 console.log(zad12([1, 2, 3, 4, 5, 6, 7, 8, 9],2,88));
 console.log(zad12([1, 2, 3, 4, 5, 6, 7, 8, 9],5,23));
+console.log(zad12([1, 2, 3, 4, 5],8,23));
 
 console.log(`~~~~~~~~~~13~~~~~~~~~~~~`);
+
+//13. napisz funkcje, ktora zwroci wartosc bezwzgledna liczby
+// funcja(5) -> 5, funkcja(-5) -> 5
