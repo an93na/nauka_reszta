@@ -241,8 +241,20 @@ console.log(zad11('Nie lubie ', 'pieczarek'));
 console.log(zad11('Nasz ', 'kot'));
 
 console.log(`~~~~~~~~~~12~~~~~~~~~~~~`);
-// 12. napisz funkcje, ktora przyjmuje jako argumenty: tablice cyfr, indeks tablicy i wartosc. 
+// 12. napisz funkcje, ktora przyjmuje jako argumenty: tablice cyfr, 
+// indeks tablicy i wartosc. 
 //Funkcja dokona podmiany wartosci pod zadanym indeksem na podaną
 // np funkcja([5, 4, 3, 2, 1], 2, 77) powinno zwrocic [5, 4, 77, 2, 1]
 
 let tabzad12 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function zad12(a, b, c) {
+    a[b] = c;
+
+    return a;
+}
+
+console.log(zad12([1, 2, 3, 4, 5, 6, 7, 8, 9],2,88));
+console.log(zad12([1, 2, 3, 4, 5, 6, 7, 8, 9],5,23));
+
+console.log(`~~~~~~~~~~13~~~~~~~~~~~~`);
