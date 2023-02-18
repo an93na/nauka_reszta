@@ -244,3 +244,5 @@ console.log(`~~~~~~~~~~12~~~~~~~~~~~~`);
 // 12. napisz funkcje, ktora przyjmuje jako argumenty: tablice cyfr, indeks tablicy i wartosc. 
 //Funkcja dokona podmiany wartosci pod zadanym indeksem na podaną
 // np funkcja([5, 4, 3, 2, 1], 2, 77) powinno zwrocic [5, 4, 77, 2, 1]
+
+let tabzad12 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
