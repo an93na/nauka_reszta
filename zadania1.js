@@ -81,3 +81,76 @@ for(let i = 1; i<=10; i++){
         console.log('to jest', i, 'i jest to obrót NIE parzysty');
     }
 }
+
+let zad4 = 1;
+
+while (zad4 <=10){
+    
+    if (zad4%2 === 0) {
+        console.log('to jest', zad4, 'i jest to obrót parzysty');
+    }
+    
+    else{
+        console.log('to jest', zad4, 'i jest to obrót NIE parzysty');
+    }
+    zad4++
+}
+
+console.log(`~~~~~~~~~~5~~~~~~~~~~~~`);
+// 5. Napisz funkcję, która jako argument przyjmuje 
+// wartość N i wypisze N kolejnych cyfr naturalnych
+// np: funkcja(5) -> 1, 2, 3, 4, 5
+
+// funkcja z for
+function zad5 (n) {
+    for (let i = 1; i <= n; i++){
+        console.log(i);
+    }
+    
+}
+
+zad5(5);
+zad5(10);
+
+// funkcja z while
+function zad5while(n) {
+    let u = 1;
+    while (u <= n) {
+        console.log(u)
+        u++
+    }
+}
+
+zad5while(5);
+zad5while(10);
+
+console.log(`~~~~~~~~~~6~~~~~~~~~~~~`);
+// 6. Napisz funkcje, ktora przyjmie dwa argumenty: 
+// N i start. N to ilosc obrotow petli, start to 
+// startowa cyfra. Kazde wywolanie petli wypisuje kolejna 
+// cyfre, zaczynając od start:
+// np: funkcja(4, 9) -> 9, 10, 11, 12
+
+function zad6(N, start) {
+    for (let i = 0; i<N; i++){
+        console.log(start++)
+    }
+}
+zad6(4,9);
+zad6(3,50);
+
+function zad6while(n, start){
+    let end = n+start;
+    let licz = start;
+    while (licz<end){
+        console.log(licz);
+        licz++
+    }
+    
+}
+zad6while(4,9);
+zad6(3,50);
+
+console.log(`~~~~~~~~~~7~~~~~~~~~~~~`);
+// 7. napisz funkcje, ktora przyjmie cyfre, doda do niej 
+// wartosc PI i zwroci powiekszona cyfre
