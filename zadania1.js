@@ -413,3 +413,25 @@ console.log(zad19({ wiek: 33 }));
 console.log(zad19({imie: 222, wiek: 33 }));  
 console.log(zad19({imie: 'Iwona', wiek: 54 }));  
 
+console.log(`~~~~~~~~~~20~~~~~~~~~~~~`);
+////20. Zastosuj w funkcji zwracajacj pole imie obsluge wyjatkow i zamiast posac w konsoli,
+//  wyrzuc stosowny wyjatek i przechwyc go poza funkcja
+
+let daneImie = {aimie: 'Gosia', wiek: 34 };
+
+function zad20(a) {
+    try {
+      if (a.aimie === undefined || typeof a.aimie !== 'string') {
+        throw new Error('Uwaga nie podano parametru imie, albo parametr nie jest tekstem');
+      } else {
+        return console.log(a.aimie); 
+      }
+    } catch (error) {
+      console.log(error.message);
+      return error.message;
+    }
+  }
+  zad20(daneImie);
+
+
+  
