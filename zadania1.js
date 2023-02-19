@@ -378,3 +378,22 @@ console.log(zad17a(2,2,2));
 
 console.log(`~~~~~~~~~~18~~~~~~~~~~~~`);
 //18. funkcje, ktora przyjmuje imie, nazwisko i wiek i zwraca w/w waetosci zapakowane w obiekt​
+
+function zad18(a, b, c) {
+    let obiekt = {
+        imie: a,
+        nazwisko: b,
+        wiek: c 
+    };
+    return obiekt
+}
+
+console.log(zad18('Anna','Jakoś',21));
+
+console.log(`~~~~~~~~~~19~~~~~~~~~~~~`);
+//19. funkcje, ktora przyjmuje obiekt i zwraca z niego pole 'imie'
+//  let obiekt = { imie: 'Janusz', wiek: 420 }
+// funkcja(obiekt) -> 'Janusz' 
+
+let obiekcik = { imie: 'Janusz', wiek: 420 };
+
