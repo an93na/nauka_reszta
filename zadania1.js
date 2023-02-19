@@ -367,3 +367,11 @@ zad16([19,2,38,14,5,26],120);
 zad16([5,5,6,5,10],25);
 
 console.log(`~~~~~~~~~~17~~~~~~~~~~~~`);
+// funkcje, ktora zwroci funkcje. Ta zwrocona funkcja umie dodawac 3 cyfry
+
+function zad17(){return (a, b, c) => a+b+c};
+
+let zad17a = zad17()
+console.log(zad17a(5,6,7));
+console.log(zad17a(5,5,5));
+console.log(zad17a(2,2,2));
