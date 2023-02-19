@@ -397,3 +397,18 @@ console.log(`~~~~~~~~~~19~~~~~~~~~~~~`);
 
 let obiekcik = { imie: 'Janusz', wiek: 420 };
 
+function zad19(a) {
+   if (a.imie=== undefined || a.imie === NaN || typeof(a.name) === Number){
+    a.imie = 'Uwaga nie podano parametru imie, albo parametr nie jest tekstem';
+   }
+   else {
+    a.imie
+   }
+    return a.imie
+}
+
+console.log(zad19(obiekcik));  
+console.log(zad19({ imie: 'Karolina', wiek: 33 }));  
+console.log(zad19({ wiek: 33 }));  
+console.log(zad19({imie: 222, wiek: 33 }));  
+console.log(typeof(imie = 222))
