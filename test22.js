@@ -40,6 +40,7 @@ function podziel(a) {
     for (let i = 0; i < a.length; i++) {
         if (i < polowatab ) {
             obiekt.after[i]=a[i];
+            
         }
         else if ( i === polowatab) {
             obiekt.middle[i]=a[i];  
@@ -49,6 +50,8 @@ function podziel(a) {
         }
     }
 }
+    obiekt.middle= obiekt.middle.slice(polowatab);
+    obiekt.before= obiekt.before.slice(polowatab+1, a.length);
     return obiekt
 }
 let wynikpodziel = podziel(tab8);

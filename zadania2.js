@@ -193,7 +193,7 @@ function podziel(a) {
     };
     let calatab = a.length;
     let polowatab = Math.floor(calatab/2);
-        console.log('tu patrz', polowatab);
+        console.log('tu patrz ile połowa tablicy: ', polowatab);
     
     if  (calatab % 2 === 0) {
     for (let i = 0; i < a.length; i++) {
@@ -207,11 +207,12 @@ function podziel(a) {
     } 
     else {
 
-    console.log('hehe cos innego');
+    console.log('tablica z nieparzystą liczbą elementów');
 
     for (let i = 0; i < a.length; i++) {
         if (i < polowatab ) {
             obiekt.after[i]=a[i];
+            
         }
         else if ( i === polowatab) {
             obiekt.middle[i]=a[i];  
@@ -221,11 +222,12 @@ function podziel(a) {
         }
     }
 }
+    obiekt.middle= obiekt.middle.slice(polowatab);
+    obiekt.before= obiekt.before.slice(polowatab+1, a.length);
     return obiekt
 }
 let wynikpodziel = podziel(tab8);
 console.log(wynikpodziel);
-
 
 console.log('~~~~~~~~~~~Zadanie9~~~~~~~~~~~~~~~~');
 // dla tablicy obiektow z cenami zakupow:
