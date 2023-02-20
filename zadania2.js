@@ -172,7 +172,7 @@ console.log(ostatecznePolacz)
 
 console.log('~~~~~~~~~~~Zadanie8~~~~~~~~~~~~~~~~');
 // napisz funckje, ktora podaną tablice przedzieli na pól i zwróci obiekt z polami 'before' i 'after' 
-// (jak na dobrej imprezie):
+
 // biscet([1,2,3,8,9,0]) => {beofre: [1,2,3], after: [8,9,0]}
 // jesli tablica nie ma parzystej liczby elementow, obiekt powinien zawierac dodatkowo pole 'middle' 
 // z elementem srodkowym
@@ -359,7 +359,7 @@ console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
 
     console.log('~~~~~~~~~~~Zadanie12~~~~~~~~~~~~~~~~');
     // za pomoca wbudowanej metory .sort i zaglebienu się w dokumentacje posortuj tablice [9, 5, 8, 1, 0, 30]
-    // J/W ale malejąco, uśmiechnij się do sieie w duchu, gdy zauwazysz, jak mało to pracy
+    // J/W ale malejąco
     
     let tab12 = [9, 5, 8, 1, 0, 30]; 
     let posortowaneRosnaco = tab12.sort((a,b) => a-b);
