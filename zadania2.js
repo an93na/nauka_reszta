@@ -177,7 +177,7 @@ console.log('~~~~~~~~~~~Zadanie8~~~~~~~~~~~~~~~~');
 // jesli tablica nie ma parzystej liczby elementow, obiekt powinien zawierac dodatkowo pole 'middle' 
 // z elementem srodkowym
 
-let tab8 = [1,2,3,8,9,0,9]; 
+let tab8 = [1,2,3,8,9,0,9,9,7,6,5]; 
 
 // let cala = tab8.length
 // console.log(cala)
@@ -204,6 +204,8 @@ function podziel(a) {
             obiekt.before[i]=a[i];
         }
     }
+    obiekt.after=obiekt.after.slice(0,polowatab);
+    obiekt.before= obiekt.before.slice(polowatab);
     } 
     else {
 
@@ -220,14 +222,18 @@ function podziel(a) {
         else if (i > polowatab) {
             obiekt.before[i]=a[i];
         }
-    }
+    } obiekt.middle= obiekt.middle.slice(polowatab);
+    obiekt.before= obiekt.before.slice(polowatab+1);
 }
-    obiekt.middle= obiekt.middle.slice(polowatab);
-    obiekt.before= obiekt.before.slice(polowatab+1, a.length);
+   
+
     return obiekt
 }
 let wynikpodziel = podziel(tab8);
 console.log(wynikpodziel);
+
+console.log(podziel([1,2,3,4,5,6,7]));
+console.log(podziel([1,2,3,4]));
 
 console.log('~~~~~~~~~~~Zadanie9~~~~~~~~~~~~~~~~');
 // dla tablicy obiektow z cenami zakupow:
@@ -398,17 +404,3 @@ let newSome = tab13.some((a) => (a > 0.8));
 console.log(newSome);
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-
-function divideArray(array) {
-    const middleIndex = Math.floor(array.length / 2);
-    const before = array.slice(0, middleIndex);
-    const after = array.slice(middleIndex);
-    
-    const result = { before, after };
-    if (array.length % 2 !== 0) {
-      result.middle = array[middleIndex];
-    }
-    
-    return result;
-  }
-  console.log(divideArray([1,2,3,4,5,6,7]));
