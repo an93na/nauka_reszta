@@ -14,7 +14,7 @@ while (a < 10) {
 }
 
 console.log(`~~~~~~~~~~2~~~~~~~~~~~~`);
-//2. Napisz petle, ktora wyswieti Twoje imie tyle razy, ile 
+//2. Napisz petle, ktora wyswietli Twoje imie tyle razy, ile 
 // liter jest w Twoim imieniu.
 
 
@@ -70,7 +70,7 @@ while (charCode < stopCondition) {
 
 console.log(`~~~~~~~~~~4~~~~~~~~~~~~`);
 //4. Napisz petle, która bedzie w trakcie swojego 
-// dzialania sprawzać, czy jej obecny "cykl"/obrót 
+// dzialania sprawdzać, czy jej obecny "cykl"/obrót 
 // jest parzysty bądź nie
 
 for(let i = 1; i<=10; i++){
@@ -194,7 +194,7 @@ console.log(zad8(5,5,5));
 console.log(zad8(10,10,10));
 
 console.log(`~~~~~~~~~~9~~~~~~~~~~~~`);
-// 9. napisz funckje, ktora przyjmie trzy argumenty, 
+// 9. napisz funkcje, ktora przyjmie trzy argumenty, 
 // pierwsze dwa doda, nastepnie trzeci odejmie i zwroci wynik
 
 function zad9(a,b,c){
