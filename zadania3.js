@@ -7,6 +7,8 @@ let zmienna3 = 'neque eum velit esse aliquid! Ab perspiciatis ex deleniti!'
 zad1 = zmienna1+zmienna2+zmienna3;
 console.log(zad1);
 
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~');
+
 //2. Sprawdzanie długości zmiennej z poprzedniego zadania.
 
 // za pomocą length
