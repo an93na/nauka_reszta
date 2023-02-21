@@ -42,8 +42,17 @@ console.log('~~~~~~~~~~~~~~~~~~~~4~~~~~~~~~~~~~~~~~~~~');
 // console.log(zad2) 
 iloscLiterDoWyswietlenia = 8;
 
+//wykorzystanie .slice 
 let zad4 = zad1.slice(zad2-iloscLiterDoWyswietlenia,zad2);
 
 console.log('8 ostatnich znaków od końca: ', zad4);
 
+//wykorzystanie pętli
+
 console.log('~~~~~~~~~~~~~~~~~~~~4~~~~~~~~~~~~~~~~~~~~');
+let wycinekZad4='';
+for (i=zad2-1; i>= zad2-iloscLiterDoWyswietlenia; i--){
+    wycinekZad4 += zad1[i]
+}
+
+console.log(wycinekZad4);
