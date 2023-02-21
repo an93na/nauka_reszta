@@ -31,14 +31,10 @@ console.log(sprawdz2(zad1));
 console.log('~~~~~~~~~~~~~~~~~~~~3~~~~~~~~~~~~~~~~~~~~');
 //3. Wyświetlanie 10 kolejnych liter zaczynając od 7
 
-function zad3(a,b,c){
-    let wynik
-    for(let i=b; i<=b+c; i++){
-        wynik = i;
-    }
-    console.log(wynik)
-    a = a.slice(b, wynik)
-    return a
-}
+let startIndex = 4;
+let stopIndex = startIndex +10;
 
-console.log(zad3(zad1,5,10));
+let zad3 = zad1.substring(startIndex, stopIndex);
+console.log(zad3);
+
+console.log('~~~~~~~~~~~~~~~~~~~~4~~~~~~~~~~~~~~~~~~~~');
