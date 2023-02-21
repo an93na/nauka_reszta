@@ -7,7 +7,7 @@ let zmienna2 = 'Ex pariatur odit repellat animi ab? Vitae fuga tempore ratione i
 let zmienna3 = 'neque eum velit esse aliquid! Ab perspiciatis ex deleniti!'
 
 zad1 = zmienna1+zmienna2+zmienna3;
-console.log(zad1);
+console.log('Całe zdanie po połączeniu: ',zad1);
 
 console.log('~~~~~~~~~~~~~~~~~~~~2~~~~~~~~~~~~~~~~~~~~');
 
@@ -26,7 +26,7 @@ function sprawdz2(a){
     return wynik
 }
 
-console.log(sprawdz2(zad1));
+console.log('Ilość znaków w zdaniu z zadania1: ', sprawdz2(zad1));
 
 console.log('~~~~~~~~~~~~~~~~~~~~3~~~~~~~~~~~~~~~~~~~~');
 //3. Wyświetlanie 10 kolejnych liter zaczynając od 7
@@ -35,6 +35,13 @@ let startIndex = 4;
 let stopIndex = startIndex +10;
 
 let zad3 = zad1.substring(startIndex, stopIndex);
-console.log(zad3);
+console.log('10 kolejnych znaków zaczynając od 5 znaku: ', zad3);
 
 console.log('~~~~~~~~~~~~~~~~~~~~4~~~~~~~~~~~~~~~~~~~~');
+
+// console.log(zad2) 
+iloscLiterDoWyswietlenia = 6;
+
+let zad4 = zad1.slice(zad2-iloscLiterDoWyswietlenia,zad2);
+
+console.log('6 ostatnich znaków od końca: ', zad4);
