@@ -38,6 +38,7 @@ let zad3 = zad1.substring(startIndex, stopIndex);
 console.log('10 kolejnych znaków zaczynając od 7 znaku: ', zad3);
 
 console.log('~~~~~~~~~~~~~~~~~~~~4~~~~~~~~~~~~~~~~~~~~');
+//4. Wyświetlenie 8 ostatnich liter.
 
 // console.log(zad2) 
 iloscLiterDoWyswietlenia = 8;
@@ -56,7 +57,7 @@ for (i=zad2-1; i>= zad2-iloscLiterDoWyswietlenia; i--){
 console.log(wycinekZad4);
 
 console.log('~~~~~~~~~~~~~~~~~~~~5~~~~~~~~~~~~~~~~~~~~');
-// jw tylko z wykorzystaniem length i substring
+//5. jw tylko z wykorzystaniem length i substring
 
 //8 ostatnich liter
 let zad5 = zad1.substring(zad2-8);
@@ -65,3 +66,38 @@ console.log(zad5)
 //4 ostatnie litery
 let zad5a = zad1.substring(zad2-4);
 console.log(zad5a);
+
+console.log('~~~~~~~~~~~~~~~~~~~~6~~~~~~~~~~~~~~~~~~~~');
+//6. Zamiana tekstu żeby wszystkie litery były duże a potem wsztskie małe
+
+//duże
+let zad6toUpperCase = zad1.toUpperCase();
+console.log('Tekst z dużych liter: ',zad6toUpperCase);
+
+//małe
+let zad6toLowerCase = zad1.toLowerCase();
+console.log('Tekst z małych liter: ',zad6toLowerCase);
+
+console.log('~~~~~~~~~~~~~~~~~~~~7~~~~~~~~~~~~~~~~~~~~');
+//7. Zmienna złożona z liter 10, 15, 25, 30, 35, 40, 45 i 50.
+
+let zad7a = zad1.slice(10,11);
+// console.log(zad7a);
+let zad7b = zad1.slice(15,16);
+// console.log(zad7b);
+let zad7c = zad1.slice(25,26)
+// console.log(zad7c);
+let zad7d = zad1.slice(30,31)
+// console.log(zad7d);
+let zad7e = zad1.slice(35,36)
+// console.log(zad7e);
+let zad7f = zad1.slice(40,41)
+// console.log(zad7f);
+let zad7g = zad1.slice(45,46)
+// console.log(zad7g);
+let zad7h = zad1.slice(50,51)
+// console.log(zad7h);
+
+let zad7 = zad7a+zad7b+zad7c+zad7d+zad7e+zad7f+zad7g+zad7h;
+console.log(zad7);
+
