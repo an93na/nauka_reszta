@@ -108,4 +108,14 @@ let zad8 = zad7.replace(zad7,'essa');
 console.log(zad8);
 
 console.log('~~~~~~~~~~~~~~~~~~~~9~~~~~~~~~~~~~~~~~~~~');
-//9 
+//9. Szukanie w teksie wystąpienia "ani"
+
+let zad9a = zad1.indexOf('ani');
+let zad9b = zad1.lastIndexOf('ani');
+console.log('index pierwszego pojawienia się ani: ',zad9a,'index ostatniego pojawienia się ani: ',zad9b);
+let zad9 = zad1.search('ani');
+console.log('Index pojawienia się ani',zad9);
+let zad9Includes = zad1.includes('ani');
+console.log('Sprawdzenie czy ciąg zawiera ani: ',zad9Includes);
+
+console.log('~~~~~~~~~~~~~~~~~~~~10~~~~~~~~~~~~~~~~~~~~');
