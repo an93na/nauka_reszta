@@ -101,3 +101,11 @@ let zad7h = zad1.slice(50,51)
 let zad7 = zad7a+zad7b+zad7c+zad7d+zad7e+zad7f+zad7g+zad7h;
 console.log(zad7);
 
+console.log('~~~~~~~~~~~~~~~~~~~~8~~~~~~~~~~~~~~~~~~~~');
+//8. Zamiana słowa z zadania poprzedniego na słowo essa
+
+let zad8 = zad7.replace(zad7,'essa');
+console.log(zad8);
+
+console.log('~~~~~~~~~~~~~~~~~~~~9~~~~~~~~~~~~~~~~~~~~');
+//9 
