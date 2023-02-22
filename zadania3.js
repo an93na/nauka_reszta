@@ -48,11 +48,20 @@ let zad4 = zad1.slice(zad2-iloscLiterDoWyswietlenia,zad2);
 console.log('8 ostatnich znaków od końca: ', zad4);
 
 //wykorzystanie pętli
-
-console.log('~~~~~~~~~~~~~~~~~~~~4~~~~~~~~~~~~~~~~~~~~');
 let wycinekZad4='';
 for (i=zad2-1; i>= zad2-iloscLiterDoWyswietlenia; i--){
     wycinekZad4 += zad1[i]
 }
 
 console.log(wycinekZad4);
+
+console.log('~~~~~~~~~~~~~~~~~~~~5~~~~~~~~~~~~~~~~~~~~');
+// jw tylko z wykorzystaniem length i substring
+
+//8 ostatnich liter
+let zad5 = zad1.substring(zad2-8);
+console.log(zad5)
+
+//4 ostatnie litery
+let zad5a = zad1.substring(zad2-4);
+console.log(zad5a);
