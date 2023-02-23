@@ -133,7 +133,7 @@ let zad11 = zad10b.toUpperCase();
 console.log(zad11);
 
 console.log('~~~~~~~~~~~~~~~~~~~~12~~~~~~~~~~~~~~~~~~~~');
-//12. 
+//12. Wyświetlenie tekstu od tyłu
 
 let tekst12 = 'Coś tam'
 
@@ -146,5 +146,15 @@ let zad12 = zad12Odwroc.join("");
 console.log(zad12);
 
 //Przy wykorzytaniu pętli for
-zad12Dlugosc = tekst12.length;
+let zad12Dlugosc = tekst12.length;
 console.log(zad12Dlugosc);
+let zad12Petla= '';
+
+for(let i = zad12Dlugosc-1; i >=0; i--){
+    zad12Petla=zad12Petla + tekst12[i];
+    
+}
+console.log(zad12Petla);
+
+console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
+//13. 
