@@ -1,0 +1,9 @@
+body{
+    background: #888888;
+    font-family: Arial;
+}
+#all{
+    width: 450px;
+    background: bisque;
+    margin:100px auto;
+}
