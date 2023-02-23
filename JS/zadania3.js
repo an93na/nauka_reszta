@@ -119,3 +119,7 @@ let zad9Includes = zad1.includes('ani');
 console.log('Sprawdzenie czy ciąg zawiera ani: ',zad9Includes);
 
 console.log('~~~~~~~~~~~~~~~~~~~~10~~~~~~~~~~~~~~~~~~~~');
+//10. Znajdź słowo 'eros' przy użyciu wybranej metody a następnie wyświetl je w konsoli wykorzystująć substring
+
+let zad10a = zad1.indexOf('eros');
+console.log(zad10a);
