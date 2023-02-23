@@ -157,4 +157,11 @@ for(let i = zad12Dlugosc-1; i >=0; i--){
 console.log(zad12Petla);
 
 console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
-//13. 
+//13. Wyświetlanie słowa litera tyle razy ile jest znaków w danym tekście.
+
+let tekst13 = 'Litera'
+console.log(zad12Dlugosc);
+
+for (let i=0; i<=zad12Dlugosc; i++){
+    console.log(i,tekst13);
+}
