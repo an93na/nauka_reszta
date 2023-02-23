@@ -121,5 +121,13 @@ console.log('Sprawdzenie czy ciąg zawiera ani: ',zad9Includes);
 console.log('~~~~~~~~~~~~~~~~~~~~10~~~~~~~~~~~~~~~~~~~~');
 //10. Znajdź słowo 'eros' przy użyciu wybranej metody a następnie wyświetl je w konsoli wykorzystująć substring
 
-let zad10a = zad1.indexOf('eros');
+let zad10a = zad1.indexOf('amet');
 console.log(zad10a);
+let zad10b= zad1.substring(22,26);
+console.log(zad10b);
+
+console.log('~~~~~~~~~~~~~~~~~~~~11~~~~~~~~~~~~~~~~~~~~');
+//11. Wyświetl tekst z zadania 10 wielkimi literami
+
+let zad11 = zad10b.toUpperCase();
+console.log(zad11);
