@@ -8,7 +8,7 @@ body{
     margin:100px auto;
 }
 
-#scren {
+#screen {
     height: 50px;
     line-height: 50px;
     padding: 5px;
@@ -47,7 +47,8 @@ input[type=submit]{
     height: 50px;
     text-align: center;
     font-size:28px;
-    color: #DDDDDD;
-    background: #666666;
+    color: white;
+    background: blueviolet;
     border: 1px solid #DDDDDD;
+    cursor: pointer;
 }

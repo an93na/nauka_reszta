@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="all">
-        <div id="scren"></div>
+        <div id="screen"></div>
         <form action method="post" id="form">
             <div id="calculator">
                 <div class="item">
@@ -32,9 +32,42 @@
                     <div class="item">
                         <input type="submit" name="submit" value="Go">
                     </div>
+                    <button id="clear-button">C</button>
             </div>
         </form>
     </div>
-    
+    <script>
+        const form = document.getElementById("form");
+        form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let result = 0;
+        const screen = document.getElementById("screen");
+        const n1 = +e.target[0].value;
+        const n2 = +e.target[1].value;
+        const operation = e.target[2].value;
+
+        switch (operation) {
+        case "+":
+            result = n1 + n2;
+        break;
+        case "-":
+            result = n1 - n2;
+        break;
+        case "*":
+            result = n1 * n2;
+        break;
+        case "/":
+            if (n2 == 0) {
+                result = "ERROR!";
+            } else {
+                result = n1 / n2;
+            }
+            break;
+
+  }
+
+    screen.innerText = result;
+});
+    </script>
 </body>
 </html>
