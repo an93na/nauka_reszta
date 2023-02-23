@@ -131,3 +131,20 @@ console.log('~~~~~~~~~~~~~~~~~~~~11~~~~~~~~~~~~~~~~~~~~');
 
 let zad11 = zad10b.toUpperCase();
 console.log(zad11);
+
+console.log('~~~~~~~~~~~~~~~~~~~~12~~~~~~~~~~~~~~~~~~~~');
+//12. 
+
+let tekst12 = 'Coś tam'
+
+//Przy wykorzystaniu właściwości tekstu i tablic
+let zad12Podziel = tekst12.split("");
+// console.log(zad12Podziel);
+let zad12Odwroc = zad12Podziel.reverse();
+// console.log(zad12Odwroc);
+let zad12 = zad12Odwroc.join("");
+console.log(zad12);
+
+//Przy wykorzytaniu pętli for
+zad12Dlugosc = tekst12.length;
+console.log(zad12Dlugosc);
