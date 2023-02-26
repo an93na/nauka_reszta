@@ -165,3 +165,5 @@ console.log(zad12Dlugosc);
 for (let i=0; i<=zad12Dlugosc; i++){
     console.log(i,tekst13);
 }
+
+//14. 
