@@ -169,12 +169,22 @@ for (let i=0; i<=zad12Dlugosc; i++){
 console.log('~~~~~~~~~~~~~~~~~~~~14~~~~~~~~~~~~~~~~~~~~');
 //14. . Wyświetlanie części tekstu, która występuje po pierwszej literze “a”
 
-let tekst14 = 'Kolejna część tekstu zaczynająca się od kolejna'
+let tekst14 = 'Kloejna część tekstu zaczynająca się od kolejna'
 
 let zad14 = tekst14.search('a');
-console.log(zad14);
+// console.log(zad14);
 let zad14end = tekst14.substring(6)
 console.log(zad14end);
 
 console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
-//15. 
+//15. Policzenie ile samogłosek jest w tekscie.
+
+let samogloski = ['a','e', 'i', 'o', 'u', 'y'];
+let ilesamoglosek = 0;
+
+for (let i=0; i<tekst14.length; i++) {
+    if (samogloski.includes(tekst14[i])){
+        ilesamoglosek++;
+    }
+}
+console.log('ilość samogłosek to:',ilesamoglosek);
