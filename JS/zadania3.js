@@ -188,3 +188,26 @@ for (let i=0; i<tekst14.length; i++) {
     }
 }
 console.log('ilość samogłosek to:',ilesamoglosek);
+
+console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
+// 16. Zamienianie wszystkich liter “a” “e” “o” na “x”
+
+let litery16 = ['a', 'e'];
+//przy użyciu funkcji replaceAll
+let zad16 = tekst14.replaceAll(/[ae]/ig, 'x')
+console.log(zad16);
+
+// przy użyciu pętli 
+let wynik16 = '';
+for(let i = 0; i<tekst14.length; i++){
+    
+    if (tekst14[i]==='a' || tekst14[i] === "e") {
+        tekst14[i].replace('a','x' )
+        wynik16+= 'x';
+    }
+    else {
+        wynik16 += tekst14[i];
+    }
+}
+
+console.log(wynik16);
