@@ -212,7 +212,6 @@ for(let i = 0; i<tekst14.length; i++){
 
 console.log(wynik16);
 
-
 console.log('~~~~~~~~~~~~~~~~~~~~17~~~~~~~~~~~~~~~~~~~~');
 //17. złączanie 3 słów w jedno.
 
@@ -228,4 +227,7 @@ console.log(zad17);
 let zad17a = slowo1.concat(slowo2);
 let zad17b = zad17a.concat(slowo3);
 console.log(zad17b);
+
+console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
+
 
