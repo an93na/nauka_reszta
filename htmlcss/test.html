@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Inicjujemy pusty string na wprowadzane przez użytkownika słowa
+let words = "";
+
+// Pętla do wprowadzania słów, aż użytkownik wpisze słowo "STOP"
+while (true) {
+  // Pobieramy słowo od użytkownika
+  const word = prompt("Podaj słowo:");
+
+  // Sprawdzamy czy słowo jest równe "STOP", jeśli tak to przerywamy pętlę
+  if (word === "STOP") {
+    break;
+  }
+
+  // Dodajemy wprowadzone słowo do łańcucha "words"
+  words += word + " ";
+}
+
+// Wyświetlamy wszystkie wprowadzone słowa przez użytkownika
+console.log("Wprowadzone słowa:", words);
+
+    </script>
+</body>
+</html>
