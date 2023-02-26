@@ -211,3 +211,21 @@ for(let i = 0; i<tekst14.length; i++){
 }
 
 console.log(wynik16);
+
+
+console.log('~~~~~~~~~~~~~~~~~~~~17~~~~~~~~~~~~~~~~~~~~');
+//17. złączanie 3 słów w jedno.
+
+let slowo1 = 'Ala';
+let slowo2 = 'ma';
+let slowo3 = 'kota'
+
+//normalne łacznie
+let zad17 = slowo1+slowo2+slowo3;
+console.log(zad17);
+
+//wykorzytatnie concat
+let zad17a = slowo1.concat(slowo2);
+let zad17b = zad17a.concat(slowo3);
+console.log(zad17b);
+
