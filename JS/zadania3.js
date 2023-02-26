@@ -166,4 +166,15 @@ for (let i=0; i<=zad12Dlugosc; i++){
     console.log(i,tekst13);
 }
 
-//14. 
+console.log('~~~~~~~~~~~~~~~~~~~~14~~~~~~~~~~~~~~~~~~~~');
+//14. . Wyświetlanie części tekstu, która występuje po pierwszej literze “a”
+
+let tekst14 = 'Kolejna część tekstu zaczynająca się od kolejna'
+
+let zad14 = tekst14.search('a');
+console.log(zad14);
+let zad14end = tekst14.substring(6)
+console.log(zad14end);
+
+console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
+//15. 
