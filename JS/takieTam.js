@@ -3,3 +3,9 @@ tab1.reverse();
 console.log(tab1);
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+let txt = 'słówko';
+let tab2 = [...txt];
+console.log(tab2);
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
