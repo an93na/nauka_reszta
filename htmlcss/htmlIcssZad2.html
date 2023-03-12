@@ -37,6 +37,7 @@
         </form>
     </div>
     <script>
+        const clear = document.getElementById("clear-button").addEventListener('click', () => location.reload());
         const form = document.getElementById("form");
         form.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -68,6 +69,8 @@
 
     screen.innerText = result;
 });
+
+
     </script>
 </body>
 </html>
