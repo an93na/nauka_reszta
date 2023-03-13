@@ -367,7 +367,7 @@ console.log('~~~~~~~~~~~Zadanie10~~~~~~~~~~~~~~~~');
     let posortowaneRosnaco = tab12.sort((a,b) => a-b);
     console.log(`Elementy tablicy posortowane rosnąco: `,posortowaneRosnaco);
     let posortowaneMalejaco = tab12.sort((a, b) => b-a);
-    console.log(`Elementy tablicy posortowane rosnąco: `,posortowaneMalejaco);
+    console.log(`Elementy tablicy posortowane malejąco: `,posortowaneMalejaco);
 
     console.log('~~~~~~~~~~~Zadanie13~~~~~~~~~~~~~~~~');
     // wygeneruje za pomocą Math.rand tablice 10 losowych elementów
