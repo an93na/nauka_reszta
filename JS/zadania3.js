@@ -229,5 +229,7 @@ let zad17b = zad17a.concat(slowo3);
 console.log(zad17b);
 
 console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
+// Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
+
 
 
