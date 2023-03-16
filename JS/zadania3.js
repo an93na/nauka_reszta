@@ -231,5 +231,15 @@ console.log(zad17b);
 console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 // Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
+let word1 = prompt("Podaj pierwsze słowo:");
+let word2 = prompt("Podaj drugie słowo:");
+let word3 = prompt("Podaj trzecie słowo:");
+let word4 = prompt("Podaj czwarte słowo:");
+let word5 = prompt("Podaj piąte słowo:");
+
+let sentence = word1 + " " + word2 + " " + word3 + " " + word4 + " " + word5;
+
+console.log("Twoje słowa jako jeden ciąg tekstu: " + sentence);
+
 
 
