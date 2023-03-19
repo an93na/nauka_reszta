@@ -134,10 +134,21 @@ console.log(zad11);
 
 // 11a. Pobierz tekst od użytkownika, a następnie wyświetl go wielkimi literami
 
-let tekst11a = prompt("Wprowadź tekst:");
-let tekstDuzy = tekst11a.toUpperCase();
-console.log(tekstDuzy);
+// let tekst11a = prompt("Wprowadź tekst:");
+// let tekstDuzy = tekst11a.toUpperCase();
+// console.log(tekstDuzy);
 
+const input11a = document.createElement("input");
+input11a.setAttribute("type","text");
+input11a.setAttribute("id","tekstUzytkownika");
+document.body.appendChild(input11a);
+
+const tekstInput11a = document.getElementById("tekstUzytkownika");
+tekstInput11a.addEventListener("input", ()=> {
+    const tekst = tekstInput11a.value.toUpperCase()
+    // tekstInput11a.value = tekst;
+    console.log(tekst)}
+);
 console.log('~~~~~~~~~~~~~~~~~~~~12~~~~~~~~~~~~~~~~~~~~');
 //12. Wyświetlenie tekstu od tyłu
 
