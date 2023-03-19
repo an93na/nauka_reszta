@@ -194,6 +194,9 @@ tekst12aWprowadzony.addEventListener('input', ()=> {
     }
     console.log(zad12aPetla);
 
+    // II sposób
+    // let tekstOdTylu = tekst.split('').reverse().join('');
+    // console.log(tekstOdTylu);
 });
 
 
