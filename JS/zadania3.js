@@ -193,6 +193,7 @@ tekst12aWprowadzony.addEventListener('input', ()=> {
         zad12aPetla = zad12aPetla + tekst[i];
     }
     console.log(zad12aPetla);
+
 });
 
 
