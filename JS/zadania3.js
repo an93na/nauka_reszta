@@ -174,6 +174,27 @@ for(let i = zad12Dlugosc-1; i >=0; i--){
 }
 console.log(zad12Petla);
 
+//12a Pobierz tekst od użytkownika i wyświetl go od końca
+
+const tekst12a = document.createElement('input');
+tekst12a.setAttribute('type','text');
+tekst12a.setAttribute('id','12a');
+tekst12a.setAttribute('placeholder','Od tyłu w consoli');
+document.body.appendChild(tekst12a);
+
+const tekst12aWprowadzony = document.getElementById('12a');
+tekst12aWprowadzony.addEventListener('input', ()=> {
+    let tekst = tekst12aWprowadzony.value;
+    let tekstDlugosc = tekst.length
+    // console.log(tekstDlugosc);
+    // console.log(tekst);
+    let zad12aPetla = '';
+    for (let i=tekstDlugosc-1; i>=0; i--) {
+        zad12aPetla = zad12aPetla + tekst[i];
+    }
+    console.log(zad12aPetla);
+});
+
 
 
 console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
