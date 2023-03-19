@@ -179,9 +179,12 @@ input12a.setAttribute("type", "text");
 input12a.setAttribute("id", "12a");
 document.body.appendChild(input12a);
 
-const tekst12a = input12a.addEventListener("input", ()=>{
- console.log('napisano');
-})
+const tekst12awprowadzony = document.getElementById("12a");
+tekst12awprowadzony.addEventListener("input", ()=> {
+    const tekst12Ile = tekst12awprowadzony.value.length
+    // console.log(tekst12Ile);
+    
+});
 
 console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
 //13. Wyświetlanie słowa litera tyle razy ile jest znaków w danym tekście.
