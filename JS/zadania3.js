@@ -141,6 +141,7 @@ console.log(zad11);
 const input11a = document.createElement("input");
 input11a.setAttribute("type","text");
 input11a.setAttribute("id","tekstUzytkownika");
+input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
 document.body.appendChild(input11a);
 
 const tekstInput11a = document.getElementById("tekstUzytkownika");
@@ -189,6 +190,7 @@ for (let i=0; i<=zad12Dlugosc; i++){
 const input13a = document.createElement("input");
 input13a.setAttribute("type", "text");
 input13a.setAttribute("id", "13a");
+input13a.setAttribute("placeholder", `Wyświetli "Litera w consoli" `);
 document.body.appendChild(input13a);
 
 const tekst13awprowadzony = document.getElementById("13a");
