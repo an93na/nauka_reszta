@@ -173,18 +173,7 @@ for(let i = zad12Dlugosc-1; i >=0; i--){
 }
 console.log(zad12Petla);
 
-// 12a. Pobierz tekst od użytkownika, a następnie wyświetl “Litera” tyle razy ile liter ma dany tekst
-const input12a = document.createElement("input");
-input12a.setAttribute("type", "text");
-input12a.setAttribute("id", "12a");
-document.body.appendChild(input12a);
 
-const tekst12awprowadzony = document.getElementById("12a");
-tekst12awprowadzony.addEventListener("input", ()=> {
-    const tekst12Ile = tekst12awprowadzony.value.length
-    // console.log(tekst12Ile);
-    
-});
 
 console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
 //13. Wyświetlanie słowa litera tyle razy ile jest znaków w danym tekście.
@@ -195,6 +184,26 @@ console.log(zad12Dlugosc);
 for (let i=0; i<=zad12Dlugosc; i++){
     console.log(i,tekst13);
 }
+
+// 13a. Pobierz tekst od użytkownika, a następnie wyświetl “Litera” tyle razy ile liter ma dany tekst
+const input13a = document.createElement("input");
+input13a.setAttribute("type", "text");
+input13a.setAttribute("id", "13a");
+document.body.appendChild(input13a);
+
+const tekst13awprowadzony = document.getElementById("13a");
+tekst13awprowadzony.addEventListener("input", ()=> {
+    const tekst13Ile = tekst13awprowadzony.value.length
+    // console.log(tekst13Ile);
+
+    // const tekst13Wynik = "Litera ".repeat(tekst13Ile);
+    let tekst13Wynik = "";
+    for(let i=0; i<tekst13Ile; i++) {
+        tekst13Wynik += "Litera ";
+    }
+
+    console.log(tekst13Wynik);
+});
 
 console.log('~~~~~~~~~~~~~~~~~~~~14~~~~~~~~~~~~~~~~~~~~');
 //14. . Wyświetlanie części tekstu, która występuje po pierwszej literze “a”
