@@ -173,6 +173,9 @@ for(let i = zad12Dlugosc-1; i >=0; i--){
 }
 console.log(zad12Petla);
 
+// 12a. Pobierz tekst od użytkownika, a następnie wyświetl “Litera” tyle razy ile liter ma dany tekst
+
+
 console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
 //13. Wyświetlanie słowa litera tyle razy ile jest znaków w danym tekście.
 
