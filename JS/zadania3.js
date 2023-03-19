@@ -174,7 +174,14 @@ for(let i = zad12Dlugosc-1; i >=0; i--){
 console.log(zad12Petla);
 
 // 12a. Pobierz tekst od użytkownika, a następnie wyświetl “Litera” tyle razy ile liter ma dany tekst
+const input12a = document.createElement("input");
+input12a.setAttribute("type", "text");
+input12a.setAttribute("id", "12a");
+document.body.appendChild(input12a);
 
+const tekst12a = input12a.addEventListener("input", ()=>{
+ console.log('napisano');
+})
 
 console.log('~~~~~~~~~~~~~~~~~~~~13~~~~~~~~~~~~~~~~~~~~');
 //13. Wyświetlanie słowa litera tyle razy ile jest znaków w danym tekście.
