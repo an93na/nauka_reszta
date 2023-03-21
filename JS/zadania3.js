@@ -271,6 +271,9 @@ for (let i=0; i<tekst14.length; i++) {
 }
 console.log('ilość samogłosek to:',ilesamoglosek);
 
+// 16a. Pobierz tekst od użytkownika, a następnie policz ile się w nim znajduje samogłosek
+
+
 console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
 // 16. Zamienianie wszystkich liter “a” “e” “o” na “x”
 
