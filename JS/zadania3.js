@@ -252,7 +252,8 @@ document.body.appendChild(input14a);
 
 const tekst14a = document.getElementById('14a')
 const tekst14aWynik = tekst14a.addEventListener('input', () => {
-
+    let t1 = tekst14a.value.search('a');
+    console.log(t1)
 });
 
 console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
