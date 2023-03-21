@@ -242,6 +242,13 @@ let zad14 = tekst14.search('a');
 let zad14end = tekst14.substring(6)
 console.log(zad14end);
 
+//14a Pobierz tekst od użytkownika a następnie wyświetl część tekstu, która występuje po pierwszej literze “a”
+
+const input14a = document.createElement('input');
+input14a.setAttribute('type', 'text');
+input14a.setAttribute('id', '14a');
+input14a.setAttribute('placeholder', "w consoli od a");
+
 console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
 //15. Policzenie ile samogłosek jest w tekscie.
 
