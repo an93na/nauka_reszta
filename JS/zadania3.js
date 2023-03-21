@@ -248,6 +248,8 @@ const input14a = document.createElement('input');
 input14a.setAttribute('type', 'text');
 input14a.setAttribute('id', '14a');
 input14a.setAttribute('placeholder', "w consoli od a");
+document.body.appendChild(input14a);
+
 
 console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
 //15. Policzenie ile samogłosek jest w tekscie.
