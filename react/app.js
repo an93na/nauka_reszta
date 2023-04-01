@@ -40,4 +40,45 @@ function verfiyUsers(){
 };
 console.log(verfiyUsers());
 
+// ZAD4
+
+const workers = [
+  {
+    name: "John",
+    seniority: "junior",
+    salary: 4000,
+  },
+  {
+    name: "Jack",
+    seniority: "senior",
+    salary: 15000,
+  },
+  {
+    name: "Jane",
+    seniority: "regular",
+    salary: 10000,
+  },
+  {
+    name: "Jerry",
+    seniority: "senior",
+    salary: 20000,
+  },
+];
+
+function processSalaries() {
+  // console.log(workers);
+  return workers.map((worker) => {
+    if (worker.seniority === 'senior'){
+      return {...worker, salary: worker.salary*1.5}
+    }
+    else if (worker.seniority === 'regular'){
+      return {...worker, salary: worker.salary*1.3}
+    }
+    else if (worker.seniority === 'junior'){
+      return {...worker, salary: worker.salary*1.15}
+    }
+  })
+}
+console.log(processSalaries());
+
 
