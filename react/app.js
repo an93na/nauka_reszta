@@ -1,3 +1,5 @@
+// ZAD1
+
 const numbers = [2, 12, 6, 4, 7, 11];
 
 function getSquaredNumbers() {
@@ -7,6 +9,9 @@ function getSquaredNumbers() {
 
 
   const phrases = ["react", "trelemorele", "frontend", "angular", "js", ""];
+
+
+// ZAD2
 
 function getLenghtsOfPhrases(){
   let tab = [] 
@@ -20,7 +25,7 @@ function getLenghtsOfPhrases(){
 const dlugoscStringow = getLenghtsOfPhrases();
 console.log(dlugoscStringow);
 
-
+// ZAD3
 const users = [
   { name: "John", age: 20 },
   { name: "Johny", age: 12 },
@@ -29,10 +34,10 @@ const users = [
   { name: "Jane", age: 66 },
 ];
 
-/* MIEJSCE NA TWÓJ KOD 👇 */
-
 function verfiyUsers(){
   console.log(users);
   return users.map((user) => ({...user, isAdult: user.age >= 18}))
 };
-console.log(verfiyUsers())
+console.log(verfiyUsers());
+
+
