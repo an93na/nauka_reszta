@@ -81,4 +81,25 @@ function processSalaries() {
 }
 console.log(processSalaries());
 
+//ZAD5
+
+// function getAdults() {
+//   // console.log(users);
+//   return users.filter((user) => {
+//   if (user.age >= 18){
+//     return true
+//   }
+//   else if (user.age < 18){
+//     return false
+//   }
+// })
+// } 
+
+//II sposób krótszy 
+function getAdults() {
+  // console.log(users);
+  return users.filter((user) => user.age >= 18)
+};
+
+console.log(getAdults());
 
