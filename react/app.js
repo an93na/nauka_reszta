@@ -103,3 +103,25 @@ function getAdults() {
 
 console.log(getAdults());
 
+//ZAD6
+
+// function getJuniors() {
+//   // console.log(workers);
+//   return workers.filter((worker) => {
+//     if (worker.seniority === 'junior'){
+//       return true
+//     }
+//     else {
+//       return false
+//     }
+//   })
+// }
+
+// II sposób krótszy
+function getJuniors() {
+  // console.log(workers);
+  return workers.filter((worker) => worker.seniority === 'junior')
+}
+
+console.log(getJuniors());
+
