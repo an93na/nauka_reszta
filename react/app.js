@@ -19,3 +19,20 @@ function getLenghtsOfPhrases(){
 };
 const dlugoscStringow = getLenghtsOfPhrases();
 console.log(dlugoscStringow);
+
+
+const users = [
+  { name: "John", age: 20 },
+  { name: "Johny", age: 12 },
+  { name: "Jerry", age: 22 },
+  { name: "Jack", age: 17 },
+  { name: "Jane", age: 66 },
+];
+
+/* MIEJSCE NA TWÓJ KOD 👇 */
+
+function verfiyUsers(){
+  console.log(users);
+  return users.map((user) => ({...user, isAdult: user.age >= 18}))
+};
+console.log(verfiyUsers())
