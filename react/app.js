@@ -400,4 +400,36 @@ function podzielNaGrupy() {
     return grupa
   },[])
 }
-console.log(podzielNaGrupy());
+const grupyPoPodziale = podzielNaGrupy()
+console.log(grupyPoPodziale);
+
+// const htmlGrupy = wynikFunkcji.map((todo) => {
+//   return `
+//   <tr>
+//   <td>
+//   ${todo.task}
+//   </td>
+//   <td>
+//   ${todo.status}
+//   </td>
+//   <td>
+//   <input type = "checkbox">OK</input>
+//   </td>
+//   </tr>
+//   `;
+// });
+
+// function createNewHTML(arg) {
+//   //to z TR
+//   const htmlTRSAsAString = arg.join("");
+//   const htmlTable = `<table>
+//   <tbody>
+//   ${htmlTRSAsAString}
+//   </tbody>
+//   </table>`;
+//   return htmlTable
+// }
+
+// const articleHTMLButJSObjectTodos2 = document.querySelector("#output4");
+
+// articleHTMLButJSObjectTodos2.innerHTML = createNewHTML(htmlTodos2);
