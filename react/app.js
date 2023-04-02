@@ -298,14 +298,14 @@ const htmlTodos1 = newPoleArchived.map((todo) => {
     
     articleHTMLButJSObjectTodos1.innerHTML = htmlTableTodos1;
     
-    // ZAD12
-    const todos2 = [
-      { task: "wyspać się", status: "in progress" },
-      { task: "mieć dobry chumor", status: "todo" },
-      { task: "pouczyć się CSSa", status: "in progress" },
-      { task: "pouczyć się JSa", status: "todo" },
-    ];
-    
+// ZAD12
+const todos2 = [
+  { task: "wyspać się", status: "in progress" },
+  { task: "mieć dobry chumor", status: "todo" },
+  { task: "pouczyć się CSSa", status: "in progress" },
+  { task: "pouczyć się JSa", status: "todo" },
+];
+
     function searchElement(slowoKlucz){
       return todos2.filter((nazwa) => nazwa.task.includes(slowoKlucz));
     }
@@ -315,17 +315,17 @@ const htmlTodos1 = newPoleArchived.map((todo) => {
     
     const htmlTodos2 = wynikFunkcji.map((todo) => {
       return `
-        <tr>
-          <td>
-            ${todo.task}
-          </td>
-          <td>
-            ${todo.status}
-          </td>
-          <td>
-            <input type = "checkbox">OK</input>
-          </td>
-        </tr>
+      <tr>
+      <td>
+      ${todo.task}
+      </td>
+      <td>
+      ${todo.status}
+      </td>
+      <td>
+      <input type = "checkbox">OK</input>
+      </td>
+      </tr>
       `;
     });
     
@@ -334,7 +334,7 @@ const htmlTodos1 = newPoleArchived.map((todo) => {
       const htmlTRSAsAString = arg.join("");
       const htmlTable = `<table>
       <tbody>
-        ${htmlTRSAsAString}
+      ${htmlTRSAsAString}
       </tbody>
       </table>`;
       return htmlTable
@@ -343,6 +343,48 @@ const htmlTodos1 = newPoleArchived.map((todo) => {
     const articleHTMLButJSObjectTodos2 = document.querySelector("#output4");
     
     articleHTMLButJSObjectTodos2.innerHTML = createNewHTML(htmlTodos2);
+    
+    
+    
+// ZAD13
+const students = [
+  { name: "John", age: 12, group: 1 },
+  { name: "Jane", age: 22, group: 2 },
+  { name: "Joe", age: 55, group: 1 },
+  { name: "Kate", age: 9, group: 2 },
+];
 
-    
-    
+// ta funckja policzy nam wiek dla wszytskich studentów
+students.reduce((acc, student)=>{
+  acc = acc + student.age
+  return acc
+},0)
+
+
+const groupedByAge = students.reduce(
+  (groups, student) => {
+    if (student.age < 30) {
+      groups[0].push(student);
+    } else {
+      groups[1].push(student);
+    }
+
+    return groups;
+  },
+  [[], []]
+);
+
+console.log(groupedByAge)
+
+function podzielNaGrupy() {
+  return students.reduce((grupa, student) => {
+    if (student.group === 1 ){
+      grupa[0].push(student);
+    }
+    else if (student.group === 2 ){
+      grupa[1].push(student);
+    }
+    return grupa
+  },[[], []])
+}
+console.log(podzielNaGrupy());
