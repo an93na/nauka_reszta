@@ -186,3 +186,19 @@ function createNewHTML(arg) {
 
 const articleHTMLButJSObject = document.querySelector("#output");
 articleHTMLButJSObject.innerHTML = createNewHTML(htmlAsArrayOfTRs);
+
+
+// ZAD9
+const strings1 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
+
+function dziwneZnaki() {
+  return strings1.map((a) => {
+    let zamianastring = a.toString();
+    let newString = zamianastring.split("").join("*");
+    // console.log(newString);
+    return newString;
+  });
+}
+console.log(dziwneZnaki());
+
+// ZAD10
