@@ -125,6 +125,8 @@ function getJuniors() {
 
 console.log(getJuniors());
 
+// ZAD7
+
 const strings2 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
 
 function stringlessThree(){
