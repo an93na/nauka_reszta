@@ -376,15 +376,28 @@ const groupedByAge = students.reduce(
 
 console.log(groupedByAge)
 
+// function podzielNaGrupy() {
+//   return students.reduce((grupa, student) => {
+//     if (student.group === 1 ){
+//       grupa[0].push(student);
+//     }
+//     else if (student.group === 2 ){
+//       grupa[1].push(student);
+//     }
+//     return grupa
+//   },[[], []])
+// }
+// console.log(podzielNaGrupy());
+
 function podzielNaGrupy() {
   return students.reduce((grupa, student) => {
-    if (student.group === 1 ){
-      grupa[0].push(student);
+    if(grupa[student.group]){
+       grupa[student.group].push(student)
     }
-    else if (student.group === 2 ){
-      grupa[1].push(student);
+    else {
+      grupa[student.group]= [student];
     }
     return grupa
-  },[[], []])
+  },[])
 }
 console.log(podzielNaGrupy());
