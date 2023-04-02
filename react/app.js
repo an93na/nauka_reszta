@@ -132,5 +132,26 @@ const strings2 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
 function stringlessThree(){
   return strings2.filter((a) => a.length < 3)
 } 
-console.log(stringlessThree())
+console.log(stringlessThree());
 
+// ZAD8
+
+const users2 = [
+  { name: "John", age: 12 },
+  { name: "Jane", age: 22 },
+  { name: "Joe", age: 55 },
+  { name: "Kate", age: "9" },
+];
+
+function czyPelnoletni() {
+  return users2.filter((user) => user.age>= 18);
+}
+console.table(czyPelnoletni());
+
+const Adults = users2.filter(
+  (isAdult) => {
+    return isAdult.age >= 18
+  }
+);
+
+// console.table(Adults);
