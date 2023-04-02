@@ -219,17 +219,17 @@ console.table(statusTODO);
 
 const htmlTodos0 = statusTODO.map((task) => {
   return `
-    <tr>
-      <td>
-        ${task.task}
-      </td>
-      <td>
-        ${task.status}
-      </td>
-      <td>
-        <button>Zaliczone</button>
-      </td>
-    </tr>
+  <tr>
+  <td>
+  ${task.task}
+  </td>
+  <td>
+  ${task.status}
+  </td>
+  <td>
+  <button>Zaliczone</button>
+  </td>
+  </tr>
   `;
 });
 
@@ -240,7 +240,7 @@ function createNewHTML(arg) {
   const htmlTRSAsAString = arg.join("");
   const htmlTable = `<table>
   <tbody>
-    ${htmlTRSAsAString}
+  ${htmlTRSAsAString}
   </tbody>
   </table>`;
   return htmlTable
@@ -248,3 +248,52 @@ function createNewHTML(arg) {
 const articleHTMLButJSObjectTodos0 = document.querySelector("#output2");
 
 articleHTMLButJSObjectTodos0.innerHTML = createNewHTML(htmlTodos0)
+
+// ZAD11
+
+const todos1 = [
+  { task: "wyspać się", status: "in progress" },
+  { task: "mieć dobry chumor", status: "todo" },
+  { task: "pouczyć się CSSa", status: "in progress" },
+  { task: "pouczyć się JSa", status: "todo" },
+];
+
+function addArchived(){
+  return todos1.map(todo  => ({...todo, archived: true}))
+}
+const newPoleArchived = addArchived();
+console.table(newPoleArchived)
+
+const htmlTodos1 = newPoleArchived.map((todo) => {
+  return `
+    <tr>
+      <td>
+        ${todo.task}
+      </td>
+      <td>
+        ${todo.status}
+      </td>
+      <td>
+        ${todo.archived}
+      </td>
+      <td>
+        <input type = "checkbox">OK</input>
+      </td>
+    </tr>
+  `;
+});
+
+// console.log(htmlTodos1);
+
+// łączenie tablicy stringów (elementów TR) w jednego stringa;
+const finishTodos1 = htmlTodos1.join("");
+
+const htmlTableTodos1 = `<table>
+  <tbody>
+    ${finishTodos1}
+  </tbody>
+</table>`;
+
+const articleHTMLButJSObjectTodos1 = document.querySelector("#output3");
+
+articleHTMLButJSObjectTodos1.innerHTML = htmlTableTodos1;
