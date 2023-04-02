@@ -125,3 +125,10 @@ function getJuniors() {
 
 console.log(getJuniors());
 
+const strings2 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
+
+function stringlessThree(){
+  return strings2.filter((a) => a.length < 3)
+} 
+console.log(stringlessThree())
+
