@@ -234,3 +234,17 @@ const htmlTodos0 = statusTODO.map((task) => {
 });
 
 // console.log(htmlTodos0);
+
+function createNewHTML(arg) {
+  //to z TR
+  const htmlTRSAsAString = arg.join("");
+  const htmlTable = `<table>
+  <tbody>
+    ${htmlTRSAsAString}
+  </tbody>
+  </table>`;
+  return htmlTable
+}
+const articleHTMLButJSObjectTodos0 = document.querySelector("#output2");
+
+articleHTMLButJSObjectTodos0.innerHTML = createNewHTML(htmlTodos0)
