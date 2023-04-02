@@ -202,3 +202,35 @@ function dziwneZnaki() {
 console.log(dziwneZnaki());
 
 // ZAD10
+
+const todos0 = [
+  { task: "wyspać się", status: "in progress" },
+  { task: "mieć dobry chumor", status: "todo" },
+  { task: "pouczyć się CSSa", status: "in progress" },
+  { task: "pouczyć się JSa", status: "todo" },
+];
+
+function zmienStatus(){
+  return todos0.map((task) => ({...task, status: 'todo' }));
+}
+const statusTODO = zmienStatus();
+console.table(statusTODO);
+
+
+const htmlTodos0 = statusTODO.map((task) => {
+  return `
+    <tr>
+      <td>
+        ${task.task}
+      </td>
+      <td>
+        ${task.status}
+      </td>
+      <td>
+        <button>Zaliczone</button>
+      </td>
+    </tr>
+  `;
+});
+
+// console.log(htmlTodos0);
