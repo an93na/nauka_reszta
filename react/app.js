@@ -155,3 +155,34 @@ const Adults = users2.filter(
 );
 
 // console.table(Adults);
+
+const htmlAsArrayOfTRs = Adults.map((user) => {
+  return `
+    <tr>
+      <td>
+        ${user.name}
+      </td>
+      <td>
+        ${user.age}
+      </td>
+      <td>
+        <button>DELETE</button>
+      </td>
+    </tr>
+  `;
+});
+
+// console.log(htmlAsArrayOfTRs);
+function createNewHTML(arg) {
+  //to z TR
+  const htmlTRSAsAString = arg.join("");
+  const htmlTable = `<table>
+  <tbody>
+    ${htmlTRSAsAString}
+  </tbody>
+  </table>`;
+  return htmlTable
+}
+
+const articleHTMLButJSObject = document.querySelector("#output");
+articleHTMLButJSObject.innerHTML = createNewHTML(htmlAsArrayOfTRs);
