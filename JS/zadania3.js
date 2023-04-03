@@ -273,6 +273,10 @@ console.log('ilość samogłosek to:',ilesamoglosek);
 
 // 16a. Pobierz tekst od użytkownika, a następnie policz ile się w nim znajduje samogłosek
 
+let input16 = document.createElement('input');
+input16.setAttribute('type', 'text');
+input16.setAttribute('placeholder','ile samogłosek');
+document.body.appendChild(input16);
 
 console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
 // 16. Zamienianie wszystkich liter “a” “e” “o” na “x”
