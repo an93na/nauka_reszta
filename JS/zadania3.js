@@ -286,7 +286,7 @@ let text15a = input15.addEventListener('input', () => {
             samo++
         }
     }
-    console.log('ilość samogłosek ew wprowadzonym tekście to: ',samo); 
+    console.log('ilość samogłosek we wprowadzonym tekście to: ',samo); 
 })
 
 console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
