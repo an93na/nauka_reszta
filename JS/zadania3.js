@@ -323,11 +323,11 @@ let text16a = input16.addEventListener('input', ()=> {
     let zamianaNaMaleLitery = input16.value.toLocaleLowerCase()
     // console.log(zamianaNaMaleLitery)
     for(let i = 0; i<input16.value.length; i++){
-        if (input16.value[i]==='a' || input16.value[i] === "e" || input16.value[i] === 'o') {
+        if (zamianaNaMaleLitery[i]==='a' || zamianaNaMaleLitery[i] === "e" || zamianaNaMaleLitery[i] === 'o') {
             wynik16a+= 'x';
         }
         else {
-            wynik16a+= input16.value[i];
+            wynik16a+= zamianaNaMaleLitery[i];
         }
 }
     console.log(wynik16a);
