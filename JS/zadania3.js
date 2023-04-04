@@ -322,11 +322,10 @@ let text16a = input16.addEventListener('input', ()=> {
     let wynik16a = '';
     for(let i = 0; i<input16.value.length; i++){
         if (input16.value[i]==='a' || input16.value[i] === "e") {
-            input16.value[i].replace('a','x' )
             wynik16a+= 'x';
         }
         else {
-            wynik16+= input16.value[i];
+            wynik16a+= input16.value[i];
         }
 }
     console.log(wynik16a);
