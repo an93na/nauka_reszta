@@ -311,6 +311,13 @@ for(let i = 0; i<tekst14.length; i++){
 }
 
 console.log(wynik16);
+//16a. Pobierz tekst od użytkownika, a następnie zamień wszystkie litery “a” “e” “o” na “x
+
+let input16 = document.createElement('input');
+input16.setAttribute('type', 'text');
+input16.setAttribute('placeholder','zamiana a,e,o na x');
+document.body.appendChild(input16);
+
 
 console.log('~~~~~~~~~~~~~~~~~~~~17~~~~~~~~~~~~~~~~~~~~');
 //17. złączanie 3 słów w jedno.
