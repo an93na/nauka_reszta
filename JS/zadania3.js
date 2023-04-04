@@ -321,7 +321,7 @@ document.body.appendChild(input16);
 let text16a = input16.addEventListener('input', ()=> {
     let wynik16a = '';
     for(let i = 0; i<input16.value.length; i++){
-        if (input16.value[i]==='a' || input16.value[i] === "e") {
+        if (input16.value[i]==='a' || input16.value[i] === "e" || input16.value === 'o') {
             wynik16a+= 'x';
         }
         else {
