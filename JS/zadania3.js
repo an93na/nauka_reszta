@@ -318,6 +318,19 @@ input16.setAttribute('type', 'text');
 input16.setAttribute('placeholder','zamiana a,e,o na x');
 document.body.appendChild(input16);
 
+let text16a = input16.addEventListener('input', ()=> {
+    let wynik16a = '';
+    for(let i = 0; i<input16.value.length; i++){
+        if (input16.value[i]==='a' || input16.value[i] === "e") {
+            input16.value[i].replace('a','x' )
+            wynik16a+= 'x';
+        }
+        else {
+            wynik16+= input16.value[i];
+        }
+}
+    console.log(wynik16a);
+});
 
 console.log('~~~~~~~~~~~~~~~~~~~~17~~~~~~~~~~~~~~~~~~~~');
 //17. złączanie 3 słów w jedno.
