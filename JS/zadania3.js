@@ -318,20 +318,20 @@ input16.setAttribute('type', 'text');
 input16.setAttribute('placeholder','zamiana a,e,o na x');
 document.body.appendChild(input16);
 
-let text16a = input16.addEventListener('input', ()=> {
-    let wynik16a = '';
-    let zamianaNaMaleLitery = input16.value.toLocaleLowerCase()
-    // console.log(zamianaNaMaleLitery)
-    for(let i = 0; i<input16.value.length; i++){
-        if (zamianaNaMaleLitery[i]==='a' || zamianaNaMaleLitery[i] === "e" || zamianaNaMaleLitery[i] === 'o') {
-            wynik16a+= 'x';
-        }
-        else {
-            wynik16a+= zamianaNaMaleLitery[i];
-        }
-}
-    console.log(wynik16a);
-});
+// let text16a = input16.addEventListener('input', ()=> {
+//     let wynik16a = '';
+//     let zamianaNaMaleLitery = input16.value.toLocaleLowerCase()
+//     // console.log(zamianaNaMaleLitery)
+//     for(let i = 0; i<input16.value.length; i++){
+//         if (zamianaNaMaleLitery[i]==='a' || zamianaNaMaleLitery[i] === "e" || zamianaNaMaleLitery[i] === 'o') {
+//             wynik16a+= 'x';
+//         }
+//         else {
+//             wynik16a+= zamianaNaMaleLitery[i];
+//         }
+// }
+//     console.log(wynik16a);
+// });
 
 // Za pomocą forEach
 // let text16a = input16.addEventListener('input', ()=> {
@@ -346,6 +346,13 @@ let text16a = input16.addEventListener('input', ()=> {
 //     });
 //     console.log(wynik16a);
 // });
+
+// za pomocą replaceAll
+let text16a = input16.addEventListener('input', ()=> {
+    let zamianaNaMaleLitery = input16.value.toLowerCase();
+    let wynik16a = zamianaNaMaleLitery.replaceAll('a', 'x').replaceAll('e', 'x').replaceAll('o', 'x');
+    console.log(wynik16a);
+});
 
 
 console.log('~~~~~~~~~~~~~~~~~~~~17~~~~~~~~~~~~~~~~~~~~');
