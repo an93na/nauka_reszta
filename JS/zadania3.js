@@ -380,8 +380,16 @@ document.body.appendChild(input17a);
 
 input17a.addEventListener('input', ()=> {
     const slowo = input17a.value.trim().split(' ');
-    
-})
+    if (slowo.length === 5) {
+        const polaczoneSlowa = slowo.join('');
+        console.log(polaczoneSlowa);
+        const result = document.createElement('p');
+        result.innerText = polaczoneSlowa;
+        document.body.appendChild(result);
+      } else {
+        console.log('Wprowadź dokładnie pięć słów!');
+      }
+    });
 console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 // Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
