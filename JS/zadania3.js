@@ -390,6 +390,7 @@ input17a.addEventListener('input', ()=> {
         console.log('Wprowadź dokładnie pięć słów!');
       }
     });
+    
 console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 // Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
