@@ -378,6 +378,10 @@ input17a.setAttribute('type', 'text');
 input17a.setAttribute('placeholder', 'złącz');
 document.body.appendChild(input17a);
 
+input17a.addEventListener('input', ()=> {
+    const slowo = input17a.value.trim().split(' ');
+    
+})
 console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 // Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
