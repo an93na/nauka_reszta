@@ -373,6 +373,10 @@ console.log(zad17b);
 
 // 17a  Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
+const input17a = document.createElement('input');
+input17a.setAttribute('type', 'text');
+input17a.setAttribute('placeholder', 'złącz');
+document.body.appendChild(input17a);
 
 console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 // Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
