@@ -224,9 +224,15 @@ for (let i=0; i<=zad12Dlugosc; i++){
 
 // 13a. Pobierz tekst od użytkownika, a następnie wyświetl “Litera” tyle razy ile liter ma dany tekst
 const input13a = document.createElement("input");
+const button13a= document.createElement("button");
+
+
 input13a.setAttribute("type", "text");
 input13a.setAttribute("id", "13a");
 input13a.setAttribute("placeholder", `Wyświetli "Litera w consoli" `);
+
+
+
 document.body.appendChild(input13a);
 
 const tekst13awprowadzony = document.getElementById("13a");
