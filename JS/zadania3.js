@@ -182,10 +182,16 @@ console.log(zad12Petla);
 //12a Pobierz tekst od użytkownika i wyświetl go od końca
 
 const tekst12a = document.createElement('input');
+const button12a = document.createElement('button');
+
+
 tekst12a.setAttribute('type','text');
 tekst12a.setAttribute('id','12a');
 tekst12a.setAttribute('placeholder','Od tyłu w consoli');
+button12a.innerText='od końca'
+
 document.body.appendChild(tekst12a);
+document.body.appendChild(button12a);
 
 const tekst12aWprowadzony = document.getElementById('12a');
 tekst12aWprowadzony.addEventListener('input', ()=> {
