@@ -148,7 +148,7 @@ document.body.appendChild(input11a);
 document.body.appendChild(button11a);
 
 const tekstInput11a = document.getElementById("tekstUzytkownika");
-tekstInput11a.addEventListener("input", ()=> {
+button11a.addEventListener("click", ()=> {
     const tekst = tekstInput11a.value.toUpperCase()
     // tekstInput11a.value = tekst;
     console.log(tekst)}
