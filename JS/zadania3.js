@@ -194,7 +194,7 @@ document.body.appendChild(tekst12a);
 document.body.appendChild(button12a);
 
 const tekst12aWprowadzony = document.getElementById('12a');
-tekst12aWprowadzony.addEventListener('input', ()=> {
+button12a.addEventListener('click', ()=> {
     let tekst = tekst12aWprowadzony.value;
     let tekstDlugosc = tekst.length
     // console.log(tekstDlugosc);
