@@ -230,13 +230,13 @@ const button13a= document.createElement("button");
 input13a.setAttribute("type", "text");
 input13a.setAttribute("id", "13a");
 input13a.setAttribute("placeholder", `Wyświetli "Litera w consoli" `);
-
-
+button13a.innerText="zamień"
 
 document.body.appendChild(input13a);
+document.body.appendChild(button13a);
 
 const tekst13awprowadzony = document.getElementById("13a");
-tekst13awprowadzony.addEventListener("input", ()=> {
+button13a.addEventListener("click", ()=> {
     const tekst13Ile = tekst13awprowadzony.value.length
     // console.log(tekst13Ile);
 
