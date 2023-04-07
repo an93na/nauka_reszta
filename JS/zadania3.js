@@ -140,10 +140,12 @@ console.log(zad11);
 
 const input11a = document.createElement("input");
 const button11a = document.createElement("button");
+
 input11a.setAttribute("type","text");
 input11a.setAttribute("id","tekstUzytkownika");
 input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
 button11a.innerText='wyświetl'
+
 document.body.appendChild(input11a);
 document.body.appendChild(button11a);
 
