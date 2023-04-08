@@ -194,8 +194,8 @@ tekst12a.setAttribute('id','12a');
 tekst12a.setAttribute('placeholder','Od tyłu w consoli');
 button12a.innerText='od końca'
 
-document.body.appendChild(tekst12a);
-document.body.appendChild(button12a);
+div.appendChild(tekst12a);
+div.appendChild(button12a);
 
 const tekst12aWprowadzony = document.getElementById('12a');
 button12a.addEventListener('click', ()=> {
@@ -236,8 +236,8 @@ input13a.setAttribute("id", "13a");
 input13a.setAttribute("placeholder", `Wyświetli "Litera w consoli" `);
 button13a.innerText="zamień"
 
-document.body.appendChild(input13a);
-document.body.appendChild(button13a);
+div.appendChild(input13a);
+div.appendChild(button13a);
 
 const tekst13awprowadzony = document.getElementById("13a");
 button13a.addEventListener("click", ()=> {
