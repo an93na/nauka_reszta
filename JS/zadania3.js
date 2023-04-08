@@ -270,6 +270,7 @@ input14a.setAttribute('placeholder', "w consoli od a");
 button14a.innerText=`po "a"`
 
 document.body.appendChild(input14a);
+document.body.appendChild(button14a);
 
 const tekst14a = document.getElementById('14a')
 const tekst14aWynik = tekst14a.addEventListener('input', () => {
