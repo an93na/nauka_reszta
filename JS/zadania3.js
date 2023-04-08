@@ -137,6 +137,10 @@ console.log(zad11);
 // let tekst11a = prompt("Wprowadź tekst:");
 // let tekstDuzy = tekst11a.toUpperCase();
 // console.log(tekstDuzy);
+const div = document.createElement('div');
+div.style.display = 'flex'
+document.body.appendChild(div);
+
 
 const input11a = document.createElement("input");
 const button11a = document.createElement("button");
@@ -146,8 +150,8 @@ input11a.setAttribute("id","tekstUzytkownika");
 input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
 button11a.innerText='wyświetl'
 
-document.body.appendChild(input11a);
-document.body.appendChild(button11a);
+div.appendChild(input11a);
+div.appendChild(button11a);
 
 const tekstInput11a = document.getElementById("tekstUzytkownika");
 button11a.addEventListener("click", ()=> {
