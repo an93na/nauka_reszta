@@ -350,7 +350,7 @@ button16.innerText=`na "x"`
 document.body.appendChild(input16);
 document.body.appendChild(button16);
 
-let text16a = input16.addEventListener('input', ()=> {
+button16.addEventListener('click', ()=> {
     let wynik16a = '';
     let zamianaNaMaleLitery = input16.value.toLocaleLowerCase()
     // console.log(zamianaNaMaleLitery)
