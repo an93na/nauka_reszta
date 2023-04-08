@@ -415,7 +415,7 @@ button17a.innerText=`złącz`
 document.body.appendChild(input17a);
 document.body.appendChild(button17a);
 
-input17a.addEventListener('input', ()=> {
+button17a.addEventListener('click', ()=> {
     const slowo = input17a.value.trim().split(' ');
     if (slowo.length === 5) {
         const polaczoneSlowa = slowo.join('');
