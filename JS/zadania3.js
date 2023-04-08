@@ -341,9 +341,14 @@ console.log(wynik16);
 //16a. Pobierz tekst od użytkownika, a następnie zamień wszystkie litery “a” “e” “o” na “x
 
 let input16 = document.createElement('input');
+let button16 = document.createElement('button');
+
 input16.setAttribute('type', 'text');
 input16.setAttribute('placeholder','zamiana a,e,o na x');
+button16.innerText=`na "x"`
+
 document.body.appendChild(input16);
+document.body.appendChild(button16);
 
 let text16a = input16.addEventListener('input', ()=> {
     let wynik16a = '';
