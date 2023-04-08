@@ -141,6 +141,8 @@ const div = document.createElement('div');
 div.style.display = 'flex'
 document.body.appendChild(div);
 
+const div11 = document.createElement('div');
+div.appendChild(div11);
 
 const input11a = document.createElement("input");
 const button11a = document.createElement("button");
@@ -150,8 +152,8 @@ input11a.setAttribute("id","tekstUzytkownika");
 input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
 button11a.innerText='wyświetl'
 
-div.appendChild(input11a);
-div.appendChild(button11a);
+div11.appendChild(input11a);
+div11.appendChild(button11a);
 
 const tekstInput11a = document.getElementById("tekstUzytkownika");
 button11a.addEventListener("click", ()=> {
