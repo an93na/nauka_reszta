@@ -296,9 +296,14 @@ console.log('ilość samogłosek to:',ilesamoglosek);
 // 15a. Pobierz tekst od użytkownika, a następnie policz ile się w nim znajduje samogłosek
 
 let input15 = document.createElement('input');
+let button15 = document.createElement('button');
+
 input15.setAttribute('type', 'text');
 input15.setAttribute('placeholder','ile samogłosek');
+button15.innerText=`ile samo`
+
 document.body.appendChild(input15);
+document.body.appendChild(button15);
 
 let text15a = input15.addEventListener('input', () => {
     let tekstZinput15 = input15.value.length;
