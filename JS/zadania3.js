@@ -262,9 +262,13 @@ console.log(zad14end);
 //14a Pobierz tekst od użytkownika a następnie wyświetl część tekstu, która występuje po pierwszej literze “a”
 
 const input14a = document.createElement('input');
+const button14a = document.createElement('button');
+
 input14a.setAttribute('type', 'text');
 input14a.setAttribute('id', '14a');
 input14a.setAttribute('placeholder', "w consoli od a");
+button14a.innerText=`po "a"`
+
 document.body.appendChild(input14a);
 
 const tekst14a = document.getElementById('14a')
