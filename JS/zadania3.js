@@ -305,7 +305,7 @@ button15.innerText=`ile samo`
 document.body.appendChild(input15);
 document.body.appendChild(button15);
 
-let text15a = input15.addEventListener('input', () => {
+button15.addEventListener('click', () => {
     let tekstZinput15 = input15.value.length;
     let samo = 0
     for (let i=0; i<tekstZinput15; i++) {
