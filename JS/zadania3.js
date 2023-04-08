@@ -293,7 +293,7 @@ for (let i=0; i<tekst14.length; i++) {
 }
 console.log('ilość samogłosek to:',ilesamoglosek);
 
-// 16a. Pobierz tekst od użytkownika, a następnie policz ile się w nim znajduje samogłosek
+// 15a. Pobierz tekst od użytkownika, a następnie policz ile się w nim znajduje samogłosek
 
 let input15 = document.createElement('input');
 input15.setAttribute('type', 'text');
