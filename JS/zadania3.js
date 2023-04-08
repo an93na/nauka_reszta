@@ -273,7 +273,7 @@ document.body.appendChild(input14a);
 document.body.appendChild(button14a);
 
 const tekst14a = document.getElementById('14a')
-const tekst14aWynik = tekst14a.addEventListener('input', () => {
+button14a.addEventListener('click', () => {
     let t1 = tekst14a.value.search('a');
     // console.log(t1)
     let t2 = tekst14a.value.substring(t1);
