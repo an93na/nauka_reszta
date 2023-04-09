@@ -316,8 +316,8 @@ input15.setAttribute('type', 'text');
 input15.setAttribute('placeholder','ile samogłosek');
 button15.innerText=`ile samo`
 
-document.body.appendChild(input15);
-document.body.appendChild(button15);
+div15.appendChild(input15);
+div15.appendChild(button15);
 
 button15.addEventListener('click', () => {
     let tekstZinput15 = input15.value.length;
