@@ -422,6 +422,9 @@ console.log(zad17b);
 
 // 17a  Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
+const div17 = document.createElement('div');
+div.appendChild(div17);
+
 const input17a = document.createElement('input');
 const button17a = document.createElement('button');
 
@@ -429,8 +432,8 @@ input17a.setAttribute('type', 'text');
 input17a.setAttribute('placeholder', 'złącz');
 button17a.innerText=`złącz`
 
-document.body.appendChild(input17a);
-document.body.appendChild(button17a);
+div17.appendChild(input17a);
+div17.appendChild(button17a);
 
 button17a.addEventListener('click', ()=> {
     const slowo = input17a.value.trim().split(' ');
