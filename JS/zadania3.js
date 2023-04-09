@@ -198,7 +198,8 @@ const button12a = document.createElement('button');
 tekst12a.setAttribute('type','text');
 tekst12a.setAttribute('id','12a');
 tekst12a.setAttribute('placeholder','Od tyłu w consoli');
-button12a.innerText='od końca'
+button12a.innerText='od końca';
+button12a.setAttribute('class', 'button');
 
 div12.appendChild(tekst12a);
 div12.appendChild(button12a);
