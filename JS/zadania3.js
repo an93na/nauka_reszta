@@ -354,6 +354,9 @@ for(let i = 0; i<tekst14.length; i++){
 console.log(wynik16);
 //16a. Pobierz tekst od użytkownika, a następnie zamień wszystkie litery “a” “e” “o” na “x
 
+const div16 = document.createElement('div');
+div.appendChild(div16);
+
 let input16 = document.createElement('input');
 let button16 = document.createElement('button');
 
