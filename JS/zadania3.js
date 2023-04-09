@@ -138,7 +138,7 @@ console.log(zad11);
 // let tekstDuzy = tekst11a.toUpperCase();
 // console.log(tekstDuzy);
 const div = document.createElement('div');
-div.style.display = 'flex'
+div.setAttribute('class', 'divGlowny');
 document.body.appendChild(div);
 
 const div11 = document.createElement('div');
