@@ -142,7 +142,7 @@ div.style.display = 'flex'
 document.body.appendChild(div);
 
 const div11 = document.createElement('div');
-div11.setAttribute('class', 'div');
+div11.setAttribute('class', 'divSrodek');
 div.appendChild(div11);
 
 const input11a = document.createElement("input");
@@ -189,6 +189,7 @@ console.log(zad12Petla);
 //12a Pobierz tekst od użytkownika i wyświetl go od końca
 
 const div12 = document.createElement('div');
+div12.setAttribute('class', 'divSrodek');
 div.appendChild(div12);
 
 const tekst12a = document.createElement('input');
@@ -232,7 +233,9 @@ for (let i=0; i<=zad12Dlugosc; i++){
 }
 
 // 13a. Pobierz tekst od użytkownika, a następnie wyświetl “Litera” tyle razy ile liter ma dany tekst
+
 const div13 = document.createElement('div');
+div13.setAttribute('class', 'divSrodek');
 div.appendChild(div13);
 
 const input13a = document.createElement("input");
@@ -271,7 +274,9 @@ let zad14end = tekst14.substring(6)
 console.log(zad14end);
 
 //14a Pobierz tekst od użytkownika a następnie wyświetl część tekstu, która występuje po pierwszej literze “a”
+
 const div14 = document.createElement('div');
+div14.setAttribute('class', 'divSrodek');
 div.appendChild(div14);
 
 const input14a = document.createElement('input');
@@ -307,7 +312,9 @@ for (let i=0; i<tekst14.length; i++) {
 console.log('ilość samogłosek to:',ilesamoglosek);
 
 // 15a. Pobierz tekst od użytkownika, a następnie policz ile się w nim znajduje samogłosek
+
 const div15 = document.createElement('div');
+div15.setAttribute('class', 'divSrodek');
 div.appendChild(div15);
 
 let input15 = document.createElement('input');
@@ -356,6 +363,7 @@ console.log(wynik16);
 //16a. Pobierz tekst od użytkownika, a następnie zamień wszystkie litery “a” “e” “o” na “x
 
 const div16 = document.createElement('div');
+div16.setAttribute('class', 'divSrodek');
 div.appendChild(div16);
 
 let input16 = document.createElement('input');
@@ -424,6 +432,7 @@ console.log(zad17b);
 // 17a  Napisz program, który pobiera od użytkownika 5 słów, a następnie wyświetla ja jako jeden ciąg tekstu
 
 const div17 = document.createElement('div');
+div17.setAttribute('class', 'divSrodek');
 div.appendChild(div17);
 
 const input17a = document.createElement('input');
