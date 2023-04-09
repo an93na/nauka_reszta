@@ -364,8 +364,8 @@ input16.setAttribute('type', 'text');
 input16.setAttribute('placeholder','zamiana a,e,o na x');
 button16.innerText=`na "x"`
 
-document.body.appendChild(input16);
-document.body.appendChild(button16);
+div16.appendChild(input16);
+div16.appendChild(button16);
 
 button16.addEventListener('click', ()=> {
     let wynik16a = '';
