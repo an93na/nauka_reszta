@@ -242,8 +242,8 @@ input13a.setAttribute("id", "13a");
 input13a.setAttribute("placeholder", `Wyświetli "Litera w consoli" `);
 button13a.innerText="zamień"
 
-div.appendChild(input13a);
-div.appendChild(button13a);
+div13.appendChild(input13a);
+div13.appendChild(button13a);
 
 const tekst13awprowadzony = document.getElementById("13a");
 button13a.addEventListener("click", ()=> {
