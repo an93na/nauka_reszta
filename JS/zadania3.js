@@ -151,7 +151,8 @@ const button11a = document.createElement("button");
 input11a.setAttribute("type","text");
 input11a.setAttribute("id","tekstUzytkownika");
 input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
-button11a.innerText='wyświetl'
+button11a.innerText='wyświetl';
+button11a.setAttribute('class', 'button');
 
 div11.appendChild(input11a);
 div11.appendChild(button11a);
