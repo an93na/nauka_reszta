@@ -142,6 +142,7 @@ div.style.display = 'flex'
 document.body.appendChild(div);
 
 const div11 = document.createElement('div');
+div11.setAttribute('class', 'div');
 div.appendChild(div11);
 
 const input11a = document.createElement("input");
