@@ -479,11 +479,14 @@ button17a.addEventListener('click', ()=> {
     if (slowo.length === 5) {
         const polaczoneSlowa = slowo.join('');
         console.log(polaczoneSlowa);
-        const result = document.createElement('p');
-        result.innerText = polaczoneSlowa;
-        document.body.appendChild(result);
+        const result = document.createElement('li');
+        result.innerText = 'Twoje złączone słowa: ',polaczoneSlowa;
+        ol.appendChild(result);
       } else {
         console.log('Wprowadź dokładnie pięć słów!');
+        const li = document.createElement('li');
+        ol.appendChild(li);
+        li.innerText = `Wprowadź dokładnie 5 słów`;
       }
     });
     
