@@ -277,7 +277,7 @@ button13a.addEventListener("click", ()=> {
 
     const li = document.createElement('li');
     ol.appendChild(li);
-    li.innerText = 'Wyświetlanie słowa Litera tyle razy ile jest liter w Twoim tekście: ' + tekst13Wynik;
+    li.innerText = `Wyświetlanie słowa 'Litera' tyle razy ile jest liter w Twoim tekście: ` + tekst13Wynik;
 });
 
 console.log('~~~~~~~~~~~~~~~~~~~~14~~~~~~~~~~~~~~~~~~~~');
@@ -355,6 +355,10 @@ button15.addEventListener('click', () => {
         }
     }
     console.log('ilość samogłosek we wprowadzonym tekście to: ',samo); 
+    
+    const li = document.createElement('li');
+    ol.appendChild(li);
+    li.innerText = 'Ilość samogłosek we wprowadzonym tekście to: ' + samo;
 })
 
 console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
