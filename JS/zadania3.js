@@ -164,7 +164,11 @@ const tekstInput11a = document.getElementById("tekstUzytkownika");
 button11a.addEventListener("click", ()=> {
     const tekst = tekstInput11a.value.toUpperCase()
     // tekstInput11a.value = tekst;
-    console.log(tekst)}
+    console.log(tekst)
+    const li = document.createElement('li');
+    ol.appendChild(li);
+    li.innerText = 'Twój powiększony tekst: ' + tekst;
+}
 );
 console.log('~~~~~~~~~~~~~~~~~~~~12~~~~~~~~~~~~~~~~~~~~');
 //12. Wyświetlenie tekstu od tyłu
