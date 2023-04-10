@@ -289,6 +289,7 @@ input14a.setAttribute('type', 'text');
 input14a.setAttribute('id', '14a');
 input14a.setAttribute('placeholder', "w consoli od a");
 button14a.innerText=`po "a"`
+button14a.setAttribute('class', 'button');
 
 div14.appendChild(input14a);
 div14.appendChild(button14a);
