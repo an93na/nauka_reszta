@@ -480,8 +480,9 @@ button17a.addEventListener('click', ()=> {
         const polaczoneSlowa = slowo.join('');
         console.log(polaczoneSlowa);
         const result = document.createElement('li');
-        result.innerText = 'Twoje złączone słowa: ',polaczoneSlowa;
+        result.innerText = 'Twoje złączone słowa: '+ polaczoneSlowa;
         ol.appendChild(result);
+
       } else {
         console.log('Wprowadź dokładnie pięć słów!');
         const li = document.createElement('li');
@@ -503,6 +504,4 @@ console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 
 // // console.log("Twoje słowa jako jeden ciąg tekstu: " + sentence);
 
-document.createElement('ol');
-div.appendChild('ol');
 
