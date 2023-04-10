@@ -327,6 +327,7 @@ let button15 = document.createElement('button');
 input15.setAttribute('type', 'text');
 input15.setAttribute('placeholder','ile samogłosek');
 button15.innerText=`ile samo`
+button15.setAttribute('class', 'button');
 
 div15.appendChild(input15);
 div15.appendChild(button15);
@@ -376,6 +377,7 @@ let button16 = document.createElement('button');
 input16.setAttribute('type', 'text');
 input16.setAttribute('placeholder','zamiana a,e,o na x');
 button16.innerText=`na "x"`
+button16.setAttribute('class', 'button');
 
 div16.appendChild(input16);
 div16.appendChild(button16);
@@ -444,7 +446,8 @@ const button17a = document.createElement('button');
 
 input17a.setAttribute('type', 'text');
 input17a.setAttribute('placeholder', 'złącz');
-button17a.innerText=`złącz`
+button17a.innerText=`złącz`;
+button17a.setAttribute('class', 'button');
 
 div17.appendChild(input17a);
 div17.appendChild(button17a);
