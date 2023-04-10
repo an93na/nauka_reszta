@@ -314,6 +314,10 @@ button14a.addEventListener('click', () => {
     // console.log(t1)
     let t2 = tekst14a.value.substring(t1);
     console.log(t2)
+
+    const li = document.createElement('li');
+    ol.appendChild(li);
+    li.innerText = `Wyświetlanie Twojego tekstu po pierwszej literze "a": ` + t2;
 });
 
 console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
