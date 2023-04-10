@@ -17,3 +17,8 @@ flex-wrap: wrap;
     cursor: pointer;
 }
 
+.button :hover
+{
+    background-color: deeppink;
+    font-size: 20px;
+}
