@@ -141,6 +141,9 @@ const div = document.createElement('div');
 div.setAttribute('class', 'divGlowny');
 document.body.appendChild(div);
 
+const ol = document.createElement('ol');
+document.body.appendChild(ol);
+
 const div11 = document.createElement('div');
 div11.setAttribute('class', 'divSrodek');
 div.appendChild(div11);
@@ -478,5 +481,6 @@ console.log('~~~~~~~~~~~~~~~~~~~~18~~~~~~~~~~~~~~~~~~~~');
 
 // // console.log("Twoje słowa jako jeden ciąg tekstu: " + sentence);
 
-
+document.createElement('ol');
+div.appendChild('ol');
 
