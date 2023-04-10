@@ -223,10 +223,13 @@ button12a.addEventListener('click', ()=> {
         zad12aPetla = zad12aPetla + tekst[i];
     }
     console.log(zad12aPetla);
-
     // II sposób
     // let tekstOdTylu = tekst.split('').reverse().join('');
     // console.log(tekstOdTylu);
+
+    const li = document.createElement('li');
+    ol.appendChild(li);
+    li.innerText = 'Twój tekst od tyłu: ' + zad12aPetla;
 });
 
 
