@@ -33,10 +33,17 @@ const users = [
     { name: "Kate", age: "9" },
   ];
 
-//   II sposób
+//   I sposób
   function czyPelnoletni() {
     return users.filter((user) => user.age >= 18);
   };
   
   const pelnoletni = czyPelnoletni()
-  console.table(pelnoletni);
+//   console.table(pelnoletni);
+
+//   II sposób
+const adults = users.filter((user)=> {
+    return user.age >= 18;
+});
+
+console.table(adults);
