@@ -132,36 +132,24 @@ const todos0 = [
   const zresteowanyStatusTablicyTodos0 = zresetujStatusTablicyTodos0();
   console.table(zresteowanyStatusTablicyTodos0);
 
-  const htmlAsArrayOfTRsTodos0 = zresteowanyStatusTablicyTodos0.map((task) => {
-    return `
-    <tr> 
-    <td>
-    ${task.task}
-    </td>
-    <td>
-    ${task.status}
-    </td>
-    <td>
-    <button>DELETE</button>
-    </td>
-    </tr>`
-});
 
-// console.log(htmlAsArrayOfTRsTodos0);
-
-
-// const htmlTRAsAStringTodos0 = htmlAsArrayOfTRsTodos0.join('');
-
-// const htmlTableTodos0 = `<table>
-// <tbody>
-// ${htmlTRAsAStringTodos0}
-// </tbody>
-// </table>`
-
-// const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
-// // console.log({articleHTMLButJSObject});
-
-// articleHTMLButJSObjectTodos0.innerHTML = htmlTableTodos0;
+  function daneDoTabeli(a) {
+    const htmlAsArrayOfTRsTodos0 = a.map((task) => {
+        return `
+        <tr> 
+        <td>
+        ${task.task}
+        </td>
+        <td>
+        ${task.status}
+        </td>
+        <td>
+        <button>DELETE</button>
+        </td>
+        </tr>`
+    });
+    return htmlAsArrayOfTRsTodos0
+  }
 
 function stworzTabeleWHTML(a){
     const htmlTRAsAString = a.join('');
@@ -174,6 +162,5 @@ function stworzTabeleWHTML(a){
 };
 
 const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
-// console.log({articleHTMLButJSObject});
-
-articleHTMLButJSObjectTodos0.innerHTML = stworzTabeleWHTML(htmlAsArrayOfTRsTodos0);
+const zwrotZFunkcjiDaneDoTabeli = daneDoTabeli(zresteowanyStatusTablicyTodos0);
+articleHTMLButJSObjectTodos0.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli);
