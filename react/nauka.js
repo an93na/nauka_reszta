@@ -59,14 +59,33 @@ const adults = users.filter((user)=> {
 //     </div>
 // `
 
-const htmlAsArrayOfTRs = users.map((user) => {
-    return
-})
+const htmlAsArrayOfTRs = adults.map((user) => {
+    return `
+    <tr> 
+    <td>
+    ${user.name}
+    </td>
+    <td>
+    ${user.age}
+    </td>
+    <td>
+    <button>DELETE</button>
+    </td>
+    </tr>`
+});
+
+// console.log(htmlAsArrayOfTRs)
 
 // łączenie tablicy stringów (elementów TR) w jednego stringa
-const htmlAsAString = htmlAsArrayOfTRs.join('');
+const htmlTRAsAString = htmlAsArrayOfTRs.join('');
+
+const htmlTable = `<table>
+<tbody>
+${htmlTRAsAString}
+</tbody>
+</table>`
 
 const articleHTMLButJSObject = document.querySelector('#output');
 // console.log({articleHTMLButJSObject});
 
-articleHTMLButJSObject.innerHTML = html;
+articleHTMLButJSObject.innerHTML = htmlTable;
