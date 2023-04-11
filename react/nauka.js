@@ -147,18 +147,33 @@ const todos0 = [
     </tr>`
 });
 
-console.log(htmlAsArrayOfTRsTodos0);
+// console.log(htmlAsArrayOfTRsTodos0);
 
-// łączenie tablicy stringów (elementów TR) w jednego stringa
-const htmlTRAsAStringTodos0 = htmlAsArrayOfTRsTodos0.join('');
 
-const htmlTableTodos0 = `<table>
-<tbody>
-${htmlTRAsAStringTodos0}
-</tbody>
-</table>`
+// const htmlTRAsAStringTodos0 = htmlAsArrayOfTRsTodos0.join('');
+
+// const htmlTableTodos0 = `<table>
+// <tbody>
+// ${htmlTRAsAStringTodos0}
+// </tbody>
+// </table>`
+
+// const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
+// // console.log({articleHTMLButJSObject});
+
+// articleHTMLButJSObjectTodos0.innerHTML = htmlTableTodos0;
+
+function stworzTabeleWHTML(a){
+    const htmlTRAsAString = a.join('');
+    const htmlTable= `<table>
+    <tbody>
+    ${htmlTRAsAString}
+    </tbody>
+    </table>`
+    return htmlTable;
+};
 
 const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
 // console.log({articleHTMLButJSObject});
 
-articleHTMLButJSObjectTodos0.innerHTML = htmlTableTodos0;
+articleHTMLButJSObjectTodos0.innerHTML = stworzTabeleWHTML(htmlAsArrayOfTRsTodos0);
