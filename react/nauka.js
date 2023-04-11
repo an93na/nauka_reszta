@@ -89,3 +89,13 @@ const articleHTMLButJSObject = document.querySelector('#output');
 // console.log({articleHTMLButJSObject});
 
 articleHTMLButJSObject.innerHTML = htmlTable;
+
+/**Zadanie 3
+ * dodaj do każdego stringa w tablicy znak specjalny * w taki sposób żeby był pomiędzy każdą literką
+ * np cześć => c*z*e*ś*ć
+ *
+ * wynik wykonsoluj za pomocą console.table
+ *
+ */
+
+const strings1 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
