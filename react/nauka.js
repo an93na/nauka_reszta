@@ -8,7 +8,7 @@ function filtruj(){
 }
 
 const wiecejNiz3 = filtruj();
-console.table(wiecejNiz3);
+// console.table(wiecejNiz3);
 
 // II sposób z pętlą for 
 
@@ -46,4 +46,27 @@ const adults = users.filter((user)=> {
     return user.age >= 18;
 });
 
-console.table(adults);
+// console.table(adults);
+
+// możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+// 1) Stowrzyść strukture HTMLową tabelki  w JSie + dane
+// 2) pobrać element z dokumentu htl tak żeby umieścić w nim stowrzoną w JSie tabelkę
+
+//Przykład html w js 
+// const html = `
+//     <div> 
+//     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga earum, nisi quidem consequatur saepe necessitatibus ipsum, nemo officia minima nesciunt blanditiis molestias nostrum ratione maxime asperiores maiores iste eaque facere. 
+//     </div>
+// `
+
+const htmlAsArrayOfTRs = users.map((user) => {
+    return
+})
+
+// łączenie tablicy stringów (elementów TR) w jednego stringa
+const htmlAsAString = htmlAsArrayOfTRs.join('');
+
+const articleHTMLButJSObject = document.querySelector('#output');
+// console.log({articleHTMLButJSObject});
+
+articleHTMLButJSObject.innerHTML = html;
