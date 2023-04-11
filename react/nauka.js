@@ -99,3 +99,13 @@ articleHTMLButJSObject.innerHTML = htmlTable;
  */
 
 const strings1 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
+
+function dodajGwiazdkeWStringu() {
+    return strings1.map((string) => {
+        const newString = string.toString();
+        const rozwiazanie = newString.split('').join('*')
+        return rozwiazanie});
+}
+const stringPodzielonyGwiazdka = dodajGwiazdkeWStringu();
+
+console.table(stringPodzielonyGwiazdka);
