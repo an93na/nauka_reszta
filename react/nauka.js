@@ -162,5 +162,7 @@ function stworzTabeleWHTML(a){
 };
 
 const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
+
 const zwrotZFunkcjiDaneDoTabeli = daneDoTabeli(zresteowanyStatusTablicyTodos0);
+
 articleHTMLButJSObjectTodos0.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli);
