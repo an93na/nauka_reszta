@@ -109,3 +109,56 @@ function dodajGwiazdkeWStringu() {
 const stringPodzielonyGwiazdka = dodajGwiazdkeWStringu();
 
 console.table(stringPodzielonyGwiazdka);
+
+/**Zadanie 4
+ * Stwórz funkcję która będzie zwracać "zresetowaną" tablicę todos
+ * tzn mając tablice todos z różnymi statusami przetwórz daną tablicę tak żeby wszystkie statusy
+ * były ustawione na todo - zwróć uwage jak wygląda podany kształ danych
+ *
+ * wynik wyświetl za pomocą console.table
+ *
+ * ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+ */
+const todos0 = [
+    { task: "wyspać się", status: "in progress" },
+    { task: "mieć dobry chumor", status: "todo" },
+    { task: "pouczyć się CSSa", status: "in progress" },
+    { task: "pouczyć się JSa", status: "todo" },
+  ];
+
+  function zresetujStatusTablicyTodos0() {
+    return todos0.map((task)=>({...task, status: 'todo'}))
+  }
+  const zresteowanyStatusTablicyTodos0 = zresetujStatusTablicyTodos0();
+  console.table(zresteowanyStatusTablicyTodos0);
+
+  const htmlAsArrayOfTRsTodos0 = zresteowanyStatusTablicyTodos0.map((task) => {
+    return `
+    <tr> 
+    <td>
+    ${task.task}
+    </td>
+    <td>
+    ${task.status}
+    </td>
+    <td>
+    <button>DELETE</button>
+    </td>
+    </tr>`
+});
+
+console.log(htmlAsArrayOfTRsTodos0);
+
+// łączenie tablicy stringów (elementów TR) w jednego stringa
+const htmlTRAsAStringTodos0 = htmlAsArrayOfTRsTodos0.join('');
+
+const htmlTableTodos0 = `<table>
+<tbody>
+${htmlTRAsAStringTodos0}
+</tbody>
+</table>`
+
+const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
+// console.log({articleHTMLButJSObject});
+
+articleHTMLButJSObjectTodos0.innerHTML = htmlTableTodos0;
