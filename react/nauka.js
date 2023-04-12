@@ -292,3 +292,21 @@ const zwrotZFunkcjiDaneDoTabeli2 = daneDoTabeli(znajdz('mi'));
 
 articleHTMLButJSObjectTodos2.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli2);
 
+
+/** Zadanie 7
+ * podana tablica skłąda się ze studenów którzy są przyporządkowani każdy do jakiejś grupy
+ * jednak są oni w tej samej tablicy
+ *
+ * swtórz funkcje która stworzy dwie lub więcej tablic w tablicy na podstawie pola group
+ * dzięki temu pogrupujesz studentów i będzie można ich wyświetlić pogrupowancyh do
+ * czego zachęcam żeby przećwiczyć operacje na DOMie
+ */
+
+const students = [
+    { name: "John", age: 12, group: 1 },
+    { name: "Jane", age: 22, group: 2 },
+    { name: "Joe", age: 55, group: 1 },
+    { name: "Kate", age: 9, group: 2 },
+  ];
+  
+  
