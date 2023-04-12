@@ -322,8 +322,18 @@ const students = [
 //     acc = acc + student.age;
 //     return acc
 //   },0)
-
-
+// 
+// Przykład z grupowaniem po wieku
+// const groupedByAge = students.reduce((groups, student)=>{
+//     if(student.age < 30){
+//         groups[0].push(student);
+// }
+//     else {
+//         groups[1].push(student);
+// } 
+//     return groups
+// },[[],[]]);
+// console.log(groupedByAge);
 
 
 
