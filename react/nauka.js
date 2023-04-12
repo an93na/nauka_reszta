@@ -307,6 +307,9 @@ const students = [
     { name: "Jane", age: 22, group: 2 },
     { name: "Joe", age: 55, group: 1 },
     { name: "Kate", age: 9, group: 2 },
+    { name: "Basia", age: 19, group: 3 },
+    { name: "Bartek", age: 28, group: 4 },
+
   ];
 
 
