@@ -308,17 +308,24 @@ const students = [
     { name: "Joe", age: 55, group: 1 },
     { name: "Kate", age: 9, group: 2 },
   ];
-  
-  let ageSum = 0;
-  students.forEach((student)=> {
-    ageSum = ageSum + student.age;
-  })
-    //acc akumulator to takie miejsce w pamięci, ktore jest dodstępne w każdym obrocie pętli (tutaj ageSum), a student to nasz parametr
-    //to zero wartośc początkowa naszego akumulatora, może to być tablica obiekt co chcemy żeby było naszym początkiem  
-  const ageSum1 = students.reduce((acc,student)=>{
-    acc = acc + student.age;
-    return acc
-  },0)
+
+
+//   Przykład działania reduce
+// 
+//   let ageSum = 0;
+//   students.forEach((student)=> {
+//     ageSum = ageSum + student.age;
+//   })
+//     //acc akumulator to takie miejsce w pamięci, ktore jest dodstępne w każdym obrocie pętli (tutaj ageSum), a student to nasz parametr
+//     //to zero wartośc początkowa naszego akumulatora, może to być tablica obiekt co chcemy żeby było naszym początkiem  
+//   const ageSum1 = students.reduce((acc,student)=>{
+//     acc = acc + student.age;
+//     return acc
+//   },0)
+
+
+
+
 
 //   function dodajDoGrupy(){
 //     return students.reduce(()=>{},)
