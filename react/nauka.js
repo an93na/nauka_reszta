@@ -336,7 +336,32 @@ const students = [
 // console.log(groupedByAge);
 
 
-
+// Rozwiązanie zadania wersja dłuższa
 //   function dodajDoGrupy(){
-//     return students.reduce(()=>{},)
-//   }
+//     return students.reduce((groups,student)=>{
+//         if(student.group === 1){
+//             groups[0].push(student);
+//         }
+//         else if (student.group === 2){
+//             groups[1].push(student);
+//         }
+//         return groups
+//     },[[], []])
+//   };
+
+//   console.log(dodajDoGrupy());
+
+// Lepsza wersja odporna na więcej wersji
+  function dodajDoGrupyLepsza(){
+    return students.reduce((groups,student)=>{
+        if(groups[student.group]){
+            groups[student.group].push(student);
+        }
+        else {
+            groups[student.group]=[student];
+        }
+        return groups
+    },[])
+  };
+
+  console.log(dodajDoGrupyLepsza());
