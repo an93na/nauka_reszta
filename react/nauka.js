@@ -255,6 +255,40 @@ const todos2 = [
   function znajdz(slowoKlucz) {
     return todos2.filter((nazwa) => nazwa.task.includes(slowoKlucz));
   }
-  console.table(znajdz('pou'));
-  console.table(znajdz('mie'));
+//   console.table(znajdz('pou'));
+//   console.table(znajdz('mie'));
+
+  function daneDoTabeli(a) {
+    const htmlAsArrayOfTRsTodos0 = a.map((task) => {
+        return `
+        <tr> 
+        <td>
+        ${task.task}
+        </td>
+        <td>
+        ${task.status}
+        </td>
+        <td>
+        <button>ok</button>
+        </td>
+        </tr>`
+    });
+    return htmlAsArrayOfTRsTodos0
+  }
+
+function stworzTabeleWHTML(a){
+    const htmlTRAsAString = a.join('');
+    const htmlTable= `<table>
+    <tbody>
+    ${htmlTRAsAString}
+    </tbody>
+    </table>`
+    return htmlTable;
+};
+
+const articleHTMLButJSObjectTodos2 = document.querySelector('#output3');
+
+const zwrotZFunkcjiDaneDoTabeli2 = daneDoTabeli(znajdz('mi'));
+
+articleHTMLButJSObjectTodos2.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli2);
 
