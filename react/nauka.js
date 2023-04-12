@@ -108,7 +108,7 @@ function dodajGwiazdkeWStringu() {
 }
 const stringPodzielonyGwiazdka = dodajGwiazdkeWStringu();
 
-console.table(stringPodzielonyGwiazdka);
+// console.table(stringPodzielonyGwiazdka);
 
 /**Zadanie 4
  * Stwórz funkcję która będzie zwracać "zresetowaną" tablicę todos
@@ -126,10 +126,12 @@ const todos0 = [
     { task: "pouczyć się JSa", status: "todo" },
   ];
 
-  function zresetujStatusTablicyTodos0() {
-    return todos0.map((task)=>({...task, status: 'todo'}))
+  function zresetujStatusTablicyTodos0(todos) {
+    return todos.map((task) => ({...task, status: 'todo'}));
   }
-  const zresteowanyStatusTablicyTodos0 = zresetujStatusTablicyTodos0();
+  const zresteowanyStatusTablicyTodos0 = zresetujStatusTablicyTodos0(todos0);
+  
+//   console.table(todos0);
   console.table(zresteowanyStatusTablicyTodos0);
 
 
@@ -144,7 +146,7 @@ const todos0 = [
         ${task.status}
         </td>
         <td>
-        <button>DELETE</button>
+        <button>what?</button>
         </td>
         </tr>`
     });
@@ -166,3 +168,64 @@ const articleHTMLButJSObjectTodos0 = document.querySelector('#output1');
 const zwrotZFunkcjiDaneDoTabeli = daneDoTabeli(zresteowanyStatusTablicyTodos0);
 
 articleHTMLButJSObjectTodos0.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli);
+
+
+/**Zadanie 5
+* Stwórz funkcję która będzie zwracać "zarchiwizowaną" tablicę todos
+ * tzn dodaj dodatkowe pole typu boolean do kazdego obiektu w tablicy
+ * pole niech się nazywa archived i niech będzie ustawione na true
+ *
+ * wynik wyświetl za pomocą console.table
+ *
+ * ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+ */
+
+const todos1 = [
+    { task: "wyspać się", status: "in progress" },
+    { task: "mieć dobry chumor", status: "todo" },
+    { task: "pouczyć się CSSa", status: "in progress" },
+    { task: "pouczyć się JSa", status: "todo" },
+  ];
+
+  function zarchiwizownyTodos1() {
+    return todos1.map((task) => ({...task, archived: true}));
+  }
+
+  const zarchiwizowny = zarchiwizownyTodos1();
+  console.table(zarchiwizowny);
+
+
+  function daneDoTabeli(a) {
+    const htmlAsArrayOfTRsTodos0 = a.map((task) => {
+        return `
+        <tr> 
+        <td>
+        ${task.task}
+        </td>
+        <td>
+        ${task.status}
+        </td>
+        <td>
+        ${task.archived}
+        </td>
+        </tr>`
+    });
+    return htmlAsArrayOfTRsTodos0
+  }
+
+function stworzTabeleWHTML(a){
+    const htmlTRAsAString = a.join('');
+    const htmlTable= `<table>
+    <tbody>
+    ${htmlTRAsAString}
+    </tbody>
+    </table>`
+    return htmlTable;
+};
+
+const articleHTMLButJSObjectTodos1 = document.querySelector('#output2');
+
+const zwrotZFunkcjiDaneDoTabeli1 = daneDoTabeli(zarchiwizowny);
+
+articleHTMLButJSObjectTodos1.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli1);
+
