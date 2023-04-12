@@ -132,7 +132,7 @@ const todos0 = [
   const zresteowanyStatusTablicyTodos0 = zresetujStatusTablicyTodos0(todos0);
   
 //   console.table(todos0);
-  console.table(zresteowanyStatusTablicyTodos0);
+//   console.table(zresteowanyStatusTablicyTodos0);
 
 
   function daneDoTabeli(a) {
@@ -192,7 +192,7 @@ const todos1 = [
   }
 
   const zarchiwizowny = zarchiwizownyTodos1();
-  console.table(zarchiwizowny);
+//   console.table(zarchiwizowny);
 
 
   function daneDoTabeli(a) {
@@ -228,4 +228,33 @@ const articleHTMLButJSObjectTodos1 = document.querySelector('#output2');
 const zwrotZFunkcjiDaneDoTabeli1 = daneDoTabeli(zarchiwizowny);
 
 articleHTMLButJSObjectTodos1.innerHTML = stworzTabeleWHTML(zwrotZFunkcjiDaneDoTabeli1);
+
+
+/**Zadanie 6
+ * stwórz funkcje która obsłuży search bar (np taki jak w aplikacjach do wyszukiwania rekordów)
+ *
+ * funckja będzie szukać w tablicy na podstawie pola "task",
+ * funckja ma zwracać pierwszy pasujący elemnt
+ *
+ *
+ * ⭐ ⭐ dla chętnych niech funckja posiada drugi parametr określający czy chcemy dostać
+ * wszystkie pasujące elementy np podając słowo "pouczyć się" funkcja powinna zwrócić dwa elmenty z poniższej tablicy
+ * gdy drugi parametr funkcji określa np że chcemy konretny rekord/element tablicy niech funckja
+ * wyszukuje pierwszy pasujący element
+ *
+ *
+ */
+
+const todos2 = [
+    { task: "wyspać się", status: "in progress" },
+    { task: "mieć dobry chumor", status: "todo" },
+    { task: "pouczyć się CSSa", status: "in progress" },
+    { task: "pouczyć się JSa", status: "todo" },
+  ];
+
+  function znajdz(slowoKlucz) {
+    return todos2.filter((nazwa) => nazwa.task.includes(slowoKlucz));
+  }
+  console.table(znajdz('pou'));
+  console.table(znajdz('mie'));
 
