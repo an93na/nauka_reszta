@@ -470,3 +470,30 @@ const removeNumber = (numberToRemove) => {
 
 console.log(removeNumber(4));
 
+// ZAD19
+
+const todos = [
+  { id: "1", name: "Pouczyć się JSa", status: "in progress", priority: "high" },
+  { id: "2", name: "Poczuyć się HTMLa", status: "todo", priority: "high" },
+  { id: "3", name: "Pouczyć się CSSa", status: "done", priority: "medium" },
+  {
+    id: "5",
+    name: "Pouczyć się GITa",
+    status: "in progress",
+    priority: "medium",
+  },
+  { id: "6", name: "Pouczyć się Reacta", status: "todo", priority: "high" },
+  { id: "7", name: "Pouczyć się Reduxa", status: "todo", priority: "low" },
+];
+
+const addNewTodo = (newTodo) => {
+  return [...todos, newTodo];
+};
+const newTask = {
+  id: `${todos.length}`, 
+  name: 'Odpocząć',
+  status: 'todo',
+  priority: 'high'
+}
+const newTodos = addNewTodo(newTask);
+console.log(newTodos);
