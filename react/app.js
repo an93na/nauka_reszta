@@ -462,3 +462,11 @@ const addNewNumber = (newNumber) => {
 console.log(numbers)
 console.log(addNewNumber(6));
 
+
+// ZAD18
+const removeNumber = (numberToRemove) => {
+  return numbers.filter((number) => number !== numberToRemove)
+};
+
+console.log(removeNumber(4));
+
