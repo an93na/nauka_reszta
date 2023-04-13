@@ -453,3 +453,12 @@ function assignToProjects() {
 }
 const workersWithProjects = assignToProjects();
 console.table(workersWithProjects);
+
+// ZAD17
+
+const addNewNumber = (newNumber) => {
+  return [...numbers, newNumber]
+};
+console.log(numbers)
+console.log(addNewNumber(6));
+
