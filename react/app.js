@@ -402,3 +402,16 @@ function podzielNaGrupy() {
 }
 const grupyPoPodziale = podzielNaGrupy()
 console.log(grupyPoPodziale);
+
+// ZAD14
+
+function getAmountBasedOnType(seniority) {
+  return workers.reduce((suma, worker) => {
+    if(worker.seniority === seniority){
+      suma += 1; 
+    }
+    return suma;
+  },0)
+};
+
+console.log(getAmountBasedOnType('senior'));
