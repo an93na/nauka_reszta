@@ -435,3 +435,21 @@ console.log(regularsSallary);
 
 const seniorsSallary = getSumOfSallariesBasedOnType('senior');
 console.log(seniorsSallary);
+
+// ZAD16
+
+function assignToProjects() {
+  return workers.map((worker) => {
+    if(worker.seniority === 'junior'){
+      return {...worker, project: 'internal project'}
+    }
+    else if(worker.seniority === 'regular'){
+      return {...worker, project: 'XYZ'}
+    }
+    else if(worker.seniority === 'senior'){
+      return {...worker, project: 'ZYX'}
+    }
+  })
+}
+const workersWithProjects = assignToProjects();
+console.table(workersWithProjects);
