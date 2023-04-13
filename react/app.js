@@ -497,3 +497,13 @@ const newTask = {
 }
 const newTodos = addNewTodo(newTask);
 console.log(newTodos);
+
+// ZAD20
+const removeTodo = (todoIdToDelete) => {
+  return todos.filter((zad) => zad.id !== todoIdToDelete);
+};
+
+const newTodosu = removeTodo('6');
+console.log(newTodosu);
+
+// 
