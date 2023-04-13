@@ -415,3 +415,23 @@ function getAmountBasedOnType(seniority) {
 };
 
 console.log(getAmountBasedOnType('senior'));
+
+// ZAD15
+
+function getSumOfSallariesBasedOnType(seniority) {
+  return workers.reduce((sumaWynagrodzen, worker) => {
+    if(worker.seniority == seniority){
+      sumaWynagrodzen += worker.salary;
+    }
+    return sumaWynagrodzen;
+  },0);
+};
+
+const juniorsSallary = getSumOfSallariesBasedOnType('junior');
+console.log(juniorsSallary);
+
+const regularsSallary = getSumOfSallariesBasedOnType('regular');
+console.log(regularsSallary); 
+
+const seniorsSallary = getSumOfSallariesBasedOnType('senior');
+console.log(seniorsSallary);
