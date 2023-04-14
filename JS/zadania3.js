@@ -305,15 +305,18 @@ const div14 = document.createElement('div');
 div14.setAttribute('class', 'divSrodek');
 div.appendChild(div14);
 
+const paragraf4 = document.createElement('p')
 const input14a = document.createElement('input');
 const button14a = document.createElement('button');
 
 input14a.setAttribute('type', 'text');
 input14a.setAttribute('id', '14a');
-input14a.setAttribute('placeholder', "w consoli od a");
+input14a.setAttribute('placeholder', "od a");
 button14a.innerText=`po "a"`
 button14a.setAttribute('class', 'button');
+paragraf4.innerText=`Wyświetli Twój tekst po pierwszej literze "a": `
 
+div14.appendChild(paragraf4);
 div14.appendChild(input14a);
 div14.appendChild(button14a);
 
