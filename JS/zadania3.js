@@ -351,14 +351,17 @@ const div15 = document.createElement('div');
 div15.setAttribute('class', 'divSrodek');
 div.appendChild(div15);
 
+const paragraf5 = document.createElement('p');
 let input15 = document.createElement('input');
 let button15 = document.createElement('button');
 
 input15.setAttribute('type', 'text');
-input15.setAttribute('placeholder','ile samogłosek');
+input15.setAttribute('placeholder','Wyświetl ile samogłosek');
 button15.innerText=`ile samo`
 button15.setAttribute('class', 'button');
+paragraf5.innerText='Wyświetli ilość samogłosek we wprowadzonym tekście';
 
+div15.appendChild(paragraf5);
 div15.appendChild(input15);
 div15.appendChild(button15);
 
