@@ -157,7 +157,7 @@ input11a.setAttribute("id","tekstUzytkownika");
 input11a.setAttribute("placeholder", "Wyświetli powiększony tekst");
 button11a.innerText='wyświetl';
 button11a.setAttribute('class', 'button');
-paragraf.innerText="Wprowadzony tekst po kliknięciu zostanie wyświetlony jako powiększony tekst"
+paragraf.innerText="Wprowadzony tekst po kliknięciu zostanie wyświetlony jako powiększony tekst."
 
 div11.appendChild(paragraf);
 div11.appendChild(input11a);
@@ -203,15 +203,18 @@ const div12 = document.createElement('div');
 div12.setAttribute('class', 'divSrodek');
 div.appendChild(div12);
 
+const paragraf2 = document.createElement("p");
 const tekst12a = document.createElement('input');
 const button12a = document.createElement('button');
 
 tekst12a.setAttribute('type','text');
 tekst12a.setAttribute('id','12a');
-tekst12a.setAttribute('placeholder','Od tyłu w consoli');
+tekst12a.setAttribute('placeholder','Wyświetl od tyłu');
 button12a.innerText='od końca';
 button12a.setAttribute('class', 'button');
+paragraf2.innerText= "Wpisany tekst zostanie wyświetlony od tyłu."
 
+div1.appendChild(paragraf2);
 div12.appendChild(tekst12a);
 div12.appendChild(button12a);
 
