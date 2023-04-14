@@ -154,7 +154,7 @@ const button11a = document.createElement("button");
 
 input11a.setAttribute("type","text");
 input11a.setAttribute("id","tekstUzytkownika");
-input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
+input11a.setAttribute("placeholder", "Wyświetli powiększony tekst");
 button11a.innerText='wyświetl';
 button11a.setAttribute('class', 'button');
 paragraf.innerText="Wprowadzony tekst po kliknięciu zostanie wyświetlony jako powiększony tekst"
