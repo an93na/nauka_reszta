@@ -485,6 +485,7 @@ const div17 = document.createElement('div');
 div17.setAttribute('class', 'divSrodek');
 div.appendChild(div17);
 
+const paragraf7 = document.createElement('p');
 const input17a = document.createElement('input');
 const button17a = document.createElement('button');
 
@@ -492,7 +493,9 @@ input17a.setAttribute('type', 'text');
 input17a.setAttribute('placeholder', 'wprowadź pięć słów');
 button17a.innerText=`złącz`;
 button17a.setAttribute('class', 'button');
+paragraf7.innerText = `Po wprowadzeniu 5 słów zostaną one złączone w jedno`
 
+div17.appendChild(paragraf7);
 div17.appendChild(input17a);
 div17.appendChild(button17a);
 
