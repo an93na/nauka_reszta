@@ -165,7 +165,9 @@ div11.appendChild(button11a);
 
 const tekstInput11a = document.getElementById("tekstUzytkownika");
 button11a.addEventListener("click", ()=> {
-    const tekst = tekstInput11a.value.toUpperCase()
+    // zabezpieczenie przed dodaniem pustych wartości
+    if(tekstInput11a.value != ''){
+         const tekst = tekstInput11a.value.toUpperCase()
     // tekstInput11a.value = tekst;
     console.log(tekst)
     const li = document.createElement('li');
@@ -173,6 +175,8 @@ button11a.addEventListener("click", ()=> {
     li.innerText = 'Twój powiększony tekst: ' + tekst;
     // czyszczenie inputu
     tekstInput11a.value = ''
+    }
+   
 }
 );
 console.log('~~~~~~~~~~~~~~~~~~~~12~~~~~~~~~~~~~~~~~~~~');
