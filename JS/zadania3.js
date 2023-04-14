@@ -408,6 +408,7 @@ const div16 = document.createElement('div');
 div16.setAttribute('class', 'divSrodek');
 div.appendChild(div16);
 
+const paragraf6 = document.createElement('p');
 let input16 = document.createElement('input');
 let button16 = document.createElement('button');
 
@@ -415,7 +416,9 @@ input16.setAttribute('type', 'text');
 input16.setAttribute('placeholder','zamiana a,e,o na x');
 button16.innerText=`na "x"`
 button16.setAttribute('class', 'button');
+paragraf6.innerText= `Zamieni wszystkie litery “a” “e” “o” na “x" w Twoim tekście`
 
+div16.appendChild(paragraf6)
 div16.appendChild(input16);
 div16.appendChild(button16);
 
