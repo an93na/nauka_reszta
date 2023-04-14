@@ -214,7 +214,7 @@ button12a.innerText='od końca';
 button12a.setAttribute('class', 'button');
 paragraf2.innerText= "Wpisany tekst zostanie wyświetlony od tyłu."
 
-div1.appendChild(paragraf2);
+div12.appendChild(paragraf2);
 div12.appendChild(tekst12a);
 div12.appendChild(button12a);
 
