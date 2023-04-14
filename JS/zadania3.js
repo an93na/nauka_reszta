@@ -471,7 +471,7 @@ const input17a = document.createElement('input');
 const button17a = document.createElement('button');
 
 input17a.setAttribute('type', 'text');
-input17a.setAttribute('placeholder', 'złącz');
+input17a.setAttribute('placeholder', 'wprowadź pięć słów');
 button17a.innerText=`złącz`;
 button17a.setAttribute('class', 'button');
 
