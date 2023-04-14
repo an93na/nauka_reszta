@@ -1,8 +1,8 @@
 .divGlowny{
 margin: 5px;
 padding: 5px;
-display: flex;
-flex-wrap: wrap;
+/* display: flex;
+flex-wrap: wrap; */
 }
 
 .divSrodek{
