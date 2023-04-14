@@ -148,6 +148,7 @@ const div11 = document.createElement('div');
 div11.setAttribute('class', 'divSrodek');
 div.appendChild(div11);
 
+const paragraf = document.createElement("p");
 const input11a = document.createElement("input");
 const button11a = document.createElement("button");
 
@@ -156,7 +157,9 @@ input11a.setAttribute("id","tekstUzytkownika");
 input11a.setAttribute("placeholder", "Wyświetli powiększony tekst w konsoli");
 button11a.innerText='wyświetl';
 button11a.setAttribute('class', 'button');
+paragraf.innerText="Wprowadzony tekst po kliknięciu zostanie wyświetlony jako powiększony tekst"
 
+div11.appendChild(paragraf);
 div11.appendChild(input11a);
 div11.appendChild(button11a);
 
