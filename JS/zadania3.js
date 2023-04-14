@@ -256,15 +256,18 @@ const div13 = document.createElement('div');
 div13.setAttribute('class', 'divSrodek');
 div.appendChild(div13);
 
+const paragraf3 = document.createElement("p");
 const input13a = document.createElement("input");
 const button13a= document.createElement("button");
 
 input13a.setAttribute("type", "text");
 input13a.setAttribute("id", "13a");
-input13a.setAttribute("placeholder", `Wyświetli "Litera w consoli" `);
+input13a.setAttribute("placeholder", `Wyświetli "Litera" `);
 button13a.innerText="zamień"
 button13a.setAttribute('class', 'button');
+paragraf3.innerText=`Wyświetli słowo 'Litera' tyle razy ile jest liter w Twoim tekście`
 
+div13.appendChild(paragraf3);
 div13.appendChild(input13a);
 div13.appendChild(button13a);
 
