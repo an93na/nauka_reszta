@@ -311,7 +311,7 @@ const button14a = document.createElement('button');
 
 input14a.setAttribute('type', 'text');
 input14a.setAttribute('id', '14a');
-input14a.setAttribute('placeholder', "od a");
+input14a.setAttribute('placeholder', "Wyświetli od a");
 button14a.innerText=`po "a"`
 button14a.setAttribute('class', 'button');
 paragraf4.innerText=`Wyświetli Twój tekst po pierwszej literze "a": `
