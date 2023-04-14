@@ -171,6 +171,8 @@ button11a.addEventListener("click", ()=> {
     const li = document.createElement('li');
     ol.appendChild(li);
     li.innerText = 'Twój powiększony tekst: ' + tekst;
+    // czyszczenie inputu
+    tekstInput11a.value = ''
 }
 );
 console.log('~~~~~~~~~~~~~~~~~~~~12~~~~~~~~~~~~~~~~~~~~');
