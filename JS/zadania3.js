@@ -242,6 +242,7 @@ button12a.addEventListener('click', ()=> {
     const li = document.createElement('li');
     ol.appendChild(li);
     li.innerText = 'Twój tekst od tyłu: ' + zad12aPetla;
+    tekst12a.value = '';
 });
 
 
