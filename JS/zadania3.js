@@ -391,6 +391,7 @@ button15.addEventListener('click', () => {
     const li = document.createElement('li');
     ol.appendChild(li);
     li.innerText = 'Ilość samogłosek we wprowadzonym tekście to: ' + samo;
+    input15.value = '';
 })
 
 console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
