@@ -296,7 +296,7 @@ button13a.addEventListener("click", ()=> {
     const li = document.createElement('li');
     ol.appendChild(li);
     li.innerText = `Wyświetlanie słowa 'Litera' tyle razy ile jest liter w Twoim tekście: ` + tekst13Wynik;
-    input13a.value
+    input13a.value = ''
 });
 
 console.log('~~~~~~~~~~~~~~~~~~~~14~~~~~~~~~~~~~~~~~~~~');
