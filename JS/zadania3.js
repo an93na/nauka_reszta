@@ -282,6 +282,7 @@ div13.appendChild(button13a);
 
 const tekst13awprowadzony = document.getElementById("13a");
 button13a.addEventListener("click", ()=> {
+    if(input13a.value != ''){
     const tekst13Ile = tekst13awprowadzony.value.length
     // console.log(tekst13Ile);
 
@@ -296,8 +297,8 @@ button13a.addEventListener("click", ()=> {
     const li = document.createElement('li');
     ol.appendChild(li);
     li.innerText = `Wyświetlanie słowa 'Litera' tyle razy ile jest liter w Twoim tekście: ` + tekst13Wynik;
-    input13a.value = ''
-});
+    input13a.value = '';
+}});
 
 console.log('~~~~~~~~~~~~~~~~~~~~14~~~~~~~~~~~~~~~~~~~~');
 //14. . Wyświetlanie części tekstu, która występuje po pierwszej literze “a”
