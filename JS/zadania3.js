@@ -333,6 +333,7 @@ div14.appendChild(button14a);
 
 const tekst14a = document.getElementById('14a')
 button14a.addEventListener('click', () => {
+    if(input14a.value != ''){
     let t1 = tekst14a.value.search('a');
     // console.log(t1)
     let t2 = tekst14a.value.substring(t1);
@@ -342,7 +343,7 @@ button14a.addEventListener('click', () => {
     ol.appendChild(li);
     li.innerText = `Wyświetlanie Twojego tekstu po pierwszej literze "a": ` + t2;
     input14a.value = '';
-});
+}});
 
 console.log('~~~~~~~~~~~~~~~~~~~~15~~~~~~~~~~~~~~~~~~~~');
 //15. Policzenie ile samogłosek jest w tekscie.
