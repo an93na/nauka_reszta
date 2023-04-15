@@ -226,6 +226,7 @@ div12.appendChild(button12a);
 
 const tekst12aWprowadzony = document.getElementById('12a');
 button12a.addEventListener('click', ()=> {
+    if(tekst12a.value != ''){
     let tekst = tekst12aWprowadzony.value;
     let tekstDlugosc = tekst.length
     // console.log(tekstDlugosc);
@@ -243,6 +244,7 @@ button12a.addEventListener('click', ()=> {
     ol.appendChild(li);
     li.innerText = 'Twój tekst od tyłu: ' + zad12aPetla;
     tekst12a.value = '';
+}
 });
 
 
