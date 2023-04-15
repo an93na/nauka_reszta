@@ -392,7 +392,7 @@ button15.addEventListener('click', () => {
     ol.appendChild(li);
     li.innerText = 'Ilość samogłosek we wprowadzonym tekście to: ' + samo;
     input15.value = '';
-})
+});
 
 console.log('~~~~~~~~~~~~~~~~~~~~16~~~~~~~~~~~~~~~~~~~~');
 // 16. Zamienianie wszystkich liter “a” “e” “o” na “x”
@@ -437,6 +437,7 @@ div16.appendChild(input16);
 div16.appendChild(button16);
 
 button16.addEventListener('click', ()=> {
+    if(input16.value != ''){
     let wynik16a = '';
     let zamianaNaMaleLitery = input16.value.toLocaleLowerCase()
     // console.log(zamianaNaMaleLitery)
@@ -453,7 +454,8 @@ button16.addEventListener('click', ()=> {
     const li = document.createElement('li');
     ol.appendChild(li);
     li.innerText = `Zamiana wszystkich liter “a” “e” “o” na “x" w Twoim tekście: ` + wynik16a;
-});
+    input16.value = '';
+}});
 
 // Za pomocą forEach
 // let text16a = input16.addEventListener('input', ()=> {
