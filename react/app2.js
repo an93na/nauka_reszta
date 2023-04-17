@@ -50,4 +50,11 @@ const renderPost = (post) => {
   // renderPost(wpisy[1]);
   // renderPost(wpisy[2]);
   
-  
+
+//  takie pojedyńcze jest mało optymalne dlatego stosujemy forEach który renderuje wszytskie posty 
+wpisy.forEach((wpis) => {
+  renderPost(wpis);
+});
+
+// forEch nic nie zwraca a map już tak ale w naszym przypadku nic nie dostaniemy bo to tworzenie html to taki "efekt uboczny"
+
