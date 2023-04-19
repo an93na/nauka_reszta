@@ -172,7 +172,6 @@ console.log(ostatecznePolacz)
 
 console.log('~~~~~~~~~~~Zadanie8~~~~~~~~~~~~~~~~');
 // napisz funckje, ktora podaną tablice przedzieli na pól i zwróci obiekt z polami 'before' i 'after' 
-// (jak na dobrej imprezie):
 // biscet([1,2,3,8,9,0]) => {beofre: [1,2,3], after: [8,9,0]}
 // jesli tablica nie ma parzystej liczby elementow, obiekt powinien zawierac dodatkowo pole 'middle' 
 // z elementem srodkowym
