@@ -22,3 +22,8 @@ console.log(`zmienna2: ${zmienna2}`);
 let number1 = 0;
 let number2 = 20;
 let number3 = 88.232432;
+let tekst = "tekst";
+
+console.log("Typ zmiennej number1 to: ", typeof number1);
+console.log("Typ zmiennej tekst to: ", typeof tekst);
+
