@@ -14,5 +14,11 @@ let zmienna2;
 
 zmienna2 = 20;
 
-console.log(`zmienna1: ${zmienna}`);
+// sposoby zapisu w console.log()
+console.log("zmienna1: " + zmienna);
+console.log("zmienna1: ", zmienna);
 console.log(`zmienna2: ${zmienna2}`);
+
+let number1 = 0;
+let number2 = 20;
+let number3 = 88.232432;
