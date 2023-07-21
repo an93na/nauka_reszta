@@ -10,3 +10,9 @@ console.log("wyświetlam to co tu w consoli");
 
 // deklaracja zmiennej
 let zmienna = 150;
+let zmienna2;
+
+zmienna2 = 20;
+
+console.log(`zmienna1: ${zmienna}`);
+console.log(`zmienna2: ${zmienna2}`);
