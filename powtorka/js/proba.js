@@ -39,4 +39,5 @@ const SunIsStar = true;
 const MoonIsStar = false;
 // let deklaracja zmiennej ale może być też const co oznacza
 // constans czyli coś jest stałe
+console.log("Typ zmiennej SunIsStar to: ", typeof SunIsStar);
 
