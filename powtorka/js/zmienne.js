@@ -37,7 +37,7 @@ let personObject = {
 }
 // kropka pomiędzy to jest akcesor dostępu do pola
 // do którego pola chcemy się dostać
-console.log(personObject.name)
-console.log(personObject.address.city)
-console.log(personObject.address.number.houseNo)
+console.log(`Imię to: ${personObject.name}`)
+console.log(`Miasto to: ${personObject.address.city}`)
+console.log(`Numer domu to: ${personObject.address.number.houseNo}`)
 
