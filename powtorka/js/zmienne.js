@@ -22,7 +22,7 @@ let personObject = {
   lastName: "Nowak",
   age: 44,
   isAdult: true,
-  // obiekt może zawierać w sobie kolejny obiekt
+  // obiekt może zawierać w sobie kolejny obiekt, może być tych zagnieżdżeń nieskończenie wiele
   address: {
     city: "Warszawa",
     zipCode: "41-100",
