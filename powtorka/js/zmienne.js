@@ -27,11 +27,17 @@ let personObject = {
     address: {
         city: 'Warszawa',
         zipCode: '41-100',
-        houseNo: 41,
-        houseAdditional: 5
+        street: 'Polna',
+        number: {
+            houseNo: 41,
+            houseAdditional: 5
+        }
 
     }
 }
 // kropka pomiędzy to jest akcesor dostępu do pola
 // do którego pola chcemy się dostać
 console.log(personObject.name)
+console.log(personObject.address.city)
+console.log(personObject.address.number.houseNo)
+
