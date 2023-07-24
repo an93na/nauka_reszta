@@ -13,31 +13,31 @@ let lastName3 = "Nowak";
 let myAge3 = 34;
 let isAdult3 = true;
 
-
 // pusty objekt
-let obiekt = {}
+let obiekt = {};
 
 // obiekt z zawartością
 let personObject = {
-    name: 'Tadeusz',
-    lastName: 'Nowak',
-    age: 44,
-    isAdult: true,
-    // obiekt może zawierać w sobie kolejny obiekt
-    address: {
-        city: 'Warszawa',
-        zipCode: '41-100',
-        street: 'Polna',
-        number: {
-            houseNo: 41,
-            houseAdditional: 5
-        }
+  name: "Tadeusz",
+  lastName: "Nowak",
+  age: 44,
+  isAdult: true,
+  // obiekt może zawierać w sobie kolejny obiekt
+  address: {
+    city: "Warszawa",
+    zipCode: "41-100",
+    street: "Polna",
+    number: {
+      houseNo: 41,
+      houseAdditional: 5,
+    },
+  },
+};
 
-    }
-}
+console.log(personObject);
+
 // kropka pomiędzy to jest akcesor dostępu do pola
 // do którego pola chcemy się dostać
-console.log(`Imię to: ${personObject.name}`)
-console.log(`Miasto to: ${personObject.address.city}`)
-console.log(`Numer domu to: ${personObject.address.number.houseNo}`)
-
+console.log(`Imię to: ${personObject.name}`);
+console.log(`Miasto to: ${personObject.address.city}`);
+console.log(`Numer domu to: ${personObject.address.number.houseNo}`);
