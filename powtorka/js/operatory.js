@@ -1,3 +1,4 @@
+// operatory
 let var4 = 5;
 console.log(var4);
 
@@ -36,3 +37,13 @@ console.log(b);
 // operator modulo %
 console.log(`reszta z dzielenia`, 10%5)
 console.log(`reszta z dzielenia`, 10%3)
+
+
+/* operatory logiczne 
+>, <, >=, <=, ===, !==
+przy opreatorach logicznych wynikiem jest zmienna boolean*/
+let wynik = 5 > 8
+console.log(wynik)
+
+wynik = (10-3) > (4+2)
+console.log(wynik)
