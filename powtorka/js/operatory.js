@@ -32,3 +32,7 @@ let b = 1;
 console.log(b);
 console.log(++b);
 console.log(b);
+
+// operator modulo %
+console.log(`reszta z dzielenia`, 10%5)
+console.log(`reszta z dzielenia`, 10%3)
