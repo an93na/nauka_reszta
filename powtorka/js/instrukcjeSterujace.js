@@ -26,12 +26,21 @@ else if (wiek > pelnoletniWPolsce && wiek < pelnoletniWUSA) {
 // wybór koloru niebieski zielony czerwony
 
 let kolor = "braz";
-// || ten lub inny 
+// || ten lub inny
 if (kolor === "czerwony" || kolor === "niebieski") {
   console.log("To idealny wybór");
 } else if (kolor === "zielony") {
   console.log("nie przepadam za tym kolorem");
+} else {
+  console.log("no może być");
 }
-else {
-    console.log('no może być')
-}
+
+let a = 34;
+/* jeśli a jest większe od 50 to wyświetl Większe a jeśli nie to większe 
+Skrócona wersja tego:
+if(a>50) 
+{wynik = 'Większe'} 
+else 
+{wynik = 'Mniejsze}*/
+let wynik = (a > 50) ? "Większe" : "Mniejsze";
+console.log(wynik);
