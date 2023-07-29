@@ -15,3 +15,10 @@ while (idx <= 40) {
   console.log(idx);
 }
 
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+while (idx<=50) {
+    idx++
+    console.log(idx)
+}
+
