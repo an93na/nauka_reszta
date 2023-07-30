@@ -38,10 +38,10 @@ if (pojazd === "samochód") {
   iloscKol = 2;
   console.log(`ilość kół to: ${iloscKol}`);
 } else if (pojazd === "tuktuk") {
-    console.log("Pojazd to: tuktuk");
-    iloscKol = 3;
-    console.log(`ilość kół to: ${iloscKol}`);
+  console.log("Pojazd to: tuktuk");
+  iloscKol = 3;
+  console.log(`ilość kół to: ${iloscKol}`);
 } else {
-    console.log(`typ ${pojazd} nie jest obsługiwany`);
-    console.log(`ilość kół to: brak w bazie`);
+  console.log(`typ ${pojazd} nie jest obsługiwany`);
+  console.log(`ilość kół to: brak w bazie`);
 }
