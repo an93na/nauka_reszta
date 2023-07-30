@@ -1,17 +1,25 @@
-let pojazd = "samochód"; // 'rower' 'tuktuk'
+let pojazd = "rower"; // 'samochód' 'rower' 'tuktuk'
 let iloscKol;
 
 switch (pojazd) {
-  case "samochód":
+  case "samochód": {
     console.log("samochód");
+    iloscKol = 4;
     break;
-  case "rower":
+  }
+  case "rower": {
     console.log("rower");
+    iloscKol = 2;
     break;
-  case "tuktuk":
+  }
+  case "tuktuk": {
     console.log("tuktuk");
+    iloscKol = 3;
     break;
-  default:
+  }
+  default: {
     console.log(`typ ${pojazd} nie jest obsługiwany`);
     break;
+  }
 }
+console.log(`ilość kół to: ${iloscKol}`)
