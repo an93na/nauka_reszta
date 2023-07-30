@@ -4,7 +4,7 @@ let idx = 0;
 // co będzie mówić kiedy ta pętla przestanie działać bo sama z siebie while
 // nie zwiększa indeksu przez co cały czas będzie on mniejszy od 40
 while (idx <= 40) {
-//   console.log("nadal mniejsze");
+  console.log("nadal mniejsze");
   if (idx % 5 === 0) {
     idx += 6;
   } else if (idx % 3 === 1) {
@@ -12,19 +12,19 @@ while (idx <= 40) {
   } else {
     idx++;
   }
-//   console.log(idx);
+  console.log(idx);
 }
 
-console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-while (idx<=50) {
-    idx++
-    // console.log(idx)
+while (idx <= 50) {
+  idx++;
+  console.log(idx);
 }
 
-console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-for (let index = 0; index <=40; index++) {
-    index++
-    console.log(index)
+for (let index = 0; index <= 40; index++) {
+  index++;
+  console.log(index);
 }
