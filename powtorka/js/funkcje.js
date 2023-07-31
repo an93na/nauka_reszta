@@ -32,7 +32,6 @@ powiedzCzesc2("Małgosia");
 let imieUzyt = "Agata";
 powiedzCzesc2(imieUzyt);
 
-
 // funkcja licząca dlugość wszystkich boków prostokąta
 function dlugoscBokowProstokata(a, b) {
   return 2 * a + 2 * b;
@@ -45,7 +44,7 @@ console.log(dlugoscBokowProstokata(3, 7));
 /* 
 Dwie funkcje sprawdzające i na koniec warunek i wypisanie tekstu w konsoli
  */
-let argumentDoSpr = 12;
+let argumentDoSpr = 15;
 
 function czyArgumentWiekszyOd10(a) {
   if (a > 10) {
@@ -71,4 +70,22 @@ if (
 } else {
   console.log(";(");
 }
+/* 
+zadanie z funkcją przyjmującą dwie zmienne usd i euro i mówi co jest większe
+zwróci większą wartość
+*/
 
+const euro = 4.41;
+const usd = 3.99;
+
+function coWieksze(e, u) {
+  if (e > u) {
+    return console.log(`euro jest droższe od dolara i wynosi: `, e);
+  } else if (e < u) {
+    return console.log(`dolar jest droższy od euro i wynosi: `, u);
+  } else {
+    console.log("kurs euro jest taki sam jak kurs dolara. Kursy te wynoszą:", e);
+  }
+}
+
+coWieksze(euro, usd);
