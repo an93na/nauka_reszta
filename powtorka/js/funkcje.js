@@ -32,6 +32,8 @@ powiedzCzesc2("Małgosia");
 let imieUzyt = "Agata";
 powiedzCzesc2(imieUzyt);
 
+
+// funkcja licząca dlugość wszystkich boków prostokąta
 function dlugoscBokowProstokata(a, b) {
   return 2 * a + 2 * b;
 }
@@ -40,7 +42,9 @@ console.log(dlugoscBokowProstokata(2, 3));
 console.log(dlugoscBokowProstokata(4, 5));
 console.log(dlugoscBokowProstokata(3, 7));
 
-
+/* 
+Dwie funkcje sprawdzające i na koniec warunek i wypisanie tekstu w konsoli
+ */
 let argumentDoSpr = 12;
 
 function czyArgumentWiekszyOd10(a) {
@@ -67,3 +71,4 @@ if (
 } else {
   console.log(";(");
 }
+
