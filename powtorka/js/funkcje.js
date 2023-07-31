@@ -84,8 +84,23 @@ function coWieksze(e, u) {
   } else if (e < u) {
     return console.log(`dolar jest droższy od euro i wynosi: `, u);
   } else {
-    console.log("kurs euro jest taki sam jak kurs dolara. Kursy te wynoszą:", e);
+    console.log(
+      "kurs euro jest taki sam jak kurs dolara. Kursy te wynoszą:",
+      e
+    );
   }
 }
 
 coWieksze(euro, usd);
+
+function myFunction(e, u) {
+  let wynik;
+  if (e > u) {
+    wynik = e;
+  } else {
+    wynik = u;
+  }
+  return wynik;
+}
+
+console.log(myFunction(euro, usd));
