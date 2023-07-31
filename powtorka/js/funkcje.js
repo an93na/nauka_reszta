@@ -39,3 +39,31 @@ function dlugoscBokowProstokata(a, b) {
 console.log(dlugoscBokowProstokata(2, 3));
 console.log(dlugoscBokowProstokata(4, 5));
 console.log(dlugoscBokowProstokata(3, 7));
+
+
+let argumentDoSpr = 12;
+
+function czyArgumentWiekszyOd10(a) {
+  if (a > 10) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function czyArgumentPodzielnyBezResztyPrzez2(a) {
+  if (a % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+if (
+  czyArgumentWiekszyOd10(argumentDoSpr) === true &&
+  czyArgumentPodzielnyBezResztyPrzez2(argumentDoSpr) === true
+) {
+  console.log("hurraaa!");
+} else {
+  console.log(";(");
+}
