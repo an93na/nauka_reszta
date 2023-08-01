@@ -129,25 +129,26 @@ function porownaj(one, two) {
 }
 porownaj(euroObj, usdObj);
 
-// sprawdzenie długości pesel
-function onSuccess() {
-  console.log("Udalo się!");
+// sprawdzenie czy podany ciąg znaków to polski pesel
+function onSuccess(number) {
+  console.log(`To jest poprawny numer PESEL ${number}`);
 }
-function onFailure() {
-  console.log("Nie udało się!");
+function onFailure(wrong) {
+  console.log(`To nie jest poprawny numer PESEL ${wrong}`);
 }
 //                           string,  funkcja        , funkcja
-function isNumberLongEnought(idIn, functionOnSuccess, functionOnFailure) {
+function isNumberLongEnought(idIn, OnPeselSuccess, OnPeselFailure) {
   const requiedLength = 11;
   // numer albo NaN
-  let convertedNumber = Number(idIn)
-  let lenght = ((Math.log(convertedNumber) * Math.LOG10E + 1) | 0);
+  const convertedNumber = Number(idIn);
+  let lenght = (Math.log(convertedNumber) * Math.LOG10E + 1) | 0;
   // czy numer nie jest NaN i czy jego długośc wynosi 11
-   if (!isNaN(convertedNumber) && lenght === requiedLength) {
-    console.log('sukcess')
+  if (!isNaN(convertedNumber) && lenght === requiedLength) {
+    return OnPeselSuccess(convertedNumber);
   } else {
-    console.log('no sucess')
+    return OnPeselFailure(idIn);
   }
 }
 
-isNumberLongEnought('11111a11111')
+isNumberLongEnought("111", onSuccess, onFailure);
+isNumberLongEnought("22222222222", onSuccess, onFailure);
