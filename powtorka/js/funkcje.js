@@ -130,9 +130,26 @@ function porownaj(one, two) {
 porownaj(euroObj, usdObj);
 
 // sprawdzenie czy podany ciąg znaków to polski pesel
+let savePesels = "";
+let invalidPesels = "";
+
+// funkcje onSuccess
 function onSuccess(number) {
   console.log(`To jest poprawny numer PESEL ${number}`);
 }
+
+function onSuccessSaveToDB(numer) {
+  console.log(`To jest poprawny numer PESEL ${numer}`);
+  console.log("Następuje zapis do bazy danych");
+  savePesels += "," + numer;
+}
+
+function onSuccessSaveSendEmail(number) {
+  console.log(`To jest poprawny numer PESEL ${number}`);
+  console.log("Wysyłam email do prezesa");
+}
+
+// funkcje onFailure
 function onFailure(wrong) {
   console.log(`To nie jest poprawny numer PESEL ${wrong}`);
 }
@@ -144,11 +161,15 @@ function isNumberLongEnought(idIn, OnPeselSuccess, OnPeselFailure) {
   let lenght = (Math.log(convertedNumber) * Math.LOG10E + 1) | 0;
   // czy numer nie jest NaN i czy jego długośc wynosi 11
   if (!isNaN(convertedNumber) && lenght === requiedLength) {
-    return OnPeselSuccess(convertedNumber);
+    OnPeselSuccess(convertedNumber);
   } else {
-    return OnPeselFailure(idIn);
+    OnPeselFailure(idIn);
   }
 }
 
 isNumberLongEnought("111", onSuccess, onFailure);
 isNumberLongEnought("22222222222", onSuccess, onFailure);
+isNumberLongEnought("1234567890", onSuccess, onFailure);
+isNumberLongEnought("22222222222", onSuccessSaveSendEmail, onFailure);
+isNumberLongEnought("22222222222", onSuccessSaveToDB, onFailure);
+// console.log(savePesels)
