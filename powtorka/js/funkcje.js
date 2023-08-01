@@ -153,6 +153,12 @@ function onSuccessSaveSendEmail(number) {
 function onFailure(wrong) {
   console.log(`To nie jest poprawny numer PESEL ${wrong}`);
 }
+
+function onFailureSaveToDB(numer) {
+  console.log(`To nie jest poprawny numer PESEL ${numer}`);
+  console.log("Popraw Pesel aby nastąpił zapis do bazy danych");
+}
+
 //                           string,  funkcja        , funkcja
 function isNumberLongEnought(idIn, OnPeselSuccess, OnPeselFailure) {
   const requiedLength = 11;
@@ -172,4 +178,24 @@ isNumberLongEnought("22222222222", onSuccess, onFailure);
 isNumberLongEnought("1234567890", onSuccess, onFailure);
 isNumberLongEnought("22222222222", onSuccessSaveSendEmail, onFailure);
 isNumberLongEnought("22222222222", onSuccessSaveToDB, onFailure);
+isNumberLongEnought("22222g22222", onSuccessSaveToDB, onFailureSaveToDB);
 // console.log(savePesels)
+
+function getAdderFunction() {
+  console.log("to jest funkcja getAdderFunction");
+  return function (a, b) {
+    console.log("To jest funkcja zwrócona");
+    console.log(`Będziemy dodawać ${a} do ${b}`);
+    return a + b;
+  };
+}
+
+let funkcjaZwrocona = getAdderFunction();
+console.log(funkcjaZwrocona);
+console.log(typeof funkcjaZwrocona);
+
+console.log(funkcjaZwrocona(3, 7));
+
+// to też jest poprawny zapis to co w nawiasie (4,4) to jest do tej funkcji anonimowej
+let wynik2 = getAdderFunction()(4, 4);
+console.log(wynik2);
