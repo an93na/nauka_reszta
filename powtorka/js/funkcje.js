@@ -110,9 +110,9 @@ console.log(myFunction(euro, usd));
 
 // jako obiekty
 
-const euroObj = { price: 5, name: "EURO" };
-const usdObj = { price: 4, name: "USD" };
-const juanObj = { price: 3, name: "JUAN" };
+const euroObj = { price: 5, name: "EURO", country: "Euro region" };
+const usdObj = { price: 4, name: "USD", country: "USA" };
+const juanObj = { price: 3, name: "JUAN", country: "China" };
 
 function porownaj(one, two) {
   const onePrice = one.price;
@@ -120,9 +120,11 @@ function porownaj(one, two) {
   const oneName = one.name;
   const twoName = two.name;
   if (onePrice > twoPrice) {
-    return `${oneName} jest większe od ${twoName} = ${onePrice}`;
+    console.log(`${oneName} jest większe od ${twoName} = ${onePrice}`);
+    return onePrice;
   } else {
-    return `${twoName} jest większe od ${oneName} = ${twoPrice}`;
+    console.log(`${twoName} jest większe od ${oneName} = ${twoPrice}`);
+    return twoPrice
   }
 }
-console.log(porownaj(euroObj, usdObj));
+porownaj(euroObj, usdObj);
