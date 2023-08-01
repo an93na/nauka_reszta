@@ -107,3 +107,22 @@ function myFunction(e, u) {
 }
 
 console.log(myFunction(euro, usd));
+
+// jako obiekty
+
+const euroObj = { price: 5, name: "EURO" };
+const usdObj = { price: 4, name: "USD" };
+const juanObj = { price: 3, name: "JUAN" };
+
+function porownaj(one, two) {
+  const onePrice = one.price;
+  const twoPrice = two.price;
+  const oneName = one.name;
+  const twoName = two.name;
+  if (onePrice > twoPrice) {
+    return `${oneName} jest większe od ${twoName} = ${onePrice}`;
+  } else {
+    return `${twoName} jest większe od ${oneName} = ${twoPrice}`;
+  }
+}
+console.log(porownaj(euroObj, usdObj));
