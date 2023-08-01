@@ -124,7 +124,30 @@ function porownaj(one, two) {
     return onePrice;
   } else {
     console.log(`${twoName} jest większe od ${oneName} = ${twoPrice}`);
-    return twoPrice
+    return twoPrice;
   }
 }
 porownaj(euroObj, usdObj);
+
+// sprawdzenie długości pesel
+function onSuccess() {
+  console.log("Udalo się!");
+}
+function onFailure() {
+  console.log("Nie udało się!");
+}
+//                           string,  funkcja        , funkcja
+function isNumberLongEnought(idIn, functionOnSuccess, functionOnFailure) {
+  const requiedLength = 11;
+  // numer albo NaN
+  let convertedNumber = Number(idIn)
+  let lenght = ((Math.log(convertedNumber) * Math.LOG10E + 1) | 0);
+  // czy numer nie jest NaN i czy jego długośc wynosi 11
+   if (!isNaN(convertedNumber) && lenght === requiedLength) {
+    console.log('sukcess')
+  } else {
+    console.log('no sucess')
+  }
+}
+
+isNumberLongEnought('11111a11111')
