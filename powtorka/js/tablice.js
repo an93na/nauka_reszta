@@ -38,16 +38,39 @@ console.log(tablicaDoOperacji[88888]);
 // długość tablicaDoOperacji
 console.log(`długośc tablicy to: ${tablicaDoOperacji.length}`);
 
-let oceny = [5, 4, 5, 6, 3, 4, 5, 6, 4];
-let ocenyWyzszeNiz4 = oceny.filter((el) => {
+let ocenyPauliny = [5, 4, 5, 6, 3, 4, 5, 6, 4];
+let ocenyWyzszeNiz4 = ocenyPauliny.filter((el) => {
   return el > 4;
 });
 console.log(ocenyWyzszeNiz4);
-let ocenyNizszelubRowne4 = oceny.filter((el) => {
+let ocenyNizszelubRowne4 = ocenyPauliny.filter((el) => {
   return el <= 4;
 });
 console.log(ocenyNizszelubRowne4);
 
 // doklejam nowa wartość przy pomocy push
-oceny.push(6);
-console.log(oceny);
+ocenyPauliny.push(6);
+console.log(ocenyPauliny);
+
+// dziennik całej klasy
+let ocenyCalejKlasy = [
+  [2, 3, 4, 5, 6, 5],
+  [4, 4, 4, 5, 6, 6],
+  [3, 3, 4, 3, 4, 5],
+];
+
+function policzSredniaUcznia(dziennik, indexUcznia) {
+  let wybranyUczen = dziennik[indexUcznia];
+  let suma = 0;
+  let srednia;
+  // console.log(wybranyUczen);
+  for (let index = 0; index < wybranyUczen.length; index++) {
+    suma = suma + wybranyUczen[index];
+  }
+  // console.log(`suma ocen to: `, suma);
+  srednia = suma / 6;
+  return srednia;
+}
+
+let sredniaPierwszegoUcznia = policzSredniaUcznia(ocenyCalejKlasy, 0);
+console.log(sredniaPierwszegoUcznia);
