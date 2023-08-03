@@ -68,7 +68,7 @@ function policzSredniaUcznia(dziennik, indexUcznia) {
     suma = suma + wybranyUczen[index];
   }
   // console.log(`suma ocen to: `, suma);
-  srednia = suma / 6;
+  srednia = suma / wybranyUczen.length;
   return srednia;
 }
 
