@@ -62,7 +62,7 @@ let ocenyCalejKlasy = [
 let indexDoUcznia = [
   { name: "Aleksandra", id: 0 },
   { name: "Marcin", id: 1 },
-  { name: "Kuba", id: 2 },
+  { name: "Jakub", id: 2 },
   { name: "Angelika", id: 3 },
 ];
 
@@ -91,8 +91,19 @@ let marcinIndex = indexDoUcznia.findIndex((ele, idx, arr) => {
   // console.log(idx);
   // console.log(arr);
   if (ele.name === "Marcin") {
-    return idx;
+    return true;
+  } else {
+    return false;
   }
 });
 console.log(`Uczeń o imieniu Marcin znajduje się pod indeksem: ${marcinIndex}`);
+let pierwszaDziewczynaIndex = indexDoUcznia.findIndex((ele) => {
+  if (ele.name[ele.name.length - 1]=== "a") {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(`Indeks pierwszej dziewczyny to: ${pierwszaDziewczynaIndex}`);
+
 function policzSredniaCalejKlasy(dziennik) {}
