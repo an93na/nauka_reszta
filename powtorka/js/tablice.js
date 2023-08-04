@@ -58,6 +58,7 @@ let ocenyCalejKlasy = [
   [4, 4, 4, 5, 6, 6],
   [3, 3, 4, 3, 4, 5],
 ];
+let indexDoStudenta = ["Aleksandra", "Marcin", "Kuba"];
 
 function policzSredniaUcznia(dziennik, indexUcznia) {
   let wybranyUczen = dziennik[indexUcznia];
@@ -73,8 +74,6 @@ function policzSredniaUcznia(dziennik, indexUcznia) {
 }
 
 let sredniaPierwszegoUcznia = policzSredniaUcznia(ocenyCalejKlasy, 0);
-console.log(sredniaPierwszegoUcznia);
+console.log(`Imię ucznia: ${indexDoStudenta[0]}. Średnia ocen to: ${sredniaPierwszegoUcznia}`);
 
-function policzSredniaCalejKlasy(dziennik) {
-
-}
+function policzSredniaCalejKlasy(dziennik) {}
