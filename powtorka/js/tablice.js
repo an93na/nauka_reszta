@@ -59,7 +59,7 @@ let ocenyCalejKlasy = [
   [3, 3, 4, 3, 4, 5],
   [5, 3, 4, 4, 4, 5],
 ];
-let indexDoStudenta = [
+let indexDoUcznia = [
   { name: "Aleksandra", id: 0 },
   { name: "Marcin", id: 1 },
   { name: "Kuba", id: 2 },
@@ -81,7 +81,15 @@ function policzSredniaUcznia(dziennik, indexUcznia) {
 
 let sredniaPierwszegoUcznia = policzSredniaUcznia(ocenyCalejKlasy, 0);
 console.log(
-  `Imię ucznia: ${indexDoStudenta[0]}. Średnia ocen to: ${sredniaPierwszegoUcznia}`
+  `Imię ucznia: ${indexDoUcznia[0].name}. Średnia ocen to: ${sredniaPierwszegoUcznia}`
 );
+
+// szukanie w tablicy po indeksie
+// funkcja findIndex przyjmuje ele czyli elementy tablicy, idx index oraz całą tablice
+let marcinIndex = indexDoUcznia.findIndex((ele, idx, arr) => {
+  console.log(ele);
+  console.log(idx);
+  console.log(arr);
+});
 
 function policzSredniaCalejKlasy(dziennik) {}
