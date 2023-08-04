@@ -87,9 +87,12 @@ console.log(
 // szukanie w tablicy po indeksie
 // funkcja findIndex przyjmuje ele czyli elementy tablicy, idx index oraz całą tablice
 let marcinIndex = indexDoUcznia.findIndex((ele, idx, arr) => {
-  console.log(ele);
-  console.log(idx);
-  console.log(arr);
+  // console.log(ele);
+  // console.log(idx);
+  // console.log(arr);
+  if (ele.name === "Marcin") {
+    return idx;
+  }
 });
-
+console.log(`Uczeń o imieniu Marcin znajduje się pod indeksem: ${marcinIndex}`);
 function policzSredniaCalejKlasy(dziennik) {}
