@@ -134,10 +134,9 @@ console.log("Pełnoletnie osoby to: ", pelnoletniKrotka);
 
 let mapTabOs = tablicaOsob.map((el) => {
   return {
+    ...el,
     name: el.name[0].toUpperCase() + el.name.slice(1),
     surname: el.surname[0].toUpperCase() + el.surname.slice(1),
-    age: el.age,
-    plec: el.plec,
   };
 });
 console.log(mapTabOs);
