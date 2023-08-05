@@ -129,3 +129,15 @@ let pelnoletni = tablicaOsob.filter((ele) => {
 
 let pelnoletniKrotka = tablicaOsob.filter((ele) => ele.age >= 18);
 console.log("Pełnoletnie osoby to: ", pelnoletniKrotka);
+
+// funkcja map
+
+let mapTabOs = tablicaOsob.map((el) => {
+  return {
+    name: el.name[0].toUpperCase() + el.name.slice(1),
+    surname: el.surname[0].toUpperCase() + el.surname.slice(1),
+    age: el.age,
+    plec: el.plec,
+  };
+});
+console.log(mapTabOs);
