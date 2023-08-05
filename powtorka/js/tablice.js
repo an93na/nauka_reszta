@@ -125,4 +125,7 @@ let pelnoletni = tablicaOsob.filter((ele) => {
     return false;
   }
 });
-console.log("Pełnoletnie osoby to: ", pelnoletni);
+// console.log("Pełnoletnie osoby to: ", pelnoletni);
+
+let pelnoletniKrotka = tablicaOsob.filter((ele) => ele.age >= 18);
+console.log("Pełnoletnie osoby to: ", pelnoletniKrotka);
