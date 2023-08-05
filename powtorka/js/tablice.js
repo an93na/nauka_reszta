@@ -84,6 +84,8 @@ console.log(
   `Imię ucznia: ${indexDoUcznia[0].name}. Średnia ocen to: ${sredniaPierwszegoUcznia}`
 );
 
+function policzSredniaCalejKlasy(dziennik) {}
+
 // szukanie w tablicy po indeksie
 // funkcja findIndex przyjmuje ele czyli elementy tablicy, idx index oraz całą tablice
 let marcinIndex = indexDoUcznia.findIndex((ele, idx, arr) => {
@@ -98,7 +100,7 @@ let marcinIndex = indexDoUcznia.findIndex((ele, idx, arr) => {
 });
 console.log(`Uczeń o imieniu Marcin znajduje się pod indeksem: ${marcinIndex}`);
 let pierwszaDziewczynaIndex = indexDoUcznia.findIndex((ele) => {
-  if (ele.name[ele.name.length - 1]=== "a") {
+  if (ele.name[ele.name.length - 1] === "a") {
     return true;
   } else {
     return false;
@@ -106,4 +108,21 @@ let pierwszaDziewczynaIndex = indexDoUcznia.findIndex((ele) => {
 });
 console.log(`Indeks pierwszej dziewczyny to: ${pierwszaDziewczynaIndex}`);
 
-function policzSredniaCalejKlasy(dziennik) {}
+// Filtrowanie tablicy:
+
+let tablicaOsob = [
+  { name: "Agata", surname: "Około", age: 32, plec: "K" },
+  { name: "Piotr", surname: "Około", age: 6, plec: "M" },
+  { name: "Marysia", surname: "Około", age: 12, plec: "K" },
+  { name: "Tadeusz", surname: "Około", age: 36, plec: "M" },
+];
+
+let pelnoletni = tablicaOsob.filter((ele) => {
+  // console.log(ele)
+  if (ele.age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log("Pełnoletnie osoby to: ", pelnoletni);
