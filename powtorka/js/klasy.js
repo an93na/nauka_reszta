@@ -74,15 +74,41 @@ class Pies {
     this.rasa = rasa;
     this.weight = waga;
     this.najedzony = false;
+    this.szczesliwy = true;
   }
   //   metody
   podajImieProsze() {
     console.log(`Nazywam się ${this.name} i sobie szczekam`);
   }
-  czyJestesGlodny() {}
-  zjedz() {}
-  biegaj() {}
-  tesknijZaOpiekunem() {}
+  czyJestesGlodny() {
+    if (this.najedzony === true) {
+      console.log("tak");
+    } else {
+      console.log("Zjadłbym coś");
+    }
+  }
+
+  czyJestesSzczesliwy() {
+    if (this.szczesliwy === true) {
+      console.log("tak");
+    } else {
+      console.log("smutno mi");
+    }
+  }
+
+  zjedz() {
+    this.najedzony = true;
+  }
+
+  biegaj() {
+    this.szczesliwy = true;
+    this.najedzony = false;
+  }
+
+  tesknijZaOpiekunem() {
+    this.szczesliwy = false;
+    this.najedzony = false;
+  }
 }
 
 let mojNowyPies = new Pies("Lusia", 6, "kundel", 12);
@@ -101,3 +127,14 @@ let tablicaPsow = [
 ];
 
 tablicaPsow[2].podajImieProsze();
+let testowyPies = new Pies("Jogi", 4, "beagle", 14);
+
+// opieka nad psem
+
+if (testowyPies.czyJestesGlodny()) {
+  testowyPies.zjedz();
+} else {
+  testowyPies.biegaj();
+}
+
+testowyPies.tesknijZaOpiekunem();
