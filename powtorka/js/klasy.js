@@ -138,3 +138,34 @@ if (testowyPies.czyJestesGlodny()) {
 }
 
 testowyPies.tesknijZaOpiekunem();
+
+// Dziedziczenie
+class Zwierze {
+  constructor(imie, wiek, rasa, waga) {
+    this.imie = imie;
+    this.wiek = wiek;
+    this.rasa = rasa;
+    this.waga = waga;
+    this.najedzony = false;
+    this.szczesliwy = true;
+  }
+  wydajDzwiek() {
+    console.log(`Nazywam się ${this.imie} i coś mówię`);
+  }
+  czyJestesGlodny() {
+    if (this.najedzony === true) {
+      console.log("tak");
+    } else {
+      console.log("Zjadłbym coś");
+    }
+    return this.najedzony;
+  }
+  czyJestesSzczesliwy() {
+    if (this.szczesliwy === true) {
+      console.log("tak");
+    } else {
+      console.log("smutno mi");
+    }
+    return this.szczesliwy;
+  }
+}
