@@ -168,4 +168,8 @@ class Zwierze {
     }
     return this.szczesliwy;
   }
+  tesknijZaOpiekunem() {
+    console.log(`Mmmm mmm mmm`);
+    this.najedzony = false;
+  }
 }
