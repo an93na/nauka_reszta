@@ -29,6 +29,14 @@ function changeAddress(customer, newAddress) {
   customer.address = newAddress;
 }
 
+function changeStreet(customer, newAddress) {
+  customer.address.street = newAddress.street;
+}
+
 mainCustomer.logAddress();
-changeAddress(mainCustomer);
+changeAddress(mainCustomer, {
+    city: "Lipowe Pole",
+    zip: 222,
+    street: "Polna",
+});
 mainCustomer.logAddress();
