@@ -143,6 +143,7 @@ console.log(`~~~~~~~~~~~~~~~~~~`);
 // Dziedziczenie
 // klasa abstrakcyjna można ją powołać do życia przez dziedziczenie. Nie istnieje sama
 class Zwierze {
+  // Funkcje w klasach nazywają się metodami klasowymi
   constructor(imie, wiek, rasa, waga) {
     this.imie = imie;
     this.wiek = wiek;
