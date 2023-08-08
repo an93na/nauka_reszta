@@ -139,6 +139,7 @@ if (testowyPies.czyJestesGlodny()) {
 
 testowyPies.tesknijZaOpiekunem();
 
+console.log(`~~~~~~~~~~~~~~~~~~`)
 // Dziedziczenie
 class Zwierze {
   constructor(imie, wiek, rasa, waga) {
@@ -148,6 +149,7 @@ class Zwierze {
     this.waga = waga;
     this.najedzony = false;
     this.szczesliwy = true;
+    console.log(`Stworzono zwierzę!`);
   }
   wydajDzwiek() {
     console.log(`Nazywam się ${this.imie} i coś mówię`);
@@ -173,3 +175,14 @@ class Zwierze {
     this.najedzony = false;
   }
 }
+
+// klasa dog jest też zwierzęciem więc posiada wszystko co ma klasa zwierzę
+class Dog extends Zwierze {
+  constructor(imie, wiek, rasa, waga){
+    super(imie, wiek, rasa, waga)
+    console.log('stworzono psa!')
+  }
+}
+
+let dogTestowy = new Dog('Tofik', 3, 'Labrador', 21);
+dogTestowy.wydajDzwiek()
