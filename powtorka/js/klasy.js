@@ -139,8 +139,9 @@ if (testowyPies.czyJestesGlodny()) {
 
 testowyPies.tesknijZaOpiekunem();
 
-console.log(`~~~~~~~~~~~~~~~~~~`)
+console.log(`~~~~~~~~~~~~~~~~~~`);
 // Dziedziczenie
+// klasa abstrakcyjna można ją powołać do życia przez dziedziczenie. Nie istnieje sama
 class Zwierze {
   constructor(imie, wiek, rasa, waga) {
     this.imie = imie;
@@ -178,11 +179,35 @@ class Zwierze {
 
 // klasa dog jest też zwierzęciem więc posiada wszystko co ma klasa zwierzę
 class Dog extends Zwierze {
-  constructor(imie, wiek, rasa, waga){
-    super(imie, wiek, rasa, waga)
-    console.log('stworzono psa!')
+  constructor(imie, wiek, rasa, waga, kolorObrozy) {
+    // super odwołuje się do konstruktora klasy którą rozszerza czyli tam trafiamy
+    super(imie, wiek, rasa, waga);
+    this.kolorObrozy = kolorObrozy;
+    console.log("stworzono psa!");
+  }
+  // nadpisuje funkcję z klasy zwierzę bo wiem więcej i wiem co ten pies wydaje z siebie
+  wydajDzwiek() {
+    console.log(`Nazywam się ${this.imie} i szczekam`);
+  }
+}
+class Cat extends Zwierze {
+  constructor(imie, wiek, rasa, waga, zycia) {
+    super(imie, wiek, rasa, waga);
+    if (zycia === undefined) {
+      this.iloscZyc = 7;
+    } else {
+      this.iloscZyc = zycia;
+    }
+    console.log("stworzono psa!");
+  }
+  wydajDzwiek() {
+    console.log(`Nazywam się ${this.imie} i miaucze`);
   }
 }
 
-let dogTestowy = new Dog('Tofik', 3, 'Labrador', 21);
-dogTestowy.wydajDzwiek()
+let dogTestowy = new Dog("Tofik", 3, "Labrador", 21, "niebieska");
+let catTestowy = new Cat("Felek", 6, "Mix", 6);
+let catTestowy1 = new Cat("Felek2", 6, "Mix", 6, 5);
+dogTestowy.wydajDzwiek();
+catTestowy.wydajDzwiek();
+catTestowy1.wydajDzwiek();
