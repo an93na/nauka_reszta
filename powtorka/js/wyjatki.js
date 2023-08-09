@@ -53,11 +53,12 @@ changeAddress(mainCustomer, newAdres1);
 mainCustomer.logAddress();
 let newNumber = 22;
 try {
-  // wiemy, że coś może tu źle pójść
+  // wiemy, że coś może tu źle pójść (kod podejrany)
   changeNumber(mainCustomer, newNumber);
 } catch (error) {
   // jeśli  tu trafimy to wypisujemy co jest nie tak.
   // i program nie kończy gwałtownie działania jak bez tego
+  // (jeśli błąd to tu trafiamy)
   console.error(error);
   if (typeof newNumber === "number") {
     let correctedNumber = {
@@ -71,6 +72,36 @@ try {
     changeNumber(mainCustomer, correctedNumber);
   }
 } finally {
+  // (zawsze wykonuje się na koniec)
   mainCustomer.logAddress();
   console.log("Program konczy działanie");
 }
+
+let newAdresInvalid = {
+  city: "Lipowe Pole",
+  zip: 222,
+  street: "Polna",
+  numbers: {
+    main: 100,
+  },
+};
+
+// twarda funkcja wyrzuca błąd
+function changeAddressThrow(customer, newAddress) {
+  if (newAddress === undefined) {
+    // wyrzuca błąd z naszym własnym tekstem
+    throw new Error("newAddres jest wymagany i nie został dostarczony");
+  }
+  if (
+    newAddress.city === undefined ||
+    newAddress.zip === undefined ||
+    newAddress.street === undefined ||
+    newAddress.numbers === undefined
+  ) {
+    throw new Error("jeden z wymaganych parametrów nie został dostarczony");
+  }
+  //   jesteśmy pewni że newAddress jest ok
+  customer.address = newAddress;
+}
+
+changeAddressThrow(mainCustomer, newAdresInvalid);
