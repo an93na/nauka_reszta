@@ -51,13 +51,25 @@ let newAdres1 = {
 mainCustomer.logAddress();
 changeAddress(mainCustomer, newAdres1);
 mainCustomer.logAddress();
+let newNumber = 22;
 try {
   // wiemy, że coś może tu źle pójść
-  changeNumber(mainCustomer, 22);
+  changeNumber(mainCustomer, newNumber);
 } catch (error) {
-  // jeśli  tu trafimy to wypisujemy co jest nie tak. 
+  // jeśli  tu trafimy to wypisujemy co jest nie tak.
   // i program nie kończy gwałtownie działania jak bez tego
-  console.error(error)
+  console.error(error);
+  if (typeof newNumber === "number") {
+    let correctedNumber = {
+      numbers: {
+        main: newNumber,
+        secondary: undefined,
+      },
+    };
+    console.log(`Updating address with corrected address`);
+    console.log(correctedNumber);
+    changeNumber(mainCustomer, correctedNumber);
+  }
 }
-
-console.log('Program konczy działanie')
+mainCustomer.logAddress();
+console.log("Program konczy działanie");
