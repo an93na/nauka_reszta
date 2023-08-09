@@ -70,6 +70,7 @@ try {
     console.log(correctedNumber);
     changeNumber(mainCustomer, correctedNumber);
   }
+} finally {
+  mainCustomer.logAddress();
+  console.log("Program konczy działanie");
 }
-mainCustomer.logAddress();
-console.log("Program konczy działanie");
