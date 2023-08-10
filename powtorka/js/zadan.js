@@ -18,13 +18,7 @@ let wynikPodzielny;
 for (idx = 1; idx <= 1000; idx++) {
   if (idx % 123 === 0) {
     console.log("Wynik to: ", idx);
-    if(wynikPodzielny===undefined){
-      wynikPodzielny = idx;
-    }
-    else {
-      console.log(idx + ' też jest podzielny przez 123 ale ja mam już wynik')
-    }
+    wynikPodzielny = idx;
+    break;
   }
 }
-
-console.log(wynikPodzielny);
