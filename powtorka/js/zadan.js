@@ -22,3 +22,14 @@ for (idx = 1; idx <= 1000; idx++) {
     break;
   }
 }
+
+// conntinue
+// wypisz dzielienia cyfry 123 przez kolejene cyfry całkowite zaczynając od -10 - +10
+
+for (let idx = -10; idx <= 10; idx++) {
+  if (idx === 0) {
+    console.log("nie dzielimy przez zero");
+    continue;
+  }
+  console.log(123 / idx);
+}
