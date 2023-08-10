@@ -13,3 +13,15 @@ function wywolanie2(ile, start) {
 wywolanie2(3, 5);
 
 // potęgowanie 2**3 to znaczy 2 do potęgi 3
+// Pierwsza cyfra podzielna przez 123 w zakresie od 0 - 1000
+let wynikPodzielny
+for(idx = 1; idx <= 1000; idx++){
+  if(idx%123 === 0){
+    console.log('Wynik to: ');
+    wynikPodzielny = idx;
+  } else {
+    console.log('Niestety nie')
+  }
+}
+
+console.log(wynikPodzielny)
