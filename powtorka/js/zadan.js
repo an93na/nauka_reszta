@@ -33,3 +33,13 @@ for (let idx = -10; idx <= 10; idx++) {
   }
   console.log(123 / idx);
 }
+
+// forEach
+let arrayForEach = ["aaa", "aa", "bbb", "bb", "ccc", "cc", "abc", "cda"];
+
+arrayForEach.forEach((a) => console.log(a.length >= 3 ? a : ""));
+arrayForEach.forEach((a) => console.log(a+'%%%'));
+// forEach nic nie zwraca wynik jest undefined. Jedynie przewala się po elemencie, 
+// natomiast map zwraca nową tablicę
+let map = arrayForEach.map((a) => a+'map');
+console.log(map)
