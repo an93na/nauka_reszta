@@ -39,7 +39,7 @@ let arrayForEach = ["aaa", "aa", "bbb", "bb", "ccc", "cc", "abc", "cda"];
 
 arrayForEach.forEach((a) => console.log(a.length >= 3 ? a : ""));
 arrayForEach.forEach((a) => console.log(a+'%%%'));
-// forEach nic nie zwraca wynik jest undefined. Jedynie przewala się po elemencie, 
+// forEach nic nie zwraca wynik jest undefined. Jedynie przewala się po elemencie, służy tylko do wyświetlania
 // natomiast map zwraca nową tablicę
 let map = arrayForEach.map((a) => a+'map');
 console.log(map)
