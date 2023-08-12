@@ -49,13 +49,30 @@ function DNAtoRNA(dna) {
   let rna = "";
   for (let index = 0; index < dna.length; index++) {
     if (dna[index] === "T") {
-      rna +="U";
-    }
-    else {
-      rna +=dna[index]
+      rna += "U";
+    } else {
+      rna += dna[index];
     }
   }
   return rna;
 }
 
 console.log(DNAtoRNA("UTTT"));
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    let wynik = args[0]
+    for (let index = 0; index < args.length; index++) {
+      if(args[index] < wynik){
+        wynik = args[index]
+      }
+      else{
+        wynik
+      }
+    }
+    return wynik
+  }
+}
+
+let small = new SmallestIntegerFinder();
+console.log(small.findSmallestInt([34, 15, 88, 2]));
