@@ -44,3 +44,18 @@ arrayForEach.forEach((a) => console.log(a + "%%%"));
 let map = arrayForEach.map((a) => a + "map");
 console.log(map);
 
+function DNAtoRNA(dna) {
+  // create a function which returns an RNA sequence from the given DNA sequence
+  let rna = "";
+  for (let index = 0; index < dna.length; index++) {
+    if (dna[index] === "T") {
+      rna +="U";
+    }
+    else {
+      rna +=dna[index]
+    }
+  }
+  return rna;
+}
+
+console.log(DNAtoRNA("UTTT"));
