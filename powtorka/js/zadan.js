@@ -75,3 +75,13 @@ class SmallestIntegerFinder {
 
 let small = new SmallestIntegerFinder();
 console.log(small.findSmallestInt([34, 15, 88, 2]));
+
+function summation(num){
+  suma = 0
+  for (let index = 1; index <= num; index++) {
+    suma += index
+  }
+  return suma
+}
+
+console.log(summation(8));
