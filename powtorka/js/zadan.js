@@ -61,16 +61,15 @@ console.log(DNAtoRNA("UTTT"));
 
 class SmallestIntegerFinder {
   findSmallestInt(args) {
-    let wynik = args[0]
+    let wynik = args[0];
     for (let index = 0; index < args.length; index++) {
-      if(args[index] < wynik){
-        wynik = args[index]
-      }
-      else{
-        wynik
+      if (args[index] < wynik) {
+        wynik = args[index];
+      } else {
+        wynik;
       }
     }
-    return wynik
+    return wynik;
   }
 }
 
