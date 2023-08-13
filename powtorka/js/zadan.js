@@ -105,17 +105,16 @@ console.log(bmi(120, 1.8));
 
 function toSamoOdTylu(str) {
   let slowoTyl = "";
-  for (let index = str.length-1; index >= 0; index--) {
+  for (let index = str.length - 1; index >= 0; index--) {
     slowoTyl += str[index];
   }
-  
+
   if (slowoTyl === str) {
-    return true
-  }
-  else {
-    return false
+    return true;
+  } else {
+    return false;
   }
 }
 
-console.log(toSamoOdTylu("isogram"))
-console.log(toSamoOdTylu("aba"))
+console.log(toSamoOdTylu("isogram"));
+console.log(toSamoOdTylu("aba"));
