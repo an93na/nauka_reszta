@@ -85,3 +85,23 @@ let summation = (num) => {
 };
 
 console.log(summation(3));
+
+function bmi(weight, height) {
+  let bmiCal = weight/(height**2)
+  if (bmiCal <= 18.5) {
+    return "Underweight";
+  } 
+  else if (bmiCal <= 25){
+    return "Normal"
+  }
+  else if (bmiCal <= 30){
+    return "Overweight"
+  }
+  else if (bmiCal > 30){
+    return "Obese"
+  }
+}
+
+console.log(bmi(80, 1.80))
+console.log(bmi(50, 1.80))
+console.log(bmi(120, 1.80))
