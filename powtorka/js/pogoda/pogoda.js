@@ -1,6 +1,7 @@
 const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
+const miasto = "Kilece";
 const endpoint =
-  "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&units=metric&lang=pl&appid=" +
+  `https://api.openweathermap.org/data/2.5/weather?q=${miasto}&units=metric&lang=pl&appid=` +
   api_key;
 
 fetch(endpoint)
@@ -15,7 +16,7 @@ fetch(endpoint)
 
     // wstawienie danych do HTML
     document.getElementById("city").textContent = city;
-    document.getElementById("temp").textContent = temp + "C";
+    document.getElementById("temp").textContent = temp + "°C";
     document.getElementById("desc").textContent = desc;
     document.getElementById("icon").src = icon;
   })
