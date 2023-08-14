@@ -1,5 +1,5 @@
 const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
-const miasto = "Kilece";
+const miasto = "Lodz";
 const endpoint =
   `https://api.openweathermap.org/data/2.5/weather?q=${miasto}&units=metric&lang=pl&appid=` +
   api_key;

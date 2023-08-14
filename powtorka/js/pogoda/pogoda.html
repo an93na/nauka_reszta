@@ -7,12 +7,23 @@
   </head>
   <body>
     <div>
-        <ul>
-            <li>Miasto: <span id="city"></span></li>
-            <li>Temperatura: <span id="temp"></span></li>
-            <li>Opis pogody: <span id="desc"></span></li>
-            <li>Ikona: <img src="" alt="" id="icon"></li>
-        </ul>
+      <form action="">
+        <select name="city" id="">
+          <option value="Warsaw">Warszawa</option>
+          <option value="Gdansk">Gdańsk</option>
+          <option value="Krakow">Kraków</option>
+          <option value="Kielce">Kielce</option>
+          <option value="Poznan">Poznań</option>
+          <option value="Lodz">Łódź</option>
+        </select>
+        <button type="submit">Szukaj</button>
+      </form>
+      <ul>
+        <li>Miasto: <span id="city"></span></li>
+        <li>Temperatura: <span id="temp"></span></li>
+        <li>Opis pogody: <span id="desc"></span></li>
+        <li>Ikona: <img src="" alt="" id="icon" /></li>
+      </ul>
     </div>
     <script src="./pogoda.js"></script>
   </body>
