@@ -124,5 +124,16 @@ console.log(toSamoOdTylu("aba"));
 // }
 
 // krótsza wersja
-let greet = (name) => `Hello, ${name} how are you doing today?`
+let greet = (name) => `Hello, ${name} how are you doing today?`;
 console.log(greet("Asia"));
+
+function areYouPlayingBanjo(name) {
+  if (name[0] === "R" || name[0] === "r") {
+    return name + " plays banjo";
+  } else {
+    return name + " does not play banjo";
+  }
+}
+
+console.log(areYouPlayingBanjo("Ray"));
+console.log(areYouPlayingBanjo("Asia"));
