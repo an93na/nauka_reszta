@@ -127,13 +127,16 @@ console.log(toSamoOdTylu("aba"));
 let greet = (name) => `Hello, ${name} how are you doing today?`;
 console.log(greet("Asia"));
 
-function areYouPlayingBanjo(name) {
-  if (name[0] === "R" || name[0] === "r") {
-    return name + " plays banjo";
-  } else {
-    return name + " does not play banjo";
-  }
-}
+// function areYouPlayingBanjo(name) {
+//   if (name[0] === "R" || name[0] === "r") {
+//     return name + " plays banjo";
+//   } else {
+//     return name + " does not play banjo";
+//   }
+// }
+
+// II wersja
+let areYouPlayingBanjo = (name) => name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
 
 console.log(areYouPlayingBanjo("Ray"));
 console.log(areYouPlayingBanjo("Asia"));
