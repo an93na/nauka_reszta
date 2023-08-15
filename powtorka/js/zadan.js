@@ -119,3 +119,8 @@ function toSamoOdTylu(str) {
 console.log(toSamoOdTylu("isogram"));
 console.log(toSamoOdTylu("aba"));
 
+function greet(name) {
+  return `Hello, ${name} how are you doing today?`;
+}
+
+console.log(greet("Asia"));
