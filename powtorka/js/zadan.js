@@ -136,7 +136,26 @@ console.log(greet("Asia"));
 // }
 
 // II wersja
-let areYouPlayingBanjo = (name) => name + (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') + " banjo";
+let areYouPlayingBanjo = (name) =>
+  name +
+  (name[0].toLowerCase() == "r" ? " plays" : " does not play") +
+  " banjo";
 
 console.log(areYouPlayingBanjo("Ray"));
 console.log(areYouPlayingBanjo("Asia"));
+
+function isTriangle(a, b, c) {
+  if (a > 0 && b > 0 && c > 0) {
+    if (a + b > c || b + c > a || a + c > b) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
+console.log(isTriangle(0, 3, 4));
+console.log(isTriangle(1, -3, 4));
+console.log(isTriangle(4, 3, 4));
