@@ -163,14 +163,19 @@ console.log(isTriangle(4, 3, 4));
 const binaryArrayToNumber = (arr) => {
   let suma = 0;
   let licznik = 0;
-  let idx = -1
-    for (let index = arr.length - 1; index >= 0; index--) {
-      idx++
-      licznik = arr[index] * (2 ** idx);
-      suma = suma + licznik;
-    }
-    return suma;
+  let idx = -1;
+  for (let index = arr.length - 1; index >= 0; index--) {
+    idx++;
+    licznik = arr[index] * 2 ** idx;
+    suma = suma + licznik;
   }
+  return suma;
+};
 
 console.log(binaryArrayToNumber([1, 1, 1, 1]));
 console.log(binaryArrayToNumber([0, 0, 0, 1]));
+
+// krótsza wersja
+const shortBinaryArrayToNumber = (arr) => parseInt(arr.join(""), 2);
+console.log(shortBinaryArrayToNumber([0, 0, 0, 1]));
+console.log(shortBinaryArrayToNumber([0, 1, 1, 0]));
