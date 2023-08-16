@@ -159,3 +159,17 @@ function isTriangle(a, b, c) {
 console.log(isTriangle(0, 3, 4));
 console.log(isTriangle(1, -3, 4));
 console.log(isTriangle(4, 3, 4));
+
+const binaryArrayToNumber = (arr) => {
+  let suma = 0;
+  let licznik = 0;
+  let idx = -1
+    for (let index = arr.length - 1; index >= 0; index--) {
+      idx++
+      licznik = arr[index] * (2 ** idx);
+      suma = suma + licznik;
+    }
+    return suma;
+  }
+
+console.log(binaryArrayToNumber([1, 1, 1, 1]));
