@@ -146,7 +146,7 @@ console.log(areYouPlayingBanjo("Asia"));
 
 function isTriangle(a, b, c) {
   if (a > 0 && b > 0 && c > 0) {
-    if (a + b > c || b + c > a || a + c > b) {
+    if (a + b > c && b + c > a && a + c > b) {
       return true;
     } else {
       return false;
