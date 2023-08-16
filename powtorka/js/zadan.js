@@ -179,3 +179,22 @@ console.log(binaryArrayToNumber([0, 0, 0, 1]));
 const shortBinaryArrayToNumber = (arr) => parseInt(arr.join(""), 2);
 console.log(shortBinaryArrayToNumber([0, 0, 0, 1]));
 console.log(shortBinaryArrayToNumber([0, 1, 1, 0]));
+
+// Sum Numbers
+function sum (numbers) {
+  let sumuj = 0
+  if(numbers.length > 0){
+    for (let index = 0; index < numbers.length; index++) {
+      sumuj+=numbers[index]
+    }
+    return sumuj
+  }
+  else{
+    return 0
+  }
+  
+  
+};
+console.log(sum([1, 5.2, 4, 0, -1]))
+console.log(sum([]))
+console.log(sum([125.122]))
