@@ -206,5 +206,24 @@ console.log(shortSum([123.62225]));
 function doubleInteger(i) {
   return i * 2;
 }
-
 console.log(doubleInteger(2));
+
+function fakeBin(x){
+  let bin = ''
+  let a = ''
+if(x !== ''){
+  for (let index = 0; index < x.length; index++) {
+  if(x[index] <5){
+     a = '0'
+  }
+  else if ( x[index]>=5){
+     a = '1'
+  }
+  bin += a
+  }
+  
+}
+return bin
+}
+
+console.log(fakeBin('45385593107843568'))
