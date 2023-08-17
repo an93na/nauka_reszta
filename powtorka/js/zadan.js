@@ -204,8 +204,7 @@ console.log(shortSum([]));
 console.log(shortSum([123.62225]));
 
 function doubleInteger(i) {
-  i * 2;
-  return i;
+  return i * 2;
 }
 
 console.log(doubleInteger(2));
