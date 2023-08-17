@@ -202,3 +202,10 @@ let shortSum = (tab) =>
 console.log(shortSum([1, 7, -9, -0.65]));
 console.log(shortSum([]));
 console.log(shortSum([123.62225]));
+
+function doubleInteger(i) {
+ i*2
+  return i;
+}
+
+console.log(doubleInteger(2))
