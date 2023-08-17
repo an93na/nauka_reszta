@@ -225,3 +225,8 @@ function fakeBin(x) {
 }
 
 console.log(fakeBin("45385593107843568"));
+
+let fakeBinShort = (x) => {
+  return x.split('').map(n=> n<5 ? 0:1).join('')
+}
+console.log(fakeBinShort("45385593107843568"))
