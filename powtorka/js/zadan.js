@@ -208,22 +208,20 @@ function doubleInteger(i) {
 }
 console.log(doubleInteger(2));
 
-function fakeBin(x){
-  let bin = ''
-  let a = ''
-if(x !== ''){
-  for (let index = 0; index < x.length; index++) {
-  if(x[index] <5){
-     a = '0'
+function fakeBin(x) {
+  let bin = "";
+  let a = "";
+  if (x !== "") {
+    for (let index = 0; index < x.length; index++) {
+      if (x[index] < 5) {
+        a = "0";
+      } else if (x[index] >= 5) {
+        a = "1";
+      }
+      bin += a;
+    }
   }
-  else if ( x[index]>=5){
-     a = '1'
-  }
-  bin += a
-  }
-  
-}
-return bin
+  return bin;
 }
 
-console.log(fakeBin('45385593107843568'))
+console.log(fakeBin("45385593107843568"));
