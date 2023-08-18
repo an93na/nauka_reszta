@@ -1,4 +1,6 @@
-function getApiData(miasto) {
+function getWeatherForecastForCity(city) {}
+
+function getWeatherForCity(miasto) {
   const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
   // const miasto = "Lodz";
   const endpoint =
@@ -28,9 +30,9 @@ function submitForm(event) {
   // console.log(event);
   const cityName = document.getElementById("cityName").value;
   // console.log(cityName);
-  getApiData(cityName);
+  getWeatherForCity(cityName);
 }
 
 document.getElementById("formularz").addEventListener("submit", submitForm);
 // getApiData("Warszawa");
-getApiData(document.getElementById("cityName").value);
+getWeatherForCity(document.getElementById("cityName").value);
