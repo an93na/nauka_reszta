@@ -1,11 +1,23 @@
 const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
 
-function getWeatherForecastForCity(city) {}
+function getWeatherForecastForCity(city) {
+  const endpoint =
+  `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=pl&appid=` +
+  api_key;
+
+fetch(endpoint)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data); // wyświetlanie danych w konsoli
+  })
+  .catch((error) => console.error(error));
+
+}
 // wczesniej nazywała się getApiData
-function getWeatherForCity(miasto) {
+function getWeatherForCity(city) {
   // const miasto = "Lodz";
   const endpoint =
-    `https://api.openweathermap.org/data/2.5/weather?q=${miasto}&units=metric&lang=pl&appid=` +
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pl&appid=` +
     api_key;
 
   fetch(endpoint)
@@ -40,4 +52,5 @@ function submitForm(event) {
 
 document.getElementById("formularz").addEventListener("submit", submitForm);
 // getApiData("Warszawa");
-getWeatherForCity(document.getElementById("cityName").value);
+getWeatherForCity(getCityName());
+getWeatherForecastForCity(getCityName())
