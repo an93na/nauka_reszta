@@ -1,7 +1,10 @@
-function getWeatherForecastForCity(city) {}
+const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
 
+function getWeatherForecastForCity(city) {
+
+}
+// wczesniej nazywała się getApiData
 function getWeatherForCity(miasto) {
-  const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
   // const miasto = "Lodz";
   const endpoint =
     `https://api.openweathermap.org/data/2.5/weather?q=${miasto}&units=metric&lang=pl&appid=` +
@@ -25,12 +28,16 @@ function getWeatherForCity(miasto) {
     })
     .catch((error) => console.error(error));
 }
+
+function getCityName() {
+  return document.getElementById("cityName").value;
+}
+
 function submitForm(event) {
   event.preventDefault();
   // console.log(event);
-  const cityName = document.getElementById("cityName").value;
-  // console.log(cityName);
-  getWeatherForCity(cityName);
+  getWeatherForCity(getCityName());
+  getWeatherForecastForCity(getCityName())
 }
 
 document.getElementById("formularz").addEventListener("submit", submitForm);
