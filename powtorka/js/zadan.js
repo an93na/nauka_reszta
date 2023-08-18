@@ -233,3 +233,24 @@ let fakeBinShort = (x) => {
     .join("");
 };
 console.log(fakeBinShort("45385593107843568"));
+
+function openOrSenior(data) {
+  let tab = [];
+  data.map((val) => {
+    if (val[0] >= 55 && val[1] > 7) {
+      tab.push("Senior");
+    } else {
+      tab.push("Open");
+    }
+    return tab;
+  });
+  return tab;
+}
+console.log(
+  openOrSenior([
+    [45, 12],
+    [55, 21],
+    [19, -2],
+    [104, 20],
+  ])
+);
