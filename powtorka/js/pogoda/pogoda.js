@@ -1,32 +1,42 @@
+function getIconUrl(icon) {
+  return "https://openweathermap.org/img/w/" + icon + ".png";
+}
+
+function getTempText(temp) {
+  return temp + "°C";
+}
+
 function getDataFromApi(endpoint, city) {
   const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
-  const host = `https://api.openweathermap.org/data/2.5`;
+  const host = "https://api.openweathermap.org/data/2.5";
   const url =
-    host + endpoint + "?q=" + city + "&units=metric&lang=pl&appid=`" + api_key;
+    host + endpoint + "?q=" + city + "&units=metric&lang=pl&appid=" + api_key;
   return fetch(url)
     .then((response) => response.json())
     .catch((error) => console.error(error));
 }
 function getWeatherForecastForCity(city) {
   const endpoint = "/forecast";
-  getDataFromApi(endpoint, city);
+  getDataFromApi(endpoint, city).then((data) => {
+    console.log(data);
+  });
 }
 // wczesniej nazywała się getApiData
 function getWeatherForCity(city) {
+  // const miasto = "Lodz";
   const endpoint = "/weather";
 
   getDataFromApi(endpoint, city)
     .then((data) => {
-      console.log(data); // wyświetlanie danych w konsoli
+      console.log(data);
       const city = data.name;
       const temp = data.main.temp;
       const desc = data.weather[0].description;
-      const icon =
-        "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
+      const icon = getIconUrl(data.weather[0].icon);
 
       // wstawienie danych do HTML
       document.getElementById("city").textContent = city;
-      document.getElementById("temp").textContent = temp + "°C";
+      document.getElementById("temp").textContent = getTempText(temp);
       document.getElementById("desc").textContent = desc;
       document.getElementById("icon").src = icon;
     })
