@@ -1,5 +1,6 @@
+function getDataFromApi(endpoint, city){
 const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
-
+}
 function getWeatherForecastForCity(city) {
   const endpoint =
     `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=pl&appid=` +
