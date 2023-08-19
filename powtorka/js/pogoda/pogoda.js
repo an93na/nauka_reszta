@@ -8,14 +8,15 @@ function getDataFromApi(endpoint, city) {
     .catch((error) => console.error(error));
 }
 function getWeatherForecastForCity(city) {
-  const endpoint ="/forecast"
-  getDataFromApi(endpoint, city)
+  const endpoint = "/forecast";
+  getDataFromApi(endpoint, city);
 }
 // wczesniej nazywała się getApiData
 function getWeatherForCity(city) {
-  const endpoint ="/weather"
+  const endpoint = "/weather";
 
-  getDataFromApi(endpoint, city).then((data) => {
+  getDataFromApi(endpoint, city)
+    .then((data) => {
       console.log(data); // wyświetlanie danych w konsoli
       const city = data.name;
       const temp = data.main.temp;
