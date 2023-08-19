@@ -1,6 +1,6 @@
 function getDataFromApi(endpoint, city) {
   const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
-  const host = `https://api.openweathermap.org/data/2.5/`;
+  const host = `https://api.openweathermap.org/data/2.5`;
   const url =
     host + endpoint + "?q=" + city + "&units=metric&lang=pl&appid=`" + api_key;
   return fetch(url)
@@ -8,27 +8,14 @@ function getDataFromApi(endpoint, city) {
     .catch((error) => console.error(error));
 }
 function getWeatherForecastForCity(city) {
-  const endpoint =
-    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&lang=pl&appid=` +
-    api_key;
-
-  fetch(endpoint)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data); // wyświetlanie danych w konsoli
-    })
-    .catch((error) => console.error(error));
+  const endpoint ="/forecast"
+  getDataFromApi(endpoint, city)
 }
 // wczesniej nazywała się getApiData
 function getWeatherForCity(city) {
-  // const miasto = "Lodz";
-  const endpoint =
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=pl&appid=` +
-    api_key;
+  const endpoint ="/weather"
 
-  fetch(endpoint)
-    .then((response) => response.json())
-    .then((data) => {
+  getDataFromApi(endpoint, city).then((data) => {
       console.log(data); // wyświetlanie danych w konsoli
       const city = data.name;
       const temp = data.main.temp;
