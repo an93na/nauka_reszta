@@ -255,14 +255,19 @@ console.log(
   ])
 );
 
-function validatePIN (pin) {
-  if ((pin.length === 4 || pin.length === 6) && !isNaN(pin) && parseInt(pin) == pin) {
-      return true
-    }
-    else {
-      return false}}
+function validatePIN(pin) {
+  if (
+    (pin.length === 4 || pin.length === 6) &&
+    !isNaN(pin) &&
+    parseInt(pin) == pin
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-console.log(validatePIN("12345"))
-console.log(validatePIN("1235"))
-console.log(validatePIN("12a5"))
-console.log(validatePIN("098765"))
+console.log(validatePIN("12345"));
+console.log(validatePIN("1235"));
+console.log(validatePIN("12a5"));
+console.log(validatePIN("098765"));
