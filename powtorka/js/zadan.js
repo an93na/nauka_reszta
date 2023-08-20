@@ -256,12 +256,11 @@ console.log(
 );
 
 function validatePIN (pin) {
-  let bolean = false
-  if (pin.length === 4 || pin.length === 6 && Number(pin) !== NaN) {
-      return bolean = true
+  if ((pin.length === 4 || pin.length === 6) && !isNaN(pin) && parseInt(pin) == pin) {
+      return true
     }
     else {
-      return bolean = false}}
+      return false}}
 
 console.log(validatePIN("12345"))
 console.log(validatePIN("1235"))
