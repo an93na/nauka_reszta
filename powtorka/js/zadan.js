@@ -254,3 +254,16 @@ console.log(
     [104, 20],
   ])
 );
+
+function validatePIN (pin) {
+  let bolean = false
+  if (pin.length === 4 || pin.length === 6 && Number(pin) !== NaN) {
+      return bolean = true
+    }
+    else {
+      return bolean = false}}
+
+console.log(validatePIN("12345"))
+console.log(validatePIN("1235"))
+console.log(validatePIN("12a5"))
+console.log(validatePIN("098765"))
