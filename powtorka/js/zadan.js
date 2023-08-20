@@ -259,7 +259,7 @@ function validatePIN(pin) {
   if (
     (pin.length === 4 || pin.length === 6) &&
     !isNaN(pin) &&
-    parseInt(pin) == pin
+    /^[0-9]+$/.test(pin)
   ) {
     return true;
   } else {
@@ -271,3 +271,4 @@ console.log(validatePIN("12345"));
 console.log(validatePIN("1235"));
 console.log(validatePIN("12a5"));
 console.log(validatePIN("098765"));
+console.log(validatePIN("98.765"));
