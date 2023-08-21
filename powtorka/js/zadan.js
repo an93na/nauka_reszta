@@ -288,3 +288,10 @@ function solution(str, ending){
 
 console.log(solution('abcde', 'cde'))
 console.log(solution('abc', 'cde'))
+
+function solutionTwo(str, ending) {
+  return str.endsWith(ending);
+}
+
+console.log(solutionTwo('abcde', 'cde')); // Output: true
+console.log(solutionTwo('abc', 'cde'));   // Output: false
