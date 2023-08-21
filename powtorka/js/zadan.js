@@ -77,7 +77,7 @@ let small = new SmallestIntegerFinder();
 console.log(small.findSmallestInt([34, 15, 88, 2]));
 
 let summation = (num) => {
-  suma = 0;
+  let suma = 0;
   for (let index = 1; index <= num; index++) {
     suma += index;
   }
@@ -274,9 +274,17 @@ console.log(validatePIN("098765"));
 console.log(validatePIN("98.765"));
 
 function solution(str, ending){
- if (str[str.length-1] === ending[ending.length-1]) {
+  let endingLenght = ending.length
+  let start = str.length-endingLenght
+  let slowo = ''
+  for (let index = start; index < str.length; index++) {
+    slowo = slowo + str[index]
+  }
+ if (slowo === ending) {
   return true
  }
-  return false
+ return false
 }
+
 console.log(solution('abcde', 'cde'))
+console.log(solution('abc', 'cde'))
