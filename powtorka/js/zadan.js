@@ -272,3 +272,11 @@ console.log(validatePIN("1235"));
 console.log(validatePIN("12a5"));
 console.log(validatePIN("098765"));
 console.log(validatePIN("98.765"));
+
+function solution(str, ending){
+ if (str[str.length-1] === ending[ending.length-1]) {
+  return true
+ }
+  return false
+}
+console.log(solution('abcde', 'cde'))
