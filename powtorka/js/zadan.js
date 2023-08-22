@@ -295,3 +295,16 @@ function solutionTwo(str, ending) {
 
 console.log(solutionTwo('abcde', 'cde')); // Output: true
 console.log(solutionTwo('abc', 'cde'));   // Output: false
+
+function reverseFunction(a) {
+let zbieraj = ''
+let podzielone 
+  for (let index = a.length-1; index >=0; index--) {
+    zbieraj+= a[index]
+  }
+ podzielone = zbieraj.split(" ").reverse()
+  console.log(podzielone) 
+
+}
+
+console.log(reverseFunction("This is an example!"))
