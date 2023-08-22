@@ -303,7 +303,7 @@ function reverseFunction(a) {
     zbieraj += a[index];
   }
   podzielone = zbieraj.split(" ").reverse().join(" ");
-  console.log(podzielone);
+  return podzielone;
 }
 
 console.log(reverseFunction("This is an example!"));
