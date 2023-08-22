@@ -296,6 +296,7 @@ function solutionTwo(str, ending) {
 console.log(solutionTwo("abcde", "cde")); // Output: true
 console.log(solutionTwo("abc", "cde")); // Output: false
 
+
 function reverseFunction(a) {
   let zbieraj = "";
   let podzielone;
@@ -307,3 +308,9 @@ function reverseFunction(a) {
 }
 
 console.log(reverseFunction("This is an example!"));
+
+// krótsza wersja
+function reverseWords(str) {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+console.log(reverseWords("This is an example!"))
