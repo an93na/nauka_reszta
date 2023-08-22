@@ -273,38 +273,37 @@ console.log(validatePIN("12a5"));
 console.log(validatePIN("098765"));
 console.log(validatePIN("98.765"));
 
-function solution(str, ending){
-  let endingLenght = ending.length
-  let start = str.length-endingLenght
-  let slowo = ''
+function solution(str, ending) {
+  let endingLenght = ending.length;
+  let start = str.length - endingLenght;
+  let slowo = "";
   for (let index = start; index < str.length; index++) {
-    slowo = slowo + str[index]
+    slowo = slowo + str[index];
   }
- if (slowo === ending) {
-  return true
- }
- return false
+  if (slowo === ending) {
+    return true;
+  }
+  return false;
 }
 
-console.log(solution('abcde', 'cde'))
-console.log(solution('abc', 'cde'))
+console.log(solution("abcde", "cde"));
+console.log(solution("abc", "cde"));
 
 function solutionTwo(str, ending) {
   return str.endsWith(ending);
 }
 
-console.log(solutionTwo('abcde', 'cde')); // Output: true
-console.log(solutionTwo('abc', 'cde'));   // Output: false
+console.log(solutionTwo("abcde", "cde")); // Output: true
+console.log(solutionTwo("abc", "cde")); // Output: false
 
 function reverseFunction(a) {
-let zbieraj = ''
-let podzielone 
-  for (let index = a.length-1; index >=0; index--) {
-    zbieraj+= a[index]
+  let zbieraj = "";
+  let podzielone;
+  for (let index = a.length - 1; index >= 0; index--) {
+    zbieraj += a[index];
   }
- podzielone = zbieraj.split(" ").reverse()
-  console.log(podzielone) 
-
+  podzielone = zbieraj.split(" ").reverse().join(" ");
+  console.log(podzielone);
 }
 
-console.log(reverseFunction("This is an example!"))
+console.log(reverseFunction("This is an example!"));
