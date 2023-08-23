@@ -317,9 +317,17 @@ console.log(reverseWords("This is an example!"));
 function makeUpperCase(str) {
   return str.toUpperCase();
 }
-
 console.log(makeUpperCase("hello"));
 
 stringToArray = (string) => string.split(" ");
-
 console.log(stringToArray("Robin Singh"));
+
+function squareSum(numbers){
+  let kwadrat = 0
+  for (let index = 0; index < numbers.length; index++) {
+    numbers[index] = numbers[index]**2
+  }
+  return numbers.reduce((previousValue, currentValue) => previousValue + currentValue)
+}
+
+console.log(squareSum([1,2]))
