@@ -323,11 +323,15 @@ stringToArray = (string) => string.split(" ");
 console.log(stringToArray("Robin Singh"));
 
 function squareSum(numbers){
-  let kwadrat = 0
-  for (let index = 0; index < numbers.length; index++) {
+  if(numbers.length > 0){
+      for (let index = 0; index < numbers.length; index++) {
     numbers[index] = numbers[index]**2
   }
-  return numbers.reduce((previousValue, currentValue) => previousValue + currentValue)
+  return numbers.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+  }
+  else{
+    return 0
+  }
 }
 
 console.log(squareSum([1,2]))
