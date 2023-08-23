@@ -320,6 +320,6 @@ function makeUpperCase(str) {
 
 console.log(makeUpperCase("hello"));
 
-stringToArray = (string) => string.split(" ")
+stringToArray = (string) => string.split(" ");
 
-console.log(stringToArray("Robin Singh"))
+console.log(stringToArray("Robin Singh"));
