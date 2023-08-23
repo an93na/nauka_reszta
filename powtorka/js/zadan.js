@@ -315,7 +315,7 @@ function reverseWords(str) {
 console.log(reverseWords("This is an example!"));
 
 function makeUpperCase(str) {
- return str.toUpperCase()
+  return str.toUpperCase();
 }
 
-console.log(makeUpperCase("hello"))
+console.log(makeUpperCase("hello"));
