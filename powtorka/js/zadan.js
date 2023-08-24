@@ -361,14 +361,22 @@ function descendingOrder(n) {
 }
 console.log(descendingOrder(123456789));
 
-function getSum(a, b)
-{
- if(a===b || isNaN(b)){
-  return a
- }
- else {
-  return a + b
- }
+function getSum(a, b) {
+  if (a === b || typeof b === "undefined") {
+    return a;
+  } else {
+    let sum = 0;
+    if (a < b) {
+      for (let i = a; i <= b; i++) {
+        sum += i;
+      }
+    } else {
+      for (let i = b; i <= a; i++) {
+        sum += i;
+      }
+    }
+    return sum;
+  }
 }
 console.log(getSum(0,-1))
 console.log(getSum(1))
