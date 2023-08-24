@@ -378,6 +378,6 @@ function getSum(a, b) {
     return sum;
   }
 }
-console.log(getSum(0,-1))
-console.log(getSum(1))
-console.log(getSum(5,-1))
+console.log(getSum(0, -1));
+console.log(getSum(1));
+console.log(getSum(5, -1));
