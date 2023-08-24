@@ -338,14 +338,38 @@ function squareSum(numbers) {
 
 console.log(squareSum([1, 2]));
 
-function descendingOrder(n) {
-  let cos = n
-    .toString()
-    .split("")
-    .map(Number)
-    .sort((a, b) => b - a)
-    .join("");
-  return parseInt(cos, 10);
-}
+// function descendingOrder(n) {
+//   let cos = n
+//     .toString()
+//     .split("")
+//     .map(Number)
+//     .sort((a, b) => b - a)
+//     .join("");
+//   return parseInt(cos, 10);
+// }
 
+function descendingOrder(n) {
+  return parseInt(
+    n
+      .toString()
+      .split("")
+      .map(Number)
+      .sort((a, b) => b - a)
+      .join(""),
+    10
+  );
+}
 console.log(descendingOrder(123456789));
+
+function getSum(a, b)
+{
+ if(a===b || isNaN(b)){
+  return a
+ }
+ else {
+  return a + b
+ }
+}
+console.log(getSum(0,-1))
+console.log(getSum(1))
+console.log(getSum(5,-1))
