@@ -338,9 +338,14 @@ function squareSum(numbers) {
 
 console.log(squareSum([1, 2]));
 
-function descendingOrder(n){
-  let cos = n.toString().split("").map(Number).sort((a, b) => b - a).join("")
-  return parseInt(cos,10)
+function descendingOrder(n) {
+  let cos = n
+    .toString()
+    .split("")
+    .map(Number)
+    .sort((a, b) => b - a)
+    .join("");
+  return parseInt(cos, 10);
 }
 
-console.log(descendingOrder(123456789))
+console.log(descendingOrder(123456789));
