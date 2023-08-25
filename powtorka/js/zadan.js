@@ -140,7 +140,6 @@ let areYouPlayingBanjo = (name) =>
   name +
   (name[0].toLowerCase() == "r" ? " plays" : " does not play") +
   " banjo";
-
 console.log(areYouPlayingBanjo("Ray"));
 console.log(areYouPlayingBanjo("Asia"));
 
@@ -155,7 +154,6 @@ function isTriangle(a, b, c) {
     return false;
   }
 }
-
 console.log(isTriangle(0, 3, 4));
 console.log(isTriangle(1, -3, 4));
 console.log(isTriangle(4, 3, 4));
@@ -171,7 +169,6 @@ const binaryArrayToNumber = (arr) => {
   }
   return suma;
 };
-
 console.log(binaryArrayToNumber([1, 1, 1, 1]));
 console.log(binaryArrayToNumber([0, 0, 0, 1]));
 
