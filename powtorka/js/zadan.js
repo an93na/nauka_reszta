@@ -222,8 +222,7 @@ function fakeBin(x) {
     }
   }
   return bin;
-}
-
+};
 console.log(fakeBin("45385593107843568"));
 
 let fakeBinShort = (x) => {
