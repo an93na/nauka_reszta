@@ -95,8 +95,7 @@ function bmi(weight, height) {
   } else if (bmiCal > 30) {
     return "Obese";
   }
-}
-
+      }
 console.log(bmi(80, 1.8));
 console.log(bmi(50, 1.8));
 console.log(bmi(120, 1.8));
@@ -113,7 +112,6 @@ function toSamoOdTylu(str) {
     return false;
   }
 }
-
 console.log(toSamoOdTylu("isogram"));
 console.log(toSamoOdTylu("aba"));
 
