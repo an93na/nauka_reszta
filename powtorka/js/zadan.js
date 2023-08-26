@@ -56,7 +56,6 @@ function DNAtoRNA(dna) {
   }
   return rna;
 }
-
 console.log(DNAtoRNA("UTTT"));
 
 class SmallestIntegerFinder {
@@ -83,7 +82,6 @@ let summation = (num) => {
   }
   return suma;
 };
-
 console.log(summation(3));
 
 function bmi(weight, height) {
