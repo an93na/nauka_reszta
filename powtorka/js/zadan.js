@@ -393,3 +393,22 @@ console.log(hoopCount(12))
 const hoopCountShort = (n) => (n < 10 ) ? "Keep at it until you get it" : "Great, now move on to tricks"
 console.log(hoopCountShort(9))
 console.log(hoopCountShort(10))
+
+const wykonaj = (r) => {
+  let index = r.indexOf(1)
+  let cz1 = []
+  let cz2 = []
+  if(index === -1){
+    return r
+  }
+  else {
+    for (let i = 0; i < index; i++) {
+      cz1.push(r[i])
+    }
+    for(let i=index+1; i< r.length; i++ ){
+      cz2.push(r[i])
+    }
+    return cz1.concat(cz2)
+  }
+}
+console.log(wykonaj([2,3,4,1,5]))
