@@ -378,3 +378,14 @@ function booleanToString(b){
   return b.toString()
 }
 console.log(booleanToString(true))
+
+function hoopCount (n) {
+  if (n < 10) {
+    return "Keep at it until you get it"
+  } else {
+    return "Great, now move on to tricks"
+  }
+}
+console.log(hoopCount(8))
+console.log(hoopCount(10))
+console.log(hoopCount(12))
