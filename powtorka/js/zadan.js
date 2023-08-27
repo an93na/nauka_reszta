@@ -95,7 +95,7 @@ function bmi(weight, height) {
   } else if (bmiCal > 30) {
     return "Obese";
   }
-      }
+}
 console.log(bmi(80, 1.8));
 console.log(bmi(50, 1.8));
 console.log(bmi(120, 1.8));
@@ -215,7 +215,7 @@ function fakeBin(x) {
     }
   }
   return bin;
-};
+}
 console.log(fakeBin("45385593107843568"));
 
 let fakeBinShort = (x) => {
@@ -374,43 +374,43 @@ console.log(getSum(0, -1));
 console.log(getSum(1));
 console.log(getSum(5, -1));
 
-function booleanToString(b){
-  return b.toString()
+function booleanToString(b) {
+  return b.toString();
 }
-console.log(booleanToString(true))
+console.log(booleanToString(true));
 
-function hoopCount (n) {
+function hoopCount(n) {
   if (n < 10) {
-    return "Keep at it until you get it"
+    return "Keep at it until you get it";
   } else {
-    return "Great, now move on to tricks"
+    return "Great, now move on to tricks";
   }
 }
-console.log(hoopCount(8))
-console.log(hoopCount(10))
-console.log(hoopCount(12))
+console.log(hoopCount(8));
+console.log(hoopCount(10));
+console.log(hoopCount(12));
 
-const hoopCountShort = (n) => (n < 10 ) ? "Keep at it until you get it" : "Great, now move on to tricks"
-console.log(hoopCountShort(9))
-console.log(hoopCountShort(10))
+const hoopCountShort = (n) =>
+  n < 10 ? "Keep at it until you get it" : "Great, now move on to tricks";
+console.log(hoopCountShort(9));
+console.log(hoopCountShort(10));
 
 const wykonaj = (r) => {
-  let index = r.indexOf(1)
-  let cz1 = []
-  let cz2 = []
-  if(index === -1){
-    return r
-  }
-  else {
+  let index = r.indexOf(1);
+  let cz1 = [];
+  let cz2 = [];
+  if (index === -1) {
+    return r;
+  } else {
     for (let i = 0; i < index; i++) {
-      cz1.push(r[i])
+      cz1.push(r[i]);
     }
-    for(let i=index+1; i< r.length; i++ ){
-      cz2.push(r[i])
+    for (let i = index + 1; i < r.length; i++) {
+      cz2.push(r[i]);
     }
-    return cz1.concat(cz2)
+    return cz1.concat(cz2);
   }
-}
-console.log(wykonaj([2,3,4,1,5]))
-console.log(wykonaj([2,2,2,1]))
-console.log(wykonaj([5,3,2,4]))
+};
+console.log(wykonaj([2, 3, 4, 1, 5]));
+console.log(wykonaj([2, 2, 2, 1]));
+console.log(wykonaj([5, 3, 2, 4]));
