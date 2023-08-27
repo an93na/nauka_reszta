@@ -412,3 +412,5 @@ const wykonaj = (r) => {
   }
 }
 console.log(wykonaj([2,3,4,1,5]))
+console.log(wykonaj([2,2,2,1]))
+console.log(wykonaj([5,3,2,4]))
