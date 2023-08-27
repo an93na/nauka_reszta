@@ -56,7 +56,6 @@ function DNAtoRNA(dna) {
   }
   return rna;
 }
-
 console.log(DNAtoRNA("UTTT"));
 
 class SmallestIntegerFinder {
@@ -83,7 +82,6 @@ let summation = (num) => {
   }
   return suma;
 };
-
 console.log(summation(3));
 
 function bmi(weight, height) {
@@ -97,8 +95,7 @@ function bmi(weight, height) {
   } else if (bmiCal > 30) {
     return "Obese";
   }
-}
-
+      }
 console.log(bmi(80, 1.8));
 console.log(bmi(50, 1.8));
 console.log(bmi(120, 1.8));
@@ -115,7 +112,6 @@ function toSamoOdTylu(str) {
     return false;
   }
 }
-
 console.log(toSamoOdTylu("isogram"));
 console.log(toSamoOdTylu("aba"));
 
@@ -140,7 +136,6 @@ let areYouPlayingBanjo = (name) =>
   name +
   (name[0].toLowerCase() == "r" ? " plays" : " does not play") +
   " banjo";
-
 console.log(areYouPlayingBanjo("Ray"));
 console.log(areYouPlayingBanjo("Asia"));
 
@@ -155,7 +150,6 @@ function isTriangle(a, b, c) {
     return false;
   }
 }
-
 console.log(isTriangle(0, 3, 4));
 console.log(isTriangle(1, -3, 4));
 console.log(isTriangle(4, 3, 4));
@@ -171,7 +165,6 @@ const binaryArrayToNumber = (arr) => {
   }
   return suma;
 };
-
 console.log(binaryArrayToNumber([1, 1, 1, 1]));
 console.log(binaryArrayToNumber([0, 0, 0, 1]));
 
@@ -222,8 +215,7 @@ function fakeBin(x) {
     }
   }
   return bin;
-}
-
+};
 console.log(fakeBin("45385593107843568"));
 
 let fakeBinShort = (x) => {
