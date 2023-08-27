@@ -389,3 +389,7 @@ function hoopCount (n) {
 console.log(hoopCount(8))
 console.log(hoopCount(10))
 console.log(hoopCount(12))
+
+const hoopCountShort = (n) => (n < 10 ) ? "Keep at it until you get it" : "Great, now move on to tricks"
+console.log(hoopCountShort(9))
+console.log(hoopCountShort(10))
