@@ -373,3 +373,8 @@ function getSum(a, b) {
 console.log(getSum(0, -1));
 console.log(getSum(1));
 console.log(getSum(5, -1));
+
+function booleanToString(b){
+  return b.toString()
+}
+console.log(booleanToString(true))
