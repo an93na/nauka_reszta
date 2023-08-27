@@ -396,7 +396,8 @@ console.log(hoopCountShort(9));
 console.log(hoopCountShort(10));
 
 const wykonaj = (r) => {
-  let index = r.indexOf(1);
+  let min = Math.min.apply(null, r);
+  let index = r.indexOf(min);
   let cz1 = [];
   let cz2 = [];
   if (index === -1) {
