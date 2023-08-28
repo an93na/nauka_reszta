@@ -14,7 +14,7 @@ function getDateTimeFromTimestamp(timestamp) {
   const hour = date.getHours()
   const minutes = date.getMinutes()
 const seconds = date.getSeconds()
-  return date
+  return `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`
 }
 
 function getDataFromApi(endpoint, city) {
@@ -69,3 +69,4 @@ document.getElementById("formularz").addEventListener("submit", submitForm);
 // getApiData("Warszawa");
 getWeatherForCity(getCityName());
 getWeatherForecastForCity(getCityName());
+console.log(getDateTimeFromTimestamp(1693194009))
