@@ -18,12 +18,19 @@
         </select>
         <button type="submit">Szukaj</button>
       </form>
-      <ul>
-        <li>Miasto: <span id="city"></span></li>
-        <li>Temperatura: <span id="temp"></span></li>
-        <li>Opis pogody: <span id="desc"></span></li>
-        <li>Ikona: <img src="" alt="" id="icon" /></li>
-      </ul>
+      <div>
+        <h2>Pogoda bieżąca</h2>
+        <ul>
+          <li>Miasto: <span id="city"></span></li>
+          <li>Temperatura: <span id="temp"></span></li>
+          <li>Opis pogody: <span id="desc"></span></li>
+          <li>Ikona: <img src="" alt="" id="icon" /></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Prognoza na następne 40 dni</h2>
+        <ul id="forecast-list"></ul>
+      </div>
     </div>
     <script src="./pogoda.js"></script>
   </body>

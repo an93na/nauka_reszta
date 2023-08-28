@@ -35,7 +35,10 @@ function getDataFromApi(endpoint, city) {
 function getWeatherForecastForCity(city) {
   const endpoint = "/forecast";
   getDataFromApi(endpoint, city).then((data) => {
-    console.log(data);
+    // console.log(data);
+    data.list.forEach(item => {
+      console.log(item)
+    });
   });
 }
 // wczesniej nazywała się getApiData
