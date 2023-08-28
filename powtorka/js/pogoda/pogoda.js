@@ -40,8 +40,13 @@ function getWeatherForecastForCity(city) {
     data.list.forEach((item) => {
       console.log(item);
       const li = document.createElement("li");
-      const textnode = document.createTextNode(item.dt_txt);
-      li.appendChild(textnode);
+      const content = `
+      <img src="${getIconUrl(item.weather[0].icon)}" />
+      <p>${item.dt_txt}</p>
+      <p>${getTempText(item.main.temp)}</p>
+      <p>${item.weather[0].description}</p>
+      `;
+      li.innerHTML = content;
       forecastList.appendChild(li);
     });
   });
