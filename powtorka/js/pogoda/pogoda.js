@@ -7,20 +7,20 @@ function getTempText(temp) {
 }
 
 function getDateTimeFromTimestamp(timestamp) {
-  function getNumberWithLeadingZero(value){
+  function getNumberAsStringWithLeadingZero(value) {
     if (value <= 9) {
-      return `0${value}`
+      return `0${value}`;
     }
-    return value
+    return `${value}`;
   }
-  const date = new Date(timestamp*1000)
-  const year = date.getFullYear()
-  const month = getNumberWithLeadingZero(date.getMonth()+1)
-  const day = getNumberWithLeadingZero(date.getDate())
-  const hour = getNumberWithLeadingZero(date.getHours())
-  const minutes = getNumberWithLeadingZero(date.getMinutes())
-  const seconds = getNumberWithLeadingZero(date.getSeconds())
-  return `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`
+  const date = new Date(timestamp * 1000);
+  const year = date.getFullYear();
+  const month = getNumberAsStringWithLeadingZero(date.getMonth() + 1);
+  const day = getNumberAsStringWithLeadingZero(date.getDate());
+  const hour = getNumberAsStringWithLeadingZero(date.getHours());
+  const minutes = getNumberAsStringWithLeadingZero(date.getMinutes());
+  const seconds = getNumberAsStringWithLeadingZero(date.getSeconds());
+  return `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`;
 }
 
 function getDataFromApi(endpoint, city) {
@@ -75,4 +75,4 @@ document.getElementById("formularz").addEventListener("submit", submitForm);
 // getApiData("Warszawa");
 getWeatherForCity(getCityName());
 getWeatherForecastForCity(getCityName());
-console.log(getDateTimeFromTimestamp(1693194009))
+console.log(getDateTimeFromTimestamp(1693194009));
