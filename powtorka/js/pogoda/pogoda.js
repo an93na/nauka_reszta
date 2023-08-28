@@ -7,13 +7,19 @@ function getTempText(temp) {
 }
 
 function getDateTimeFromTimestamp(timestamp) {
+  function getNumberWithLeadingZero(value){
+    if (value <= 9) {
+      return `0${value}`
+    }
+    return value
+  }
   const date = new Date(timestamp*1000)
   const year = date.getFullYear()
-  const month = date.getMonth()+1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minutes = date.getMinutes()
-const seconds = date.getSeconds()
+  const month = getNumberWithLeadingZero(date.getMonth()+1)
+  const day = getNumberWithLeadingZero(date.getDate())
+  const hour = getNumberWithLeadingZero(date.getHours())
+  const minutes = getNumberWithLeadingZero(date.getMinutes())
+  const seconds = getNumberWithLeadingZero(date.getSeconds())
   return `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`
 }
 
