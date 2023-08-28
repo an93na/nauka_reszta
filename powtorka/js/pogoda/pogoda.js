@@ -33,11 +33,16 @@ function getDataFromApi(endpoint, city) {
     .catch((error) => console.error(error));
 }
 function getWeatherForecastForCity(city) {
+  const forecastList = document.getElementById("forecast-list");
   const endpoint = "/forecast";
   getDataFromApi(endpoint, city).then((data) => {
     // console.log(data);
-    data.list.forEach(item => {
-      console.log(item)
+    data.list.forEach((item) => {
+      console.log(item);
+      const li = document.createElement("li");
+      const textnode = document.createTextNode(item.dt_txt);
+      li.appendChild(textnode);
+      forecastList.appendChild(li);
     });
   });
 }
