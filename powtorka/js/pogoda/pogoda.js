@@ -6,6 +6,17 @@ function getTempText(temp) {
   return temp + "°C";
 }
 
+function getDateTimeFromTimestamp(timestamp) {
+  const date = new Date(timestamp*1000)
+  const year = date.getFullYear()
+  const month = date.getMonth()+1
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minutes = date.getMinutes()
+const seconds = date.getSeconds()
+  return date
+}
+
 function getDataFromApi(endpoint, city) {
   const api_key = "ac6428ea7fc0ef9caef037d08a02ce91";
   const host = "https://api.openweathermap.org/data/2.5";
