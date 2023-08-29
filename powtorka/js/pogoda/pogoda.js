@@ -5,14 +5,13 @@ function getIconUrl(icon) {
 function getTempText(temp) {
   return temp + "°C";
 }
-
-function getDateTimeFromTimestamp(timestamp) {
-  function getNumberAsStringWithLeadingZero(value) {
-    if (value <= 9) {
-      return `0${value}`;
-    }
-    return `${value}`;
+function getNumberAsStringWithLeadingZero(value) {
+  if (value <= 9) {
+    return `0${value}`;
   }
+  return `${value}`;
+}
+function getDateTimeFromTimestamp(timestamp) {
   const date = new Date(timestamp * 1000);
   const year = date.getFullYear();
   const month = getNumberAsStringWithLeadingZero(date.getMonth() + 1);
@@ -35,19 +34,27 @@ function getDataFromApi(endpoint, city) {
 function getWeatherForecastForCity(city) {
   const forecastList = document.getElementById("forecast-list");
   const endpoint = "/forecast";
+  function canShowItem(timestamp) {
+    const hours = ["09", "15"];
+    const date = new Date(timestamp * 1000);
+    const hour = getNumberAsStringWithLeadingZero(date.getHours());
+    return hours.includes(hour)
+  }
   getDataFromApi(endpoint, city).then((data) => {
     // console.log(data);
     data.list.forEach((item) => {
       console.log(item);
-      const li = document.createElement("li");
-      const content = `
+      if (canShowItem(item.dt)) {
+        const li = document.createElement("li");
+        const content = `
       <img src="${getIconUrl(item.weather[0].icon)}" />
       <p>${item.dt_txt}</p>
       <p>${getTempText(item.main.temp)}</p>
       <p>${item.weather[0].description}</p>
       `;
-      li.innerHTML = content;
-      forecastList.appendChild(li);
+        li.innerHTML = content;
+        forecastList.appendChild(li);
+      }
     });
   });
 }
