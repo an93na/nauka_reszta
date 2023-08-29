@@ -34,32 +34,32 @@ function getDataFromApi(endpoint, city) {
     .catch((error) => console.error(error));
 }
 function getWeatherForecastForCity(city) {
-  const forecastList = document.getElementById("forecast-list");
   const endpoint = "/forecast";
+  getDataFromApi(endpoint, city).then((data) => {
+    generateForecastContent(data.list);
+  });
+}
 
+function generateForecastContent(items) {
+  const forecastList = document.getElementById("forecast-list");
   function canShowItem(timestamp) {
     const hours = ["14", "20"];
     const date = new Date(timestamp * 1000);
     const hour = getNumberAsStringWithLeadingZero(date.getHours());
-    // console.log(hour, hours)
     return !!hours.includes(hour);
   }
-  getDataFromApi(endpoint, city).then((data) => {
-    // console.log(data);
-    data.list.forEach((item) => {
-      // console.log(item);
-      if (canShowItem(item.dt)) {
-        const li = document.createElement("li");
-        const content = `
-      <img src="${getIconUrl(item.weather[0].icon)}" />
-      <p>${getDateTimeFromTimestamp(item.dt)}</p>
-      <p>${getTempText(item.main.temp)}</p>
-      <p>${item.weather[0].description}</p>
-      `;
-        li.innerHTML = content;
-        forecastList.appendChild(li);
-      }
-    });
+  items.forEach((item) => {
+    if (canShowItem(item.dt)) {
+      const li = document.createElement("li");
+      const content = `
+    <img src="${getIconUrl(item.weather[0].icon)}" />
+    <p>${getDateTimeFromTimestamp(item.dt)}</p>
+    <p>${getTempText(item.main.temp)}</p>
+    <p>${item.weather[0].description}</p>
+    `;
+      li.innerHTML = content;
+      forecastList.appendChild(li);
+    }
   });
 }
 // wczesniej nazywała się getApiData
