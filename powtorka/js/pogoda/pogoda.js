@@ -42,6 +42,7 @@ function getWeatherForecastForCity(city) {
 
 function generateForecastContent(items) {
   const forecastList = document.getElementById("forecast-list");
+  forecastList.innerHTML = "";
   function canShowItem(timestamp) {
     const hours = ["14", "20"];
     const date = new Date(timestamp * 1000);
