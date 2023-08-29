@@ -41,13 +41,13 @@ function getWeatherForecastForCity(city) {
     const hours = ["14", "20"];
     const date = new Date(timestamp * 1000);
     const hour = getNumberAsStringWithLeadingZero(date.getHours());
-    console.log(hour, hours)
+    // console.log(hour, hours)
     return !!hours.includes(hour);
   }
   getDataFromApi(endpoint, city).then((data) => {
     // console.log(data);
     data.list.forEach((item) => {
-      console.log(item);
+      // console.log(item);
       if (canShowItem(item.dt)) {
         const li = document.createElement("li");
         const content = `
