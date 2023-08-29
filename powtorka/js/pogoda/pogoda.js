@@ -5,12 +5,14 @@ function getIconUrl(icon) {
 function getTempText(temp) {
   return temp + "°C";
 }
+
 function getNumberAsStringWithLeadingZero(value) {
   if (value <= 9) {
     return `0${value}`;
   }
   return `${value}`;
 }
+
 function getDateTimeFromTimestamp(timestamp) {
   const date = new Date(timestamp * 1000);
   const year = date.getFullYear();
@@ -34,11 +36,13 @@ function getDataFromApi(endpoint, city) {
 function getWeatherForecastForCity(city) {
   const forecastList = document.getElementById("forecast-list");
   const endpoint = "/forecast";
+
   function canShowItem(timestamp) {
-    const hours = ["09", "15"];
+    const hours = ["14", "20"];
     const date = new Date(timestamp * 1000);
     const hour = getNumberAsStringWithLeadingZero(date.getHours());
-    return hours.includes(hour)
+    console.log(hour, hours)
+    return !!hours.includes(hour);
   }
   getDataFromApi(endpoint, city).then((data) => {
     // console.log(data);
@@ -48,7 +52,7 @@ function getWeatherForecastForCity(city) {
         const li = document.createElement("li");
         const content = `
       <img src="${getIconUrl(item.weather[0].icon)}" />
-      <p>${item.dt_txt}</p>
+      <p>${getDateTimeFromTimestamp(item.dt)}</p>
       <p>${getTempText(item.main.temp)}</p>
       <p>${item.weather[0].description}</p>
       `;
@@ -65,7 +69,7 @@ function getWeatherForCity(city) {
 
   getDataFromApi(endpoint, city)
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       const city = data.name;
       const temp = data.main.temp;
       const desc = data.weather[0].description;
