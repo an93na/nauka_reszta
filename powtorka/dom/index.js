@@ -18,8 +18,12 @@ console.log("Pierwszy element to: ", pierwszyTd);
 
 // [0] wez z tego co zwroci pierzy element
 const el = document.getElementsByName("nazwisko")[0];
+console.log("element o name=nazwisko ma następujące atrybuty ", el.attributes);
 const maType = el.hasAttribute("type");
 console.log(
   "element o name=nazwisko " +
     (maType ? "ma atrybut type" : "nie ma atrybutu type")
 );
+// getAttribute
+// setAttribute
+// removeAttribute
