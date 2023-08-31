@@ -11,7 +11,7 @@ console.log("Ostatni element to: ", ostatniElementTd);
 const pierwszyTd = document.querySelector("td");
 console.log("Pierwszy element to: ", pierwszyTd);
 
-// document.getElementById("ele1");
-// document.getElementsByTagName("table");
-// document.getElementsByName("imie");
-// document.getElementsByClassName("tekscik");
+// document.getElementById("ele1"); -po ID, zawsze zwraca pojedyńczy element
+// document.getElementsByTagName("table"); - po nazwie tagu
+// document.getElementsByName("imie"); - po atrybucie name
+// document.getElementsByClassName("tekscik"); - po nazwie klasy
