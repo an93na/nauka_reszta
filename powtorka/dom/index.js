@@ -11,3 +11,7 @@ console.log("Ostatni element to: ", ostatniElementTd);
 const pierwszyTd = document.querySelector("td");
 console.log("Pierwszy element to: ", pierwszyTd);
 
+// document.getElementById("ele1");
+// document.getElementsByTagName("table");
+// document.getElementsByName("imie");
+// document.getElementsByClassName("tekscik");
