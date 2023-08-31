@@ -24,6 +24,18 @@ console.log(
   "element o name=nazwisko " +
     (maType ? "ma atrybut type" : "nie ma atrybutu type")
 );
+
 // getAttribute
 // setAttribute
 // removeAttribute
+
+const przyciskSet = document.getElementById("set");
+const przyciskDel = document.getElementById("del");
+przyciskSet.addEventListener("click", () => {
+  console.log("kliknięto set");
+  el.setAttribute("class", "wazne");
+});
+przyciskDel.addEventListener("click", () => {
+  console.log("kliknięto na del");
+  el.removeAttribute("class");
+});
