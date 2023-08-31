@@ -15,3 +15,8 @@ console.log("Pierwszy element to: ", pierwszyTd);
 // document.getElementsByTagName("table"); - po nazwie tagu
 // document.getElementsByName("imie"); - po atrybucie name
 // document.getElementsByClassName("tekscik"); - po nazwie klasy
+
+// [0] wez z tego co zwroci pierzy element
+const el = document.getElementsByName("nazwisko")[0];
+const maType = el.hasAttribute("type")
+console.log('element o name=nazwisko '+ (maType?"1":"0"))
