@@ -43,6 +43,6 @@ przyciskDel.addEventListener("click", () => {
 const hasloWiget = document.getElementsByName("haslo")[0];
 hasloWiget.addEventListener("keyup", () => {
   console.log("nacisnieto klawisz");
-  const obecnaWartosc = hasloWiget.getAttribute("value");
-  console.log('obecna wartość' + obecnaWartosc);
+  const obecnaWartosc = hasloWiget.value;
+  console.log('obecna wartość: ' + obecnaWartosc);
 });
