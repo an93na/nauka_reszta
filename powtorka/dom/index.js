@@ -56,7 +56,10 @@ hasloWiget.addEventListener("keyup", () => {
   } else if (komplikacjaHasla < 1.5) {
     color = "ok";
   } else if (komplikacjaHasla < 2) {
-    color = "super!";
+    color = "super";
+  } else {
+    color = 'extra'
   }
   console.log(komplikacjaHasla);
+  hasloWiget.setAttribute('class', color)
 });
