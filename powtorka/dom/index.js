@@ -43,6 +43,20 @@ przyciskDel.addEventListener("click", () => {
 const hasloWiget = document.getElementsByName("haslo")[0];
 hasloWiget.addEventListener("keyup", () => {
   console.log("nacisnieto klawisz");
-  const komplikacjaHasla = hasloWiget.value.length;
+  const komplikacjaHasla = hasloWiget.value.length / 8;
+  let color = "weak";
+  if (komplikacjaHasla < 0.25) {
+    color = "weak";
+  } else if (komplikacjaHasla < 0.5) {
+    color = "medium";
+  } else if (komplikacjaHasla < 0.75) {
+    color = "almost";
+  } else if (komplikacjaHasla < 1) {
+    color = "close";
+  } else if (komplikacjaHasla < 1.5) {
+    color = "ok";
+  } else if (komplikacjaHasla < 2) {
+    color = "super!";
+  }
   console.log(komplikacjaHasla);
 });
