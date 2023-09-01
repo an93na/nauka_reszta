@@ -39,3 +39,10 @@ przyciskDel.addEventListener("click", () => {
   console.log("kliknięto na del");
   el.removeAttribute("class");
 });
+
+const hasloWiget = document.getElementsByName("haslo")[0];
+hasloWiget.addEventListener("keyup", () => {
+  console.log("nacisnieto klawisz");
+  const obecnaWartosc = hasloWiget.getAttribute("value");
+  console.log('obecna wartość' + obecnaWartosc);
+});
