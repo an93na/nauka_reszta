@@ -41,6 +41,7 @@ przyciskDel.addEventListener("click", () => {
 });
 
 const hasloWiget = document.getElementsByName("haslo")[0];
+const sila = document.getElementById("sila");
 hasloWiget.addEventListener("keyup", () => {
   console.log("nacisnieto klawisz");
   const komplikacjaHasla = hasloWiget.value.length / 8;
@@ -58,8 +59,9 @@ hasloWiget.addEventListener("keyup", () => {
   } else if (komplikacjaHasla < 2) {
     color = "super";
   } else {
-    color = 'extra'
+    color = "extra";
   }
   console.log(komplikacjaHasla);
-  hasloWiget.setAttribute('class', color)
+  hasloWiget.setAttribute("class", color);
+  sila.innerText = "siła hasła= " + komplikacjaHasla;
 });
