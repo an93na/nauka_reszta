@@ -67,9 +67,9 @@ hasloWiget.addEventListener("keyup", () => {
 });
 
 const dodajEl = document.getElementsByName("dodaj")[0];
-dodajEl.addEventListener("click", ()=> {
-  const kontener = document.getElementById('kontener')
-  let nowyElement = document.createElement('span');
-  nowyElement.innerText='nowySpan id='+Math.floor(Math.random()*100)
-  kontener.insertBefore(nowyElement, kontener.firstChild)
-})
+dodajEl.addEventListener("click", () => {
+  const kontener = document.getElementById("kontener");
+  let nowyElement = document.createElement("span");
+  nowyElement.innerText = "nowySpan id=" + Math.floor(Math.random() * 100);
+  kontener.insertBefore(nowyElement, kontener.firstChild);
+});
