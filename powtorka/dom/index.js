@@ -79,4 +79,13 @@ dodajEl.addEventListener("click", () => {
   const kolorSzesnastkowy =
     "#" + kolorR.toString(16) + kolorG.toString(16) + kolorB.toString(16);
   nowyElement.style.backgroundColor = kolorSzesnastkowy;
+  nowyElement.style.cursor = "pointer";
+  nowyElement.addEventListener("click", (evt) => {
+    // console.log("kliknięto na span", evt);
+    // evt.target.innerText = 'Trafiony!'
+    // evt.target.remove();
+    if (evt.target.previousElementSibling) {
+      evt.target.previousElementSibling.remove();
+    }
+  });
 });
