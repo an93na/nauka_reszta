@@ -65,3 +65,10 @@ hasloWiget.addEventListener("keyup", () => {
   hasloWiget.setAttribute("class", color);
   sila.innerText = "siła hasła= " + komplikacjaHasla;
 });
+
+const dodajEl = document.getElementsByName("dodaj")[0];
+dodajEl.addEventListener("click", ()=> {
+  const kontener = document.getElementById('kontener')
+  let nowyElement = document.createElement('span');
+  kontener.insertBefore(nowyElement, kontener.firstChild)
+})
