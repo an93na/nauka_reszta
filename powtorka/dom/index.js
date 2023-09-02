@@ -72,9 +72,10 @@ dodajEl.addEventListener("click", () => {
   let nowyElement = document.createElement("span");
   nowyElement.innerText = "nowySpan id=" + Math.floor(Math.random() * 100);
   kontener.insertBefore(nowyElement, kontener.firstChild);
-  const kolorR = Math.floor(Math.random() * 256);
-  const kolorG = Math.floor(Math.random() * 256);
-  const kolorB = Math.floor(Math.random() * 256);
+  // kontener.appendChild(nowyElement);
+  const kolorR = 16 + Math.floor(Math.random() * 256);
+  const kolorG = 16 + Math.floor(Math.random() * 256);
+  const kolorB = 16 + Math.floor(Math.random() * 256);
   const kolorSzesnastkowy =
     "#" + kolorR.toString(16) + kolorG.toString(16) + kolorB.toString(16);
   nowyElement.style.backgroundColor = kolorSzesnastkowy;
