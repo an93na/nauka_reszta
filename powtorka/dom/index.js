@@ -67,9 +67,10 @@ hasloWiget.addEventListener("keyup", () => {
 });
 
 document.getElementById("kontener").addEventListener("click", (evt) => {
-  console.log(evt)
-  if (evt.target.localName === 'span') {
+  // console.log(evt)
+  if (evt.target.localName === "span") {
     evt.target.innerText = "Trafiony";
+    evt.target.style.backgroundColor = "#444444";
   }
 });
 
