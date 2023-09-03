@@ -89,3 +89,7 @@ dodajEl.addEventListener("click", () => {
     }
   });
 });
+
+document.getElementById("powierzchniaTestowa").addEventListener("mouseenter", ()=> {console.log('mouseenter')})
+document.getElementById("powierzchniaTestowa").addEventListener("mouseout", ()=> {console.log('mouseout')})
+document.getElementById("powierzchniaTestowa").addEventListener("mousemove", ()=> {console.log('mousemove')})
