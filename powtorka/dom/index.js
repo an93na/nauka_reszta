@@ -67,7 +67,10 @@ hasloWiget.addEventListener("keyup", () => {
 });
 
 document.getElementById("kontener").addEventListener("click", (evt) => {
-  console.log(evt.target);
+  console.log(evt)
+  if (evt.target.localName === 'span') {
+    evt.target.innerText = "Trafiony";
+  }
 });
 
 const dodajEl = document.getElementsByName("dodaj")[0];
