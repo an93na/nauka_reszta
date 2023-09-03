@@ -66,6 +66,10 @@ hasloWiget.addEventListener("keyup", () => {
   sila.innerText = "siła hasła= " + komplikacjaHasla;
 });
 
+document.getElementById("kontener").addEventListener("click", (evt) => {
+  console.log(evt.target);
+});
+
 const dodajEl = document.getElementsByName("dodaj")[0];
 dodajEl.addEventListener("click", () => {
   const kontener = document.getElementById("kontener");
@@ -80,6 +84,7 @@ dodajEl.addEventListener("click", () => {
     "#" + kolorR.toString(16) + kolorG.toString(16) + kolorB.toString(16);
   nowyElement.style.backgroundColor = kolorSzesnastkowy;
   nowyElement.style.cursor = "pointer";
+  /* 
   nowyElement.addEventListener("click", (evt) => {
     // console.log("kliknięto na span", evt);
     // evt.target.innerText = 'Trafiony!'
@@ -87,9 +92,22 @@ dodajEl.addEventListener("click", () => {
     if (evt.target.previousElementSibling) {
       evt.target.previousElementSibling.remove();
     }
-  });
+  })
+  */
 });
 
-document.getElementById("powierzchniaTestowa").addEventListener("mouseenter", ()=> {console.log('mouseenter')})
-document.getElementById("powierzchniaTestowa").addEventListener("mouseout", ()=> {console.log('mouseout')})
-document.getElementById("powierzchniaTestowa").addEventListener("mousemove", ()=> {console.log('mousemove')})
+document
+  .getElementById("powierzchniaTestowa")
+  .addEventListener("mouseenter", () => {
+    console.log("mouseenter");
+  });
+document
+  .getElementById("powierzchniaTestowa")
+  .addEventListener("mouseout", () => {
+    console.log("mouseout");
+  });
+document
+  .getElementById("powierzchniaTestowa")
+  .addEventListener("mousemove", () => {
+    console.log("mousemove");
+  });
