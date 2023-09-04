@@ -115,3 +115,8 @@ document
   .addEventListener("mousemove", () => {
     console.log("mousemove");
   });
+document
+  .getElementById("powierzchniaTestowa")
+  .addEventListener("mouseleave", () => {
+    console.log("mouseleave");
+  });
