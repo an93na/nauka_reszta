@@ -121,17 +121,26 @@ document
     console.log("mouseleave");
   });
 
-  function biezacyCzas() {
-    const teraz = new Date()
-    return teraz.getHours() + ":" + teraz.getMinutes() + ":" + teraz.getSeconds()
-  }
+function biezacyCzas() {
+  const teraz = new Date();
+  return teraz.getHours() + ":" + teraz.getMinutes() + ":" + teraz.getSeconds();
+}
 
-  console.log("Mamy godzinę:" + biezacyCzas())
+console.log("Mamy godzinę:" + biezacyCzas());
 
-  const zegarekDiv = document.getElementById("zegarek")
-  /* 1000 to ilisekundy i jedna sekunda to 1000 milisekund
+const zegarekDiv = document.getElementById("zegarek");
+/* 1000 to ilisekundy i jedna sekunda to 1000 milisekund
    czyli ta funkcja która jest w setInterval wywoła się 
   co sekundę */
-  setInterval(()=>{
-  zegarekDiv.innerText = biezacyCzas()
-  }, 1000)
+let uchwytInterwal = window.setInterval(() => {
+  zegarekDiv.innerText = biezacyCzas();
+}, 1000);
+
+document.getElementById("zegarStop").onclick = () => {
+  window.clearInterval(uchwytInterwal);
+};
+document.getElementById("zegarStart").onclick = () => {
+  uchwytInterwal = window.setInterval(() => {
+    zegarekDiv.innerText = biezacyCzas();
+  }, 1000);
+};
