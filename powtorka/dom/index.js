@@ -126,4 +126,7 @@ document
     return teraz.getHours() + ":" + teraz.getMinutes() + ":" + teraz.getSeconds()
   }
 
-  console.log("MAmy godzinę:" + biezacyCzas())
+  console.log("Mamy godzinę:" + biezacyCzas())
+
+  const zegarekDiv = document.getElementById("zegarek")
+  zegarekDiv.innerText = biezacyCzas()
