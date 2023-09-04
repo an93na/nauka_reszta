@@ -123,7 +123,13 @@ document
 
 function biezacyCzas() {
   const teraz = new Date();
-  return formatuj(teraz.getHours(),2) + ":" + formatuj(teraz.getMinutes(),2) + ":" + formatuj(teraz.getSeconds(),2);
+  return (
+    formatuj(teraz.getHours(), 2) +
+    ":" +
+    formatuj(teraz.getMinutes(), 2) +
+    ":" +
+    formatuj(teraz.getSeconds(), 2)
+  );
 }
 
 console.log("Mamy godzinę:" + biezacyCzas());
@@ -155,3 +161,7 @@ function formatuj(liczba, iloscPozycji) {
 }
 
 console.log("wynik: ", formatuj(69, 4));
+
+/* setInterval w kółko się odpala w zależności od czasu jaki 
+podamy a setTimeout tylko raz a usunąć to można przy pomocy
+window.clearTimeout i window.clearInterval */
