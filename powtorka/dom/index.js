@@ -144,3 +144,14 @@ document.getElementById("zegarStart").onclick = () => {
     zegarekDiv.innerText = biezacyCzas();
   }, 1000);
 };
+
+function formatuj(liczba, iloscPozycji) {
+  const liczbaLancuch = liczba.toString(10);
+  const dlugoscLiczby = liczbaLancuch.length;
+  const iloscZer = iloscPozycji - dlugoscLiczby;
+  const zero = "0";
+  const wynik = zero.repeat(iloscZer) + liczbaLancuch;
+  return wynik;
+}
+
+console.log("wynik: ", formatuj(69, 4));
