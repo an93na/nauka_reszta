@@ -129,4 +129,9 @@ document
   console.log("Mamy godzinę:" + biezacyCzas())
 
   const zegarekDiv = document.getElementById("zegarek")
+  /* 1000 to ilisekundy i jedna sekunda to 1000 milisekund
+   czyli ta funkcja która jest w setInterval wywoła się 
+  co sekundę */
+  setInterval(()=>{
   zegarekDiv.innerText = biezacyCzas()
+  }, 1000)
