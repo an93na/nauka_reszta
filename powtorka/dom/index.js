@@ -123,7 +123,7 @@ document
 
 function biezacyCzas() {
   const teraz = new Date();
-  return teraz.getHours() + ":" + teraz.getMinutes() + ":" + teraz.getSeconds();
+  return formatuj(teraz.getHours(),2) + ":" + formatuj(teraz.getMinutes(),2) + ":" + formatuj(teraz.getSeconds(),2);
 }
 
 console.log("Mamy godzinę:" + biezacyCzas());
