@@ -120,3 +120,10 @@ document
   .addEventListener("mouseleave", () => {
     console.log("mouseleave");
   });
+
+  function biezacyCzas() {
+    const teraz = new Date()
+    return teraz.getHours() + ":" + teraz.getMinutes() + ":" + teraz.getSeconds()
+  }
+
+  console.log("MAmy godzinę:" + biezacyCzas())
