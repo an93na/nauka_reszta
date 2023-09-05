@@ -19,6 +19,11 @@ function wyswietlKomunikat(tekst, waznosc) {
   }
   ostrzezenie.setAttribute('class', 'waga'+waznosc)
   bledy.appendChild(ostrzezenie);
+  window.setTimeout(()=>{
+    for (let index = 0; index < bledy.children.length; index++) {
+      bledy.children[index].remove();
+    }
+  },2000)
 }
 
 const lista = znajdzElement("ul");
