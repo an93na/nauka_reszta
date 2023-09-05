@@ -44,8 +44,9 @@ dodaj.addEventListener("click", () => {
     const eleDol = zrobElement("button", "w dół");
     const eleGotowe = zrobElement("button", "zrobione");
     elLi.appendChild(eleUsun);
-    elLi.appendChild(eleGora);
     elLi.appendChild(eleGotowe);
+    elLi.appendChild(eleGora);
+    elLi.appendChild(eleDol);
     eleUsun.onclick = (evt) => {
       // usuwa element li
       evt.target.parentElement.remove();
@@ -60,6 +61,12 @@ dodaj.addEventListener("click", () => {
       const liWczesniejsze = liKlikniete.previousElementSibling;
       const ul = liKlikniete.parentElement;
       ul.insertBefore(liKlikniete, liWczesniejsze);
+    };
+    eleDol.onclick = (evt) => {
+      const liKlikniete = evt.target.parentElement;
+      const liNastepne = liKlikniete.nextElementSibling;
+      const ul = liKlikniete.parentElement;
+      ul.insertBefore(liNastepne, liKlikniete);
     };
     wyswietlKomunikat("Dodano czynnność", 0);
   } else {
