@@ -6,9 +6,12 @@ function znajdzElement(selektor) {
   return document.querySelector(selektor);
 }
 
-function zrobElement(nazwa, tekst) {
+function zrobElement(nazwa, tekst, opcje = {}) {
   const element = document.createElement(nazwa);
   element.innerText = tekst;
+  if (opcje) {
+    element.setAttribute(opcje.nazwaAtr, opcje.wartosc);
+  }
   return element;
 }
 
@@ -43,10 +46,16 @@ dodaj.addEventListener("click", () => {
     const eleGora = zrobElement("button", "w górę");
     const eleDol = zrobElement("button", "w dół");
     const eleGotowe = zrobElement("button", "zrobione");
+    const eleCheck = zrobElement("input", "zrobione", {
+      nazwaAtr: "type",
+      wartosc: "checkbox",
+    });
     elLi.appendChild(eleUsun);
     elLi.appendChild(eleGotowe);
+    elLi.appendChild(eleCheck);
     elLi.appendChild(eleGora);
     elLi.appendChild(eleDol);
+
     eleUsun.onclick = (evt) => {
       // usuwa element li
       evt.target.parentElement.remove();
@@ -54,6 +63,9 @@ dodaj.addEventListener("click", () => {
     };
     eleGotowe.onclick = (evt) => {
       // przekreśla czynność
+      evt.target.parentElement.style.textDecoration = "line-through";
+    };
+    eleCheck.onclick = (evt) => {
       evt.target.parentElement.style.textDecoration = "line-through";
     };
     eleGora.onclick = (evt) => {
