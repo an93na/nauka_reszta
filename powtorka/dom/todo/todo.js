@@ -12,18 +12,20 @@ function zrobElement(nazwa, tekst) {
   return element;
 }
 
-function wyswietlKomunikat(tekst) {
+function wyswietlKomunikat(tekst, waznosc) {
   const ostrzezenie = zrobElement("div", tekst);
   for (let index = 0; index < bledy.children.length; index++) {
     bledy.children[index].remove();
   }
+  ostrzezenie.setAttribute('class', 'waga'+waznosc)
   bledy.appendChild(ostrzezenie);
 }
 
 const lista = znajdzElement("ul");
 const dodaj = znajdzElement("button");
 const input = znajdzElement("input[name='rzecz']");
-const bledy = znajdzElement("#bledy");
+// tutaj szukamy div z id bledy
+const bledy = znajdzElement("div#bledy");
 
 dodaj.addEventListener("click", () => {
   const rzecz = input.value;
@@ -34,8 +36,8 @@ dodaj.addEventListener("click", () => {
     lista.appendChild(elLi);
     eleUsun = zrobElement("button", "usun");
     elLi.appendChild(eleUsun);
-    wyswietlKomunikat("Dodano czynnność");
+    wyswietlKomunikat("Dodano czynnność", 0);
   } else {
-    wyswietlKomunikat("Nie można dodać pustej czynności!");
+    wyswietlKomunikat("Nie można dodać pustej czynności!", 2);
   }
 });
