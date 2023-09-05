@@ -41,14 +41,25 @@ dodaj.addEventListener("click", () => {
     lista.appendChild(elLi);
     const eleUsun = zrobElement("button", "usun");
     const eleGora = zrobElement("button", "w górę");
+    const eleDol = zrobElement("button", "w dół");
+    const eleGotowe = zrobElement("button", "zrobione");
     elLi.appendChild(eleUsun);
     elLi.appendChild(eleGora);
+    elLi.appendChild(eleGotowe);
     eleUsun.onclick = (evt) => {
       // usuwa element li
-      /*evt.target.parentElement.remove();
-      wyswietlKomunikat("Usunięto czynność", 1)*/
+      evt.target.parentElement.remove();
+      wyswietlKomunikat("Usunięto czynność", 1);
+    };
+    eleGotowe.onclick = (evt) => {
       // przekreśla czynność
       evt.target.parentElement.style.textDecoration = "line-through";
+    };
+    eleGora.onclick = (evt) => {
+      const liKlikniete = evt.target.parentElement;
+      const liWczesniejsze = liKlikniete.previousElementSibling;
+      const ul = liKlikniete.parentElement;
+      ul.insertBefore(liKlikniete, liWczesniejsze);
     };
     wyswietlKomunikat("Dodano czynnność", 0);
   } else {
