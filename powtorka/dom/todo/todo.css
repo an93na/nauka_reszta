@@ -15,8 +15,18 @@ li > button:hover {
 .waga2 {
   color: red;
   font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(244, 234, 234);
+  border-radius: 5px;
+  text-align: center;
 }
 .waga0 {
     color: rgb(63, 214, 63);
     font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(244, 234, 234);
+    border-radius: 5px;
+    text-align: center;
 }
