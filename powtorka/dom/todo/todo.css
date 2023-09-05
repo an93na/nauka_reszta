@@ -42,3 +42,7 @@ li > button:hover {
 #bledy {
     height: 45px;
 }
+input[type=checkbox]{
+    width: 25px;
+    height: 25px;
+}

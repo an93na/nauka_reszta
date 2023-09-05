@@ -66,7 +66,13 @@ dodaj.addEventListener("click", () => {
       evt.target.parentElement.style.textDecoration = "line-through";
     };
     eleCheck.onclick = (evt) => {
-      evt.target.parentElement.style.textDecoration = "line-through";
+      // console.log(evt.target.checked);
+      let checked = evt.target.checked;
+      if (checked === true) {
+        evt.target.parentElement.style.textDecoration = "line-through";
+      } else {
+        evt.target.parentElement.style.textDecoration = "none";
+      }
     };
     eleGora.onclick = (evt) => {
       const liKlikniete = evt.target.parentElement;
