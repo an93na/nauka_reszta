@@ -48,3 +48,6 @@ input[type=checkbox]{
     padding: 5px;
     margin: 5px;
 }
+#wykres{
+  height: 90px;
+}
