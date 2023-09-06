@@ -99,8 +99,6 @@ function rysujWykres(element, s1, s2) {
   }
   const slupek1 = zrobElement("div", "");
   const slupek2 = zrobElement("div", "");
-  slupek1.style.height = "100px";
-  slupek2.style.height = "70px";
   slupek1.style.width = "20px";
   slupek2.style.width = "20px";
   slupek1.style.display = "inline-block";
@@ -120,3 +118,4 @@ function rysujWykres(element, s1, s2) {
 }
 
 rysujWykres(document.getElementById("wykres"), 100, 32);
+rysujWykres(document.getElementById("wykres"), 10, 2);
