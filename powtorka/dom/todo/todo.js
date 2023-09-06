@@ -118,4 +118,5 @@ function rysujWykres(element, s1, s2) {
 }
 
 rysujWykres(document.getElementById("wykres"), 100, 32);
-rysujWykres(document.getElementById("wykres"), 10, 2);
+rysujWykres(document.getElementById("wykres"), 2, 10);
+rysujWykres(document.getElementById("wykres"), 6, 5);
