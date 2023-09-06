@@ -29,6 +29,8 @@ function wyswietlKomunikat(tekst, waznosc) {
   }, 2000);
 }
 
+let ile = 0;
+let zrobione = 0;
 const lista = znajdzElement("ul");
 const dodaj = znajdzElement("button");
 const input = znajdzElement("input[name='rzecz']");
@@ -42,6 +44,9 @@ dodaj.addEventListener("click", () => {
   if (rzecz !== "") {
     const elLi = zrobElement("li", rzecz);
     lista.appendChild(elLi);
+    ile += 1;
+    console.log(ile);
+    console.log(zrobione);
     const eleUsun = zrobElement("button", "usun");
     const eleGora = zrobElement("button", "w górę");
     const eleDol = zrobElement("button", "w dół");
@@ -60,16 +65,19 @@ dodaj.addEventListener("click", () => {
       // usuwa element li
       evt.target.parentElement.remove();
       wyswietlKomunikat("Usunięto czynność", 1);
+      ile = ile - 1;
     };
     eleGotowe.onclick = (evt) => {
       // przekreśla czynność
       evt.target.parentElement.style.textDecoration = "line-through";
+      zrobione += 1;
     };
     eleCheck.onclick = (evt) => {
       // console.log(evt.target.checked);
       let checked = evt.target.checked;
       if (checked === true) {
         evt.target.parentElement.style.textDecoration = "line-through";
+        zrobione += 1;
       } else {
         evt.target.parentElement.style.textDecoration = "none";
       }
@@ -120,3 +128,4 @@ function rysujWykres(element, s1, s2) {
 rysujWykres(document.getElementById("wykres"), 100, 32);
 rysujWykres(document.getElementById("wykres"), 2, 10);
 rysujWykres(document.getElementById("wykres"), 6, 5);
+rysujWykres(document.getElementById("wykres"), ile, zrobione);
