@@ -108,7 +108,7 @@ function rysujWykres(element, s1, s2) {
   element.appendChild(slupek1);
   element.appendChild(slupek2);
   const wysokoscWykresu = element.getBoundingClientRect().height;
-  const max = s1;
+  let max = s1;
   if (s1 < s2) {
     max = s2;
   }
