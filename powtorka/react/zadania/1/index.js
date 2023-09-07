@@ -50,7 +50,7 @@ const users = [
 ];
 
 const dorosli = users.filter((user) => user.age >= 18);
-console.table(dorosli);
+// console.table(dorosli);
 
 const uchwyt2 = document.getElementById("2");
 const htmlAsArrayofTRs = dorosli.map((user) => {
@@ -62,11 +62,12 @@ const htmlAsArrayofTRs = dorosli.map((user) => {
 });
 // console.log(htmlAsArrayofTRs);
 const htmlTRAsAString = htmlAsArrayofTRs.join("");
-const tableHTML = `<table>
+const htmlTable = `<table>
 <thead>
 <tr>
 <th>Name:</th>
 <th>Age:</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
@@ -74,4 +75,48 @@ ${htmlTRAsAString}
 </tbody>
 </table>`;
 
-uchwyt2.innerHTML = tableHTML;
+uchwyt2.innerHTML = htmlTable;
+
+/**
+ * dodaj do każdego stringa w tablicy znak specjalny * w taki sposób żeby był pomiędzy każdą literką
+ * np cześć => c*z*e*ś*ć
+ *
+ * wynik wykonsoluj za pomocą console.table
+ *
+ * split(''); // spróbuj wywołać .split('') na dowolnym stringu
+ *
+ *
+ */
+
+"jakisstring".split().join();
+
+// const strings1 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
+
+/**
+ * ["a*d*s*f*a*s*d*f", "q*w*e*q*wdasd", "as", "assadwq", "s", "", 123]
+ */
+
+const dodajGwiazdkeDoLiter = tablicaStringow.map((string) =>
+  string.split("").join("*")
+);
+console.table(dodajGwiazdkeDoLiter);
+
+const htmlAsArrayofTRs3 = dodajGwiazdkeDoLiter.map((user) => {
+    return `<tr>
+      <td>${user}</td>
+      <td><button>DELETE</button></td>
+      </tr>`;
+  });
+
+const wstawDoHTML = (htmlAsArrayofTRs) => {
+  const htmlTRAsAString = htmlAsArrayofTRs.join("");
+  const htmlTable = `<table>
+<tbody>
+${htmlTRAsAString}
+</tbody>
+</table>`;
+  return htmlTable;
+};
+
+document.getElementById('3').innerHTML = wstawDoHTML(htmlAsArrayofTRs3);
+
