@@ -19,7 +19,7 @@ let tablicaStringow = strings2.map((a) => a.toString());
 const filterStrings = tablicaStringow.filter((a) => {
   return a.length <= 3;
 });
-console.table(filterStrings);
+// console.table(filterStrings);
 
 // przy pomocy pętli
 let nowaTab = [];
@@ -29,7 +29,7 @@ for (let index = 0; index < tablicaStringow.length; index++) {
     nowaTab.push(tablicaStringow[index]);
   }
 }
-console.table(nowaTab);
+// console.table(nowaTab);
 
 /**
  * Przerób podaną tablicę tak aby zawierała osoby pełnoletnie w świetle polskiego prawa
@@ -39,12 +39,39 @@ console.table(nowaTab);
  * ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
  */
 
+// nazwy zmiennych małymi literami a nazwy funcji imetod dużymi
 const users = [
-    { name: "John", age: 12 },
-    { name: "Jane", age: 22 },
-    { name: "Joe", age: 55 },
-    { name: "Kate", age: "9" },
-    { name: "Kate", age: null },
-    { name: "Kate", age: undefined },
-  ];
-  
+  { name: "John", age: 12 },
+  { name: "Jane", age: 22 },
+  { name: "Joe", age: 55 },
+  { name: "Kate", age: "9" },
+  { name: "Kate", age: null },
+  { name: "Kate", age: undefined },
+];
+
+const dorosli = users.filter((user) => user.age >= 18);
+console.table(dorosli);
+
+const uchwyt2 = document.getElementById("2");
+const htmlAsArrayofTRs = dorosli.map((user) => {
+  return `<tr>
+    <td>${user.name}</td>
+    <td>${user.age}</td>
+    <td><button>DELETE</button></td>
+    </tr>`;
+});
+// console.log(htmlAsArrayofTRs);
+const htmlTRAsAString = htmlAsArrayofTRs.join("");
+const tableHTML = `<table>
+<thead>
+<tr>
+<th>Name:</th>
+<th>Age:</th>
+</tr>
+</thead>
+<tbody>
+${htmlTRAsAString}
+</tbody>
+</table>`;
+
+uchwyt2.innerHTML = tableHTML;
