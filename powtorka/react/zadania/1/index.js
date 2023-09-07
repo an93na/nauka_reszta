@@ -1,3 +1,6 @@
+// Powtórka z zajęć react z repozytorium: 
+// https://github.com/simon125/before-react
+
 /**
  * usuń/odfiltruj wszystkie stringi z tablicy które mają mniej znaków niż 3
  *
