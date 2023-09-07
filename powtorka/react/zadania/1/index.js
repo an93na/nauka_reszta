@@ -161,11 +161,11 @@ const todos0 = [
   { task: "pouczyć się JSa", status: "todo" },
 ];
 
-const isAdult = todos0.map((a) => (a.status = "todo"));
-// console.table(isAdult)
+const todosWithNewStatus = todos0.map((a) => ({...a, status: "todo"}));
 // console.table(todos0)
+// console.table(todosWithNewStatus)
 
-const htmlAsArrayofTRs4 = todos0.map((todo) => {
+const htmlAsArrayofTRs4 = todosWithNewStatus.map((todo) => {
   return `<tr>
         <td>${todo.task}</td>
         <td>${todo.status}</td>
