@@ -161,15 +161,50 @@ const todos0 = [
   { task: "pouczyć się JSa", status: "todo" },
 ];
 
-const todosWithNewStatus = todos0.map((a) => ({...a, status: "todo"}));
+const todosWithNewStatus = todos0.map((a) => ({ ...a, status: "todo" }));
 // console.table(todos0)
 // console.table(todosWithNewStatus)
 
 const htmlAsArrayofTRs4 = todosWithNewStatus.map((todo) => {
-  return `<tr>
-        <td>${todo.task}</td>
+    return `<tr>
+    <td>${todo.task}</td>
         <td>${todo.status}</td>
         <td><button>DELETE</button></td>
         </tr>`;
 });
 document.getElementById("4").innerHTML = wstawDoHTML(htmlAsArrayofTRs4);
+
+/**
+ * Stwórz funkcję która będzie zwracać "zarchiwizowaną" tablicę todos
+ * tzn dodaj dodatkowe pole typu boolean do kazdego obiektu w tablicy
+ * pole niech się nazywa archived i niech będzie ustawione na true
+ *
+ * wynik wyświetl za pomocą console.table
+ *
+ * obiekt.nazwaPola = true albo false;
+*
+* ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+*/
+
+const todos1 = [
+    { task: "wyspać się", status: "in progress" },
+    { task: "mieć dobry chumor", status: "todo" },
+    { task: "pouczyć się CSSa", status: "in progress" },
+    { task: "pouczyć się JSa", status: "todo" },
+];
+
+const zarchiwizowaneTodosy = todos1.map((todo) => ({
+    ...todo,
+    archived: true,
+}));
+
+// console.table(zarchiwizowaneTodosy);
+
+const htmlAsArrayofTRs5 = zarchiwizowaneTodosy.map((todo) => {
+    return `<tr>
+    <td>${todo.task}</td>
+        <td>${todo.status}</td>
+        <td>${todo.archived}</td>
+        </tr>`;
+});
+document.getElementById("5").innerHTML = wstawDoHTML(htmlAsArrayofTRs5);
