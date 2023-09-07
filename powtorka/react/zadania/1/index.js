@@ -30,3 +30,21 @@ for (let index = 0; index < tablicaStringow.length; index++) {
   }
 }
 console.table(nowaTab);
+
+/**
+ * Przerób podaną tablicę tak aby zawierała osoby pełnoletnie w świetle polskiego prawa
+ *
+ * wynik wykonsoluj przy użyciu metody console.table lub wyświetl dane w dowolny znany Ci sposób
+ *
+ * ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+ */
+
+const users = [
+    { name: "John", age: 12 },
+    { name: "Jane", age: 22 },
+    { name: "Joe", age: 55 },
+    { name: "Kate", age: "9" },
+    { name: "Kate", age: null },
+    { name: "Kate", age: undefined },
+  ];
+  
