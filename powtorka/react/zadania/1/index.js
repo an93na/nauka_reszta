@@ -99,14 +99,14 @@ uchwyt2.innerHTML = htmlTable;
 const dodajGwiazdkeDoLiter = tablicaStringow.map((string) =>
   string.split("").join("*")
 );
-console.table(dodajGwiazdkeDoLiter);
+// console.table(dodajGwiazdkeDoLiter);
 
 const htmlAsArrayofTRs3 = dodajGwiazdkeDoLiter.map((user) => {
-    return `<tr>
+  return `<tr>
       <td>${user}</td>
       <td><button>DELETE</button></td>
       </tr>`;
-  });
+});
 
 const wstawDoHTML = (htmlAsArrayofTRs) => {
   const htmlTRAsAString = htmlAsArrayofTRs.join("");
@@ -118,5 +118,58 @@ ${htmlTRAsAString}
   return htmlTable;
 };
 
-document.getElementById('3').innerHTML = wstawDoHTML(htmlAsArrayofTRs3);
+document.getElementById("3").innerHTML = wstawDoHTML(htmlAsArrayofTRs3);
 
+/**
+ * Stwórz funkcję która będzie zwracać "zresetowaną" tablicę todos
+ * tzn mając tablice todos z różnymi statusami przetwórz daną tablicę tak żeby wszystkie statusy
+ * były ustawione na todo - zwróć uwage jak wygląda podany kształ danych
+ *
+ * wynik wyświetl za pomocą console.table
+ *
+ * przykładowy obiekt user:
+ *
+ * --------------------------------
+ *
+ * const user = {
+ *      name: 'Jane',
+ *      lastName: 'Doe',
+ *      age: 12,
+ *      isAult: false
+ * }
+ *
+ * --------------------------------
+ *
+ * żeby zaktualizować pole tego obiektu należy odwołać się do tego obiektu i następnie do przyszłego pola po
+ * kropce (patrz poniżej)
+ *
+ * --------------------------------
+ *
+ * user.isAdult = true;
+ *
+ * --------------------------------
+ *
+ * przypisaliśmy wartość boolowską true
+ *
+ * ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+ */
+
+const todos0 = [
+  { task: "wyspać się", status: "in progress" },
+  { task: "mieć dobry chumor", status: "todo" },
+  { task: "pouczyć się CSSa", status: "in progress" },
+  { task: "pouczyć się JSa", status: "todo" },
+];
+
+const isAdult = todos0.map((a) => (a.status = "todo"));
+// console.table(isAdult)
+// console.table(todos0)
+
+const htmlAsArrayofTRs4 = todos0.map((todo) => {
+  return `<tr>
+        <td>${todo.task}</td>
+        <td>${todo.status}</td>
+        <td><button>DELETE</button></td>
+        </tr>`;
+});
+document.getElementById("4").innerHTML = wstawDoHTML(htmlAsArrayofTRs4);
