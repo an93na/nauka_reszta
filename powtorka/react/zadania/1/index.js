@@ -1,4 +1,4 @@
-// Powtórka z zajęć react z repozytorium: 
+// Powtórka z zajęć react z repozytorium:
 // https://github.com/simon125/before-react
 
 /**
@@ -14,9 +14,19 @@
 const strings2 = ["adsfasdf", "qweqwdasd", "as", "assadwq", "s", "", 123];
 
 let tablicaStringow = strings2.map((a) => a.toString());
-console.log(tablicaStringow);
+// console.table(tablicaStringow);
 
 const filterStrings = tablicaStringow.filter((a) => {
   return a.length <= 3;
 });
-console.log(filterStrings);
+console.table(filterStrings);
+
+// przy pomocy pętli
+let nowaTab = [];
+
+for (let index = 0; index < tablicaStringow.length; index++) {
+  if (tablicaStringow[index].length <= 3) {
+    nowaTab.push(tablicaStringow[index]);
+  }
+}
+console.table(nowaTab);
