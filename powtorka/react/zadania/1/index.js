@@ -231,3 +231,10 @@ const todos2 = [
   { task: "pouczyć się CSSa", status: "in progress" },
   { task: "pouczyć się JSa", status: "todo" },
 ];
+
+const znajdTaska = (szukanyTask) => {
+  return todos2.filter((todos) => todos.task.includes(szukanyTask));
+};
+
+console.table(znajdTaska("pou"));
+console.table(znajdTaska("wys"));
