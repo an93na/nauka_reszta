@@ -238,3 +238,36 @@ const znajdTaska = (szukanyTask) => {
 
 console.table(znajdTaska("pou"));
 console.table(znajdTaska("wys"));
+
+/**
+ * podana tablica skłąda się ze studenów którzy są przyporządkowani każdy do jakiejś grupy
+ * jednak są oni w tej samej tablicy
+ *
+ * reduce
+ *
+ * swtórz funkcje która stworzy dwie lub więcej tablic w tablicy na podstawie pola group
+ * dzięki temu pogrupujesz studentów i będzie można ich wyświetlić pogrupowancyh do
+ * czego zachęcam żeby przećwiczyć operacje na DOMie
+ */
+
+const students = [
+  { name: "John", age: 12, group: 1 },
+  { name: "Jane", age: 22, group: 2 },
+  { name: "Joe", age: 55, group: 1 },
+  { name: "Kate", age: 9, group: 2 },
+  { name: "Kate", age: 9, group: 3 },
+  { name: "Kate", age: 9, group: 4 },
+  { name: "Kate", age: 9, group: 5 },
+  { name: "Kate", age: 9, group: 15 },
+];
+
+const podzialNaGrupy = students.reduce((groups, student) => {
+  if (groups[student.group]) {
+    groups[student.group].push(student);
+  } else {
+    groups[student.group] = [student];
+  }
+  return groups;
+}, []);
+
+console.log(podzialNaGrupy);
