@@ -166,7 +166,7 @@ const todosWithNewStatus = todos0.map((a) => ({ ...a, status: "todo" }));
 // console.table(todosWithNewStatus)
 
 const htmlAsArrayofTRs4 = todosWithNewStatus.map((todo) => {
-    return `<tr>
+  return `<tr>
     <td>${todo.task}</td>
         <td>${todo.status}</td>
         <td><button>DELETE</button></td>
@@ -182,29 +182,52 @@ document.getElementById("4").innerHTML = wstawDoHTML(htmlAsArrayofTRs4);
  * wynik wyświetl za pomocą console.table
  *
  * obiekt.nazwaPola = true albo false;
-*
-* ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
-*/
+ *
+ * ⭐ możesz wyświetlić dane w tabeli w HTMLu - ćwiczenie z DOMa
+ */
 
 const todos1 = [
-    { task: "wyspać się", status: "in progress" },
-    { task: "mieć dobry chumor", status: "todo" },
-    { task: "pouczyć się CSSa", status: "in progress" },
-    { task: "pouczyć się JSa", status: "todo" },
+  { task: "wyspać się", status: "in progress" },
+  { task: "mieć dobry chumor", status: "todo" },
+  { task: "pouczyć się CSSa", status: "in progress" },
+  { task: "pouczyć się JSa", status: "todo" },
 ];
 
 const zarchiwizowaneTodosy = todos1.map((todo) => ({
-    ...todo,
-    archived: true,
+  ...todo,
+  archived: true,
 }));
 
 // console.table(zarchiwizowaneTodosy);
 
 const htmlAsArrayofTRs5 = zarchiwizowaneTodosy.map((todo) => {
-    return `<tr>
+  return `<tr>
     <td>${todo.task}</td>
         <td>${todo.status}</td>
         <td>${todo.archived}</td>
         </tr>`;
 });
 document.getElementById("5").innerHTML = wstawDoHTML(htmlAsArrayofTRs5);
+
+/**
+ * stwórz funkcje która obsłuży search bar (np taki jak w aplikacjach do wyszukiwania rekordów)
+ *
+ * funckja będzie szukać w tablicy na podstawie pola "task",
+ * funckja ma zwracać pierwszy pasujący elemnt
+ *
+ * albo filter albo find
+ *
+ *
+ * ⭐ ⭐ dla chętnych niech funckja posiada drugi parametr określający czy chcemy dostać
+ * wszystkie pasujące elementy np podając słowo "pouczyć się" funkcja powinna zwrócić dwa elmenty z poniższej tablicy
+ * gdy drugi parametr funkcji określa np że chcemy konretny rekord/element tablicy niech funckja
+ * wyszukuje pierwszy pasujący element
+ *
+ */
+
+const todos2 = [
+  { task: "wyspać się", status: "in progress" },
+  { task: "mieć dobry chumor", status: "todo" },
+  { task: "pouczyć się CSSa", status: "in progress" },
+  { task: "pouczyć się JSa", status: "todo" },
+];
