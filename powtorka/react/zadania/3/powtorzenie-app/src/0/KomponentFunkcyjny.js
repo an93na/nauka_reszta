@@ -1,5 +1,8 @@
 import React from "react";
 
+const mnozenieDwochLiczb = (a, b) => {
+  return a * b;
+};
 export const KomponentFunkcyjny = () => {
   const div = <div>div</div>;
   const przykladowaZmienna =
@@ -7,6 +10,9 @@ export const KomponentFunkcyjny = () => {
   const user = { name: "Jan", age: 20 };
   const tablicaLiczb = [1, 2, 34, 5, 6, 4];
   const tablicaStringow = ["jakis", "krotki", "string"];
+  const dodawanieDwochLiczb = (a, b) => {
+    return a + b;
+  };
   return (
     <article>
       <h3>Komponent Funkcyjny</h3>
@@ -25,6 +31,8 @@ export const KomponentFunkcyjny = () => {
       </ul>
       <div>{tablicaLiczb.slice("").join(", ")}</div>
       <div>{tablicaStringow.slice("").join(" ")}</div>
+      <p>wynik dodawania dwóch liczb 3 + 4 = {dodawanieDwochLiczb(3, 4)}</p>
+      <p>wynik mnożenia dwóch liczb 3 * 4 = {mnozenieDwochLiczb(3, 4)}</p>
     </article>
   );
 };
