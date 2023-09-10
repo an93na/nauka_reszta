@@ -5,6 +5,7 @@ import { StyleCSSModules } from "./1_style/StyleCSSModules";
 import { StyleInline } from "./1_style/StyleInline";
 import { StyleCSSExercise } from "./1_style/ex1/StyleCSSExercise";
 import { StyleCSSExercise2 } from "./1_style/ex2/StyleCSSExercise2";
+import { StyleInlineExercise } from "./1_style/ex3/StyleInlineExercise";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <StyleCSSModules/>
       <StyleCSSExercise/>
       <StyleCSSExercise2/>
+      <StyleInlineExercise/>
     </div>
   );
 }
