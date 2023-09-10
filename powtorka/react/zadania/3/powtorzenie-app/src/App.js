@@ -1,5 +1,5 @@
-import { KomponentFunkcyjny } from "./0/KomponentFunkcyjny";
-import { MyFirstComponent } from "./0/ex1/ex1";
+import { KomponentFunkcyjny } from "./0_komponent/KomponentFunkcyjny";
+import { MyFirstComponent } from "./0_komponent/ex1/ex1";
 import { StyleCSS } from "./1_style/StyleCSS";
 import { StyleInline } from "./1_style/StyleInline";
 
