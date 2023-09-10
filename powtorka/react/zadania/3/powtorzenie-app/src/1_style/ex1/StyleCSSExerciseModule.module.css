@@ -1,0 +1,25 @@
+.artykul {
+  background-color: bisque;
+}
+.naglowek {
+  color: blueviolet;
+  text-align: center;
+  font-weight: bold;
+}
+.span {
+  font-weight: bold;
+  color: red;
+}
+.paragraf {
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(239, 153, 153);
+    display: inline;
+    color: black;
+}
+.przekreslony {
+  text-decoration: line-through;
+  color: black;
+}
