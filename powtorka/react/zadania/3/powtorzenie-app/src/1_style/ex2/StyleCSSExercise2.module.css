@@ -1,0 +1,13 @@
+.zielona {
+color: green;
+}
+.niebieska{
+    color: blue;
+}
+.przekreslenie{
+    text-decoration: line-through;
+}
+.pogrubienie{
+    font-weight: bold;
+    color: black;
+}
