@@ -1,0 +1,12 @@
+.mojaKlasa{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.naglowek{
+    color: palevioletred;
+}
