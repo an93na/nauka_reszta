@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "./components/Button/Button";
 
 const Heading = () => {
     return <h5>Nauka React</h5>
@@ -16,7 +17,7 @@ export const Relacje = () => {
       <Podtytul/>
       <Podtytul/>
       <Podtytul/>
-      <Podtytul/>
+      <Button/>
     </article>
   );
 };
