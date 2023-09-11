@@ -7,7 +7,7 @@ export const AppMetric = () => {
   return (
     <article>
       <h3>Metrics</h3>
-      <div style={{display: 'flex'}}>
+      <div style={{ display: "flex", gap: "10px" }}>
         <Metric1 />
         <Metric2 />
         <Metric3 />

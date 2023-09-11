@@ -1,10 +1,8 @@
 .spod {
-  display: inline-block;
   width: 200px;
   border-radius: 15px;
   background-color: aqua;
   padding-top: 40px;
-  margin-left: 10px;
 }
 .ciemnyRoz {
   background-color: darkmagenta;

@@ -8,6 +8,7 @@ import { StyleCSSExercise2 } from "./1_style/ex2/StyleCSSExercise2";
 import { StyleInlineExercise } from "./1_style/ex3/StyleInlineExercise";
 import { Metric } from "./1_style/ex4/Metric";
 import { Relacje } from "./2_relacjeKomponenty/Relacje";
+import { Relacje2 } from "./2_relacjeKomponenty/Relacje2";
 import { AppMetric } from "./2_relacjeKomponenty/ex1/AppMetric";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Metric />
       <Relacje />
       <AppMetric />
+      <Relacje2 />
     </div>
   );
 }
