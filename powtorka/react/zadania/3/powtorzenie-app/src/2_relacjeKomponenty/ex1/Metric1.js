@@ -4,7 +4,7 @@ import klasa from "./Metric.module.css";
 export const Metric1 = () => {
   return (
     <div className={klasa.spod}>
-      <div className={klasa.wierzch}>
+      <div className={`${klasa.wierzch} ${klasa.niebieski}`}>
         <p className={klasa.tytul}>
           Work<span>...</span>
         </p>

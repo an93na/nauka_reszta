@@ -2,26 +2,27 @@
   display: inline-block;
   width: 200px;
   border-radius: 15px;
-  background-color: coral;
+  background-color: aqua;
   padding-top: 40px;
   margin-left: 10px;
 }
-.col2 {
-  background-color: blueviolet;
+.ciemnyRoz {
+  background-color: darkmagenta;
 }
 .col3 {
   background-color: greenyellow;
 }
-
+.niebieski {
+  background-color: blue;
+}
 .wierzch {
   border-radius: 15px;
-  background-color: blue;
 }
 .w2 {
   background-color: pink;
 }
 .w3 {
-  background-color: red;
+  background-color: green;
 }
 .tytul {
   display: flex;

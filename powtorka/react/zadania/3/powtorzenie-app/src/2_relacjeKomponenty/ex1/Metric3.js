@@ -6,10 +6,10 @@ export const Metric3 = () => {
     <div className={`${klasa.spod} ${klasa.col3}`}>
       <div className={`${klasa.wierzch} ${klasa.w3}`}>
         <p className={klasa.tytul}>
-          Work<span>...</span>
+          Study<span>...</span>
         </p>
-        <p className={klasa.wartosc}>32hrs</p>
-        <p className={klasa.lastWeek}>Last Week - 36hrs</p>
+        <p className={klasa.wartosc}>4hrs</p>
+        <p className={klasa.lastWeek}>Last Week - 7hrs</p>
       </div>
     </div>
   );
