@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./StyleCSSExerciseModule.module.css"
+import classes from "./StyleCSSExerciseModule.module.css";
 
 /**
  * Zadanie

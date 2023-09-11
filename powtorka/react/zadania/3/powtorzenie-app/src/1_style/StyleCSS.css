@@ -1,12 +1,12 @@
-.mojaKlasa{
-    background-color: cornsilk;
-    color: blueviolet;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.mojaKlasa {
+  background-color: cornsilk;
+  color: blueviolet;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
-.naglowek{
-    color: blueviolet;
+.naglowek {
+  color: blueviolet;
 }

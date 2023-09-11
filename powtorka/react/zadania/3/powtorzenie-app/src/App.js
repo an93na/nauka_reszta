@@ -7,20 +7,21 @@ import { StyleCSSExercise } from "./1_style/ex1/StyleCSSExercise";
 import { StyleCSSExercise2 } from "./1_style/ex2/StyleCSSExercise2";
 import { StyleInlineExercise } from "./1_style/ex3/StyleInlineExercise";
 import { Metric } from "./1_style/ex4/Metric";
-
+import { Relacje } from "./2_relacjeKomponenty/Relacje";
 
 function App() {
   return (
     <div className="container">
-      <KomponentFunkcyjny/>
-      <MyFirstComponent/>
-      <StyleInline/>
-      <StyleCSS/>
-      <StyleCSSModules/>
-      <StyleCSSExercise/>
-      <StyleCSSExercise2/>
-      <StyleInlineExercise/>
-      <Metric/>
+      <KomponentFunkcyjny />
+      <MyFirstComponent />
+      <StyleInline />
+      <StyleCSS />
+      <StyleCSSModules />
+      <StyleCSSExercise />
+      <StyleCSSExercise2 />
+      <StyleInlineExercise />
+      <Metric />
+      <Relacje />
     </div>
   );
 }

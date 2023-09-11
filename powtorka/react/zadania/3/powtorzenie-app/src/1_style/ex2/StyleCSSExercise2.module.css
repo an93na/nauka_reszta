@@ -1,13 +1,13 @@
 .zielona {
-color: green;
+  color: green;
 }
-.niebieska{
-    color: blue;
+.niebieska {
+  color: blue;
 }
-.przekreslenie{
-    text-decoration: line-through;
+.przekreslenie {
+  text-decoration: line-through;
 }
-.pogrubienie{
-    font-weight: bold;
-    color: black;
+.pogrubienie {
+  font-weight: bold;
+  color: black;
 }
