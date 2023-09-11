@@ -4,3 +4,9 @@
   /* width: auto; */
   border: 1px solid darkmagenta;
 }
+.button1 {
+  background-color: pink;
+  color: palevioletred;
+  /* width: auto; */
+  border: 1px solid pink;
+}
