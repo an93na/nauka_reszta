@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "./components/Button/Button";
 // import default export
 import Button1 from './components/Button/Button';
+import { Input } from "./components/Input/Input";
 
 const Heading = () => {
     return <h5>Nauka React</h5>
@@ -21,6 +22,7 @@ export const Relacje = () => {
       <Podtytul/>
       <Podtytul/>
       <Button/>
+      <Input></Input>
       <Button1/>
     </article>
   );
