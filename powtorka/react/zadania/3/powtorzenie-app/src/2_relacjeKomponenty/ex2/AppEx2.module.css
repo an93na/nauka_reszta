@@ -1,0 +1,22 @@
+.app {
+  background-color: orange;
+  padding: 10px;
+  color: white;
+  margin: 5px;
+  width: 325px;
+}
+.niebieski {
+  background-color: blue;
+  padding: 10px;
+  margin: 5px;
+}
+.szary {
+  background-color: gray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.submit {
+  margin-top: 25px;
+  width: fit-content;
+  margin-left: auto;
+}

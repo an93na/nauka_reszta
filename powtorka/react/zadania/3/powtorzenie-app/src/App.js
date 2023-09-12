@@ -10,6 +10,7 @@ import { Metric } from "./1_style/ex4/Metric";
 import { Relacje } from "./2_relacjeKomponenty/Relacje";
 import { Relacje2 } from "./2_relacjeKomponenty/Relacje2";
 import { AppMetric } from "./2_relacjeKomponenty/ex1/AppMetric";
+import { AppEx2 } from "./2_relacjeKomponenty/ex2/AppEx2";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Relacje />
       <AppMetric />
       <Relacje2 />
+      <AppEx2/>
     </div>
   );
 }
