@@ -11,6 +11,7 @@ import { Relacje } from "./2_relacjeKomponenty/Relacje";
 import { Relacje2 } from "./2_relacjeKomponenty/Relacje2";
 import { AppMetric } from "./2_relacjeKomponenty/ex1/AppMetric";
 import { AppEx2 } from "./2_relacjeKomponenty/ex2/AppEx2";
+import { Assets } from "./3_assety/Assets";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <AppMetric />
       <Relacje2 />
       <AppEx2/>
+      <Assets/>
     </div>
   );
 }
