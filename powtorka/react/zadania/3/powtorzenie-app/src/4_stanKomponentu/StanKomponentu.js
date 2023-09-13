@@ -30,6 +30,9 @@ export const StanKomponentu = () => {
     street: "Dworcowa",
     postalCode: 123,
   });
+  const [users, setUsers] = useState(["Jane", "John", "Jack"]);
+  const [number1] = useState(10);
+  const [number2] = useState(15);
 
   //   setTimeout(() => {
   //     setNumber(number + 1);
@@ -40,6 +43,12 @@ export const StanKomponentu = () => {
     // setAddress(newAddress);
     setAddress((prevAddress) => ({ ...prevAddress, street: "Kwiatowa" }));
   }, 5000);
+
+  // setTimeout(() => {
+  //   setUsers((prevUsers) => [...prevUsers, "John"]);
+  // }, 6000);
+
+  const sum = number1 + number2;
   return (
     <article>
       <h3>StanKomponentu</h3>
@@ -50,6 +59,8 @@ export const StanKomponentu = () => {
       <p>City: {address.city}</p>
       <p>Street: {address.street}</p>
       <p>Postal Code: {address.postalCode}</p>
+      <p>Users: {users.slice("").join(" ")}</p>
+      <p>Wynik obliczenia równa się: {number1} + {number2} = {sum}</p>
     </article>
   );
 };
