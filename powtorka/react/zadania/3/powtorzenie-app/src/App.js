@@ -14,6 +14,7 @@ import { AppEx2 } from "./2_relacjeKomponenty/ex2/AppEx2";
 import { Assets } from "./3_assety/Assets";
 import { KomponentBezStanu } from "./4_stanKomponentu/KomponentBezStanu";
 import { StanKomponentu } from "./4_stanKomponentu/StanKomponentu";
+import { WyswietlStan } from "./4_stanKomponentu/ex1/WyswietlStan";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Assets />
       <KomponentBezStanu />
       <StanKomponentu />
+      <WyswietlStan />
     </div>
   );
 }
