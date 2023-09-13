@@ -12,6 +12,8 @@ import { Relacje2 } from "./2_relacjeKomponenty/Relacje2";
 import { AppMetric } from "./2_relacjeKomponenty/ex1/AppMetric";
 import { AppEx2 } from "./2_relacjeKomponenty/ex2/AppEx2";
 import { Assets } from "./3_assety/Assets";
+import { KomponentBezStanu } from "./4_stanKomponentu/KomponentBezStanu";
+import { StanKomponentu } from "./4_stanKomponentu/StanKomponentu";
 
 function App() {
   return (
@@ -28,8 +30,10 @@ function App() {
       <Relacje />
       <AppMetric />
       <Relacje2 />
-      <AppEx2/>
-      <Assets/>
+      <AppEx2 />
+      <Assets />
+      <KomponentBezStanu />
+      <StanKomponentu />
     </div>
   );
 }
