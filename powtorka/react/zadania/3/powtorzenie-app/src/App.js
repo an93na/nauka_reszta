@@ -15,6 +15,8 @@ import { Assets } from "./3_assety/Assets";
 import { KomponentBezStanu } from "./4_stanKomponentu/KomponentBezStanu";
 import { StanKomponentu } from "./4_stanKomponentu/StanKomponentu";
 import { WyswietlStan } from "./4_stanKomponentu/ex1/WyswietlStan";
+import { Eventy } from "./5_Eventy/Eventy";
+import { Counter } from "./5_Eventy/components/Counter";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
       <KomponentBezStanu />
       <StanKomponentu />
       <WyswietlStan />
+      <Eventy />
+      <Counter />
     </div>
   );
 }
