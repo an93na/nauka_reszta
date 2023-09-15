@@ -4,19 +4,19 @@ export const Calculator = () => {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
   const [operation, setOperation] = useState("");
-  const getResult = (res) => {
-    if (operation === "+") {
-      res = Number(num1) + Number(num2);
-    } else if (operation === "-") {
-      res = Number(num1) - Number(num2);
-    } else if (operation === "*") {
-      res = Number(num1) * Number(num2);
-    } else if (operation === "/") {
-      res = Number(num1) / Number(num2);
+  const getResult = (n1, n2, op) => {
+    if (op === "+") {
+      return Number(n1) + Number(n2);
+    } else if (op === "-") {
+      return Number(n1) - Number(n2);
+    } else if (op === "*") {
+      return Number(n1) * Number(n2);
+    } else if (op === "/") {
+      return Number(n1) / Number(n2);
     }
-    return res;
+    return "";
   };
-  const result = getResult();
+  const result = getResult(num1, num2, operation);
 
   return (
     <div>
