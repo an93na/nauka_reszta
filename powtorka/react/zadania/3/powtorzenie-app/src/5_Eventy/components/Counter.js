@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { SimpleCounter } from "../ex1/SimpleCounter";
 import { TextFiled } from "../ex2/textFiled";
 import { AddTwoNumbers } from "../ex3/AddTwoNumbers";
+import { CSSEditor } from "../ex4/CSSEditor";
 
 export const Counter = () => {
   const [counter, setCounter] = useState(0);
@@ -44,6 +45,7 @@ export const Counter = () => {
       <SimpleCounter/>
       <TextFiled/>
       <AddTwoNumbers/>
+      <CSSEditor/>
     </article>
   );
 };
