@@ -52,6 +52,7 @@ export const CSSEditor = () => {
         id=""
         value={bok}
         onChange={(e) => setBok(e.target.value)}
+        min={0}
         max={50}
       />
       <h5>Preview</h5>
