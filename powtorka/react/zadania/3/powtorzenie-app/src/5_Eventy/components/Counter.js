@@ -4,6 +4,7 @@ import { TextFiled } from "../ex2/textFiled";
 import { AddTwoNumbers } from "../ex3/AddTwoNumbers";
 import { CSSEditor } from "../ex4/CSSEditor";
 import { Calculator } from "../ex5/Calculator";
+import { Form } from "../ex6/Form";
 
 export const Counter = () => {
   const [counter, setCounter] = useState(0);
