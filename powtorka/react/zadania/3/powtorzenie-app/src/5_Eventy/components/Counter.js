@@ -3,6 +3,7 @@ import { SimpleCounter } from "../ex1/SimpleCounter";
 import { TextFiled } from "../ex2/textFiled";
 import { AddTwoNumbers } from "../ex3/AddTwoNumbers";
 import { CSSEditor } from "../ex4/CSSEditor";
+import { Calculator } from "../ex5/Calculator";
 
 export const Counter = () => {
   const [counter, setCounter] = useState(0);
@@ -46,6 +47,7 @@ export const Counter = () => {
       <TextFiled/>
       <AddTwoNumbers/>
       <CSSEditor/>
+      <Calculator/>
     </article>
   );
 };

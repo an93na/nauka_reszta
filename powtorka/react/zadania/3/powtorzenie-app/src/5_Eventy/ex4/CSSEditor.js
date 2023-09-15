@@ -3,8 +3,8 @@ import React, { useState } from "react";
 export const CSSEditor = () => {
   const [color, setColor] = useState("blue");
   const [position, setPosition] = useState("flex-start");
-  const [bok, setBok] = useState(0)
-  console.log(bok)
+  const [bok, setBok] = useState(0);
+  // console.log(bok);
   return (
     <div>
       <h3>CSSEditor</h3>
@@ -22,7 +22,7 @@ export const CSSEditor = () => {
           type="radio"
           name="position"
           id=""
-          value='flex-start'
+          value="flex-start"
           onChange={(e) => setPosition(e.target.value)}
         />
       </label>
@@ -32,7 +32,7 @@ export const CSSEditor = () => {
           type="radio"
           name="position"
           id=""
-          value='center'
+          value="center"
           onChange={(e) => setPosition(e.target.value)}
         />
       </label>
@@ -42,19 +42,26 @@ export const CSSEditor = () => {
           type="radio"
           name="position"
           id=""
-          value='flex-end'
+          value="flex-end"
           onChange={(e) => setPosition(e.target.value)}
         />
       </label>
-      <input type="range" name="" id="" value={bok} onChange={(e) => setBok(e.target.value)} />
+      <input
+        type="range"
+        name=""
+        id=""
+        value={bok}
+        onChange={(e) => setBok(e.target.value)}
+        max={50}
+      />
       <h5>Preview</h5>
-      <div style={{ display: "flex", justifyContent: position}}>
+      <div style={{ display: "flex", justifyContent: position }}>
         <div
           style={{
             width: "50px",
             height: "50px",
             backgroundColor: color,
-            borderRadius: bok + 'px'
+            borderRadius: bok + "%",
           }}
         ></div>
       </div>
