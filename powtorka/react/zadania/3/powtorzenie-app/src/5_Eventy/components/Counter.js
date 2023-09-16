@@ -49,6 +49,7 @@ export const Counter = () => {
       <AddTwoNumbers/>
       <CSSEditor/>
       <Calculator/>
+      <Form/>
     </article>
   );
 };
