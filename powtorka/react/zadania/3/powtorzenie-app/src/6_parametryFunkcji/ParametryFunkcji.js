@@ -14,6 +14,14 @@ const UsersList = (props) => {
   );
 };
 
+const CounterControler = (props) => {
+
+}
+
+const CounterOutput = (props) => {
+
+}
+
 export const ParametryFunkcji = () => {
   const users = [
     { name: "John", lastName: "Doe" },
@@ -26,6 +34,8 @@ export const ParametryFunkcji = () => {
       <ul>
         <UsersList name={users[0].name} lastName={users[0].lastName} />
       </ul>
+      <CounterControler/>
+      <CounterOutput/>
     </article>
   );
 };
