@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Parent } from "./ex1/Parent";
+import { Parent2 } from "./ex2/Parent2";
 
 const ComponentWithProps = (props) => {
   const { number1, number2 } = props;
@@ -55,6 +56,7 @@ export const ParametryFunkcji = () => {
       <CounterControler wynik={counter} funkcjaZmieniająca={setCounter} />
       <CounterOutput wynik={counter} />
       <Parent/>
+      <Parent2/>
     </article>
   );
 };
