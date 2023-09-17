@@ -5,7 +5,7 @@ export const Child = (props) => {
     <div
       style={{ backgroundColor: props.bcolor, padding: 5}}
     >
-      <h6>Podrzędny komponent (Child)</h6>
+      <h6 style={{color: props.color}}>Podrzędny komponent (Child)</h6>
     </div>
   );
 };
