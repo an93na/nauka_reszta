@@ -41,6 +41,8 @@ const TASK = [
 export const ListyTabele = () => {
   const tablicaStringow = ["test", "test2", "test3"];
   const [tasks, setTasks] = useState(TASK);
+  const [title, setTitle] = useState("");
+  const [priority, setPriority] = useState("");
   return (
     <article>
       <h3>ListyTabele</h3>
@@ -49,15 +51,39 @@ export const ListyTabele = () => {
           <li key={element}>{element}</li>
         ))}
       </ul>
-      <form action="">
-        <input type="text" name="" id="" placeholder="title" />
-        <select name="" id="">
+      <form
+        action=""
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (title !== "" && priority !== "") {
+            const newTask = { title, priority, id: Math.random() };
+            // console.log(newTask)
+            setTasks((prevTask) => [...prevTask, newTask]);
+            setTitle("");
+            setPriority("");
+          }
+        }}
+      >
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <select
+          name=""
+          id=""
+          value={priority}
+          onChange={(e) => setPriority(e.target.value)}
+        >
           <option value="" hidden>
             Select piriority
           </option>
-          <option value="low">LOW</option>
-          <option value="MEDIUM">MEDIUM</option>
-          <option value="HIGH">HIGH</option>
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
         </select>
         <button type="submit">Submit</button>
       </form>
