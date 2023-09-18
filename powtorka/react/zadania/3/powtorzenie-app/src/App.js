@@ -18,6 +18,7 @@ import { WyswietlStan } from "./4_stanKomponentu/ex1/WyswietlStan";
 import { Eventy } from "./5_Eventy/Eventy";
 import { Counter } from "./5_Eventy/components/Counter";
 import { ParametryFunkcji } from "./6_parametryFunkcji/ParametryFunkcji";
+import { ListyTabele } from "./7_listyTabele/ListyTabele";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Eventy />
       <Counter />
       <ParametryFunkcji/>
+      <ListyTabele/>
     </div>
   );
 }
