@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Numbers } from "./ex1/Numbers";
 
 const TASK = [
   {
@@ -120,6 +121,7 @@ export const ListyTabele = () => {
           })}
         </tbody>
       </table>
+      <Numbers/>
     </article>
   );
 };
