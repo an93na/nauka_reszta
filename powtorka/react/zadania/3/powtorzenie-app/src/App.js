@@ -19,6 +19,7 @@ import { Eventy } from "./5_Eventy/Eventy";
 import { Counter } from "./5_Eventy/components/Counter";
 import { ParametryFunkcji } from "./6_parametryFunkcji/ParametryFunkcji";
 import { ListyTabele } from "./7_listyTabele/ListyTabele";
+import { Numbers } from "./7_listyTabele/ex1/Numbers";
 
 function App() {
   return (
