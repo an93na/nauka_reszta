@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Numbers } from "./ex1/Numbers";
+import { SimpleTodoList } from "./ex2/SimpleTodoList";
 
 const TASK = [
   {
@@ -121,7 +122,8 @@ export const ListyTabele = () => {
           })}
         </tbody>
       </table>
-      <Numbers/>
+      <Numbers />
+      <SimpleTodoList />
     </article>
   );
 };
