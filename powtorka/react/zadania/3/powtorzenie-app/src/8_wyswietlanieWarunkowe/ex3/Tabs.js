@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const style = {
   margin: 20,
@@ -10,12 +10,30 @@ const style = {
 };
 
 export const Tabs = () => {
+  const [selectedTab, setSelectedTab] = useState("form");
+
+  const handleChange = (e) => {
+    setSelectedTab(e.target.value);
+  };
   return (
     <article>
       <div style={style}>
         <label>
-          <input value="home" type="radio" />
+          <input
+            checked={selectedTab === "home"}
+            value="home"
+            type="radio"
+            onChange={handleChange}
+          />
           Home
+        </label>
+        <label>
+          <input checked={selectedTab === "form"} value="form" type="radio" onChange={handleChange} />
+          Form
+        </label>
+        <label>
+          <input checked={selectedTab === "list"} value="list" type="radio" onChange={handleChange} />
+          List
         </label>
       </div>
 

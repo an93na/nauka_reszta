@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Show } from "./ex1/Show";
 import { CatDogPerson } from "./ex2/CarDogPerson";
+import { Tabs } from "./ex3/Tabs";
 
 const Component1 = () => {
   return <div style={{ color: "blue" }}>Component1</div>;
@@ -63,8 +64,9 @@ export const WyswietlanieWarunkowe = () => {
       {cmp === "cmp2" && <Component2 />}
       {cmp === "cmp3" && <Component3 />}
 
-      <Show/>
-      <CatDogPerson/>
+      <Show />
+      <CatDogPerson />
+      <Tabs />
     </article>
   );
 };
