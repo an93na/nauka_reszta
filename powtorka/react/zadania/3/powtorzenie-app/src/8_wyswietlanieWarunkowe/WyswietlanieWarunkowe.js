@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Show } from "./ex1/Show";
 
 const Component1 = () => {
   return <div style={{ color: "blue" }}>Component1</div>;
@@ -60,6 +61,8 @@ export const WyswietlanieWarunkowe = () => {
       {cmp === "cmp1" && <Component1 />}
       {cmp === "cmp2" && <Component2 />}
       {cmp === "cmp3" && <Component3 />}
+
+      <Show/>
     </article>
   );
 };
