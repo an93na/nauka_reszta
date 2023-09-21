@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Home } from "./components/Home";
+import { Form } from "./components/Form";
+import { List } from "./components/List";
 
 const style = {
   margin: 20,
@@ -11,12 +14,17 @@ const style = {
 
 export const Tabs = () => {
   const [selectedTab, setSelectedTab] = useState("form");
+  const [tasks, setTasks] = useState([
+    { title: "pouczyć się", content: "JSa", id: 34 },
+  ]);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
   const handleChange = (e) => {
     setSelectedTab(e.target.value);
   };
   return (
-    <article>
+    <div>
       <div style={style}>
         <label>
           <input
@@ -28,16 +36,39 @@ export const Tabs = () => {
           Home
         </label>
         <label>
-          <input checked={selectedTab === "form"} value="form" type="radio" onChange={handleChange} />
+          <input
+            checked={selectedTab === "form"}
+            value="form"
+            type="radio"
+            onChange={handleChange}
+          />
           Form
         </label>
         <label>
-          <input checked={selectedTab === "list"} value="list" type="radio" onChange={handleChange} />
+          <input
+            checked={selectedTab === "list"}
+            value="list"
+            type="radio"
+            onChange={handleChange}
+          />
           List
         </label>
       </div>
 
-      <div style={{ margin: 20, marginTop: 50 }}></div>
-    </article>
+      <div style={{ margin: 20, marginTop: 50 }}>
+        {selectedTab === "home" && <Home />}
+        {selectedTab === "form" && (
+          <Form
+            tasks={tasks}
+            setTasks={setTasks}
+            title={title}
+            setTitle={setTitle}
+            content={content}
+            setContent={setContent}
+          />
+        )}
+        {selectedTab === "list" && <List tasks={tasks} setTasks={setTasks} />}
+      </div>
+    </div>
   );
 };
