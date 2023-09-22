@@ -33,7 +33,6 @@ let personObject = {
     },
   },
 };
-
 console.log(personObject);
 
 // kropka pomiędzy to jest akcesor dostępu do pola
