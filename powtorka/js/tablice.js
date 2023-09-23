@@ -109,7 +109,6 @@ let pierwszaDziewczynaIndex = indexDoUcznia.findIndex((ele) => {
 console.log(`Indeks pierwszej dziewczyny to: ${pierwszaDziewczynaIndex}`);
 
 // Filtrowanie tablicy:
-
 let tablicaOsob = [
   { name: "Agata", surname: "Około", age: 32, plec: "K" },
   { name: "Piotr", surname: "Około", age: 6, plec: "M" },
@@ -131,7 +130,6 @@ let pelnoletniKrotka = tablicaOsob.filter((ele) => ele.age >= 18);
 console.log("Pełnoletnie osoby to: ", pelnoletniKrotka);
 
 // funkcja map
-
 let mapTabOs = tablicaOsob.map((el) => {
   return {
     ...el,
