@@ -15,7 +15,6 @@ body {
   align-content: stretch;
   width: 100%;
 }
-
 #forecast-list li {
   background-color: #f4f4f4;
   padding: 10px;
@@ -24,7 +23,6 @@ body {
   position: relative;
   width: 40%;
 }
-
 #forecast-list li img {
   position: absolute;
   top: 0;
