@@ -48,7 +48,6 @@ wynik = 10 - 3 > 4 + 2;
 console.log(wynik);
 
 // stringi i funkcje
-
 let jakisTekst = "jakiśTekst";
 // length podaje długość tego stringa
 console.log(jakisTekst.length)
