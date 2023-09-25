@@ -21,6 +21,7 @@ import { ParametryFunkcji } from "./6_parametryFunkcji/ParametryFunkcji";
 import { ListyTabele } from "./7_listyTabele/ListyTabele";
 import { WeightConventer } from "./7_listyTabele/ex2/components/WeightConverter";
 import { WyswietlanieWarunkowe } from "./8_wyswietlanieWarunkowe/WyswietlanieWarunkowe";
+import { CyklZyciaKomponentow } from "./9_cyklZyciaKomponentu/CyklZyciaKomponentu";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
       <ListyTabele/>
       <WeightConventer/>
       <WyswietlanieWarunkowe/>
+      <CyklZyciaKomponentow/>
     </div>
   );
 }
