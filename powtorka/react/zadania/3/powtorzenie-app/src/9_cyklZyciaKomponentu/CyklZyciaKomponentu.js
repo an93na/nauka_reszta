@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form } from "./components/Form";
 import { Home } from "./components/Home";
 import { List } from "./components/List";
+import { Users } from "./components/Users";
 
 const style = {
   margin: 20,
@@ -52,12 +53,23 @@ export const CyklZyciaKomponentow = () => {
           />
           List
         </label>
+        <label>
+          <input
+            checked={navigationState === "users"}
+            value="users"
+            type="radio"
+            name="nav"
+            onChange={handleChange}
+          />
+          Users
+        </label>
       </div>
 
       <div style={{ margin: 20, marginTop: 50 }}>
         {navigationState === "home" && <Home />}
         {navigationState === "form" && <Form />}
         {navigationState === "list" && <List />}
+        {navigationState === 'users' && <Users/>}
       </div>
     </article>
   );
