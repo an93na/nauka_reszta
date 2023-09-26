@@ -7,7 +7,8 @@ export const Users = () => {
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }, []);
-  return <div>
-    
-  </div>;
+  return <ul>
+    {users.map((user)=><li key={user.id}>{user.name}</li>
+    )}
+  </ul>;
 };
