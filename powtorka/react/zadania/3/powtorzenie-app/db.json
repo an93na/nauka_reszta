@@ -17,12 +17,23 @@
       "id": 4,
       "title": "et porro tempora",
       "completed": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John",
+      "lastName": "Doe"
     },
     {
-      "userId": 1,
-      "id": 5,
-      "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-      "completed": false
+      "id": 2,
+      "name": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "lastName": "Doe"
     }
   ]
 }
