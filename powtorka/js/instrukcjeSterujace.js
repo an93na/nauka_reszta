@@ -24,7 +24,6 @@ else if (wiek > pelnoletniWPolsce && wiek < pelnoletniWUSA) {
 }
 
 // wybór koloru niebieski zielony czerwony
-
 let kolor = "braz";
 // || ten lub inny
 if (kolor === "czerwony" || kolor === "niebieski") {
