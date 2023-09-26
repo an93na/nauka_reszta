@@ -1,8 +1,13 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 
 export const Users = () => {
-    return <div>
-        
-    </div>
-}
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => response.json())
+      .then((data) => setUsers(data));
+  }, []);
+  return <div>
+    
+  </div>;
+};
