@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Home } from "./components/Home";
 import { Form } from "./components/Form";
 import { List } from "./components/List";
+import { Routes, Route, Link } from "react-router-dom";
 
 const style = {
   margin: 20,
@@ -22,7 +23,7 @@ function App() {
   return (
     <div className="container">
       <article>
-        {
+        {/* {
           <div style={style}>
             <label>
               <input
@@ -55,15 +56,25 @@ function App() {
               List
             </label>
           </div>
-        }
+        } */}
 
-        {
+        {/*         {
           <div style={{ margin: 20, marginTop: 50 }}>
             {navigationState === "home" && <Home />}
             {navigationState === "form" && <Form />}
             {navigationState === "list" && <List />}
           </div>
-        }
+        } */}
+        {<div style={style}>
+          <Link to="/">Home</Link>
+          <Link to="form">Form</Link>
+          <Link to="list">List</Link>
+          </div>}
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="form" element={<Form/>}/>
+          <Route path="list" element={<List/>}/>
+        </Routes>
       </article>
     </div>
   );
