@@ -3,6 +3,7 @@ import { Home } from "./components/Home";
 import { Form } from "./components/Form";
 import { List } from "./components/List";
 import { Routes, Route, Link } from "react-router-dom";
+import { About } from "./components/About";
 
 const style = {
   margin: 20,
@@ -69,11 +70,13 @@ function App() {
           <Link to="/">Home</Link>
           <Link to="form">Form</Link>
           <Link to="list">List</Link>
+          <Link to="about">About</Link>
           </div>}
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="form" element={<Form/>}/>
           <Route path="list" element={<List/>}/>
+          <Route path="about" element={<About/>}/>
         </Routes>
       </article>
     </div>

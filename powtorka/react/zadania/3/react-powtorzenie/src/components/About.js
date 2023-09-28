@@ -2,11 +2,11 @@ import React from "react";
 
 export const About = () => {
     return (
-      <article>
+      <div>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
           quisquam.
         </p>
-      </article>
+      </div>
     );
   };
