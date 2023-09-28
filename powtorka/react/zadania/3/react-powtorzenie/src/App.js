@@ -4,6 +4,7 @@ import { Form } from "./components/Form";
 import { List } from "./components/List";
 import { Routes, Route, Link } from "react-router-dom";
 import { About } from "./components/About";
+import { Navigation } from "./components/Navigation";
 
 const style = {
   margin: 20,
@@ -66,17 +67,14 @@ function App() {
             {navigationState === "list" && <List />}
           </div>
         } */}
-        {<div style={style}>
-          <Link to="/">Home</Link>
-          <Link to="form">Form</Link>
-          <Link to="list">List</Link>
-          <Link to="about">About</Link>
-          </div>}
+
+        <Navigation style={style} />
+
         <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="form" element={<Form/>}/>
-          <Route path="list" element={<List/>}/>
-          <Route path="about" element={<About/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="form" element={<Form />} />
+          <Route path="list" element={<List />} />
+          <Route path="about" element={<About />} />
         </Routes>
       </article>
     </div>
