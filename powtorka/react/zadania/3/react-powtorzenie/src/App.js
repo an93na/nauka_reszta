@@ -6,6 +6,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { About } from "./components/About";
 import { Navigation } from "./components/Navigation";
 import { NotFound } from "./components/NotFound";
+import { Todo } from "./components/Todo";
 
 const style = {
   margin: 20,
@@ -77,6 +78,7 @@ function App() {
           <Route path="list" element={<List />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<NotFound/>} />
+          <Route path="todo" element={<Todo/>} />
         </Routes>
       </article>
     </div>
