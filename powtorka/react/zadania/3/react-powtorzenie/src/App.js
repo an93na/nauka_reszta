@@ -77,8 +77,8 @@ function App() {
           <Route path="form" element={<Form />} />
           <Route path="list" element={<List />} />
           <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound/>} />
-          <Route path="todo" element={<Todo/>} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="todo" element={<Todo />} />
         </Routes>
       </article>
     </div>
