@@ -8,7 +8,7 @@ export const Navigation = (props) => {
       <Link to="form">Form</Link>
       <Link to="list">List</Link>
       <Link to="about">About</Link>
-      <Link to='todo'>Todo</Link>
+      <Link to="todo">Todo</Link>
     </div>
   );
 };
