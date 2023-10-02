@@ -23,6 +23,12 @@
   ],
   "users": [
     {
+      "id": 1,
+      "name": "Johan",
+      "lastName": "Doe",
+      "age": 32
+    },
+    {
       "id": 2,
       "name": "John",
       "lastName": "Doe",
