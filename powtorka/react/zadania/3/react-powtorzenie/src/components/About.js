@@ -4,11 +4,11 @@ export const About = () => {
   return (
     <div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
+        <b style={{color:'green'}}>Lorem ipsum</b>  dolor sit amet, consectetur adipisicing elit. Nihil,
         quisquam.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
+        <b style={{color:'red'}}>Lorem ipsum</b> dolor sit amet consectetur, adipisicing elit. Voluptatibus
         error a aliquid voluptas ab natus optio quos eius! Dolorum dolores quos
         totam? Aut quaerat assumenda totam earum pariatur sapiente id.
       </p>

@@ -11,7 +11,7 @@ import { Todo } from "./components/Todo";
 const style = {
   margin: 20,
   padding: 20,
-  border: "2px solid green",
+  border: "2px solid blue",
   display: "flex",
   borderRadius: 5,
   gap: 50,
