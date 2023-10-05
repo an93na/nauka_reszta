@@ -24,7 +24,7 @@ export const Form = () => {
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Title"
       />
-      <button style={{backgroundColor: 'pink'}}>Submit</button>
+      <button style={{backgroundColor: 'pink', width: 'fit-content', textAlign: 'center', alignItems: 'center'}}>Submit</button>
     </form>
   );
 };
