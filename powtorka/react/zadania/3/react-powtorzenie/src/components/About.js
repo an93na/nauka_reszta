@@ -12,6 +12,7 @@ export const About = () => {
         error a aliquid voluptas ab natus optio quos eius! Dolorum dolores quos
         totam? Aut quaerat assumenda totam earum pariatur sapiente id.
       </p>
+      <div style={{width: 80, height: 80, backgroundColor: 'palevioletred', borderRadius: '50%'}}></div>
     </div>
   );
 };
