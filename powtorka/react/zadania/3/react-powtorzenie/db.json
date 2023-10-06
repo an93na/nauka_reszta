@@ -51,6 +51,12 @@
       "name": "Caroline",
       "lastName": "Johs",
       "age": 20
+    },
+    {
+      "id": 6,
+      "name": "Paula",
+      "lastName": "Pat",
+      "age": 28
     }
   ]
 }
