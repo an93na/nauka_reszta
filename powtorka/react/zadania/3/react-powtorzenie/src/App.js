@@ -7,6 +7,7 @@ import { About } from "./components/About";
 import { Navigation } from "./components/Navigation";
 import { NotFound } from "./components/NotFound";
 import { Todo } from "./components/Todo";
+import { TodoDetails } from "./components/TodoDetails";
 
 const style = {
   margin: 20,
@@ -77,8 +78,9 @@ function App() {
           <Route path="form" element={<Form />} />
           <Route path="list" element={<List />} />
           <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
           <Route path="todo" element={<Todo />} />
+          <Route path="todos/:id" element={<TodoDetails/>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </article>
     </div>
