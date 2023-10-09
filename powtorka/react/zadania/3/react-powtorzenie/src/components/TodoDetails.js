@@ -14,5 +14,10 @@ export const TodoDetails = () => {
         return setTodo(data);
       });
   }, [id]);
-  return <h2>Todo title: {id}</h2>;
+
+  if(todo === null) {
+    return <h2>Loading ...</h2>
+  }
+
+  return <h2>Todo title: {todo.title}</h2>;
 };
