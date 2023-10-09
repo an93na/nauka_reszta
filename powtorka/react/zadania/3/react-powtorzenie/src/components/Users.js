@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from "react";
 
 export const Users = () => {
+    const [users, setUsers] = useState([]);
   return (
-    <div>Users</div>
-  )
-}
+    <div>
+      <h3>Users</h3>
+    </div>
+  );
+};
