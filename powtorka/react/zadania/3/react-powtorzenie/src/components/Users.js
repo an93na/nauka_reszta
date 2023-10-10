@@ -15,7 +15,9 @@ export const Users = () => {
     }).then(getUsers);
   };
 
-  useEffect(() => {getUsers()}, []);
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   return (
     <div>
@@ -30,12 +32,18 @@ export const Users = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.lastName}</td>
-            <td>{user.age}</td>
-            <td><button onClick={() => handleButtonDelClick(user.id)}>DELETE</button></td>
-          </tr>)}
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.lastName}</td>
+              <td>{user.age}</td>
+              <td>
+                <button onClick={() => handleButtonDelClick(user.id)}>
+                  DELETE
+                </button>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
