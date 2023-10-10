@@ -9,6 +9,12 @@ export const Users = () => {
       .then((data) => setUsers(data));
   };
 
+  const handleButtonDelClick = (idToDelete) => {
+    fetch(`http://localhost:3010/users/${idToDelete}`, {
+      method: "DELETE",
+    }).then(getUsers);
+  };
+
   useEffect(() => {getUsers()}, []);
 
   return (
@@ -28,7 +34,7 @@ export const Users = () => {
             <td>{user.name}</td>
             <td>{user.lastName}</td>
             <td>{user.age}</td>
-            <td><button>DELETE</button></td>
+            <td><button onClick={() => handleButtonDelClick(user.id)}>DELETE</button></td>
           </tr>)}
         </tbody>
       </table>

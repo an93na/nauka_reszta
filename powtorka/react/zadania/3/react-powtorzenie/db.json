@@ -9,14 +9,6 @@
       "title": "Odpocząć"
     },
     {
-      "title": "Pouczyć się Reduxa",
-      "id": 5
-    },
-    {
-      "title": "Pouczyć się React router dom",
-      "id": 2
-    },
-    {
       "title": "test 123",
       "id": 6
     }
@@ -25,12 +17,6 @@
     {
       "id": 1,
       "name": "Johan",
-      "lastName": "Doe",
-      "age": 32
-    },
-    {
-      "id": 2,
-      "name": "John",
       "lastName": "Doe",
       "age": 32
     },
