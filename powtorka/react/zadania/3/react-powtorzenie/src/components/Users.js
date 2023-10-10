@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 export const Users = () => {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
+  const getUsers = () => {
     fetch("http://localhost:3010/users")
       .then((response) => response.json())
       .then((data) => setUsers(data));
-  }, []);
+  };
+
+  useEffect(() => {getUsers()}, []);
 
   return (
     <div>
@@ -21,7 +23,14 @@ export const Users = () => {
             <th></th>
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>
+          {users.map((user) => <tr key={user.id}>
+            <td>{user.name}</td>
+            <td>{user.lastName}</td>
+            <td>{user.age}</td>
+            <td><button>DELETE</button></td>
+          </tr>)}
+        </tbody>
       </table>
     </div>
   );
