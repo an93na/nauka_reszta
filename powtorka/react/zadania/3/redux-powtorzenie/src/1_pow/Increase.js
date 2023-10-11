@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export const Increase = () => {
+export const Increase = (props) => {
+  const { counter, setCounter } = props;
   return (
-    <div>Increase</div>
-  )
-}
+    <div style={{display: 'flex', gap: 20}}>
+      <button onClick={() => setCounter(counter + 1)}>+1</button>
+      <button onClick={() => setCounter(counter + 5)}>+5</button>
+    </div>
+  );
+};

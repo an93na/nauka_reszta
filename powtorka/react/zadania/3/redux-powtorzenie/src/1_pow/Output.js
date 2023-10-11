@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
 
-export const Output = () => {
+export const Output = (props) => {
+  const { counter } = props;
   return (
-    <div>Output</div>
-  )
-}
+    <div>
+      <h4>{counter}</h4>
+    </div>
+  );
+};
