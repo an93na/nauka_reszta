@@ -9,10 +9,10 @@ export const Counter = () => {
   return (
     <article>
       <h3>Counter</h3>
-      <Increase counter={counter} setCounter={setCounter}/>
-      <Output counter={counter}/>
-      <Decrease counter={counter} setCounter={setCounter}/>
-      <ResetCounter setCounter={setCounter}/>
+      <Increase counter={counter} setCounter={setCounter} />
+      <Output counter={counter} />
+      <Decrease counter={counter} setCounter={setCounter} />
+      <ResetCounter setCounter={setCounter} />
     </article>
   );
 };
