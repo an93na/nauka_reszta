@@ -4,7 +4,7 @@ export const Output = (props) => {
   const { counter } = props;
   return (
     <div>
-      <input readOnly value={counter}/>
+      <input readOnly value={counter} />
     </div>
   );
 };
