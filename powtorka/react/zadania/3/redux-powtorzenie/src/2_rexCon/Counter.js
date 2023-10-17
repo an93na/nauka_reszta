@@ -1,5 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export const Counter = () => {
-  return <div>Counter</div>;
+    const counter = useSelector((state) => state.counter.value)
+  return <article>{counter}</article>;
 };
