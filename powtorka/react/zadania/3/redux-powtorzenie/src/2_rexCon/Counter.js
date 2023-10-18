@@ -13,10 +13,12 @@ export const Counter = () => {
   const showPoweredValue = useSelector(
     (state) => state.counter3.showPoweredValue
   );
+  const poweredCounter = useSelector((state) => state.counter3.poweredValue);
   return (
     <article>
       <button onClick={() => dispatch(increment())}>+1</button>
       <input type="text" value={counter} readOnly />
+      <input type="text" value={poweredCounter} readOnly />
       <button onClick={() => dispatch(decrement())}>-1</button>
       <button onClick={() => dispatch(resetCounter())}>Reset</button>
       <label>
