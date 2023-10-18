@@ -18,7 +18,6 @@ export const Counter = () => {
     <article>
       <button onClick={() => dispatch(increment())}>+1</button>
       <input type="text" value={counter} readOnly />
-      <input type="text" value={poweredCounter} readOnly />
       <button onClick={() => dispatch(decrement())}>-1</button>
       <button onClick={() => dispatch(resetCounter())}>Reset</button>
       <label>
@@ -34,11 +33,7 @@ export const Counter = () => {
         />
       </label>
       {showPoweredValue && (
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis a
-          unde quo pariatur hic deleniti nam temporibus dignissimos nobis.
-          Voluptas aliquam unde quia, cumque dolorum labore iure dicta eius eum.
-        </p>
+        <input type="text" value={poweredCounter} readOnly />
       )}
     </article>
   );
