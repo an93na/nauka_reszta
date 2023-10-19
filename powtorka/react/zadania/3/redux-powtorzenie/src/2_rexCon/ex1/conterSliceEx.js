@@ -18,5 +18,6 @@ const counterSliceEx = createSlice({
   },
 });
 
+export const counterSelec = (state) => state.nazwaUzyta.value;
 export const { increment, decrement, reset } = counterSliceEx.actions;
 export default counterSliceEx.reducer;

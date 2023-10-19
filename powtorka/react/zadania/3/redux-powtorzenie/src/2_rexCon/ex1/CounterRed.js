@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, reset } from "./conterSliceEx";
+import { counterSelec, decrement, increment, reset } from "./conterSliceEx";
 
 export const CounterRed = () => {
-  const counter = useSelector((state) => state.nazwaUzyta.value);
   const dispatch = useDispatch();
+  const counter = useSelector(counterSelec);
   return (
     <article>
       <button
