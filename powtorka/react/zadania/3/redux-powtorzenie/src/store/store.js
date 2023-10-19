@@ -14,6 +14,6 @@ export const store = configureStore({
     counter: counterReducer,
     counter2: counterReducer2,
     counter3: counterReducer3,
-    counter4: counterReducer4,
+    nazwaUzyta: counterReducer4,
   },
 });

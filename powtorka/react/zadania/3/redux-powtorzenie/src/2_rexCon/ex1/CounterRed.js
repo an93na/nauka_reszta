@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, reset } from "./conterSliceEx";
 
 export const CounterRed = () => {
-  const counter = useSelector((state) => state.counter4.value);
+  const counter = useSelector((state) => state.nazwaUzyta.value);
   const dispatch = useDispatch();
   return (
     <article>
