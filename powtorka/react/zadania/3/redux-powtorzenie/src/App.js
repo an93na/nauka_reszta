@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Counter />
       <Counter2 />
-      <CounterRed/>
+      <CounterRed />
     </div>
   );
 }
