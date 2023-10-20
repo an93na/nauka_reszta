@@ -3,17 +3,17 @@ import { createSlice } from "@reduxjs/toolkit";
 const conterSliceEx2 = createSlice({
   name: "counter5",
   initialState: {
-    value: 20,
+    value: 0,
   },
   reducers: {
-    increment: (state) => {
-      state.value = state.value + 1;
+    increment: (state, action) => {
+      state.value = state.value + action.payload;
     },
-    decrement: (state) => {
-      state.value = state.value - 1;
+    decrement: (state, action) => {
+      state.value = state.value - action.payload;
     },
     resetCounter: (state) => {
-      state.value = 20;
+      state.value = 0;
     },
   },
 });
