@@ -1,7 +1,8 @@
 import React from 'react'
 
-export const Decrease = () => {
+export const Decrease = (props) => {
+    const {value} = props
   return (
-    <div>Decrease</div>
+    <button>{-value}</button>
   )
 }
