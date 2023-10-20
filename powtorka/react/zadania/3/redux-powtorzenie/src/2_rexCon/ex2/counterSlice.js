@@ -12,4 +12,5 @@ const conterSliceEx2 = createSlice({
 });
 
 export const selectorCounter5 = (state) => state.counter5.value
+export const {decrement, increment} = conterSliceEx2.actions
 export default conterSliceEx2.reducer;
