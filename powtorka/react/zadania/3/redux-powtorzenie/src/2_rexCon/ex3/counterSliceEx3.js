@@ -12,7 +12,9 @@ const counterSliceEx3 = createSlice({
     decrement: (state, action) => {
       state.value = state.value - action.payload;
     },
-    resetBtn: (state) => {state.value = 0}
+    resetBtn: (state) => {
+      state.value = 0;
+    },
   },
 });
 

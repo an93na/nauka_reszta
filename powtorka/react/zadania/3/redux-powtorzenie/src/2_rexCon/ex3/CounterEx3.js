@@ -14,7 +14,7 @@ export const CounterEx3 = () => {
         <Output />
         <Decrease value={1} />
         <Decrease value={5} />
-        <ResetBtn/>
+        <ResetBtn />
       </div>
     </article>
   );
