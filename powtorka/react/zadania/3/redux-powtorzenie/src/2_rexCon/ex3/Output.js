@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
+import { selectCounter6 } from "./counterSliceEx3";
 
 export const Output = () => {
-  return (
-    <input type='text' readOnly/>
-  )
-}
+  const counter = useSelector(selectCounter6);
+  return <input type="text" readOnly value={counter} />;
+};

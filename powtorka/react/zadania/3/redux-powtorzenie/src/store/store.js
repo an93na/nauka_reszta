@@ -8,6 +8,7 @@ import counterReducer2 from "../1_pow/counterSlice2";
 import counterReducer3 from "../2_rexCon/conterSlice";
 import counterReducer4 from "../2_rexCon/ex1/conterSliceEx";
 import counterReducer5 from "../2_rexCon/ex2/counterSlice";
+import counterReducer6 from "../2_rexCon/ex3/counterSliceEx3";
 
 export const store = configureStore({
   // reducer zbiera nam te kawałki stanu
@@ -17,5 +18,6 @@ export const store = configureStore({
     counter3: counterReducer3,
     nazwaUzyta: counterReducer4,
     counter5: counterReducer5,
+    counter6: counterReducer6,
   },
 });
