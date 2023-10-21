@@ -11,7 +11,7 @@ function App() {
       <Counter2 />
       <CounterRed />
       <Counter3 />
-      <CounterEx3/>
+      <CounterEx3 />
     </div>
   );
 }
