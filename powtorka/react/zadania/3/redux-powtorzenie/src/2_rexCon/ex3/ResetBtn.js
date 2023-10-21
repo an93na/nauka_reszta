@@ -4,5 +4,12 @@ import { resetBtn } from "./counterSliceEx3";
 
 export const ResetBtn = () => {
   const dispatch = useDispatch();
-  return <button style={{backgroundColor: 'red'}} onClick={() => dispatch(resetBtn())}>RESET</button>;
+  return (
+    <button
+      style={{ backgroundColor: "red" }}
+      onClick={() => dispatch(resetBtn())}
+    >
+      RESET
+    </button>
+  );
 };
