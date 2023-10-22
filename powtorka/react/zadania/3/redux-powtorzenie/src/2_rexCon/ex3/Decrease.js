@@ -6,6 +6,6 @@ export const Decrease = (props) => {
     const {value} = props
     const dispatch = useDispatch()
   return (
-    <button onClick={() => dispatch(decrement(value))}>{-value}</button>
+    <button onClick={() => dispatch(decrement(value))} style={{backgroundColor: 'palevioletred'}}>{-value}</button>
   )
 }
