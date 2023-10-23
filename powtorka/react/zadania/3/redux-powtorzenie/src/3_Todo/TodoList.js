@@ -12,6 +12,7 @@ export const TodoList = () => {
         }}
       >
         <input
+          required
           type="text"
           name=""
           id=""
