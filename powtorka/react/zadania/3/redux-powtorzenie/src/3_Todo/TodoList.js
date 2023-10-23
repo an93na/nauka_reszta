@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo, selectTodo } from "./sliceTodoList";
 
 export const TodoList = () => {
   const [todoTitle, setTodoTitle] = useState("");
+  const select = useSelector(selectTodo);
+  const dispatch = useDispatch();
   return (
     <article>
       <h3>TodoList</h3>
@@ -9,6 +13,8 @@ export const TodoList = () => {
         action=""
         onSubmit={(e) => {
           e.preventDefault();
+          dispatch(addTodo(todoTitle));
+          setTodoTitle("");
         }}
       >
         <input
