@@ -27,7 +27,11 @@ export const TodoList = () => {
         />
         <button type="submit">Submit</button>
       </form>
-      <ul>{}</ul>
+      <ul>
+        {select.map((todo) => (
+          <li>{todo}</li>
+        ))}
+      </ul>
     </article>
   );
 };
