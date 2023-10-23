@@ -9,6 +9,7 @@ import counterReducer3 from "../2_rexCon/conterSlice";
 import counterReducer4 from "../2_rexCon/ex1/conterSliceEx";
 import counterReducer5 from "../2_rexCon/ex2/counterSlice";
 import counterReducer6 from "../2_rexCon/ex3/counterSliceEx3";
+import todoReducer from "../3_Todo/sliceTodoList";
 
 export const store = configureStore({
   // reducer zbiera nam te kawałki stanu
@@ -19,5 +20,6 @@ export const store = configureStore({
     nazwaUzyta: counterReducer4,
     counter5: counterReducer5,
     counter6: counterReducer6,
+    todo: todoReducer,
   },
 });
