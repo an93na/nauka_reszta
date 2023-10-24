@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Filters = () => {
   return (
-    <div>Filters</div>
+    <div><input type="text" name="" id="" /></div>
   )
 }
