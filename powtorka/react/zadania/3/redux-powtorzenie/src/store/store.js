@@ -22,6 +22,6 @@ export const store = configureStore({
     counter5: counterReducer5,
     counter6: counterReducer6,
     todo: todoReducer,
-    users: usersReducer,
+    user: usersReducer,
   },
 });
