@@ -5,6 +5,11 @@ const userSlice = createSlice({
   initialState: {
     users: [],
   },
-  reducers: {},
+  reducers: {
+    addUser: (user, action)=>{},
+    removeUser: (user, action)=>{},
+    setFilter: (user, action)=>{},
+  },
 });
+
 export default userSlice.reducer
