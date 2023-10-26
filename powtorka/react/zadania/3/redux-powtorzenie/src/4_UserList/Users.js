@@ -8,8 +8,8 @@ export const Users = () => {
   return (
     <article>
       <h3>Users</h3>
-      <UserForm/>
-      <Filters/>
+      <UserForm />
+      <Filters />
       <Metric />
       <UsersList />
     </article>
