@@ -6,10 +6,11 @@ const userSlice = createSlice({
     users: [],
   },
   reducers: {
-    addUser: (user, action)=>{},
-    removeUser: (user, action)=>{},
-    setFilter: (user, action)=>{},
+    addUser: (user, action) => {},
+    removeUser: (user, action) => {},
+    setFilter: (user, action) => {},
   },
 });
 
-export default userSlice.reducer
+export const { addUser, removeUser, setFilter } = userSlice.actions;
+export default userSlice.reducer;
