@@ -11,6 +11,6 @@ const userSlice = createSlice({
     setFilter: (user, action) => {},
   },
 });
-
+export const usersSelector = (state) => state.userState.users;
 export const { addUser, removeUser, setFilter } = userSlice.actions;
 export default userSlice.reducer;
