@@ -7,7 +7,7 @@ export const UsersList = () => {
   return (
     <div>
       <ul>
-        {selectUser.map((user) => <li key={Math.random()}>{user}</li>)}
+        {selectUser.map((user) => <li key={user.id}>{user.name}</li>)}
       </ul>
     </div>
   )
