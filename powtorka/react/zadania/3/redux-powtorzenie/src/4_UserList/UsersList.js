@@ -9,9 +9,10 @@ export const UsersList = () => {
       <table>
         <thead>
           <tr>
-            <th>Name:</th>
-            <th>LastName:</th>
-            <th>Age:</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@ export const UsersList = () => {
               <td>{user.name}</td>
               <td>{user.lastName}</td>
               <td>{user.age}</td>
+              <td><button style={{backgroundColor: 'red',marginBottom: 0}}>DELETE</button></td>
             </tr>
           ))}
         </tbody>
