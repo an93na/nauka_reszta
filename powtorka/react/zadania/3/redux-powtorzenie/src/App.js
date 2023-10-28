@@ -5,6 +5,7 @@ import { Counter3 } from "./2_rexCon/ex2/Counter3";
 import { CounterEx3 } from "./2_rexCon/ex3/CounterEx3";
 import { TodoList } from "./3_Todo/TodoList";
 import { Users } from "./4_UserList/Users";
+import { TodoList2 } from "./5_MetTodo/TodoList";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <CounterEx3 />
       <TodoList />
       <Users />
+      <TodoList2 />
     </div>
   );
 }
