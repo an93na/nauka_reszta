@@ -1,7 +1,17 @@
-import React from 'react'
+import React from "react";
 
 export const Filters = () => {
   return (
-    <div>Filters</div>
-  )
-}
+    <div>
+      <select name="" id="">
+        <option value="" hidden>
+          Wybierz
+        </option>
+        <option value="0">string z 3 znakami</option>
+        <option value="1">string z wiekszą ilością znamków niż 3</option>
+        <option value="2">string z mniejszą ilością znaków niż 3</option>
+        <option value="3">pokaż wszystko</option>
+      </select>
+    </div>
+  );
+};
