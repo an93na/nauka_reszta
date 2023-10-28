@@ -1,6 +1,7 @@
 import React from "react";
 
-export const Filters = () => {
+export const Filters = (props) => {
+  const { filter, setFilter } = props;
   return (
     <div>
       <select name="" id="">
