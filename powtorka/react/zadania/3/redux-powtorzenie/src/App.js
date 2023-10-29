@@ -6,6 +6,7 @@ import { CounterEx3 } from "./2_rexCon/ex3/CounterEx3";
 import { TodoList } from "./3_Todo/TodoList";
 import { Users } from "./4_UserList/Users";
 import { TodoList2 } from "./5_MetTodo/TodoList";
+import { TodoList3 } from "./6_ex6/TodoList3";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <TodoList />
       <Users />
       <TodoList2 />
+      <TodoList3 />
     </div>
   );
 }

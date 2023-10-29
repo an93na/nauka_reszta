@@ -11,6 +11,7 @@ import counterReducer5 from "../2_rexCon/ex2/counterSlice";
 import counterReducer6 from "../2_rexCon/ex3/counterSliceEx3";
 import todoReducer from "../3_Todo/sliceTodoList";
 import usersReducer from "../4_UserList/usersSlice";
+import todos3Reducer from "../6_ex6/Todo3slice";
 
 export const store = configureStore({
   // reducer zbiera nam te kawałki stanu
@@ -23,5 +24,6 @@ export const store = configureStore({
     counter6: counterReducer6,
     todo: todoReducer,
     userState: usersReducer,
+    todo3: todos3Reducer,
   },
 });
