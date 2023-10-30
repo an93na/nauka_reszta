@@ -20,6 +20,7 @@ export const Form3 = () => {
         id=""
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        required
       />
       <button type="submit">Submit</button>
     </form>
