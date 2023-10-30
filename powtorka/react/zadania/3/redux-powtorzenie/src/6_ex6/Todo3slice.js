@@ -17,7 +17,10 @@ const Todo3Slice = createSlice({
     },
   },
 });
-
+// selektory
 export const stateTodo3 = (state) => state.todo3.todos3;
+export const selectTotalNumberOfTodos = (state) => state.todo3.todos3.length
+// akcje
 export const { addTodo, resetState } = Todo3Slice.actions;
+// kawałek stanu
 export default Todo3Slice.reducer;
