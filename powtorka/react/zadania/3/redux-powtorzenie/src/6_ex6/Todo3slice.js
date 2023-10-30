@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   todos3: [],
+  searchPhrase: "",
 };
 
 const Todo3Slice = createSlice({
@@ -14,6 +15,9 @@ const Todo3Slice = createSlice({
     resetState: (state) => {
       //reset całego stanu
       state = initialState;
+    },
+    setSearchPhrase: (state, action) => {
+      state.searchPhrase = action.payload;
     },
   },
 });
@@ -30,7 +34,9 @@ export const selectTotalNumberOfTodosMore5Mark = (state) => {
   const newTodos = state.todo3.todos3.filter((todo) => todo.length >= 5);
   return newTodos.length;
 };
+export const selectSearchPhrase = (state) => state.todo3.searchPhrase;
+
 // akcje
-export const { addTodo, resetState } = Todo3Slice.actions;
+export const { addTodo, resetState, setSearchPhrase } = Todo3Slice.actions;
 // kawałek stanu
 export default Todo3Slice.reducer;
