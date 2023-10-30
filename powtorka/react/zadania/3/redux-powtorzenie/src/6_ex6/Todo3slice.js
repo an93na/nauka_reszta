@@ -19,5 +19,5 @@ const Todo3Slice = createSlice({
 });
 
 export const stateTodo3 = (state) => state.todo3.todos3;
-export const { addTodo } = Todo3Slice.actions;
+export const { addTodo, resetState } = Todo3Slice.actions;
 export default Todo3Slice.reducer;
