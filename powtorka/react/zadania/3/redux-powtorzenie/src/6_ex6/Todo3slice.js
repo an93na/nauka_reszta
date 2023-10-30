@@ -22,6 +22,14 @@ export const stateTodo3 = (state) => state.todo3.todos3;
 export const selectTotalNumberOfTodos = (state) => state.todo3.todos3.length;
 export const selectTotalMarkofTodos = (state) =>
   state.todo3.todos3.join("").length;
+export const selectTotalNumberOfTodosLess5Mark = (state) => {
+  const newTodos = state.todo3.todos3.filter((todo) => todo.length < 5);
+  return newTodos.length;
+};
+export const selectTotalNumberOfTodosMore5Mark = (state) => {
+  const newTodos = state.todo3.todos3.filter((todo) => todo.length >= 5);
+  return newTodos.length;
+};
 // akcje
 export const { addTodo, resetState } = Todo3Slice.actions;
 // kawałek stanu
