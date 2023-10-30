@@ -1,9 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectTotalNumberOfTodos } from "./Todo3slice";
+import { selectTotalMarkofTodos, selectTotalNumberOfTodos } from "./Todo3slice";
 
 export const Metrics = () => {
-    const total = useSelector(selectTotalNumberOfTodos)
+  const total = useSelector(selectTotalNumberOfTodos);
+  const totalMark = useSelector(selectTotalMarkofTodos);
   return (
     <div
       style={{ border: "solid 1px white", borderRadius: "10px", padding: 10 }}
@@ -12,7 +13,7 @@ export const Metrics = () => {
         Total: <b>{total}</b>
       </p>
       <p>
-        Ilość wszystkich znaków: <b>{10}</b>
+        Ilość wszystkich znaków: <b>{totalMark}</b>
       </p>
       <p>
         Ilość słów, które mają mniej niż 5 znaków: <b>{10}</b>
