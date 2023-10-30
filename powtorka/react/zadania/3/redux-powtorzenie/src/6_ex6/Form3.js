@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { addTodo, resetState } from "./Todo3slice";
+import { addTodo } from "./Todo3slice";
 import { useDispatch } from "react-redux";
 
 export const Form3 = () => {
