@@ -12,6 +12,9 @@ const style = {
 };
 
 export const Users = () => {
+  const total = 2;
+  const filtredAmount = 32;
+
   return (
     <article>
       <h3>Users</h3>
@@ -23,7 +26,10 @@ export const Users = () => {
         <h6>Filters</h6>
         <Filters />
       </div>
-      <Metric />
+      <div style={{ display: "flex", gap: 20 }}>
+        <Metric label="Total" value={total} />
+        <Metric label="Amount of filtered users" value={filtredAmount} />
+      </div>
       <UsersList />
     </article>
   );
