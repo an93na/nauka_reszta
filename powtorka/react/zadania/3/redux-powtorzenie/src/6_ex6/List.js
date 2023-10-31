@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { stateTodo3 } from "./Todo3slice";
+import { selectTodos} from "./Todo3slice";
 
 export const List3 = () => {
-  const todos = useSelector(stateTodo3);
+  const todos = useSelector(selectTodos);
   return (
     <ul>
       <li style={{ listStyle: "none" }}>

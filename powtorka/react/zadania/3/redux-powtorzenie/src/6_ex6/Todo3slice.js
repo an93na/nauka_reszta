@@ -35,7 +35,10 @@ export const selectTotalNumberOfTodosMore5Mark = (state) => {
   return newTodos.length;
 };
 export const selectSearchPhrase = (state) => state.todo3.searchPhrase;
-
+export const selectTodos = (state) =>
+  state.todo3.todos3.filter((todo) =>
+    todo.includes(state.todo3.searchPhrase)
+  );
 // akcje
 export const { addTodo, resetState, setSearchPhrase } = Todo3Slice.actions;
 // kawałek stanu
