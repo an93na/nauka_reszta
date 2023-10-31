@@ -6,7 +6,9 @@ const userSlice = createSlice({
     users: [{ name: "Jole", lastName: "Foo", age: 20, id: Math.random() }],
   },
   reducers: {
-    addUser: (user, action) => {},
+    addUser: (user, action) => {
+      user.users.push(action.payload);
+    },
     removeUser: (user, action) => {},
     setFilter: (user, action) => {},
   },

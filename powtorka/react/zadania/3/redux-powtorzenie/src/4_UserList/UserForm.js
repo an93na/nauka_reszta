@@ -1,11 +1,23 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addUser } from "./usersSlice";
 
 export const UserForm = () => {
   const [name, setName] = useState("");
   const [lastName, seTLastName] = useState("");
   const [age, setAge] = useState("");
+  const dispatch = useDispatch();
   return (
-    <form>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        const newUser = { name, lastName, age, id: Math.random() };
+        dispatch(addUser(newUser));
+        setName("");
+        seTLastName("");
+        setAge("");
+      }}
+    >
       <input
         type="text"
         name="name"
