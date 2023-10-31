@@ -19,7 +19,18 @@ const userSlice = createSlice({
     resetState: () => initialState,
   },
 });
-export const usersSelector = (state) => state.userState.users;
+export const usersSelector = (state) =>
+  state.userState.users.filter((usr) => {
+    if (state.userState.searchPhrase === "") {
+      return true;
+    }
+    if (state.userState.searchPhrase === "underage" && usr.age < 18) {
+      return usr;
+    }
+    if (state.userState.searchPhrase === "adults" && usr.age > 18) {
+      return usr;
+    }
+  });
 export const selectSearchPhrase = (state) => state.userState.searchPhrase;
 export const { addUser, removeUser, setSearchPhrase, resetState } =
   userSlice.actions;
