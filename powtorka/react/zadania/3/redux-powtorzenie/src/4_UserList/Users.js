@@ -4,7 +4,7 @@ import { Filters } from "./Filters";
 import { Metric } from "./Metric";
 import { UsersList } from "./UsersList";
 import { useSelector } from "react-redux";
-import { amountOfFilteredUsers } from "./usersSlice";
+import { amountOfFilteredUsers, totalNumberUser } from "./usersSlice";
 
 const style = {
   border: "solid 1px white",
@@ -14,7 +14,7 @@ const style = {
 };
 
 export const Users = () => {
-  const total = 2;
+  const total = useSelector(totalNumberUser);
   const filtredAmount = useSelector(amountOfFilteredUsers);
 
   return (
