@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export const Filters = () => {
   return (
-    <div><input type="text" name="" id="" /></div>
-  )
-}
+    <div>
+      <select name="" id="">
+        <option value="" hidden>Wybierz filtr</option>
+      </select>
+    </div>
+  );
+};
