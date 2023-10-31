@@ -32,6 +32,21 @@ export const usersSelector = (state) =>
     }
   });
 export const selectSearchPhrase = (state) => state.userState.searchPhrase;
+export const amountOfFilteredUsers = (state) => {
+ const total = state.userState.users.filter((usr) => {
+  if (state.userState.searchPhrase === "") {
+    return true;
+  }
+  if (state.userState.searchPhrase === "underage" && usr.age < 18) {
+    return usr;
+  }
+  if (state.userState.searchPhrase === "adults" && usr.age > 18) {
+    return usr;
+  }
+});
+return total.length
+}
+
 export const { addUser, removeUser, setSearchPhrase, resetState } =
   userSlice.actions;
 export default userSlice.reducer;
