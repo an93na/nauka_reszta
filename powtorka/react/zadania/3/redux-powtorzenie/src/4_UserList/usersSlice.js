@@ -21,5 +21,6 @@ const userSlice = createSlice({
 });
 export const usersSelector = (state) => state.userState.users;
 export const selectSearchPhrase = (state) => state.userState.searchPhrase;
-export const { addUser, removeUser, setFilter } = userSlice.actions;
+export const { addUser, removeUser, setSearchPhrase, resetState } =
+  userSlice.actions;
 export default userSlice.reducer;
