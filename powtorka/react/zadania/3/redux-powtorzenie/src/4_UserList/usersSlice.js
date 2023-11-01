@@ -28,11 +28,12 @@ export const usersSelector = (state) =>
       return true;
     }
     if (state.userState.searchPhrase === "underage" && usr.age < 18) {
-      return usr;
+      return true;
     }
     if (state.userState.searchPhrase === "adults" && usr.age > 18) {
-      return usr;
+      return true;
     }
+    return false;
   });
 export const selectSearchPhrase = (state) => state.userState.searchPhrase;
 export const amountOfFilteredUsers = (state) => {
@@ -41,11 +42,12 @@ export const amountOfFilteredUsers = (state) => {
       return true;
     }
     if (state.userState.searchPhrase === "underage" && usr.age < 18) {
-      return usr;
+      return true;
     }
     if (state.userState.searchPhrase === "adults" && usr.age > 18) {
-      return usr;
+      return true;
     }
+    return false;
   });
   return total.length;
 };
