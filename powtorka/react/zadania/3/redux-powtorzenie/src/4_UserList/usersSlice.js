@@ -9,10 +9,10 @@ const userSlice = createSlice({
   name: "user",
   initialState: initialState,
   reducers: {
-    addUser: (user, action) => {
-      user.users.push(action.payload);
+    addUser: (state, action) => {
+      state.users.push(action.payload);
     },
-    removeUser: (user, action) => {},
+    removeUser: (state, action) => {},
     setSearchPhrase: (state, action) => {
       state.searchPhrase = action.payload;
     },
