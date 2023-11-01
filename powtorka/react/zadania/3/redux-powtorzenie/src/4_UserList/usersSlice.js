@@ -13,8 +13,9 @@ const userSlice = createSlice({
       state.users.push(action.payload);
     },
     removeUser: (state, action) => {
-      const idToDelete = action.payload
-      state.users = state.users.filter((user) => user.id !== idToDelete)},
+      const idToDelete = action.payload;
+      state.users = state.users.filter((user) => user.id !== idToDelete);
+    },
     setSearchPhrase: (state, action) => {
       state.searchPhrase = action.payload;
     },
