@@ -1,9 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { usersSelector } from "./usersSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { removeUser, usersSelector } from "./usersSlice";
 
 export const UsersList = () => {
   const selectUser = useSelector(usersSelector);
+  const dispatch = useDispatch();
   return (
     <div>
       <table>
@@ -22,7 +23,10 @@ export const UsersList = () => {
               <td>{user.lastName}</td>
               <td>{user.age}</td>
               <td>
-                <button style={{ backgroundColor: "red", marginBottom: 0 }}>
+                <button
+                  style={{ backgroundColor: "red", marginBottom: 0 }}
+                  onClick={() => dispatch(removeUser(user.id))}
+                >
                   DELETE
                 </button>
               </td>
