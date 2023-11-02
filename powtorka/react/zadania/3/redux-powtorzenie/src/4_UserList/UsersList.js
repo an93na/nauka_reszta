@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeUser, usersSelector } from "./usersSlice";
 
 export const UsersList = () => {
+  const btnDel = { backgroundColor: "red", marginBottom: 0 }
   const selectUser = useSelector(usersSelector);
   const dispatch = useDispatch();
   return (
@@ -24,7 +25,7 @@ export const UsersList = () => {
               <td>{user.age}</td>
               <td>
                 <button
-                  style={{ backgroundColor: "red", marginBottom: 0 }}
+                  style={btnDel}
                   onClick={() => dispatch(removeUser(user.id))}
                 >
                   DELETE
