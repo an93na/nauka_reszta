@@ -13,6 +13,8 @@ const style = {
   marginBottom: 15,
 };
 
+const metricStyle = { display: "flex", gap: 20 };
+
 export const Users = () => {
   const total = useSelector(totalNumberUser);
   const filtredAmount = useSelector(amountOfFilteredUsers);
@@ -28,7 +30,7 @@ export const Users = () => {
         <h6>Filters</h6>
         <Filters />
       </div>
-      <div style={{ display: "flex", gap: 20 }}>
+      <div style={metricStyle}>
         <Metric label="Total" value={total} />
         <Metric label="Amount of filtered users" value={filtredAmount} />
       </div>
