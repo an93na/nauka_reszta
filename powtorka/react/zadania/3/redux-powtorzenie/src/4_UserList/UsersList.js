@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeUser, usersSelector } from "./usersSlice";
 
 export const UsersList = () => {
-  const btnDel = { backgroundColor: "red", marginBottom: 0 }
+  const btnDel = { backgroundColor: "red", marginBottom: 0 };
   const selectUser = useSelector(usersSelector);
   const dispatch = useDispatch();
   return (
