@@ -18,13 +18,17 @@ const asyncCounterSlice = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getCounter.fulfilled, (state, action) => {
-      state.value = action.payload.value;
-      state.isLoading = false
-    }).addCase(getCounter.pending, (state)=>{
-        state.isLoading = true
-    });
+    builder
+      .addCase(getCounter.fulfilled, (state, action) => {
+        state.value = action.payload.value;
+        state.isLoading = false;
+      })
+      .addCase(getCounter.pending, (state) => {
+        state.isLoading = true;
+      });
   },
 });
 
 export default asyncCounterSlice.reducer;
+export const selectIsLoading = (state) => state.asyncCounter.isLoading;
+export const selectCounterValue = (state) => state.asyncCounter.value
