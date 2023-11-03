@@ -7,6 +7,7 @@ import { TodoList } from "./3_Todo/TodoList";
 import { Users } from "./4_UserList/Users";
 import { TodoList2 } from "./5_MetTodo/TodoList";
 import { TodoList3 } from "./6_ex6/TodoList3";
+import { Ex7 } from "./7_intermediate/Ex7";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Users />
       <TodoList2 />
       <TodoList3 />
+      <Ex7 />
     </div>
   );
 }
