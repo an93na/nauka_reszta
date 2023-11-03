@@ -9,6 +9,20 @@ export const getCounter = createAsyncThunk(
   }
 );
 
+export const updateCounter = createAsyncThunk(
+  "updateCounter",
+  async (newValue, thunkAPI) => {
+    const response = await fetch("http://localhost:3010/counter", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ value: newValue }),
+    });
+    const data = await response.json();
+    return thunkAPI.fulfillWithValue(data);
+  }
+);
 const asyncCounterSlice = createSlice({
   name: "asyncSlice",
   initialState: {
@@ -25,10 +39,13 @@ const asyncCounterSlice = createSlice({
       })
       .addCase(getCounter.pending, (state) => {
         state.isLoading = true;
+      })
+      .addCase(updateCounter.fulfilled, (state, action) => {
+        state.value = action.payload.value;
       });
   },
 });
 
 export default asyncCounterSlice.reducer;
 export const selectIsLoading = (state) => state.asyncCounter.isLoading;
-export const selectCounterValue = (state) => state.asyncCounter.value
+export const selectCounterValue = (state) => state.asyncCounter.value;
