@@ -5,7 +5,7 @@ export const getCounter = createAsyncThunk(
   async (params, thunkAPI) => {
     const response = await fetch("http://localhost:3010/counter");
     const data = await response.json();
-    thunkAPI.fulfillWithValue(data);
+    return thunkAPI.fulfillWithValue(data);
   }
 );
 
@@ -19,7 +19,10 @@ const asyncCounterSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getCounter.fulfilled, (state, action) => {
-      state.value = action.payload;
+      state.value = action.payload.value;
+      state.isLoading = false
+    }).addCase(getCounter.pending, (state)=>{
+        state.isLoading = true
     });
   },
 });
