@@ -23,6 +23,7 @@ export const updateCounter = createAsyncThunk(
     return thunkAPI.fulfillWithValue(data);
   }
 );
+
 const asyncCounterSlice = createSlice({
   name: "asyncSlice",
   initialState: {
