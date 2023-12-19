@@ -1,6 +1,6 @@
 // console.log("TypeScript");
 
-// let age: number = 29;
+let age: number = 29;
 // age = 49;
 
 // let ageAsString: string = "dwadzieścia";
@@ -18,4 +18,9 @@
 //   console.log('suma z input: ',sum);
 // });
 
-let age: number = 29;
+const logAge = (age: number | string) => {
+  console.log(`Hej mam ${age} lat!`);
+};
+
+logAge(28);
+logAge("dwadzieścia osiem");
