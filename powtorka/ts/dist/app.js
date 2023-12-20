@@ -31,28 +31,28 @@ let age = 29;
 //     new URLSearchParams(window.location.search).get("discount") === "true";
 //   console.log(calculatePrice(orginalPrice, hasDiscount));
 // });
-// <li>
-// <label for="task-1">Wyrzucić śmieci</label>
-// <input type="checkbox" name="wyrzucić śmieci" id="task-1" />
-// </li>
 const taskNAmeInputElement = document.querySelector("#name");
 const addButtonElement = document.querySelector("button");
 const tasksContainerElement = document.querySelector(".tasks");
+const task = {
+    name: "Wyrzucić smieci",
+    done: false,
+};
 const tasks = [
-    "wyrzucić śmieci",
-    "pójść na siłownię",
-    "nakarmić koty",
+    { name: "wyrzucić śmieci", done: false },
+    { name: "pójść na siłownię", done: false },
+    { name: "nakarmić koty", done: true },
 ];
 const render = () => {
     tasksContainerElement.innerHTML = "";
     tasks.forEach((task) => {
         const taskElement = document.createElement("li");
-        taskElement.innerText = task;
+        taskElement.innerText = task.name;
         tasksContainerElement.appendChild(taskElement);
     });
 };
-const addTask = (task) => {
-    tasks.push(task);
+const addTask = (taskName) => {
+    tasks.push({ name: taskName, done: false });
 };
 addButtonElement.addEventListener("click", (event) => {
     event.preventDefault();

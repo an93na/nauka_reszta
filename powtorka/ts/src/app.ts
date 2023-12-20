@@ -43,31 +43,35 @@ let age: number = 29;
 //   console.log(calculatePrice(orginalPrice, hasDiscount));
 // });
 
-// <li>
-// <label for="task-1">Wyrzucić śmieci</label>
-// <input type="checkbox" name="wyrzucić śmieci" id="task-1" />
-// </li>
-
 const taskNAmeInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
 const tasksContainerElement: HTMLElement = document.querySelector(".tasks");
-const tasks: string[] = [
-  "wyrzucić śmieci",
-  "pójść na siłownię",
-  "nakarmić koty",
+
+const task = {
+  name: "Wyrzucić smieci",
+  done: false,
+};
+
+const tasks: {
+  name: string;
+  done: boolean;
+}[] = [
+  { name: "wyrzucić śmieci", done: false },
+  { name: "pójść na siłownię", done: false },
+  { name: "nakarmić koty", done: true },
 ];
 
 const render = () => {
   tasksContainerElement.innerHTML = "";
   tasks.forEach((task) => {
     const taskElement: HTMLElement = document.createElement("li");
-    taskElement.innerText = task;
+    taskElement.innerText = task.name;
     tasksContainerElement.appendChild(taskElement);
   });
 };
 
-const addTask = (task: string) => {
-  tasks.push(task);
+const addTask = (taskName: string) => {
+  tasks.push({ name: taskName, done: false });
 };
 
 addButtonElement.addEventListener("click", (event: Event) => {
