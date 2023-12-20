@@ -12,12 +12,21 @@ let age = 29;
 //   const sum = dodaj(Number(input1.value), Number(input2.value));
 //   console.log('suma z input: ',sum);
 // });
-const logAge = (age) => {
-    console.log(`Hej mam ${age} lat!`);
+// const logAge = (age: number | string) => {
+//   console.log(`Hej mam ${age} lat!`);
+// };
+// logAge(28);
+// logAge("dwadzieścia osiem");
+// let zmienna: string | number | boolean;
+// zmienna = "dwa";
+// zmienna = 2;
+// zmienna = true;
+const buttonElement = document.querySelector("button");
+const calculatePrice = (orginalPrice, hasDiscount) => {
+    return hasDiscount ? orginalPrice * 0.8 : orginalPrice;
 };
-logAge(28);
-logAge("dwadzieścia osiem");
-let zmienna;
-zmienna = "dwa";
-zmienna = 2;
-zmienna = true;
+buttonElement.addEventListener("click", () => {
+    const orginalPrice = 50;
+    const hasDiscount = new URLSearchParams(window.location.search).get("discount") === "true";
+    console.log(calculatePrice(orginalPrice, hasDiscount));
+});

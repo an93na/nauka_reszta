@@ -18,16 +18,27 @@ let age: number = 29;
 //   console.log('suma z input: ',sum);
 // });
 
-const logAge = (age: number | string) => {
-  console.log(`Hej mam ${age} lat!`);
+// const logAge = (age: number | string) => {
+//   console.log(`Hej mam ${age} lat!`);
+// };
+
+// logAge(28);
+// logAge("dwadzieścia osiem");
+
+// let zmienna: string | number | boolean;
+
+// zmienna = "dwa";
+// zmienna = 2;
+// zmienna = true;
+
+const buttonElement = document.querySelector("button");
+const calculatePrice = (orginalPrice: number, hasDiscount: boolean) => {
+  return hasDiscount ? orginalPrice * 0.8 : orginalPrice;
 };
 
-logAge(28);
-logAge("dwadzieścia osiem");
-
-let zmienna: string | number | boolean;
-
-zmienna = "dwa";
-zmienna = 2;
-zmienna = true;
-
+buttonElement.addEventListener("click", () => {
+  const orginalPrice: number = 50;
+  const hasDiscount: boolean =
+    new URLSearchParams(window.location.search).get("discount") === "true";
+  console.log(calculatePrice(orginalPrice, hasDiscount));
+});
