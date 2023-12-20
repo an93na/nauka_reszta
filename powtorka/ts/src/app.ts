@@ -24,3 +24,10 @@ const logAge = (age: number | string) => {
 
 logAge(28);
 logAge("dwadzieścia osiem");
+
+let zmienna: string | number | boolean;
+
+zmienna = "dwa";
+zmienna = 2;
+zmienna = true;
+

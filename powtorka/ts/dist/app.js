@@ -17,3 +17,7 @@ const logAge = (age) => {
 };
 logAge(28);
 logAge("dwadzieścia osiem");
+let zmienna;
+zmienna = "dwa";
+zmienna = 2;
+zmienna = true;
