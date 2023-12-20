@@ -1,0 +1,26 @@
+body {
+  background: rgba(225, 225, 255, 0.8);
+}
+.categories li {
+  align-items: center;
+  display: flex;
+  list-style: "none";
+}
+.categories input {
+  margin-right: 8px;
+}
+.task {
+}
+.task input {
+  margin-left: 8px;
+}
+.gym {
+  color: darkblue;
+  list-style: circle;
+}
+.hobby {
+  color: darkgoldenrod;
+}
+.work {
+  text-decoration: underline;
+}

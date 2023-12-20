@@ -34,19 +34,23 @@ let age = 29;
 const taskNAmeInputElement = document.querySelector("#name");
 const addButtonElement = document.querySelector("button");
 const tasksContainerElement = document.querySelector(".tasks");
+const categories = ["general", "work", "gym", "hobby"];
 const task = {
     title: "Wyrzucić smieci",
     done: false,
 };
 const tasks = [
-    { title: "wyrzucić śmieci", done: false },
-    { title: "pójść na siłownię", done: false },
-    { title: "nakarmić koty", done: true },
+    { title: "wyrzucić śmieci", done: false, category: "work" },
+    { title: "pójść na siłownię", done: false, category: "gym" },
+    { title: "nakarmić koty", done: true, category: "hobby" },
 ];
 const render = () => {
     tasksContainerElement.innerHTML = "";
     tasks.forEach((task, index) => {
         const taskElement = document.createElement("li");
+        if (task.category) {
+            taskElement.classList.add(task.category);
+        }
         const id = `task-${index}`;
         const labelElement = document.createElement("label");
         labelElement.innerText = task.title;

@@ -47,24 +47,32 @@ const taskNAmeInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
 const tasksContainerElement: HTMLElement = document.querySelector(".tasks");
 
+interface Task {
+  title: string;
+  done: boolean;
+  category?: string;
+}
+
+const categories: string[] = ["general", "work", "gym", "hobby"];
+
 const task = {
   title: "Wyrzucić smieci",
   done: false,
 };
 
-const tasks: {
-  title: string;
-  done: boolean;
-}[] = [
-  { title: "wyrzucić śmieci", done: false },
-  { title: "pójść na siłownię", done: false },
-  { title: "nakarmić koty", done: true },
+const tasks: Task[] = [
+  { title: "wyrzucić śmieci", done: false, category: "work" },
+  { title: "pójść na siłownię", done: false, category: "gym" },
+  { title: "nakarmić koty", done: true, category: "hobby" },
 ];
 
 const render = () => {
   tasksContainerElement.innerHTML = "";
   tasks.forEach((task, index) => {
     const taskElement: HTMLElement = document.createElement("li");
+    if (task.category) {
+      taskElement.classList.add(task.category);
+    }
     const id: string = `task-${index}`;
     const labelElement: HTMLLabelElement = document.createElement("label");
     labelElement.innerText = task.title;
@@ -85,7 +93,7 @@ const render = () => {
   });
 };
 
-const addTask = (task: { title: string; done: boolean }) => {
+const addTask = (task: Task) => {
   tasks.push(task);
 };
 
