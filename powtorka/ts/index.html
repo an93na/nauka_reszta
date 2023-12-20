@@ -14,6 +14,34 @@
     <form class="container" action="" autocomplete="off">
       <label for="name"> Task </label>
       <input type="text" name="name" id="name" />
+      <ul class="categories">
+        <li>
+          <input
+            type="radio"
+            name="category"
+            id="categoty-general"
+            value="general"
+          />
+          <label for="categoty-general"> general </label>
+        </li>
+        <li>
+          <input type="radio" name="category" id="categoty-work" value="work" />
+          <label for="categoty-work"> work </label>
+        </li>
+        <li>
+          <input type="radio" name="category" id="categoty-gym" value="gym" />
+          <label for="categoty-gym"> gym </label>
+        </li>
+        <li>
+          <input
+            type="radio"
+            name="category"
+            id="categoty-hobby"
+            value="hobby"
+          />
+          <label for="categoty-hobby"> hobby </label>
+        </li>
+      </ul>
       <button>Add</button>
       <p>Todo:</p>
       <ul class="tasks"></ul>
