@@ -73,7 +73,13 @@ const addTask = (task) => {
 };
 addButtonElement.addEventListener("click", (event) => {
     event.preventDefault();
-    addTask({ title: taskNAmeInputElement.value, done: false });
+    const selectedRadioElement = document.querySelector("input[type='radio]:checked");
+    const selectedCategory = selectedRadioElement.value;
+    addTask({
+        title: taskNAmeInputElement.value,
+        done: false,
+        category: selectedCategory,
+    });
     render();
 });
 addTask({ title: "napisać notatkę", category: "gym", done: false });

@@ -47,10 +47,12 @@ const taskNAmeInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
 const tasksContainerElement: HTMLElement = document.querySelector(".tasks");
 
+type Category = "general" | "work" | "gym" | "hobby";
+
 interface Task {
   title: string;
   done: boolean;
-  category?: "general" | "work" | "gym" | "hobby";
+  category?: Category;
 }
 
 const categories: string[] = ["general", "work", "gym", "hobby"];
@@ -99,7 +101,15 @@ const addTask = (task: Task) => {
 
 addButtonElement.addEventListener("click", (event: Event) => {
   event.preventDefault();
-  addTask({ title: taskNAmeInputElement.value, done: false });
+  const selectedRadioElement: HTMLInputElement = document.querySelector(
+    "input[type='radio]:checked"
+  );
+  const selectedCategory: Category = selectedRadioElement.value as Category;
+  addTask({
+    title: taskNAmeInputElement.value,
+    done: false,
+    category: selectedCategory,
+  });
   render();
 });
 
