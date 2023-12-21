@@ -1,5 +1,6 @@
 // console.log("TypeScript");
 
+
 let age: number = 29;
 // age = 49;
 
@@ -14,11 +15,11 @@ let age: number = 29;
 
 // const dodaj = (i1: number, i2: number) => i1 + i2;
 // button.addEventListener("click", () => {
-//   const sum = dodaj(Number(input1.value), Number(input2.value));
-//   console.log('suma z input: ',sum);
-// });
-
-// const logAge = (age: number | string) => {
+  //   const sum = dodaj(Number(input1.value), Number(input2.value));
+  //   console.log('suma z input: ',sum);
+  // });
+  
+  // const logAge = (age: number | string) => {
 //   console.log(`Hej mam ${age} lat!`);
 // };
 
@@ -42,6 +43,7 @@ let age: number = 29;
 //     new URLSearchParams(window.location.search).get("discount") === "true";
 //   console.log(calculatePrice(orginalPrice, hasDiscount));
 // });
+import { Category, Task } from "./types/types";
 
 const taskNAmeInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
@@ -50,14 +52,6 @@ const categoriesContainerElement: HTMLElement =
   document.querySelector(".categories");
 
 let selectedCategory: Category;
-
-type Category = "general" | "work" | "gym" | "hobby";
-
-interface Task {
-  title: string;
-  done: boolean;
-  category?: Category;
-}
 
 const categories: Category[] = ["general", "work", "gym", "hobby"];
 
