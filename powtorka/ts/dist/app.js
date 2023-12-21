@@ -76,4 +76,5 @@ addButtonElement.addEventListener("click", (event) => {
     addTask({ title: taskNAmeInputElement.value, done: false });
     render();
 });
+addTask({ title: "napisać notatkę", category: "gym", done: false });
 render();

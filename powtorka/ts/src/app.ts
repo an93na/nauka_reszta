@@ -50,7 +50,7 @@ const tasksContainerElement: HTMLElement = document.querySelector(".tasks");
 interface Task {
   title: string;
   done: boolean;
-  category?: string;
+  category?: "general" | "work" | "gym" | "hobby";
 }
 
 const categories: string[] = ["general", "work", "gym", "hobby"];
@@ -103,4 +103,5 @@ addButtonElement.addEventListener("click", (event: Event) => {
   render();
 });
 
+addTask({ title: "napisać notatkę", category: "gym", done: false });
 render();
