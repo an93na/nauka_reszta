@@ -49,6 +49,8 @@ const tasksContainerElement: HTMLElement = document.querySelector(".tasks");
 const categoriesContainerElement: HTMLElement =
   document.querySelector(".categories");
 
+let selectedCategory: Category;
+
 type Category = "general" | "work" | "gym" | "hobby";
 
 interface Task {
@@ -102,9 +104,12 @@ const renderCategories = () => {
     const categoryElement: HTMLElement = document.createElement("li");
     const radioInputElement: HTMLInputElement = document.createElement("input");
     radioInputElement.type = "radio";
-    radioInputElement.name = category;
+    radioInputElement.name = "category";
     radioInputElement.value = category;
     radioInputElement.id = `category-${category}`;
+    radioInputElement.addEventListener("change", () => {
+      selectedCategory = category;
+    });
     const labelElement: HTMLLabelElement = document.createElement("label");
     labelElement.setAttribute("for", `category-${category}`);
     labelElement.innerText = category;
@@ -120,10 +125,6 @@ const addTask = (task: Task) => {
 
 addButtonElement.addEventListener("click", (event: Event) => {
   event.preventDefault();
-  const selectedRadioElement: HTMLInputElement = document.querySelector(
-    "input[type='radio]:checked"
-  );
-  const selectedCategory: Category = selectedRadioElement.value as Category;
   addTask({
     title: taskNAmeInputElement.value,
     done: false,
@@ -133,5 +134,5 @@ addButtonElement.addEventListener("click", (event: Event) => {
 });
 
 renderCategories();
-addTask({ title: "napisać notatkę", category: "gym", done: false });
+addTask({ title: "napisać notatkę", category: "work", done: false });
 render();
