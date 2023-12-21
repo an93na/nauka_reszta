@@ -1,6 +1,5 @@
 // console.log("TypeScript");
 
-
 let age: number = 29;
 // age = 49;
 
@@ -15,11 +14,11 @@ let age: number = 29;
 
 // const dodaj = (i1: number, i2: number) => i1 + i2;
 // button.addEventListener("click", () => {
-  //   const sum = dodaj(Number(input1.value), Number(input2.value));
-  //   console.log('suma z input: ',sum);
-  // });
-  
-  // const logAge = (age: number | string) => {
+//   const sum = dodaj(Number(input1.value), Number(input2.value));
+//   console.log('suma z input: ',sum);
+// });
+
+// const logAge = (age: number | string) => {
 //   console.log(`Hej mam ${age} lat!`);
 // };
 
@@ -44,6 +43,7 @@ let age: number = 29;
 //   console.log(calculatePrice(orginalPrice, hasDiscount));
 // });
 import { Category, Task } from "./types/types";
+import { render } from "./helpers/render-task-helpers.js";
 
 const taskNAmeInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
@@ -65,33 +65,6 @@ const tasks: Task[] = [
   { title: "pójść na siłownię", done: false, category: "gym" },
   { title: "nakarmić koty", done: true, category: "hobby" },
 ];
-
-const render = () => {
-  tasksContainerElement.innerHTML = "";
-  tasks.forEach((task, index) => {
-    const taskElement: HTMLElement = document.createElement("li");
-    if (task.category) {
-      taskElement.classList.add(task.category);
-    }
-    const id: string = `task-${index}`;
-    const labelElement: HTMLLabelElement = document.createElement("label");
-    labelElement.innerText = task.title;
-    labelElement.setAttribute("for", id);
-    const checkboxElement: HTMLInputElement = document.createElement("input");
-    checkboxElement.type = "checkbox";
-    checkboxElement.name = task.title;
-    checkboxElement.id = id;
-    checkboxElement.checked = task.done;
-    checkboxElement.addEventListener("change", () => {
-      task.done = !task.done;
-    });
-
-    taskElement.appendChild(labelElement);
-    taskElement.appendChild(checkboxElement);
-
-    tasksContainerElement.appendChild(taskElement);
-  });
-};
 
 const renderCategories = () => {
   categories.forEach((category) => {
@@ -124,9 +97,9 @@ addButtonElement.addEventListener("click", (event: Event) => {
     done: false,
     category: selectedCategory,
   });
-  render();
+  render(tasks, tasksContainerElement);
 });
 
 renderCategories();
 addTask({ title: "napisać notatkę", category: "work", done: false });
-render();
+render(tasks, tasksContainerElement);
