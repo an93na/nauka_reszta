@@ -3,7 +3,7 @@ import { Category } from "../types/types";
 export const renderCategories = (
   categories: Category[],
   categoriesContainerElement: HTMLElement,
-  inputChangeCalback
+  inputChangeCalback: (category: Category) => void
 ) => {
   categories.forEach((category) => {
     const categoryElement: HTMLElement = document.createElement("li");
