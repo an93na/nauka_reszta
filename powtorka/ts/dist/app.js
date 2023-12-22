@@ -35,3 +35,10 @@ addButtonElement.addEventListener("click", (event) => {
 addTask({ title: "napisać notatkę", category: "work", done: false });
 renderCategories(categories, categoriesContainerElement, updateSelectedCategory);
 render(tasks, tasksContainerElement);
+// do any można wszystko przypisać ale jest to
+//  złą praktyką
+let wiek;
+wiek = 13;
+wiek = "a";
+wiek = false;
+wiek = [];
