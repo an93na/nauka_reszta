@@ -42,3 +42,8 @@ wiek = 13;
 wiek = "a";
 wiek = false;
 wiek = [];
+// typ unknown
+let get = (response) => response;
+const logFixed = (v) => {
+    console.log(v.toFixed());
+};
