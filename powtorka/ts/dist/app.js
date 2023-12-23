@@ -47,3 +47,6 @@ let get = (response) => response;
 const logFixed = (v) => {
     console.log(v.toFixed());
 };
+logFixed(3.6);
+logFixed(get(3.6));
+// logFixed(get("abc"));
