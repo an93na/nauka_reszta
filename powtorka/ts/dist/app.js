@@ -47,6 +47,12 @@ let get = (response) => response;
 const logFixed = (v) => {
     console.log(v.toFixed());
 };
+let zmienna;
+zmienna = 19;
+zmienna = "string";
+zmienna = true;
 logFixed(3.6);
-logFixed(get(3.6));
-// logFixed(get("abc"));
+let value = get(3.6);
+if (typeof value === "number") {
+    logFixed(value);
+}

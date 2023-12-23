@@ -102,10 +102,18 @@ wiek = false;
 wiek = [];
 
 // typ unknown
-let get = (response: any) => response;
+let get = (response: unknown) => response;
 const logFixed = (v: number) => {
   console.log(v.toFixed());
 };
+
+let zmienna: unknown;
+zmienna = 19;
+zmienna = "string";
+zmienna = true;
+
 logFixed(3.6);
-logFixed(get(3.6));
-// logFixed(get("abc"));
+let value = get(3.6);
+if (typeof value === "number") {
+  logFixed(value);
+}
