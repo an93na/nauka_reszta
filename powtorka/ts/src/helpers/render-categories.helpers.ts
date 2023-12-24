@@ -1,13 +1,13 @@
-import { Category } from "../types/types";
+import { Category } from "../types/types.js";
 
 const handleCategoryChange = (category: Category) => {
-  if (category === "general") {
+  if (category === Category.GENERAL) {
     console.log("Zmiana na general!");
-  } else if (category === "gym") {
+  } else if (category === Category.GYM) {
     alert("Ktoś tu ćwiczy");
-  } else if (category === "hobby") {
+  } else if (category === Category.HOBBY) {
     document.body.style.background = "green";
-  } else if (category === "work") {
+  } else if (category === Category.WORK) {
     console.log("Zmiana na general!");
     alert("Ktoś tu ćwiczy");
     document.body.style.background = "green";

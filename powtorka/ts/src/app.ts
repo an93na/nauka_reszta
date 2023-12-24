@@ -42,7 +42,7 @@ let age: number = 29;
 //     new URLSearchParams(window.location.search).get("discount") === "true";
 //   console.log(calculatePrice(orginalPrice, hasDiscount));
 // });
-import { Category, Task } from "./types/types";
+import { Category, Task } from "./types/types.js";
 import { render } from "./helpers/render-task-helpers.js";
 import { renderCategories } from "./helpers/render-categories.helpers.js";
 
@@ -54,7 +54,12 @@ const categoriesContainerElement: HTMLElement =
 
 let selectedCategory: Category;
 
-const categories: Category[] = ["general", "work", "gym", "hobby"];
+const categories: Category[] = [
+  Category.GENERAL,
+  Category.WORK,
+  Category.GYM,
+  Category.HOBBY,
+];
 
 const task = {
   title: "Wyrzucić smieci",
@@ -62,9 +67,9 @@ const task = {
 };
 
 const tasks: Task[] = [
-  { title: "wyrzucić śmieci", done: false, category: "work" },
-  { title: "pójść na siłownię", done: false, category: "gym" },
-  { title: "nakarmić koty", done: true, category: "hobby" },
+  { title: "wyrzucić śmieci", done: false, category: Category.WORK },
+  { title: "pójść na siłownię", done: false, category: Category.GYM },
+  { title: "nakarmić koty", done: true, category: Category.HOBBY },
 ];
 
 const addTask = (task: Task) => {
@@ -85,7 +90,7 @@ addButtonElement.addEventListener("click", (event: Event) => {
   render(tasks, tasksContainerElement);
 });
 
-addTask({ title: "napisać notatkę", category: "work", done: false });
+addTask({ title: "napisać notatkę", category: Category.WORK, done: false });
 renderCategories(
   categories,
   categoriesContainerElement,
