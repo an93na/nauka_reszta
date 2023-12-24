@@ -56,3 +56,4 @@ let value = get(3.6);
 if (typeof value === "number") {
     logFixed(value);
 }
+// typ never

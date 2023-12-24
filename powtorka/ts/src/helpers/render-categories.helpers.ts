@@ -1,5 +1,19 @@
 import { Category } from "../types/types";
 
+const handleCategoryChange = (category: Category) => {
+  if (category === "general") {
+    console.log("Zmiana na general!");
+  } else if (category === "gym") {
+    alert("Ktoś tu ćwiczy");
+  } else if (category === "hobby") {
+    document.body.style.background = "green";
+  } else if (category === "work") {
+    console.log("Zmiana na general!");
+    alert("Ktoś tu ćwiczy");
+    document.body.style.background = "green";
+  }
+};
+
 export const renderCategories = (
   categories: Category[],
   categoriesContainerElement: HTMLElement,
@@ -14,6 +28,7 @@ export const renderCategories = (
     radioInputElement.id = `category-${category}`;
     radioInputElement.addEventListener("change", () => {
       inputChangeCalback(category);
+      handleCategoryChange(category);
     });
     const labelElement: HTMLLabelElement = document.createElement("label");
     labelElement.setAttribute("for", `category-${category}`);
