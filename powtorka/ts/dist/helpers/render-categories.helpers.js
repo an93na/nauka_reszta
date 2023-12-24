@@ -13,6 +13,12 @@ const handleCategoryChange = (category) => {
         alert("Ktoś tu ćwiczy");
         document.body.style.background = "green";
     }
+    else {
+        // gdy pojawia się jakaś nowa kategoria to wtedy wejdziemy do tego elsa
+        // do którego nie powinniśmy trafić więc to taka nasza pamięć, że tą
+        // nową kategorie też trzeba obsłużyć
+        const never = category;
+    }
 };
 export const renderCategories = (categories, categoriesContainerElement, inputChangeCalback) => {
     categories.forEach((category) => {
