@@ -90,11 +90,8 @@ addButtonElement.addEventListener("click", (event: Event) => {
   render(tasks, tasksContainerElement);
 });
 
-const taskow: [string, Category, boolean] = [
-  "zrobić zakupy",
-  Category.GENERAL,
-  false,
-];
+type TaskAsTuple = [string, Category, boolean];
+const taskow: TaskAsTuple = ["zrobić zakupy", Category.GENERAL, false];
 const taskName = taskow[0];
 const taskCategory = taskow[1];
 const taskDoneStatus = taskow[2];
