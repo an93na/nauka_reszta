@@ -98,3 +98,9 @@ let value = get(3.6);
 if (typeof value === "number") {
     logFixed(value);
 }
+;
+let newTask;
+newTask = {
+    name: "noey task",
+    done: true
+};

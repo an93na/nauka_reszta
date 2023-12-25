@@ -129,3 +129,23 @@ let value = get(3.6);
 if (typeof value === "number") {
   logFixed(value);
 }
+
+// Typ
+type TaskType = {
+  name: string;
+  done: boolean;
+  category?: Category;
+};
+
+// interfejs
+interface TaskInterface {
+  name: string;
+  done: boolean;
+  category?: Category;
+};
+
+let newTask: TaskType;
+newTask = {
+  name: "noey task",
+  done: true
+}
