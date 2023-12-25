@@ -142,10 +142,29 @@ interface TaskInterface {
   name: string;
   done: boolean;
   category?: Category;
-};
+}
 
-let newTask: TaskType;
+// za pomocą typu możemy sobie przypisać coś takiego
+type Kategoria = "work" | "hobby" | "general";
+// a za pomocą interface już nie bo interfejs to
+// musi być obiekt
+// interface Kategoria  = 'work' | "hobby" | "general"
+// Typy można łączyć a interfejsy już nie
+// type KategoriaAndNumber = Kategoria | number;
+// możemy stworzyć więcej interfejsów o tej samej nazwie
+// i można sobie to wyobrazić że to co jest w pierwszym
+// interfejsie zlepi się z tym co jest w drugim interfejsie
+interface TaskInterface {
+  createdAt: Date;
+}
+
+let newTask: TaskInterface;
 newTask = {
   name: "noey task",
-  done: true
-}
+  done: true,
+  createdAt: new Date(),
+};
+// interjesy przydają się wtedy gdy importuejmy coś i nie chcemy
+// rozszerzać naszego interfejsu ale możemy go nadpisać
+// interfejsy przydają się w momencie kiedy dana klasa
+// musi go zaimplementwiać

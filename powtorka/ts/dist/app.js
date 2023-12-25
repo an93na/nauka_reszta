@@ -98,9 +98,13 @@ let value = get(3.6);
 if (typeof value === "number") {
     logFixed(value);
 }
-;
 let newTask;
 newTask = {
     name: "noey task",
-    done: true
+    done: true,
+    createdAt: new Date(),
 };
+// interjesy przydają się wtedy gdy importuejmy coś i nie chcemy
+// rozszerzać naszego interfejsu ale możemy go nadpisać
+// interfejsy przydają się w momencie kiedy dana klasa
+// musi go zaimplementwiać
