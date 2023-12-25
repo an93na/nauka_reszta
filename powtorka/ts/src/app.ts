@@ -90,6 +90,11 @@ addButtonElement.addEventListener("click", (event: Event) => {
   render(tasks, tasksContainerElement);
 });
 
+const taskow = ["zrobić zakupy", Category.GENERAL, false];
+const taskName = taskow[0];
+const taskCategory = taskow[1];
+const taskDoneStatus = taskow[2];
+
 addTask({ title: "napisać notatkę", category: Category.WORK, done: false });
 renderCategories(
   categories,
