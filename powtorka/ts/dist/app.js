@@ -69,10 +69,15 @@ addButtonElement.addEventListener("click", (event) => {
     });
     render(tasks, tasksContainerElement);
 });
-const taskow = ["zrobić zakupy", Category.GENERAL, false];
+const taskow = [
+    "zrobić zakupy",
+    Category.GENERAL,
+    false,
+];
 const taskName = taskow[0];
 const taskCategory = taskow[1];
 const taskDoneStatus = taskow[2];
+addTask({ title: taskName, category: taskCategory, done: taskDoneStatus });
 addTask({ title: "napisać notatkę", category: Category.WORK, done: false });
 renderCategories(categories, categoriesContainerElement, updateSelectedCategory);
 render(tasks, tasksContainerElement);
