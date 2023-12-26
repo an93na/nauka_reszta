@@ -1,4 +1,9 @@
 export class TaskClass {
-  name: string = 'Nowe zadanie';
-  done: boolean = true;
+  title: string;
+  done: boolean;
+
+  constructor(title: string, done: boolean) {
+    this.title = title;
+    this.done = done;
+  }
 }

@@ -170,5 +170,5 @@ newTask = {
 // interfejsy przydają się w momencie kiedy dana klasa
 // musi go zaimplementwiać
 
-const taskClass = new TaskClass();
-console.log(taskClass)
+const taskClassInstance = new TaskClass("zadanie", false);
+console.log(taskClassInstance)

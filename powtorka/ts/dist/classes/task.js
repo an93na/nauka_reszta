@@ -1,6 +1,6 @@
 export class TaskClass {
-    constructor() {
-        this.name = 'Nowe zadanie';
-        this.done = true;
+    constructor(title, done) {
+        this.title = title;
+        this.done = done;
     }
 }
