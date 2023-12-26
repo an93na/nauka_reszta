@@ -4,7 +4,7 @@ export class TaskClass {
   title: string;
   done: boolean;
   categoty?: Category;
-  createdAt: Date;
+  private createdAt: Date;
 
   constructor(
     title: string,
