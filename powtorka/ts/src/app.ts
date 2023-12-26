@@ -170,5 +170,6 @@ newTask = {
 // interfejsy przydają się w momencie kiedy dana klasa
 // musi go zaimplementwiać
 
-const taskClassInstance = new TaskClass("zadanie", false);
+const taskClassInstance = new TaskClass("zadanie", false, Category.GYM);
 console.log(taskClassInstance)
+taskClassInstance.LogCreationDate("!")

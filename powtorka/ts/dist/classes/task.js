@@ -4,5 +4,9 @@ export class TaskClass {
         this.title = title;
         this.done = done;
         this.categoty = category;
+        this.createdAt = new Date();
+    }
+    LogCreationDate(extra) {
+        console.log(`Task został stworzony ${this.createdAt} ${extra || ""}`);
     }
 }
