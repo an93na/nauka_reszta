@@ -45,6 +45,7 @@ let age: number = 29;
 import { Category, Task } from "./types/types.js";
 import { render } from "./helpers/render-task-helpers.js";
 import { renderCategories } from "./helpers/render-categories.helpers.js";
+import { TaskClass } from "./classes/task.js";
 
 const taskNAmeInputElement: HTMLInputElement = document.querySelector("#name");
 const addButtonElement: HTMLButtonElement = document.querySelector("button");
@@ -168,3 +169,6 @@ newTask = {
 // rozszerzać naszego interfejsu ale możemy go nadpisać
 // interfejsy przydają się w momencie kiedy dana klasa
 // musi go zaimplementwiać
+
+const taskClass = new TaskClass();
+console.log(taskClass)
